@@ -63,6 +63,26 @@ namespace FnB_Records.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bg_login_register {
+            get {
+                object obj = ResourceManager.GetObject("bg-login-register", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_Fnb_Records {
+            get {
+                object obj = ResourceManager.GetObject("Logo Fnb_Records", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_FnB_Records_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("Logo_FnB_Records-removebg-preview", resourceCulture);
