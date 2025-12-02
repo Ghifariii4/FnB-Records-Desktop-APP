@@ -93,6 +93,16 @@ namespace FnB_Records.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dashboard_Logo_Hitam {
+            get {
+                object obj = ResourceManager.GetObject("Dashboard-Logo-Hitam", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_Fnb_Records {
             get {
                 object obj = ResourceManager.GetObject("Logo Fnb_Records", resourceCulture);
