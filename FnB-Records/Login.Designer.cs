@@ -80,7 +80,7 @@
             guna2GroupBox1.ShadowDecoration.Depth = 10;
             guna2GroupBox1.ShadowDecoration.Enabled = true;
             guna2GroupBox1.ShadowDecoration.Shadow = new Padding(0, 3, 10, 10);
-            guna2GroupBox1.Size = new Size(544, 626);
+            guna2GroupBox1.Size = new Size(544, 594);
             guna2GroupBox1.TabIndex = 0;
             guna2GroupBox1.Text = "guna2GroupBox1";
             // 
@@ -187,13 +187,14 @@
             txtPassword.Font = new Font("Inter", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             txtPassword.ForeColor = Color.FromArgb(45, 45, 45);
             txtPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPassword.Location = new Point(43, 294);
+            txtPassword.Location = new Point(44, 295);
+            txtPassword.Margin = new Padding(3, 4, 3, 4);
             txtPassword.Name = "txtPassword";
             txtPassword.PlaceholderForeColor = Color.FromArgb(125, 137, 149);
             txtPassword.PlaceholderText = "Masukan Kata Sandi";
             txtPassword.SelectedText = "";
             txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtPassword.Size = new Size(455, 45);
+            txtPassword.Size = new Size(455, 51);
             txtPassword.TabIndex = 2;
             // 
             // label5
@@ -223,13 +224,14 @@
             txtEmail.Font = new Font("Inter", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             txtEmail.ForeColor = Color.FromArgb(45, 45, 45);
             txtEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEmail.Location = new Point(43, 204);
+            txtEmail.Location = new Point(43, 205);
+            txtEmail.Margin = new Padding(3, 4, 3, 4);
             txtEmail.Name = "txtEmail";
             txtEmail.PlaceholderForeColor = Color.FromArgb(125, 137, 149);
             txtEmail.PlaceholderText = "email@example.com";
             txtEmail.SelectedText = "";
             txtEmail.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            txtEmail.Size = new Size(455, 45);
+            txtEmail.Size = new Size(455, 51);
             txtEmail.TabIndex = 1;
             // 
             // label4
