@@ -26,5 +26,25 @@ namespace FnB_Records
         {
 
         }
+
+        private void guna2GroupBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GroupBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GroupBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblpenjualan_hari_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

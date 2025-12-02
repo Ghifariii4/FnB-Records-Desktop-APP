@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "6CT2jP7bxlk=",
+  "dgSpecHash": "+QESIiNJyOQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\FnB-Records.csproj",
+  "projectFilePath": "C:\\Users\\HYPE AMD\\Source\\Repos\\FnB-Records-Desktop-APP\\FnB-Records\\FnB-Records.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\USER\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.7\\guna.ui2.winforms.2.0.4.7.nupkg.sha512",
-    "C:\\Users\\USER\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
-    "C:\\Users\\USER\\.nuget\\packages\\system.management\\7.0.0\\system.management.7.0.0.nupkg.sha512"
+    "C:\\Users\\HYPE AMD\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.7\\guna.ui2.winforms.2.0.4.7.nupkg.sha512",
+    "C:\\Users\\HYPE AMD\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\HYPE AMD\\.nuget\\packages\\system.management\\7.0.0\\system.management.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }
