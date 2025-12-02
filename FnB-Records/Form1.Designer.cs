@@ -35,6 +35,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1263, 713);
+            FormBorderStyle = FormBorderStyle.None;
             IsMdiContainer = true;
             Name = "Form1";
             Text = "Main Form";
