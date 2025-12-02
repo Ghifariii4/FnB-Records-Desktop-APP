@@ -40,19 +40,22 @@
             guna2Panel1.Location = new Point(0, 0);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Panel1.Size = new Size(200, 713);
+            guna2Panel1.Size = new Size(200, 808);
             guna2Panel1.TabIndex = 1;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1263, 713);
+            ClientSize = new Size(1263, 808);
             Controls.Add(guna2Panel1);
+            Font = new Font("Manrope", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
             IsMdiContainer = true;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Main Form";
+            WindowState = FormWindowState.Maximized;
             ResumeLayout(false);
         }
 
