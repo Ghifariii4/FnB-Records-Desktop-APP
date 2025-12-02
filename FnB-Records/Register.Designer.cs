@@ -198,11 +198,11 @@
             guna2TextBox1.Margin = new Padding(3, 4, 3, 4);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PlaceholderForeColor = Color.FromArgb(125, 137, 149);
-            guna2TextBox1.PlaceholderText = "email@example.com";
+            guna2TextBox1.PlaceholderText = "Warung Ikan";
             guna2TextBox1.SelectedText = "";
             guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2TextBox1.Size = new Size(486, 54);
-            guna2TextBox1.TabIndex = 15;
+            guna2TextBox1.TabIndex = 1;
             // 
             // label3
             // 
