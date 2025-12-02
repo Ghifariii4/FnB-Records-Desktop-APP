@@ -293,11 +293,11 @@
             guna2GroupBox1.FillColor = Color.FromArgb(227, 201, 189);
             guna2GroupBox1.Font = new Font("Segoe UI", 9F);
             guna2GroupBox1.ForeColor = Color.Transparent;
-            guna2GroupBox1.Location = new Point(352, 225);
+            guna2GroupBox1.Location = new Point(393, 225);
             guna2GroupBox1.Name = "guna2GroupBox1";
             guna2GroupBox1.ShadowDecoration.BorderRadius = 20;
             guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2GroupBox1.ShadowDecoration.Depth = 10;
+            guna2GroupBox1.ShadowDecoration.Depth = 20;
             guna2GroupBox1.ShadowDecoration.Enabled = true;
             guna2GroupBox1.ShadowDecoration.Shadow = new Padding(0, 3, 10, 10);
             guna2GroupBox1.Size = new Size(567, 706);
@@ -348,7 +348,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.bg_login_register;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1248, 1008);
+            ClientSize = new Size(1330, 1008);
             Controls.Add(guna2GroupBox1);
             Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;

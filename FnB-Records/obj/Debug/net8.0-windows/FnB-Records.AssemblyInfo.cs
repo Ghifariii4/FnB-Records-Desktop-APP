@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FnB-Records")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d4992d554fb53e39da7d88deb75af80be75aa3c3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d47a480105943bd623b2fc4955a24fb4e45a4c36")]
 [assembly: System.Reflection.AssemblyProductAttribute("FnB-Records")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FnB-Records")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -73,11 +73,11 @@
             guna2GroupBox1.FillColor = Color.FromArgb(227, 201, 189);
             guna2GroupBox1.Font = new Font("Segoe UI", 9F);
             guna2GroupBox1.ForeColor = Color.Transparent;
-            guna2GroupBox1.Location = new Point(339, 136);
+            guna2GroupBox1.Location = new Point(380, 225);
             guna2GroupBox1.Name = "guna2GroupBox1";
             guna2GroupBox1.ShadowDecoration.BorderRadius = 20;
             guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2GroupBox1.ShadowDecoration.Depth = 10;
+            guna2GroupBox1.ShadowDecoration.Depth = 20;
             guna2GroupBox1.ShadowDecoration.Enabled = true;
             guna2GroupBox1.ShadowDecoration.Shadow = new Padding(0, 3, 10, 10);
             guna2GroupBox1.Size = new Size(544, 594);
@@ -101,11 +101,11 @@
             label8.AutoSize = true;
             label8.BackColor = Color.Transparent;
             label8.Cursor = Cursors.Hand;
-            label8.Font = new Font("Manrope SemiBold", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.FromArgb(45, 45, 45);
             label8.Location = new Point(264, 488);
             label8.Name = "label8";
-            label8.Size = new Size(180, 22);
+            label8.Size = new Size(181, 22);
             label8.TabIndex = 12;
             label8.Text = "Daftar gratis sekarang";
             // 
@@ -253,7 +253,7 @@
             BackColor = Color.FromArgb(249, 247, 245);
             BackgroundImage = Properties.Resources.bg_login_register;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1248, 831);
+            ClientSize = new Size(1330, 1008);
             Controls.Add(guna2GroupBox1);
             Font = new Font("Manrope", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ForeColor = SystemColors.ControlText;
@@ -263,6 +263,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             WindowState = FormWindowState.Maximized;
+            Load += Login_Load;
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
             ResumeLayout(false);

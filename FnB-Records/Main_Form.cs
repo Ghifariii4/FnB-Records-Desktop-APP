@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace FnB_Records
 {
-    public partial class Login : Form
+    public partial class Main_Form : Form
     {
-        public Login()
+        public Main_Form()
         {
             InitializeComponent();
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void btnExitApp_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void gbStatusRole_Click(object sender, EventArgs e)
         {
 
         }

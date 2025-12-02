@@ -73,6 +73,16 @@ namespace FnB_Records.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Blue_and_White_Modern_Login_and_Sign_up_Website_Page_UI_Desktop_Prototype {
+            get {
+                object obj = ResourceManager.GetObject("Blue and White Modern Login and Sign-up Website Page UI Desktop Prototype", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_Fnb_Records {
             get {
                 object obj = ResourceManager.GetObject("Logo Fnb_Records", resourceCulture);
@@ -86,6 +96,16 @@ namespace FnB_Records.Properties {
         internal static System.Drawing.Bitmap Logo_FnB_Records_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("Logo_FnB_Records-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mahkota {
+            get {
+                object obj = ResourceManager.GetObject("mahkota", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -3,24 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\main_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:main_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\main_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:main_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 448,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,13 +74,51 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Login.cs",
+              "RelativeToolTip": "Login.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T08:04:30.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Main_Form.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Main_Form.cs",
+              "RelativeDocumentMoniker": "Main_Form.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Main_Form.cs",
+              "RelativeToolTip": "Main_Form.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAcwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T06:42:58.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Main_Form.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Main_Form.cs",
+              "RelativeDocumentMoniker": "Main_Form.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Main_Form.cs [Design]",
+              "RelativeToolTip": "Main_Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T06:27:55.146Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-02T02:32:00.02Z",
               "EditorCaption": ""
@@ -88,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "Register.cs [Design]",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Register.cs",
               "RelativeDocumentMoniker": "Register.cs",
@@ -112,7 +162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",

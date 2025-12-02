@@ -11,7 +11,7 @@ namespace FnB_Records
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Register());
+            Application.Run(new Main_Form());
         }
     }
 }
