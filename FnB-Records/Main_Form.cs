@@ -26,5 +26,32 @@ namespace FnB_Records
         {
 
         }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void navigationControl(UserControl uc)
+        {
+            uc.Dock = DockStyle.Fill;
+            paneluc.Controls.Clear();
+            paneluc.Controls.Add(uc);
+            uc.BringToFront();
+
+        }
+
+        private void guna2Button22_Click(object sender, EventArgs e)
+        {
+            UCDashboard dashboard = new UCDashboard();
+            navigationControl(dashboard);
+        }
+
+        private void Main_Form_Load(object sender, EventArgs e)
+        {
+            UCDashboard uc = new UCDashboard();
+            navigationControl(uc);
+            btdashboard.Checked = true;
+        }
     }
 }
