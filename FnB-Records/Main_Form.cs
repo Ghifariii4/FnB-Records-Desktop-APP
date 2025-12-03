@@ -53,5 +53,17 @@ namespace FnB_Records
             navigationControl(uc);
             btdashboard.Checked = true;
         }
+
+        private void btVendor_Click(object sender, EventArgs e)
+        {
+            UC_Vendor vendor = new UC_Vendor();
+            navigationControl(vendor);
+        }
+
+        private void btBahanBaku_Click(object sender, EventArgs e)
+        {
+            UC_BahanBaku bahanBaku = new UC_BahanBaku();
+            navigationControl(bahanBaku);
+        }
     }
 }
