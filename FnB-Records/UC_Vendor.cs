@@ -26,5 +26,15 @@ namespace FnB_Records
         {
 
         }
+
+        private void btnSimpanPopUp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTambahVendor_Click(object sender, EventArgs e)
+        {
+            gbVendorPopUp.Visible = true;
+        }
     }
 }

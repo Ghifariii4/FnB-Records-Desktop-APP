@@ -63,6 +63,16 @@ namespace FnB_Records.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_button_icon_putih {
+            get {
+                object obj = ResourceManager.GetObject("add-button-icon-putih", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bg_login_register {
             get {
                 object obj = ResourceManager.GetObject("bg-login-register", resourceCulture);
@@ -96,6 +106,16 @@ namespace FnB_Records.Properties {
         internal static System.Drawing.Bitmap Dashboard_Logo_Hitam {
             get {
                 object obj = ResourceManager.GetObject("Dashboard-Logo-Hitam", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exit_icon_hitam {
+            get {
+                object obj = ResourceManager.GetObject("exit-icon-hitam", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
