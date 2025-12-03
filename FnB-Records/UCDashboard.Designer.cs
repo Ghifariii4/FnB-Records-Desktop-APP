@@ -150,11 +150,11 @@
             guna2GroupBox2.ForeColor = Color.Transparent;
             guna2GroupBox2.Location = new Point(1400, 32);
             guna2GroupBox2.Name = "guna2GroupBox2";
-            guna2GroupBox2.ShadowDecoration.BorderRadius = 20;
+            guna2GroupBox2.ShadowDecoration.BorderRadius = 8;
             guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2GroupBox2.ShadowDecoration.Depth = 20;
             guna2GroupBox2.ShadowDecoration.Enabled = true;
-            guna2GroupBox2.ShadowDecoration.Shadow = new Padding(0, 3, 10, 10);
+            guna2GroupBox2.ShadowDecoration.Shadow = new Padding(0, 3, 5, 5);
             guna2GroupBox2.Size = new Size(125, 42);
             guna2GroupBox2.TabIndex = 9;
             guna2GroupBox2.Text = "guna2GroupBox4";
@@ -199,10 +199,11 @@
             gbStatusRole.ForeColor = Color.Transparent;
             gbStatusRole.Location = new Point(1261, 33);
             gbStatusRole.Name = "gbStatusRole";
-            gbStatusRole.ShadowDecoration.BorderRadius = 20;
+            gbStatusRole.ShadowDecoration.BorderRadius = 8;
             gbStatusRole.ShadowDecoration.CustomizableEdges = customizableEdges8;
             gbStatusRole.ShadowDecoration.Depth = 20;
-            gbStatusRole.ShadowDecoration.Shadow = new Padding(0, 3, 10, 10);
+            gbStatusRole.ShadowDecoration.Enabled = true;
+            gbStatusRole.ShadowDecoration.Shadow = new Padding(0, 3, 5, 5);
             gbStatusRole.Size = new Size(116, 42);
             gbStatusRole.TabIndex = 5;
             gbStatusRole.Text = "guna2GroupBox4";
@@ -235,6 +236,7 @@
             // guna2GroupBox3
             // 
             guna2GroupBox3.BackColor = Color.Transparent;
+            guna2GroupBox3.BorderColor = Color.DimGray;
             guna2GroupBox3.BorderRadius = 15;
             guna2GroupBox3.Controls.Add(guna2PictureBox3);
             guna2GroupBox3.Controls.Add(label5);
