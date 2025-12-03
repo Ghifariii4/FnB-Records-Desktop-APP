@@ -17,6 +17,8 @@ namespace FnB_Records
             InitializeComponent();
         }
 
+
+
         private void guna2GroupBox2_Click(object sender, EventArgs e)
         {
 
@@ -35,6 +37,11 @@ namespace FnB_Records
         private void btnTambahVendor_Click(object sender, EventArgs e)
         {
             gbVendorPopUp.Visible = true;
+        }
+
+        private void btnClosePopUpVendor_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

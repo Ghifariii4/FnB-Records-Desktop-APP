@@ -104,7 +104,7 @@
             guna2GroupBox1.Location = new Point(12, 13);
             guna2GroupBox1.Name = "guna2GroupBox1";
             guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2GroupBox1.Size = new Size(1186, 99);
+            guna2GroupBox1.Size = new Size(1590, 99);
             guna2GroupBox1.TabIndex = 5;
             // 
             // btnTambahVendor
@@ -123,7 +123,7 @@
             btnTambahVendor.ImageAlign = HorizontalAlignment.Left;
             btnTambahVendor.ImageOffset = new Point(5, 0);
             btnTambahVendor.ImageSize = new Size(30, 20);
-            btnTambahVendor.Location = new Point(993, 0);
+            btnTambahVendor.Location = new Point(1397, 0);
             btnTambahVendor.Name = "btnTambahVendor";
             btnTambahVendor.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnTambahVendor.Size = new Size(193, 48);
@@ -175,7 +175,7 @@
             guna2GroupBox2.ShadowDecoration.Depth = 3;
             guna2GroupBox2.ShadowDecoration.Enabled = true;
             guna2GroupBox2.ShadowDecoration.Shadow = new Padding(10);
-            guna2GroupBox2.Size = new Size(1186, 364);
+            guna2GroupBox2.Size = new Size(1590, 364);
             guna2GroupBox2.TabIndex = 7;
             guna2GroupBox2.Click += guna2GroupBox2_Click;
             // 
@@ -257,7 +257,7 @@
             guna2GroupBox3.ShadowDecoration.Depth = 0;
             guna2GroupBox3.ShadowDecoration.Enabled = true;
             guna2GroupBox3.ShadowDecoration.Shadow = new Padding(10);
-            guna2GroupBox3.Size = new Size(1127, 50);
+            guna2GroupBox3.Size = new Size(1531, 50);
             guna2GroupBox3.TabIndex = 9;
             // 
             // guna2Button1
@@ -304,7 +304,7 @@
             txtCariVendor.SelectedText = "";
             txtCariVendor.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtCariVendor.ShadowDecoration.Depth = 0;
-            txtCariVendor.Size = new Size(1049, 37);
+            txtCariVendor.Size = new Size(1453, 37);
             txtCariVendor.TabIndex = 9;
             // 
             // gbVendorPopUp
@@ -314,13 +314,13 @@
             gbVendorPopUp.Controls.Add(btnBatalPopUp);
             gbVendorPopUp.Controls.Add(btnSimpanPopUp);
             gbVendorPopUp.Controls.Add(guna2GroupBox4);
-            gbVendorPopUp.CustomBorderColor = Color.Transparent;
+            gbVendorPopUp.CustomBorderColor = Color.White;
             gbVendorPopUp.CustomBorderThickness = new Padding(0);
             gbVendorPopUp.CustomizableEdges = customizableEdges27;
             gbVendorPopUp.FillColor = Color.FromArgb(249, 247, 245);
             gbVendorPopUp.Font = new Font("Segoe UI", 9F);
             gbVendorPopUp.ForeColor = Color.FromArgb(125, 137, 149);
-            gbVendorPopUp.Location = new Point(385, 95);
+            gbVendorPopUp.Location = new Point(665, 97);
             gbVendorPopUp.Name = "gbVendorPopUp";
             gbVendorPopUp.ShadowDecoration.BorderRadius = 15;
             gbVendorPopUp.ShadowDecoration.CustomizableEdges = customizableEdges28;
@@ -425,6 +425,7 @@
             btnClosePopUpVendor.ShadowDecoration.Depth = 4;
             btnClosePopUpVendor.Size = new Size(46, 41);
             btnClosePopUpVendor.TabIndex = 15;
+            btnClosePopUpVendor.Click += btnClosePopUpVendor_Click;
             // 
             // label7
             // 
@@ -451,6 +452,7 @@
             txtInputAlamat.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtInputAlamat.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtInputAlamat.Font = new Font("Manrope", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtInputAlamat.ForeColor = Color.FromArgb(45, 45, 45);
             txtInputAlamat.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtInputAlamat.Location = new Point(0, 306);
             txtInputAlamat.Margin = new Padding(4);
@@ -488,6 +490,7 @@
             txtInputKontak.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtInputKontak.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtInputKontak.Font = new Font("Manrope", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtInputKontak.ForeColor = Color.FromArgb(45, 45, 45);
             txtInputKontak.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtInputKontak.Location = new Point(0, 221);
             txtInputKontak.Margin = new Padding(4);
@@ -524,6 +527,7 @@
             txtInputNamaVendor.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtInputNamaVendor.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtInputNamaVendor.Font = new Font("Manrope", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtInputNamaVendor.ForeColor = Color.FromArgb(45, 45, 45);
             txtInputNamaVendor.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtInputNamaVendor.Location = new Point(0, 137);
             txtInputNamaVendor.Margin = new Padding(4);
@@ -567,7 +571,7 @@
             Controls.Add(guna2GroupBox1);
             Controls.Add(guna2GroupBox2);
             Name = "UC_Vendor";
-            Size = new Size(1210, 710);
+            Size = new Size(1616, 1027);
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
             guna2GroupBox2.ResumeLayout(false);
