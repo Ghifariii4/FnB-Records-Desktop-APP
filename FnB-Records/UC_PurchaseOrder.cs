@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace FnB_Records
 {
-    public partial class UC_Resep : UserControl
+    public partial class UC_PurchaseOrder : UserControl
     {
-        public UC_Resep()
+        public UC_PurchaseOrder()
         {
             InitializeComponent();
-        }
-
-        private void btTambahResep_Click(object sender, EventArgs e)
-        {
-            gbResepPopUp.Visible = true;
         }
     }
 }
