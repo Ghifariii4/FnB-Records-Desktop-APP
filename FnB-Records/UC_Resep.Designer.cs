@@ -412,7 +412,6 @@
             cbSatuan.Font = new Font("Manrope", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cbSatuan.ForeColor = Color.FromArgb(45, 45, 45);
             cbSatuan.ItemHeight = 30;
-            cbSatuan.Items.AddRange(new object[] { "Kilogram (kg)", "Gram (g)", "Liter (L)", "Mililiter (mL)", "Pieces (pcs)", "Pack", "Box" });
             cbSatuan.Location = new Point(3, 456);
             cbSatuan.Name = "cbSatuan";
             cbSatuan.ShadowDecoration.CustomizableEdges = customizableEdges10;
@@ -547,6 +546,7 @@
             btnClosePopUpBahanBaku.ShadowDecoration.Depth = 4;
             btnClosePopUpBahanBaku.Size = new Size(46, 41);
             btnClosePopUpBahanBaku.TabIndex = 15;
+            btnClosePopUpBahanBaku.Click += btnClosePopUpBahanBaku_Click;
             // 
             // label6
             // 

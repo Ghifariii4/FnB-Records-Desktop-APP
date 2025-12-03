@@ -41,7 +41,7 @@ namespace FnB_Records
 
         private void btnClosePopUpVendor_Click(object sender, EventArgs e)
         {
-
+            gbVendorPopUp.Visible = false;
         }
     }
 }

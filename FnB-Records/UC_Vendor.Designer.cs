@@ -214,7 +214,7 @@
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
             dgvDataVendor.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvDataVendor.RowHeadersVisible = false;
-            dgvDataVendor.Size = new Size(1124, 207);
+            dgvDataVendor.Size = new Size(1531, 207);
             dgvDataVendor.TabIndex = 10;
             dgvDataVendor.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvDataVendor.ThemeStyle.AlternatingRowsStyle.Font = null;
