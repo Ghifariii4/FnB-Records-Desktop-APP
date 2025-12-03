@@ -19,5 +19,11 @@
     <Compile Update="UCDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UC_Vendor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Vendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
