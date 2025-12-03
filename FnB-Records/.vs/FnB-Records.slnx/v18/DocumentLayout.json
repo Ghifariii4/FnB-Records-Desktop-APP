@@ -3,68 +3,72 @@
   "WorkspaceRootPath": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\uc_purchaseorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_purchaseorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\main_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:main_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\uc_resep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\uc_resep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_resep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\uc_penjualan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_penjualan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\uc_purchaseorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_purchaseorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\uc_bahanbaku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_bahanbaku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\uc_bahanbaku.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_bahanbaku.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\main_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:main_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\uc_resep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_resep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\uc_bahanbaku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_bahanbaku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\main_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:main_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\uc_bahanbaku.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_bahanbaku.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\uc_vendor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_vendor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\main_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:main_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\uc_vendor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_vendor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\main_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:main_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\uc_vendor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_vendor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\uc_bahanbaku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_bahanbaku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\uc_bahanbaku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_bahanbaku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\uc_purchaseorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_purchaseorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\uc_resep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_resep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\user\\source\\repos\\fnb-records-desktop-app\\fnb-records\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,11 +90,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 448,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 21,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "Login.cs [Design]",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Login.cs",
               "RelativeDocumentMoniker": "Login.cs",
@@ -98,7 +102,8 @@
               "RelativeToolTip": "Login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-02T02:18:10.607Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -111,6 +116,18 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-03T05:48:59.054Z",
               "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UC_Penjualan.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_Penjualan.cs",
+              "RelativeDocumentMoniker": "UC_Penjualan.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_Penjualan.cs [Design]",
+              "RelativeToolTip": "UC_Penjualan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T07:49:03.512Z",
               "EditorCaption": " [Design]"
             },
             {
@@ -143,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 13,
               "Title": "UC_PurchaseOrder.cs [Design]",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_PurchaseOrder.cs",
               "RelativeDocumentMoniker": "UC_PurchaseOrder.cs",
@@ -155,32 +172,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UC_PurchaseOrder.cs",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_PurchaseOrder.cs",
               "RelativeDocumentMoniker": "UC_PurchaseOrder.cs",
               "ToolTip": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_PurchaseOrder.cs",
               "RelativeToolTip": "UC_PurchaseOrder.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAiwBEAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAkwBoAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-03T06:00:34.963Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "UC_Resep.cs",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_Resep.cs",
               "RelativeDocumentMoniker": "UC_Resep.cs",
               "ToolTip": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_Resep.cs",
               "RelativeToolTip": "UC_Resep.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAswBUAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAkwBoAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T05:42:25.922Z"
+              "WhenOpened": "2025-12-03T05:42:25.922Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "UC_BahanBaku.cs [Design]",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_BahanBaku.cs",
               "RelativeDocumentMoniker": "UC_BahanBaku.cs",
@@ -192,7 +210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -204,44 +222,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Main_Form.cs [Design]",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Main_Form.cs",
               "RelativeDocumentMoniker": "Main_Form.cs",
               "ToolTip": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Main_Form.cs [Design]",
               "RelativeToolTip": "Main_Form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T06:27:55.146Z"
+              "WhenOpened": "2025-12-02T06:27:55.146Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "UC_BahanBaku.cs",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_BahanBaku.cs",
               "RelativeDocumentMoniker": "UC_BahanBaku.cs",
               "ToolTip": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_BahanBaku.cs",
               "RelativeToolTip": "UC_BahanBaku.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAASwCkAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAswC0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-03T03:03:38.044Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 8,
               "Title": "UC_Vendor.cs",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_Vendor.cs",
               "RelativeDocumentMoniker": "UC_Vendor.cs",
               "ToolTip": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_Vendor.cs",
               "RelativeToolTip": "UC_Vendor.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAA5wCsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAA7wCsAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-03T00:48:24.96Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 4,
               "Title": "UC_BahanBaku.Designer.cs",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_BahanBaku.Designer.cs",
               "RelativeDocumentMoniker": "UC_BahanBaku.Designer.cs",
@@ -254,42 +273,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 7,
               "Title": "UC_Vendor.cs [Design]",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_Vendor.cs",
               "RelativeDocumentMoniker": "UC_Vendor.cs",
               "ToolTip": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_Vendor.cs [Design]",
               "RelativeToolTip": "UC_Vendor.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T00:30:08.65Z"
+              "WhenOpened": "2025-12-03T00:30:08.65Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 6,
               "Title": "Main_Form.cs",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Main_Form.cs",
               "RelativeDocumentMoniker": "Main_Form.cs",
               "ToolTip": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Main_Form.cs",
               "RelativeToolTip": "Main_Form.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAiwDoAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAiwE0AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T06:42:58.519Z"
+              "WhenOpened": "2025-12-02T06:42:58.519Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 0,
               "Title": "Main_Form.Designer.cs",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Main_Form.Designer.cs",
               "RelativeDocumentMoniker": "Main_Form.Designer.cs",
               "ToolTip": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Main_Form.Designer.cs",
               "RelativeToolTip": "Main_Form.Designer.cs",
-              "ViewState": "AgIAAKcBAAAAAAAAAAAcwLoBAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAAUDAAAAAAAAAAAgwB0DAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T02:45:50.381Z"
+              "WhenOpened": "2025-12-03T02:45:50.381Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "Register.cs [Design]",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Register.cs",
               "RelativeDocumentMoniker": "Register.cs",
@@ -300,18 +322,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Dashboard.cs [Design]",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Dashboard.cs",
               "RelativeDocumentMoniker": "Dashboard.cs",
               "ToolTip": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Dashboard.cs [Design]",
               "RelativeToolTip": "Dashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T10:36:24.351Z"
+              "WhenOpened": "2025-12-02T10:36:24.351Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Login.cs",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Login.cs",
               "RelativeDocumentMoniker": "Login.cs",
@@ -323,7 +346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Dashboard.cs",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Dashboard.cs",
               "RelativeDocumentMoniker": "Dashboard.cs",
@@ -335,7 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Register.cs",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Register.cs",
               "RelativeDocumentMoniker": "Register.cs",

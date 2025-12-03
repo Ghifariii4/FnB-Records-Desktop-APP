@@ -225,29 +225,28 @@
             guna2DataGridView3 = new Guna.UI2.WinForms.Guna2DataGridView();
             guna2GroupBox11 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2Button20 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button21 = new Guna.UI2.WinForms.Guna2Button();
+            btBuatPOBaru = new Guna.UI2.WinForms.Guna2Button();
             guna2GroupBox12 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
-            gbResepPopUp = new Guna.UI2.WinForms.Guna2GroupBox();
+            gbPopUpPO = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2GroupBox13 = new Guna.UI2.WinForms.Guna2GroupBox();
             label19 = new Label();
             label21 = new Label();
             label24 = new Label();
             guna2GroupBox14 = new Guna.UI2.WinForms.Guna2GroupBox();
-            guna2TextBox11 = new Guna.UI2.WinForms.Guna2TextBox();
+            txtInputAlamat = new Guna.UI2.WinForms.Guna2TextBox();
+            label13 = new Label();
             guna2TextBox13 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Button22 = new Guna.UI2.WinForms.Guna2Button();
             guna2TextBox12 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2ComboBox5 = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2ComboBox4 = new Guna.UI2.WinForms.Guna2ComboBox();
-            label17 = new Label();
-            btnClosePopUpBahanBaku = new Guna.UI2.WinForms.Guna2Button();
+            btnClosePopUpPO = new Guna.UI2.WinForms.Guna2Button();
             label25 = new Label();
             label26 = new Label();
             label27 = new Label();
             label28 = new Label();
             guna2GroupBox15 = new Guna.UI2.WinForms.Guna2GroupBox();
-            label13 = new Label();
             guna2GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDataVendor).BeginInit();
             guna2GroupBox3.SuspendLayout();
@@ -264,7 +263,7 @@
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView3).BeginInit();
             guna2GroupBox11.SuspendLayout();
             guna2GroupBox12.SuspendLayout();
-            gbResepPopUp.SuspendLayout();
+            gbPopUpPO.SuspendLayout();
             guna2GroupBox13.SuspendLayout();
             guna2GroupBox14.SuspendLayout();
             SuspendLayout();
@@ -1570,7 +1569,7 @@
             guna2Button18.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button18.ForeColor = Color.FromArgb(45, 45, 45);
             guna2Button18.ImageSize = new Size(30, 20);
-            guna2Button18.Location = new Point(320, 777);
+            guna2Button18.Location = new Point(323, 597);
             guna2Button18.Name = "guna2Button18";
             guna2Button18.ShadowDecoration.BorderRadius = 10;
             guna2Button18.ShadowDecoration.CustomizableEdges = customizableEdges82;
@@ -1595,7 +1594,7 @@
             guna2Button19.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button19.ForeColor = Color.White;
             guna2Button19.ImageSize = new Size(30, 20);
-            guna2Button19.Location = new Point(413, 777);
+            guna2Button19.Location = new Point(416, 597);
             guna2Button19.Name = "guna2Button19";
             guna2Button19.ShadowDecoration.BorderRadius = 10;
             guna2Button19.ShadowDecoration.CustomizableEdges = customizableEdges84;
@@ -1759,36 +1758,37 @@
             guna2Button20.TabIndex = 7;
             guna2Button20.TextAlign = HorizontalAlignment.Left;
             // 
-            // guna2Button21
+            // btBuatPOBaru
             // 
-            guna2Button21.BorderRadius = 10;
-            guna2Button21.Cursor = Cursors.Hand;
-            guna2Button21.CustomizableEdges = customizableEdges91;
-            guna2Transition1.SetDecoration(guna2Button21, Guna.UI2.AnimatorNS.DecorationType.None);
-            guna2Button21.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button21.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button21.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button21.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button21.FillColor = Color.FromArgb(45, 45, 45);
-            guna2Button21.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button21.ForeColor = Color.White;
-            guna2Button21.Image = Properties.Resources.add_button_icon_putih;
-            guna2Button21.ImageAlign = HorizontalAlignment.Left;
-            guna2Button21.ImageOffset = new Point(5, 0);
-            guna2Button21.ImageSize = new Size(30, 20);
-            guna2Button21.Location = new Point(1414, 0);
-            guna2Button21.Name = "guna2Button21";
-            guna2Button21.ShadowDecoration.CustomizableEdges = customizableEdges92;
-            guna2Button21.Size = new Size(176, 48);
-            guna2Button21.TabIndex = 6;
-            guna2Button21.Text = "Buat PO Baru";
-            guna2Button21.TextAlign = HorizontalAlignment.Left;
-            guna2Button21.TextOffset = new Point(5, 0);
+            btBuatPOBaru.BorderRadius = 10;
+            btBuatPOBaru.Cursor = Cursors.Hand;
+            btBuatPOBaru.CustomizableEdges = customizableEdges91;
+            guna2Transition1.SetDecoration(btBuatPOBaru, Guna.UI2.AnimatorNS.DecorationType.None);
+            btBuatPOBaru.DisabledState.BorderColor = Color.DarkGray;
+            btBuatPOBaru.DisabledState.CustomBorderColor = Color.DarkGray;
+            btBuatPOBaru.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btBuatPOBaru.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btBuatPOBaru.FillColor = Color.FromArgb(45, 45, 45);
+            btBuatPOBaru.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btBuatPOBaru.ForeColor = Color.White;
+            btBuatPOBaru.Image = Properties.Resources.add_button_icon_putih;
+            btBuatPOBaru.ImageAlign = HorizontalAlignment.Left;
+            btBuatPOBaru.ImageOffset = new Point(5, 0);
+            btBuatPOBaru.ImageSize = new Size(30, 20);
+            btBuatPOBaru.Location = new Point(1414, 0);
+            btBuatPOBaru.Name = "btBuatPOBaru";
+            btBuatPOBaru.ShadowDecoration.CustomizableEdges = customizableEdges92;
+            btBuatPOBaru.Size = new Size(176, 48);
+            btBuatPOBaru.TabIndex = 6;
+            btBuatPOBaru.Text = "Buat PO Baru";
+            btBuatPOBaru.TextAlign = HorizontalAlignment.Left;
+            btBuatPOBaru.TextOffset = new Point(5, 0);
+            btBuatPOBaru.Click += btBuatPOBaru_Click;
             // 
             // guna2GroupBox12
             // 
             guna2GroupBox12.BorderColor = Color.Transparent;
-            guna2GroupBox12.Controls.Add(guna2Button21);
+            guna2GroupBox12.Controls.Add(btBuatPOBaru);
             guna2GroupBox12.Controls.Add(label15);
             guna2GroupBox12.Controls.Add(label16);
             guna2GroupBox12.CustomBorderColor = Color.Transparent;
@@ -1823,30 +1823,30 @@
             animation1.TransparencyCoeff = 0F;
             guna2Transition1.DefaultAnimation = animation1;
             // 
-            // gbResepPopUp
+            // gbPopUpPO
             // 
-            gbResepPopUp.BackColor = Color.Transparent;
-            gbResepPopUp.BorderRadius = 15;
-            gbResepPopUp.Controls.Add(guna2GroupBox13);
-            gbResepPopUp.Controls.Add(guna2GroupBox14);
-            gbResepPopUp.Controls.Add(guna2Button18);
-            gbResepPopUp.Controls.Add(guna2Button19);
-            gbResepPopUp.CustomBorderColor = Color.White;
-            gbResepPopUp.CustomBorderThickness = new Padding(0);
-            gbResepPopUp.CustomizableEdges = customizableEdges115;
-            guna2Transition1.SetDecoration(gbResepPopUp, Guna.UI2.AnimatorNS.DecorationType.None);
-            gbResepPopUp.FillColor = Color.FromArgb(249, 247, 245);
-            gbResepPopUp.Font = new Font("Segoe UI", 9F);
-            gbResepPopUp.ForeColor = Color.FromArgb(125, 137, 149);
-            gbResepPopUp.Location = new Point(604, 99);
-            gbResepPopUp.Name = "gbResepPopUp";
-            gbResepPopUp.ShadowDecoration.BorderRadius = 15;
-            gbResepPopUp.ShadowDecoration.CustomizableEdges = customizableEdges116;
-            gbResepPopUp.ShadowDecoration.Depth = 10;
-            gbResepPopUp.ShadowDecoration.Shadow = new Padding(0, 10, 10, 10);
-            gbResepPopUp.Size = new Size(540, 873);
-            gbResepPopUp.TabIndex = 20;
-            gbResepPopUp.Visible = false;
+            gbPopUpPO.BackColor = Color.Transparent;
+            gbPopUpPO.BorderRadius = 15;
+            gbPopUpPO.Controls.Add(guna2GroupBox13);
+            gbPopUpPO.Controls.Add(guna2GroupBox14);
+            gbPopUpPO.Controls.Add(guna2Button18);
+            gbPopUpPO.Controls.Add(guna2Button19);
+            gbPopUpPO.CustomBorderColor = Color.White;
+            gbPopUpPO.CustomBorderThickness = new Padding(0);
+            gbPopUpPO.CustomizableEdges = customizableEdges115;
+            guna2Transition1.SetDecoration(gbPopUpPO, Guna.UI2.AnimatorNS.DecorationType.None);
+            gbPopUpPO.FillColor = Color.FromArgb(249, 247, 245);
+            gbPopUpPO.Font = new Font("Segoe UI", 9F);
+            gbPopUpPO.ForeColor = Color.FromArgb(125, 137, 149);
+            gbPopUpPO.Location = new Point(604, 99);
+            gbPopUpPO.Name = "gbPopUpPO";
+            gbPopUpPO.ShadowDecoration.BorderRadius = 15;
+            gbPopUpPO.ShadowDecoration.CustomizableEdges = customizableEdges116;
+            gbPopUpPO.ShadowDecoration.Depth = 10;
+            gbPopUpPO.ShadowDecoration.Shadow = new Padding(0, 10, 10, 10);
+            gbPopUpPO.Size = new Size(540, 677);
+            gbPopUpPO.TabIndex = 20;
+            gbPopUpPO.Visible = false;
             // 
             // guna2GroupBox13
             // 
@@ -1909,15 +1909,14 @@
             guna2GroupBox14.BackColor = Color.Transparent;
             guna2GroupBox14.BorderRadius = 15;
             guna2GroupBox14.BorderThickness = 0;
+            guna2GroupBox14.Controls.Add(txtInputAlamat);
             guna2GroupBox14.Controls.Add(label13);
-            guna2GroupBox14.Controls.Add(guna2TextBox11);
             guna2GroupBox14.Controls.Add(guna2TextBox13);
             guna2GroupBox14.Controls.Add(guna2Button22);
             guna2GroupBox14.Controls.Add(guna2TextBox12);
             guna2GroupBox14.Controls.Add(guna2ComboBox5);
             guna2GroupBox14.Controls.Add(guna2ComboBox4);
-            guna2GroupBox14.Controls.Add(label17);
-            guna2GroupBox14.Controls.Add(btnClosePopUpBahanBaku);
+            guna2GroupBox14.Controls.Add(btnClosePopUpPO);
             guna2GroupBox14.Controls.Add(label25);
             guna2GroupBox14.Controls.Add(label26);
             guna2GroupBox14.Controls.Add(label27);
@@ -1932,35 +1931,49 @@
             guna2GroupBox14.Location = new Point(17, 16);
             guna2GroupBox14.Name = "guna2GroupBox14";
             guna2GroupBox14.ShadowDecoration.CustomizableEdges = customizableEdges114;
-            guna2GroupBox14.Size = new Size(504, 739);
+            guna2GroupBox14.Size = new Size(504, 575);
             guna2GroupBox14.TabIndex = 12;
             // 
-            // guna2TextBox11
+            // txtInputAlamat
             // 
-            guna2TextBox11.BorderColor = Color.Gainsboro;
-            guna2TextBox11.BorderRadius = 5;
-            guna2TextBox11.Cursor = Cursors.IBeam;
-            guna2TextBox11.CustomizableEdges = customizableEdges97;
-            guna2Transition1.SetDecoration(guna2TextBox11, Guna.UI2.AnimatorNS.DecorationType.None);
-            guna2TextBox11.DefaultText = "";
-            guna2TextBox11.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox11.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox11.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox11.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox11.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox11.Font = new Font("Manrope", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2TextBox11.ForeColor = Color.FromArgb(45, 45, 45);
-            guna2TextBox11.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox11.Location = new Point(0, 453);
-            guna2TextBox11.Margin = new Padding(4);
-            guna2TextBox11.Name = "guna2TextBox11";
-            guna2TextBox11.PlaceholderForeColor = Color.FromArgb(45, 45, 45);
-            guna2TextBox11.PlaceholderText = "0";
-            guna2TextBox11.SelectedText = "";
-            guna2TextBox11.ShadowDecoration.CustomizableEdges = customizableEdges98;
-            guna2TextBox11.ShadowDecoration.Depth = 0;
-            guna2TextBox11.Size = new Size(504, 46);
-            guna2TextBox11.TabIndex = 39;
+            txtInputAlamat.AllowDrop = true;
+            txtInputAlamat.BorderColor = Color.Gainsboro;
+            txtInputAlamat.BorderRadius = 5;
+            txtInputAlamat.Cursor = Cursors.IBeam;
+            txtInputAlamat.CustomizableEdges = customizableEdges97;
+            guna2Transition1.SetDecoration(txtInputAlamat, Guna.UI2.AnimatorNS.DecorationType.None);
+            txtInputAlamat.DefaultText = "";
+            txtInputAlamat.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtInputAlamat.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtInputAlamat.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtInputAlamat.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtInputAlamat.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtInputAlamat.Font = new Font("Manrope", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtInputAlamat.ForeColor = Color.FromArgb(45, 45, 45);
+            txtInputAlamat.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtInputAlamat.Location = new Point(0, 453);
+            txtInputAlamat.Margin = new Padding(4);
+            txtInputAlamat.Multiline = true;
+            txtInputAlamat.Name = "txtInputAlamat";
+            txtInputAlamat.PlaceholderForeColor = Color.FromArgb(45, 45, 45);
+            txtInputAlamat.PlaceholderText = "Catatan tambahan untuk PO ini";
+            txtInputAlamat.SelectedText = "";
+            txtInputAlamat.ShadowDecoration.CustomizableEdges = customizableEdges98;
+            txtInputAlamat.ShadowDecoration.Depth = 0;
+            txtInputAlamat.Size = new Size(504, 101);
+            txtInputAlamat.TabIndex = 46;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            guna2Transition1.SetDecoration(label13, Guna.UI2.AnimatorNS.DecorationType.None);
+            label13.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.ForeColor = Color.Black;
+            label13.Location = new Point(0, 427);
+            label13.Name = "label13";
+            label13.Size = new Size(73, 22);
+            label13.TabIndex = 21;
+            label13.Text = "Catatan";
             // 
             // guna2TextBox13
             // 
@@ -2051,7 +2064,6 @@
             guna2ComboBox5.Font = new Font("Manrope", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2ComboBox5.ForeColor = Color.FromArgb(45, 45, 45);
             guna2ComboBox5.ItemHeight = 30;
-            guna2ComboBox5.Items.AddRange(new object[] { "Kilogram (kg)", "Gram (g)", "Liter (L)", "Mililiter (mL)", "Pieces (pcs)", "Pack", "Box" });
             guna2ComboBox5.Location = new Point(3, 229);
             guna2ComboBox5.Name = "guna2ComboBox5";
             guna2ComboBox5.ShadowDecoration.CustomizableEdges = customizableEdges106;
@@ -2070,47 +2082,36 @@
             guna2ComboBox4.Font = new Font("Manrope", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2ComboBox4.ForeColor = Color.FromArgb(45, 45, 45);
             guna2ComboBox4.ItemHeight = 30;
-            guna2ComboBox4.Items.AddRange(new object[] { "Kilogram (kg)", "Gram (g)", "Liter (L)", "Mililiter (mL)", "Pieces (pcs)", "Pack", "Box" });
+            guna2ComboBox4.Items.AddRange(new object[] { "" });
             guna2ComboBox4.Location = new Point(0, 137);
             guna2ComboBox4.Name = "guna2ComboBox4";
             guna2ComboBox4.ShadowDecoration.CustomizableEdges = customizableEdges108;
             guna2ComboBox4.Size = new Size(504, 36);
             guna2ComboBox4.TabIndex = 41;
             // 
-            // label17
+            // btnClosePopUpPO
             // 
-            label17.AutoSize = true;
-            guna2Transition1.SetDecoration(label17, Guna.UI2.AnimatorNS.DecorationType.None);
-            label17.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label17.ForeColor = Color.Black;
-            label17.Location = new Point(0, 667);
-            label17.Name = "label17";
-            label17.Size = new Size(142, 22);
-            label17.TabIndex = 40;
-            label17.Text = "Harga Jual target";
-            // 
-            // btnClosePopUpBahanBaku
-            // 
-            btnClosePopUpBahanBaku.BorderRadius = 10;
-            btnClosePopUpBahanBaku.Cursor = Cursors.Hand;
-            btnClosePopUpBahanBaku.CustomizableEdges = customizableEdges109;
-            guna2Transition1.SetDecoration(btnClosePopUpBahanBaku, Guna.UI2.AnimatorNS.DecorationType.None);
-            btnClosePopUpBahanBaku.DisabledState.BorderColor = Color.DarkGray;
-            btnClosePopUpBahanBaku.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnClosePopUpBahanBaku.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnClosePopUpBahanBaku.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnClosePopUpBahanBaku.FillColor = Color.FromArgb(249, 247, 245);
-            btnClosePopUpBahanBaku.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnClosePopUpBahanBaku.ForeColor = Color.FromArgb(45, 45, 45);
-            btnClosePopUpBahanBaku.Image = Properties.Resources.exit_icon_hitam;
-            btnClosePopUpBahanBaku.ImageSize = new Size(30, 20);
-            btnClosePopUpBahanBaku.Location = new Point(458, 3);
-            btnClosePopUpBahanBaku.Name = "btnClosePopUpBahanBaku";
-            btnClosePopUpBahanBaku.ShadowDecoration.BorderRadius = 10;
-            btnClosePopUpBahanBaku.ShadowDecoration.CustomizableEdges = customizableEdges110;
-            btnClosePopUpBahanBaku.ShadowDecoration.Depth = 4;
-            btnClosePopUpBahanBaku.Size = new Size(46, 41);
-            btnClosePopUpBahanBaku.TabIndex = 15;
+            btnClosePopUpPO.BorderRadius = 10;
+            btnClosePopUpPO.Cursor = Cursors.Hand;
+            btnClosePopUpPO.CustomizableEdges = customizableEdges109;
+            guna2Transition1.SetDecoration(btnClosePopUpPO, Guna.UI2.AnimatorNS.DecorationType.None);
+            btnClosePopUpPO.DisabledState.BorderColor = Color.DarkGray;
+            btnClosePopUpPO.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnClosePopUpPO.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnClosePopUpPO.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnClosePopUpPO.FillColor = Color.FromArgb(249, 247, 245);
+            btnClosePopUpPO.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClosePopUpPO.ForeColor = Color.FromArgb(45, 45, 45);
+            btnClosePopUpPO.Image = Properties.Resources.exit_icon_hitam;
+            btnClosePopUpPO.ImageSize = new Size(30, 20);
+            btnClosePopUpPO.Location = new Point(458, 3);
+            btnClosePopUpPO.Name = "btnClosePopUpPO";
+            btnClosePopUpPO.ShadowDecoration.BorderRadius = 10;
+            btnClosePopUpPO.ShadowDecoration.CustomizableEdges = customizableEdges110;
+            btnClosePopUpPO.ShadowDecoration.Depth = 4;
+            btnClosePopUpPO.Size = new Size(46, 41);
+            btnClosePopUpPO.TabIndex = 15;
+            btnClosePopUpPO.Click += btnClosePopUpPO_Click;
             // 
             // label25
             // 
@@ -2177,24 +2178,12 @@
             guna2GroupBox15.Size = new Size(504, 114);
             guna2GroupBox15.TabIndex = 15;
             // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            guna2Transition1.SetDecoration(label13, Guna.UI2.AnimatorNS.DecorationType.None);
-            label13.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.ForeColor = Color.Black;
-            label13.Location = new Point(0, 427);
-            label13.Name = "label13";
-            label13.Size = new Size(73, 22);
-            label13.TabIndex = 21;
-            label13.Text = "Catatan";
-            // 
             // UC_PurchaseOrder
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(212, 122, 71);
-            Controls.Add(gbResepPopUp);
+            Controls.Add(gbPopUpPO);
             Controls.Add(guna2GroupBox10);
             Controls.Add(guna2GroupBox12);
             guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
@@ -2220,7 +2209,7 @@
             guna2GroupBox11.ResumeLayout(false);
             guna2GroupBox12.ResumeLayout(false);
             guna2GroupBox12.PerformLayout();
-            gbResepPopUp.ResumeLayout(false);
+            gbPopUpPO.ResumeLayout(false);
             guna2GroupBox13.ResumeLayout(false);
             guna2GroupBox13.PerformLayout();
             guna2GroupBox14.ResumeLayout(false);
@@ -2294,17 +2283,15 @@
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView3;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox11;
         private Guna.UI2.WinForms.Guna2Button guna2Button20;
-        private Guna.UI2.WinForms.Guna2Button guna2Button21;
+        private Guna.UI2.WinForms.Guna2Button btBuatPOBaru;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox12;
-        private Guna.UI2.WinForms.Guna2GroupBox gbResepPopUp;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox11;
+        private Guna.UI2.WinForms.Guna2GroupBox gbPopUpPO;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox13;
         private Label label19;
         private Label label21;
         private Label label24;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox14;
-        private Label label17;
-        private Guna.UI2.WinForms.Guna2Button btnClosePopUpBahanBaku;
+        private Guna.UI2.WinForms.Guna2Button btnClosePopUpPO;
         private Label label25;
         private Label label26;
         private Label label27;
@@ -2316,5 +2303,6 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox12;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox5;
         private Label label13;
+        private Guna.UI2.WinForms.Guna2TextBox txtInputAlamat;
     }
 }

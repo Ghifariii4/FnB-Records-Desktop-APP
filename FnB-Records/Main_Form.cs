@@ -71,5 +71,11 @@ namespace FnB_Records
             UC_Resep resep = new UC_Resep();
             navigationControl(resep);
         }
+
+        private void btPO_Click(object sender, EventArgs e)
+        {
+            UC_PurchaseOrder PO = new UC_PurchaseOrder();
+            navigationControl(PO);
+        }
     }
 }

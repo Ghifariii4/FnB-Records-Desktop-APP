@@ -81,7 +81,7 @@
             guna2Button13 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button17 = new Guna.UI2.WinForms.Guna2Button();
             btdashboard = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button18 = new Guna.UI2.WinForms.Guna2Button();
+            btPO = new Guna.UI2.WinForms.Guna2Button();
             guna2Button14 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button16 = new Guna.UI2.WinForms.Guna2Button();
             btBahanBaku = new Guna.UI2.WinForms.Guna2Button();
@@ -140,7 +140,7 @@
             guna2GroupBox4.Controls.Add(guna2Button13);
             guna2GroupBox4.Controls.Add(guna2Button17);
             guna2GroupBox4.Controls.Add(btdashboard);
-            guna2GroupBox4.Controls.Add(guna2Button18);
+            guna2GroupBox4.Controls.Add(btPO);
             guna2GroupBox4.Controls.Add(guna2Button14);
             guna2GroupBox4.Controls.Add(guna2Button16);
             guna2GroupBox4.Controls.Add(btBahanBaku);
@@ -322,35 +322,36 @@
             btdashboard.TextAlign = HorizontalAlignment.Right;
             btdashboard.Click += guna2Button22_Click;
             // 
-            // guna2Button18
+            // btPO
             // 
-            guna2Button18.Animated = true;
-            guna2Button18.AnimatedGIF = true;
-            guna2Button18.BorderRadius = 10;
-            guna2Button18.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            guna2Button18.CheckedState.FillColor = Color.FromArgb(212, 122, 71);
-            guna2Button18.CheckedState.ForeColor = Color.FromArgb(45, 45, 45);
-            guna2Button18.CheckedState.Image = (Image)resources.GetObject("resource.Image5");
-            guna2Button18.Cursor = Cursors.Hand;
-            guna2Button18.CustomizableEdges = customizableEdges11;
-            guna2Button18.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button18.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button18.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button18.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button18.FillColor = Color.FromArgb(45, 45, 45);
-            guna2Button18.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button18.ForeColor = Color.White;
-            guna2Button18.Image = (Image)resources.GetObject("guna2Button18.Image");
-            guna2Button18.ImageAlign = HorizontalAlignment.Right;
-            guna2Button18.ImageSize = new Size(30, 20);
-            guna2Button18.Location = new Point(14, 214);
-            guna2Button18.Name = "guna2Button18";
-            guna2Button18.RightToLeft = RightToLeft.Yes;
-            guna2Button18.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Button18.Size = new Size(246, 36);
-            guna2Button18.TabIndex = 29;
-            guna2Button18.Text = "              Purchase Order";
-            guna2Button18.TextAlign = HorizontalAlignment.Right;
+            btPO.Animated = true;
+            btPO.AnimatedGIF = true;
+            btPO.BorderRadius = 10;
+            btPO.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            btPO.CheckedState.FillColor = Color.FromArgb(212, 122, 71);
+            btPO.CheckedState.ForeColor = Color.FromArgb(45, 45, 45);
+            btPO.CheckedState.Image = (Image)resources.GetObject("resource.Image5");
+            btPO.Cursor = Cursors.Hand;
+            btPO.CustomizableEdges = customizableEdges11;
+            btPO.DisabledState.BorderColor = Color.DarkGray;
+            btPO.DisabledState.CustomBorderColor = Color.DarkGray;
+            btPO.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btPO.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btPO.FillColor = Color.FromArgb(45, 45, 45);
+            btPO.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btPO.ForeColor = Color.White;
+            btPO.Image = (Image)resources.GetObject("btPO.Image");
+            btPO.ImageAlign = HorizontalAlignment.Right;
+            btPO.ImageSize = new Size(30, 20);
+            btPO.Location = new Point(14, 214);
+            btPO.Name = "btPO";
+            btPO.RightToLeft = RightToLeft.Yes;
+            btPO.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btPO.Size = new Size(246, 36);
+            btPO.TabIndex = 29;
+            btPO.Text = "              Purchase Order";
+            btPO.TextAlign = HorizontalAlignment.Right;
+            btPO.Click += btPO_Click;
             // 
             // guna2Button14
             // 
@@ -724,10 +725,11 @@
             // paneluc
             // 
             paneluc.CustomizableEdges = customizableEdges43;
-            paneluc.Location = new Point(301, 53);
+            paneluc.Dock = DockStyle.Fill;
+            paneluc.Location = new Point(300, 53);
             paneluc.Name = "paneluc";
             paneluc.ShadowDecoration.CustomizableEdges = customizableEdges44;
-            paneluc.Size = new Size(1616, 1027);
+            paneluc.Size = new Size(1620, 1008);
             paneluc.TabIndex = 4;
             // 
             // Main_Form
@@ -792,7 +794,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button15;
         private Guna.UI2.WinForms.Guna2Button btResepMenu;
         private Guna.UI2.WinForms.Guna2Button guna2Button16;
-        private Guna.UI2.WinForms.Guna2Button guna2Button18;
+        private Guna.UI2.WinForms.Guna2Button btPO;
         private Guna.UI2.WinForms.Guna2Button guna2Button17;
     }
 }

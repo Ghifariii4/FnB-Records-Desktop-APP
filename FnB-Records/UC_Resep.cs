@@ -21,5 +21,10 @@ namespace FnB_Records
         {
             gbResepPopUp.Visible = true;
         }
+
+        private void btnClosePopUpBahanBaku_Click(object sender, EventArgs e)
+        {
+            gbResepPopUp.Visible = false;
+        }
     }
 }

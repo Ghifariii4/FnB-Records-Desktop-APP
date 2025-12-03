@@ -16,5 +16,15 @@ namespace FnB_Records
         {
             InitializeComponent();
         }
+
+        private void btBuatPOBaru_Click(object sender, EventArgs e)
+        {
+            gbPopUpPO.Visible = true;
+        }
+
+        private void btnClosePopUpPO_Click(object sender, EventArgs e)
+        {
+            gbPopUpPO.Visible = false;
+        }
     }
 }
