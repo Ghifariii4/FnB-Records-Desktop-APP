@@ -320,7 +320,7 @@
             gbVendorPopUp.FillColor = Color.FromArgb(249, 247, 245);
             gbVendorPopUp.Font = new Font("Segoe UI", 9F);
             gbVendorPopUp.ForeColor = Color.FromArgb(125, 137, 149);
-            gbVendorPopUp.Location = new Point(665, 97);
+            gbVendorPopUp.Location = new Point(615, 97);
             gbVendorPopUp.Name = "gbVendorPopUp";
             gbVendorPopUp.ShadowDecoration.BorderRadius = 15;
             gbVendorPopUp.ShadowDecoration.CustomizableEdges = customizableEdges28;

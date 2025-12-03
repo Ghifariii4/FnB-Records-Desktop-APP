@@ -25,11 +25,5 @@
     <Compile Update="UC_Vendor.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Vendor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Vendor_PopUp.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>
