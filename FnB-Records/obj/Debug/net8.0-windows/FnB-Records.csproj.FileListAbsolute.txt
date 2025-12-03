@@ -31,6 +31,7 @@ C:\Users\diana\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0
 C:\Users\diana\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\System.Management.dll
 C:\Users\diana\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\runtimes\win\lib\net7.0\System.Management.dll
 C:\Users\diana\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB-Records.csproj.AssemblyReference.cache
+C:\Users\diana\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.Form1.resources
 C:\Users\diana\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.Login.resources
 C:\Users\diana\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.Properties.Resources.resources
 C:\Users\diana\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.Register.resources
@@ -58,4 +59,7 @@ C:\Users\diana\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0
 C:\Users\diana\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UCDashboard.resources
 C:\Users\diana\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_BahanBaku.resources
 C:\Users\diana\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_Vendor.resources
-C:\Users\diana\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_Resep.resources
+C:\Users\diana\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.Vendor.resources
+C:\Users\diana\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.Vendor_PopUp.resources
+C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_Resep.resources
+C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_PurchaseOrder.resources

@@ -65,5 +65,11 @@ namespace FnB_Records
             UC_BahanBaku bahanBaku = new UC_BahanBaku();
             navigationControl(bahanBaku);
         }
+
+        private void btResepMenu_Click(object sender, EventArgs e)
+        {
+            UC_Resep resep = new UC_Resep();
+            navigationControl(resep);
+        }
     }
 }

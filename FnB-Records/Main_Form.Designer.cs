@@ -93,7 +93,7 @@
             guna2Button14 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button16 = new Guna.UI2.WinForms.Guna2Button();
             btBahanBaku = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button19 = new Guna.UI2.WinForms.Guna2Button();
+            btResepMenu = new Guna.UI2.WinForms.Guna2Button();
             guna2Button15 = new Guna.UI2.WinForms.Guna2Button();
             guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             lblEmail = new Label();
@@ -158,7 +158,7 @@
             guna2GroupBox4.Controls.Add(guna2Button14);
             guna2GroupBox4.Controls.Add(guna2Button16);
             guna2GroupBox4.Controls.Add(btBahanBaku);
-            guna2GroupBox4.Controls.Add(guna2Button19);
+            guna2GroupBox4.Controls.Add(btResepMenu);
             guna2GroupBox4.Controls.Add(guna2Button15);
             guna2GroupBox4.CustomBorderColor = Color.Transparent;
             guna2GroupBox4.CustomBorderThickness = new Padding(0, 0, 0, 1);
@@ -457,35 +457,36 @@
             btBahanBaku.TextAlign = HorizontalAlignment.Right;
             btBahanBaku.Click += btBahanBaku_Click;
             // 
-            // guna2Button19
+            // btResepMenu
             // 
-            guna2Button19.Animated = true;
-            guna2Button19.AnimatedGIF = true;
-            guna2Button19.BorderRadius = 10;
-            guna2Button19.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            guna2Button19.CheckedState.FillColor = Color.FromArgb(212, 122, 71);
-            guna2Button19.CheckedState.ForeColor = Color.FromArgb(45, 45, 45);
-            guna2Button19.CheckedState.Image = (Image)resources.GetObject("resource.Image9");
-            guna2Button19.Cursor = Cursors.Hand;
-            guna2Button19.CustomizableEdges = customizableEdges19;
-            guna2Button19.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button19.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button19.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button19.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button19.FillColor = Color.FromArgb(45, 45, 45);
-            guna2Button19.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button19.ForeColor = Color.White;
-            guna2Button19.Image = Properties.Resources._11;
-            guna2Button19.ImageAlign = HorizontalAlignment.Right;
-            guna2Button19.ImageSize = new Size(30, 20);
-            guna2Button19.Location = new Point(14, 172);
-            guna2Button19.Name = "guna2Button19";
-            guna2Button19.RightToLeft = RightToLeft.Yes;
-            guna2Button19.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2Button19.Size = new Size(246, 36);
-            guna2Button19.TabIndex = 28;
-            guna2Button19.Text = "              Resep Menu";
-            guna2Button19.TextAlign = HorizontalAlignment.Right;
+            btResepMenu.Animated = true;
+            btResepMenu.AnimatedGIF = true;
+            btResepMenu.BorderRadius = 10;
+            btResepMenu.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            btResepMenu.CheckedState.FillColor = Color.FromArgb(212, 122, 71);
+            btResepMenu.CheckedState.ForeColor = Color.FromArgb(45, 45, 45);
+            btResepMenu.CheckedState.Image = (Image)resources.GetObject("resource.Image9");
+            btResepMenu.Cursor = Cursors.Hand;
+            btResepMenu.CustomizableEdges = customizableEdges19;
+            btResepMenu.DisabledState.BorderColor = Color.DarkGray;
+            btResepMenu.DisabledState.CustomBorderColor = Color.DarkGray;
+            btResepMenu.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btResepMenu.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btResepMenu.FillColor = Color.FromArgb(45, 45, 45);
+            btResepMenu.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btResepMenu.ForeColor = Color.White;
+            btResepMenu.Image = Properties.Resources._11;
+            btResepMenu.ImageAlign = HorizontalAlignment.Right;
+            btResepMenu.ImageSize = new Size(30, 20);
+            btResepMenu.Location = new Point(14, 172);
+            btResepMenu.Name = "btResepMenu";
+            btResepMenu.RightToLeft = RightToLeft.Yes;
+            btResepMenu.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btResepMenu.Size = new Size(246, 36);
+            btResepMenu.TabIndex = 28;
+            btResepMenu.Text = "              Resep Menu";
+            btResepMenu.TextAlign = HorizontalAlignment.Right;
+            btResepMenu.Click += btResepMenu_Click;
             // 
             // guna2Button15
             // 
@@ -880,7 +881,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button14;
         private Guna.UI2.WinForms.Guna2Button btBahanBaku;
         private Guna.UI2.WinForms.Guna2Button guna2Button15;
-        private Guna.UI2.WinForms.Guna2Button guna2Button19;
+        private Guna.UI2.WinForms.Guna2Button btResepMenu;
         private Guna.UI2.WinForms.Guna2Button guna2Button16;
         private Guna.UI2.WinForms.Guna2Button guna2Button18;
         private Guna.UI2.WinForms.Guna2Button guna2Button17;
