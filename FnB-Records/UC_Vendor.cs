@@ -43,5 +43,10 @@ namespace FnB_Records
         {
             gbVendorPopUp.Visible = false;
         }
+
+        private void UC_Vendor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

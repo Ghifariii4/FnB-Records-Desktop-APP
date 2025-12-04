@@ -10,21 +10,21 @@ using System.Windows.Forms;
 
 namespace FnB_Records
 {
-    public partial class UC_Penjualan : UserControl
+    public partial class UC_Cabang : UserControl
     {
-        public UC_Penjualan()
+        public UC_Cabang()
         {
             InitializeComponent();
         }
 
-        private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void btnTambahVendor_Click(object sender, EventArgs e)
         {
-
+            gbCabangPopUp.Visible = true;
         }
 
-        private void btinputPenjualanPopUp_Click(object sender, EventArgs e)
+        private void btClosePopUpCabang_Click(object sender, EventArgs e)
         {
-            gbInputPenjualanPopUp.Visible = true;
+            gbCabangPopUp.Visible = false;
         }
     }
 }

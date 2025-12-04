@@ -83,5 +83,11 @@ namespace FnB_Records
             UC_Penjualan penjualan = new UC_Penjualan();
             navigationControl(penjualan);
         }
+
+        private void btCabang_Click(object sender, EventArgs e)
+        {
+            UC_Cabang cabang = new UC_Cabang();
+            navigationControl(cabang);
+        }
     }
 }

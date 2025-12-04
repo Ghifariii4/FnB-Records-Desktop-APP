@@ -26,5 +26,10 @@ namespace FnB_Records
         {
             gbResepPopUp.Visible = false;
         }
+
+        private void UC_Resep_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

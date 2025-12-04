@@ -640,11 +640,11 @@
             // 
             label2.AutoSize = true;
             guna2Transition1.SetDecoration(label2, Guna.UI2.AnimatorNS.DecorationType.None);
-            label2.Font = new Font("Inter", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(45, 45, 45);
             label2.Location = new Point(3, 48);
             label2.Name = "label2";
-            label2.Size = new Size(279, 22);
+            label2.Size = new Size(300, 23);
             label2.TabIndex = 2;
             label2.Text = "Kelola inventori dan harga bahan baku";
             // 
@@ -652,11 +652,11 @@
             // 
             label1.AutoSize = true;
             guna2Transition1.SetDecoration(label1, Guna.UI2.AnimatorNS.DecorationType.None);
-            label1.Font = new Font("Manrope ExtraBold", 26.2499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Manrope ExtraBold", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(328, 48);
+            label1.Size = new Size(355, 50);
             label1.TabIndex = 0;
             label1.Text = "Kelola Bahan Baku";
             // 
