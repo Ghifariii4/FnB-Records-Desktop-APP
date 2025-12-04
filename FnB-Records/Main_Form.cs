@@ -89,5 +89,11 @@ namespace FnB_Records
             UC_Cabang cabang = new UC_Cabang();
             navigationControl(cabang);
         }
+
+        private void btAnalisisBelanja_Click(object sender, EventArgs e)
+        {
+            UC_AnalisisBelanja analisisBelanja = new UC_AnalisisBelanja();
+            navigationControl(analisisBelanja);
+        }
     }
 }
