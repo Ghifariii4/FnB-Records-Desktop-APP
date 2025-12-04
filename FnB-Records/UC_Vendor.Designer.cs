@@ -136,22 +136,22 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Inter", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Inter", 12F);
             label2.ForeColor = Color.FromArgb(45, 45, 45);
             label2.Location = new Point(3, 48);
             label2.Name = "label2";
-            label2.Size = new Size(320, 22);
+            label2.Size = new Size(344, 23);
             label2.TabIndex = 2;
             label2.Text = "Kelola daftar vendor dan suplier bahan baku";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Manrope ExtraBold", 26.2499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Manrope ExtraBold", 27.75F, FontStyle.Bold);
             label1.ForeColor = Color.Black;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(253, 48);
+            label1.Size = new Size(270, 50);
             label1.TabIndex = 0;
             label1.Text = "Kelola Vendor";
             // 
@@ -572,6 +572,7 @@
             Controls.Add(guna2GroupBox2);
             Name = "UC_Vendor";
             Size = new Size(1616, 1027);
+            Load += UC_Vendor_Load;
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
             guna2GroupBox2.ResumeLayout(false);

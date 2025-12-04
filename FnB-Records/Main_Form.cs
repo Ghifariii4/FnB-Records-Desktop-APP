@@ -83,5 +83,24 @@ namespace FnB_Records
             UC_Penjualan penjualan = new UC_Penjualan();
             navigationControl(penjualan);
         }
+
+<<<<<<< Updated upstream
+        private void btCabang_Click(object sender, EventArgs e)
+        {
+            UC_Cabang cabang = new UC_Cabang();
+            navigationControl(cabang);
+=======
+        private void guna2Button15_Click(object sender, EventArgs e)
+        {
+            UC_Analisis analisis = new UC_Analisis();
+            navigationControl(analisis);
+>>>>>>> Stashed changes
+        }
+
+        private void btAnalisisBelanja_Click(object sender, EventArgs e)
+        {
+            UC_AnalisisBelanja analisisBelanja = new UC_AnalisisBelanja();
+            navigationControl(analisisBelanja);
+        }
     }
 }
