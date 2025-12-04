@@ -77,5 +77,11 @@ namespace FnB_Records
             UC_PurchaseOrder PO = new UC_PurchaseOrder();
             navigationControl(PO);
         }
+
+        private void btPenjualan_Click(object sender, EventArgs e)
+        {
+            UC_Penjualan penjualan = new UC_Penjualan();
+            navigationControl(penjualan);
+        }
     }
 }

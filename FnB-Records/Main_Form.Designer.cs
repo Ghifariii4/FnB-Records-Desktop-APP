@@ -79,7 +79,7 @@
             btVendor = new Guna.UI2.WinForms.Guna2Button();
             label6 = new Label();
             guna2Button13 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button17 = new Guna.UI2.WinForms.Guna2Button();
+            btPenjualan = new Guna.UI2.WinForms.Guna2Button();
             btdashboard = new Guna.UI2.WinForms.Guna2Button();
             btPO = new Guna.UI2.WinForms.Guna2Button();
             guna2Button14 = new Guna.UI2.WinForms.Guna2Button();
@@ -138,7 +138,7 @@
             guna2GroupBox4.Controls.Add(btVendor);
             guna2GroupBox4.Controls.Add(label6);
             guna2GroupBox4.Controls.Add(guna2Button13);
-            guna2GroupBox4.Controls.Add(guna2Button17);
+            guna2GroupBox4.Controls.Add(btPenjualan);
             guna2GroupBox4.Controls.Add(btdashboard);
             guna2GroupBox4.Controls.Add(btPO);
             guna2GroupBox4.Controls.Add(guna2Button14);
@@ -260,35 +260,36 @@
             guna2Button13.Text = "              Manajemen Inventori";
             guna2Button13.TextAlign = HorizontalAlignment.Right;
             // 
-            // guna2Button17
+            // btPenjualan
             // 
-            guna2Button17.Animated = true;
-            guna2Button17.AnimatedGIF = true;
-            guna2Button17.BorderRadius = 10;
-            guna2Button17.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            guna2Button17.CheckedState.FillColor = Color.FromArgb(212, 122, 71);
-            guna2Button17.CheckedState.ForeColor = Color.FromArgb(45, 45, 45);
-            guna2Button17.CheckedState.Image = (Image)resources.GetObject("resource.Image3");
-            guna2Button17.Cursor = Cursors.Hand;
-            guna2Button17.CustomizableEdges = customizableEdges7;
-            guna2Button17.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button17.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button17.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button17.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button17.FillColor = Color.FromArgb(45, 45, 45);
-            guna2Button17.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button17.ForeColor = Color.White;
-            guna2Button17.Image = (Image)resources.GetObject("guna2Button17.Image");
-            guna2Button17.ImageAlign = HorizontalAlignment.Right;
-            guna2Button17.ImageSize = new Size(30, 20);
-            guna2Button17.Location = new Point(14, 256);
-            guna2Button17.Name = "guna2Button17";
-            guna2Button17.RightToLeft = RightToLeft.Yes;
-            guna2Button17.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button17.Size = new Size(246, 36);
-            guna2Button17.TabIndex = 30;
-            guna2Button17.Text = "              Penjualan";
-            guna2Button17.TextAlign = HorizontalAlignment.Right;
+            btPenjualan.Animated = true;
+            btPenjualan.AnimatedGIF = true;
+            btPenjualan.BorderRadius = 10;
+            btPenjualan.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            btPenjualan.CheckedState.FillColor = Color.FromArgb(212, 122, 71);
+            btPenjualan.CheckedState.ForeColor = Color.FromArgb(45, 45, 45);
+            btPenjualan.CheckedState.Image = (Image)resources.GetObject("resource.Image3");
+            btPenjualan.Cursor = Cursors.Hand;
+            btPenjualan.CustomizableEdges = customizableEdges7;
+            btPenjualan.DisabledState.BorderColor = Color.DarkGray;
+            btPenjualan.DisabledState.CustomBorderColor = Color.DarkGray;
+            btPenjualan.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btPenjualan.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btPenjualan.FillColor = Color.FromArgb(45, 45, 45);
+            btPenjualan.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btPenjualan.ForeColor = Color.White;
+            btPenjualan.Image = (Image)resources.GetObject("btPenjualan.Image");
+            btPenjualan.ImageAlign = HorizontalAlignment.Right;
+            btPenjualan.ImageSize = new Size(30, 20);
+            btPenjualan.Location = new Point(14, 256);
+            btPenjualan.Name = "btPenjualan";
+            btPenjualan.RightToLeft = RightToLeft.Yes;
+            btPenjualan.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btPenjualan.Size = new Size(246, 36);
+            btPenjualan.TabIndex = 30;
+            btPenjualan.Text = "              Penjualan";
+            btPenjualan.TextAlign = HorizontalAlignment.Right;
+            btPenjualan.Click += btPenjualan_Click;
             // 
             // btdashboard
             // 
@@ -795,6 +796,6 @@
         private Guna.UI2.WinForms.Guna2Button btResepMenu;
         private Guna.UI2.WinForms.Guna2Button guna2Button16;
         private Guna.UI2.WinForms.Guna2Button btPO;
-        private Guna.UI2.WinForms.Guna2Button guna2Button17;
+        private Guna.UI2.WinForms.Guna2Button btPenjualan;
     }
 }

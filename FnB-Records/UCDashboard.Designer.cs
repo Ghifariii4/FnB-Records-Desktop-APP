@@ -69,30 +69,30 @@
             label4 = new Label();
             guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
+            label18 = new Label();
             label9 = new Label();
             guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             label5 = new Label();
             guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
+            label14 = new Label();
             label6 = new Label();
             label8 = new Label();
             guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             label7 = new Label();
             guna2GroupBox5 = new Guna.UI2.WinForms.Guna2GroupBox();
+            label19 = new Label();
             label10 = new Label();
             label11 = new Label();
             guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             label12 = new Label();
             guna2GroupBox6 = new Guna.UI2.WinForms.Guna2GroupBox();
+            label20 = new Label();
             label13 = new Label();
             guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             label15 = new Label();
             guna2GroupBox7 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
             label17 = new Label();
-            label18 = new Label();
-            label14 = new Label();
-            label19 = new Label();
-            label20 = new Label();
             guna2GroupBox1.SuspendLayout();
             guna2GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
@@ -275,6 +275,17 @@
             guna2GroupBox3.Size = new Size(355, 200);
             guna2GroupBox3.TabIndex = 1;
             // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Font = new Font("Inter Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label18.ForeColor = Color.LightGray;
+            label18.Location = new Point(21, 161);
+            label18.Name = "label18";
+            label18.Size = new Size(48, 17);
+            label18.TabIndex = 16;
+            label18.Text = "Hari ini";
+            // 
             // label9
             // 
             label9.AutoSize = true;
@@ -335,6 +346,17 @@
             guna2GroupBox4.Size = new Size(355, 200);
             guna2GroupBox4.TabIndex = 16;
             guna2GroupBox4.Click += guna2GroupBox4_Click;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label14.ForeColor = Color.LightGray;
+            label14.Location = new Point(21, 161);
+            label14.Name = "label14";
+            label14.Size = new Size(36, 17);
+            label14.TabIndex = 17;
+            label14.Text = "Total";
             // 
             // label6
             // 
@@ -407,6 +429,17 @@
             guna2GroupBox5.Size = new Size(355, 200);
             guna2GroupBox5.TabIndex = 17;
             // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label19.ForeColor = Color.LightGray;
+            label19.Location = new Point(20, 161);
+            label19.Name = "label19";
+            label19.Size = new Size(40, 17);
+            label19.TabIndex = 18;
+            label19.Text = "Profit";
+            // 
             // label10
             // 
             label10.AutoSize = true;
@@ -476,6 +509,17 @@
             guna2GroupBox6.ShadowDecoration.Shadow = new Padding(3, 1, 3, 5);
             guna2GroupBox6.Size = new Size(355, 200);
             guna2GroupBox6.TabIndex = 18;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label20.ForeColor = Color.LightGray;
+            label20.Location = new Point(31, 161);
+            label20.Name = "label20";
+            label20.Size = new Size(40, 17);
+            label20.TabIndex = 19;
+            label20.Text = "Profit";
             // 
             // label13
             // 
@@ -559,50 +603,6 @@
             label17.TabIndex = 12;
             label17.Text = "Menu Terlaris Hari Ini";
             // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Inter Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label18.ForeColor = Color.LightGray;
-            label18.Location = new Point(21, 161);
-            label18.Name = "label18";
-            label18.Size = new Size(48, 17);
-            label18.TabIndex = 16;
-            label18.Text = "Hari ini";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.ForeColor = Color.LightGray;
-            label14.Location = new Point(21, 161);
-            label14.Name = "label14";
-            label14.Size = new Size(36, 17);
-            label14.TabIndex = 17;
-            label14.Text = "Total";
-            // 
-            // label19
-            // 
-            label19.AutoSize = true;
-            label19.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label19.ForeColor = Color.LightGray;
-            label19.Location = new Point(20, 161);
-            label19.Name = "label19";
-            label19.Size = new Size(40, 17);
-            label19.TabIndex = 18;
-            label19.Text = "Profit";
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label20.ForeColor = Color.LightGray;
-            label20.Location = new Point(31, 161);
-            label20.Name = "label20";
-            label20.Size = new Size(40, 17);
-            label20.TabIndex = 19;
-            label20.Text = "Profit";
-            // 
             // UCDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -616,6 +616,7 @@
             Controls.Add(guna2GroupBox1);
             Name = "UCDashboard";
             Size = new Size(1616, 1027);
+            Load += UCDashboard_Load;
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
             guna2GroupBox2.ResumeLayout(false);
