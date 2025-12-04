@@ -174,7 +174,7 @@
             guna2Button12.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button12.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button12.FillColor = Color.FromArgb(45, 45, 45);
-            guna2Button12.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button12.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button12.ForeColor = Color.White;
             guna2Button12.Image = (Image)resources.GetObject("guna2Button12.Image");
             guna2Button12.ImageAlign = HorizontalAlignment.Right;
@@ -204,7 +204,7 @@
             btVendor.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btVendor.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btVendor.FillColor = Color.FromArgb(45, 45, 45);
-            btVendor.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btVendor.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btVendor.ForeColor = Color.White;
             btVendor.Image = (Image)resources.GetObject("btVendor.Image");
             btVendor.ImageAlign = HorizontalAlignment.Right;
@@ -222,11 +222,11 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("League Spartan", 21.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Microsoft Sans Serif", 21.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.FromArgb(212, 122, 71);
             label6.Location = new Point(62, -77);
             label6.Name = "label6";
-            label6.Size = new Size(170, 43);
+            label6.Size = new Size(288, 52);
             label6.TabIndex = 4;
             label6.Text = "FnB Records";
             // 
@@ -246,7 +246,7 @@
             guna2Button13.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button13.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button13.FillColor = Color.FromArgb(45, 45, 45);
-            guna2Button13.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button13.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button13.ForeColor = Color.White;
             guna2Button13.Image = (Image)resources.GetObject("guna2Button13.Image");
             guna2Button13.ImageAlign = HorizontalAlignment.Right;
@@ -276,7 +276,7 @@
             btPenjualan.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btPenjualan.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btPenjualan.FillColor = Color.FromArgb(45, 45, 45);
-            btPenjualan.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btPenjualan.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btPenjualan.ForeColor = Color.White;
             btPenjualan.Image = (Image)resources.GetObject("btPenjualan.Image");
             btPenjualan.ImageAlign = HorizontalAlignment.Right;
@@ -308,7 +308,7 @@
             btdashboard.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btdashboard.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btdashboard.FillColor = Color.FromArgb(45, 45, 45);
-            btdashboard.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btdashboard.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btdashboard.ForeColor = Color.White;
             btdashboard.Image = Properties.Resources._5;
             btdashboard.ImageAlign = HorizontalAlignment.Right;
@@ -339,7 +339,7 @@
             btPO.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btPO.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btPO.FillColor = Color.FromArgb(45, 45, 45);
-            btPO.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btPO.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btPO.ForeColor = Color.White;
             btPO.Image = (Image)resources.GetObject("btPO.Image");
             btPO.ImageAlign = HorizontalAlignment.Right;
@@ -370,7 +370,7 @@
             guna2Button14.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button14.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button14.FillColor = Color.FromArgb(45, 45, 45);
-            guna2Button14.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button14.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button14.ForeColor = Color.White;
             guna2Button14.Image = (Image)resources.GetObject("guna2Button14.Image");
             guna2Button14.ImageAlign = HorizontalAlignment.Right;
@@ -386,6 +386,7 @@
             // 
             // btCabang
             // 
+<<<<<<< Updated upstream
             btCabang.Animated = true;
             btCabang.AnimatedGIF = true;
             btCabang.BorderRadius = 10;
@@ -414,6 +415,35 @@
             btCabang.Text = "              Cabang";
             btCabang.TextAlign = HorizontalAlignment.Right;
             btCabang.Click += btCabang_Click;
+=======
+            guna2Button16.Animated = true;
+            guna2Button16.AnimatedGIF = true;
+            guna2Button16.BorderRadius = 10;
+            guna2Button16.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            guna2Button16.CheckedState.FillColor = Color.FromArgb(212, 122, 71);
+            guna2Button16.CheckedState.ForeColor = Color.FromArgb(45, 45, 45);
+            guna2Button16.CheckedState.Image = (Image)resources.GetObject("resource.Image7");
+            guna2Button16.Cursor = Cursors.Hand;
+            guna2Button16.CustomizableEdges = customizableEdges15;
+            guna2Button16.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button16.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button16.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button16.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button16.FillColor = Color.FromArgb(45, 45, 45);
+            guna2Button16.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button16.ForeColor = Color.White;
+            guna2Button16.Image = (Image)resources.GetObject("guna2Button16.Image");
+            guna2Button16.ImageAlign = HorizontalAlignment.Right;
+            guna2Button16.ImageSize = new Size(30, 20);
+            guna2Button16.Location = new Point(14, 297);
+            guna2Button16.Name = "guna2Button16";
+            guna2Button16.RightToLeft = RightToLeft.Yes;
+            guna2Button16.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna2Button16.Size = new Size(246, 36);
+            guna2Button16.TabIndex = 31;
+            guna2Button16.Text = "              Cabang";
+            guna2Button16.TextAlign = HorizontalAlignment.Right;
+>>>>>>> Stashed changes
             // 
             // btBahanBaku
             // 
@@ -431,7 +461,7 @@
             btBahanBaku.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btBahanBaku.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btBahanBaku.FillColor = Color.FromArgb(45, 45, 45);
-            btBahanBaku.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btBahanBaku.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btBahanBaku.ForeColor = Color.White;
             btBahanBaku.Image = Properties.Resources._9;
             btBahanBaku.ImageAlign = HorizontalAlignment.Right;
@@ -462,7 +492,7 @@
             btResepMenu.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btResepMenu.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btResepMenu.FillColor = Color.FromArgb(45, 45, 45);
-            btResepMenu.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btResepMenu.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btResepMenu.ForeColor = Color.White;
             btResepMenu.Image = Properties.Resources._11;
             btResepMenu.ImageAlign = HorizontalAlignment.Right;
@@ -493,7 +523,7 @@
             guna2Button15.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button15.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button15.FillColor = Color.FromArgb(45, 45, 45);
-            guna2Button15.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button15.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button15.ForeColor = Color.White;
             guna2Button15.Image = (Image)resources.GetObject("guna2Button15.Image");
             guna2Button15.ImageAlign = HorizontalAlignment.Right;
@@ -506,6 +536,7 @@
             guna2Button15.TabIndex = 32;
             guna2Button15.Text = "              Analisis Belanja";
             guna2Button15.TextAlign = HorizontalAlignment.Right;
+            guna2Button15.Click += guna2Button15_Click;
             // 
             // guna2GroupBox3
             // 
@@ -531,33 +562,33 @@
             // lblEmail
             // 
             lblEmail.AutoSize = true;
-            lblEmail.Font = new Font("Inter Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblEmail.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblEmail.ForeColor = Color.White;
             lblEmail.Location = new Point(12, 31);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(123, 17);
+            lblEmail.Size = new Size(184, 22);
             lblEmail.TabIndex = 7;
             lblEmail.Text = "example@gmail.c...";
             // 
             // lblNamaBisnis
             // 
             lblNamaBisnis.AutoSize = true;
-            lblNamaBisnis.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNamaBisnis.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblNamaBisnis.ForeColor = Color.FromArgb(212, 122, 71);
             lblNamaBisnis.Location = new Point(12, 10);
             lblNamaBisnis.Name = "lblNamaBisnis";
-            lblNamaBisnis.Size = new Size(124, 21);
+            lblNamaBisnis.Size = new Size(188, 29);
             lblNamaBisnis.TabIndex = 4;
             lblNamaBisnis.Text = "warung maka...";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("League Spartan", 21.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Microsoft Sans Serif", 21.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(212, 122, 71);
             label3.Location = new Point(62, -77);
             label3.Name = "label3";
-            label3.Size = new Size(170, 43);
+            label3.Size = new Size(288, 52);
             label3.TabIndex = 4;
             label3.Text = "FnB Records";
             // 
@@ -609,11 +640,11 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Inter", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
             label4.Location = new Point(36, 1);
             label4.Name = "label4";
-            label4.Size = new Size(65, 18);
+            label4.Size = new Size(96, 25);
             label4.TabIndex = 8;
             label4.Text = "Premium";
             // 
@@ -634,11 +665,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("League Spartan", 21.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 21.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(212, 122, 71);
             label2.Location = new Point(62, -37);
             label2.Name = "label2";
-            label2.Size = new Size(170, 43);
+            label2.Size = new Size(288, 52);
             label2.TabIndex = 4;
             label2.Text = "FnB Records";
             // 
@@ -679,11 +710,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("League Spartan", 21.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 21.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(212, 122, 71);
             label1.Location = new Point(83, 4);
             label1.Name = "label1";
-            label1.Size = new Size(170, 43);
+            label1.Size = new Size(288, 52);
             label1.TabIndex = 4;
             label1.Text = "FnB Records";
             // 
@@ -711,10 +742,10 @@
             btnExitApp.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnExitApp.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnExitApp.FillColor = Color.Transparent;
-            btnExitApp.Font = new Font("Manrope ExtraBold", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnExitApp.Font = new Font("Microsoft Sans Serif", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnExitApp.ForeColor = Color.White;
             btnExitApp.HoverState.FillColor = Color.FromArgb(211, 47, 47);
-            btnExitApp.HoverState.Font = new Font("Manrope ExtraBold", 11.999999F, FontStyle.Bold);
+            btnExitApp.HoverState.Font = new Font("Microsoft Sans Serif", 11.999999F, FontStyle.Bold);
             btnExitApp.HoverState.ForeColor = Color.White;
             btnExitApp.Location = new Point(1871, 3);
             btnExitApp.Name = "btnExitApp";
@@ -736,13 +767,13 @@
             // 
             // Main_Form
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(10F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1920, 1061);
             Controls.Add(paneluc);
             Controls.Add(guna2Panel1);
             Controls.Add(guna2Panel2);
-            Font = new Font("Manrope", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
             IsMdiContainer = true;
             Name = "Main_Form";
