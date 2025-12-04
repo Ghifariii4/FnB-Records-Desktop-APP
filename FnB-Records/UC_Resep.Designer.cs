@@ -721,11 +721,11 @@
             // 
             label2.AutoSize = true;
             guna2Transition1.SetDecoration(label2, Guna.UI2.AnimatorNS.DecorationType.None);
-            label2.Font = new Font("Inter", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Inter", 12F);
             label2.ForeColor = Color.FromArgb(45, 45, 45);
             label2.Location = new Point(3, 48);
             label2.Name = "label2";
-            label2.Size = new Size(410, 22);
+            label2.Size = new Size(435, 23);
             label2.TabIndex = 2;
             label2.Text = "Buat dan kelola resep dengan perhitungan HPP otomatis";
             // 
@@ -733,11 +733,11 @@
             // 
             label1.AutoSize = true;
             guna2Transition1.SetDecoration(label1, Guna.UI2.AnimatorNS.DecorationType.None);
-            label1.Font = new Font("Manrope ExtraBold", 26.2499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Manrope ExtraBold", 27.75F, FontStyle.Bold);
             label1.ForeColor = Color.Black;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(345, 48);
+            label1.Size = new Size(368, 50);
             label1.TabIndex = 0;
             label1.Text = "Kelola  Resep Menu";
             // 
@@ -926,6 +926,7 @@
             guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             Name = "UC_Resep";
             Size = new Size(1616, 1027);
+            Load += UC_Resep_Load;
             gbResepPopUp.ResumeLayout(false);
             gbResepPopUp.PerformLayout();
             guna2GroupBox6.ResumeLayout(false);

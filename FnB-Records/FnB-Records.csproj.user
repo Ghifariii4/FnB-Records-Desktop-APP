@@ -16,7 +16,13 @@
     <Compile Update="UCDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UC_AnalisisBelanja.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UC_BahanBaku.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UC_Cabang.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UC_Penjualan.cs">

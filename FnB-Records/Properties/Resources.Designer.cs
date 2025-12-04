@@ -123,6 +123,26 @@ namespace FnB_Records.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Box_Ungu {
+            get {
+                object obj = ResourceManager.GetObject("Box-Ungu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chart_Biru {
+            get {
+                object obj = ResourceManager.GetObject("Chart-Biru", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Dashboard_Logo {
             get {
                 object obj = ResourceManager.GetObject("Dashboard-Logo", resourceCulture);
@@ -153,6 +173,16 @@ namespace FnB_Records.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Kalender_Logo_putih {
+            get {
+                object obj = ResourceManager.GetObject("Kalender-Logo_putih", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_Fnb_Records {
             get {
                 object obj = ResourceManager.GetObject("Logo Fnb_Records", resourceCulture);
@@ -176,6 +206,16 @@ namespace FnB_Records.Properties {
         internal static System.Drawing.Bitmap mahkota {
             get {
                 object obj = ResourceManager.GetObject("mahkota", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pengeluaaran_Logo_Merah {
+            get {
+                object obj = ResourceManager.GetObject("Pengeluaaran-Logo-Merah", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

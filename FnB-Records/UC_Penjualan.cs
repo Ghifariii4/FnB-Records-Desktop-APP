@@ -16,5 +16,15 @@ namespace FnB_Records
         {
             InitializeComponent();
         }
+
+        private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btinputPenjualanPopUp_Click(object sender, EventArgs e)
+        {
+            gbInputPenjualanPopUp.Visible = true;
+        }
     }
 }
