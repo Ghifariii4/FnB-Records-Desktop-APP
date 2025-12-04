@@ -88,11 +88,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Manrope ExtraBold", 35.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 35.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(212, 122, 71);
             label1.Location = new Point(182, 75);
             label1.Name = "label1";
-            label1.Size = new Size(180, 65);
+            label1.Size = new Size(252, 82);
             label1.TabIndex = 14;
             label1.Text = "Masuk";
             // 
@@ -101,23 +101,24 @@
             label8.AutoSize = true;
             label8.BackColor = Color.Transparent;
             label8.Cursor = Cursors.Hand;
-            label8.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Font = new Font("Microsoft Sans Serif", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.FromArgb(45, 45, 45);
             label8.Location = new Point(264, 488);
             label8.Name = "label8";
-            label8.Size = new Size(181, 22);
+            label8.Size = new Size(268, 29);
             label8.TabIndex = 12;
             label8.Text = "Daftar gratis sekarang";
+        //    label8.Click += label8_Click;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.BackColor = Color.Transparent;
-            label7.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Font = new Font("Microsoft Sans Serif", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.FromArgb(125, 137, 149);
             label7.Location = new Point(109, 488);
             label7.Name = "label7";
-            label7.Size = new Size(159, 22);
+            label7.Size = new Size(238, 29);
             label7.TabIndex = 11;
             label7.Text = "Belum punya akun?";
             // 
@@ -131,7 +132,7 @@
             btnMasuk.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnMasuk.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnMasuk.FillColor = Color.FromArgb(212, 122, 71);
-            btnMasuk.Font = new Font("Manrope SemiBold", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnMasuk.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMasuk.ForeColor = Color.White;
             btnMasuk.Location = new Point(43, 422);
             btnMasuk.Name = "btnMasuk";
@@ -139,16 +140,17 @@
             btnMasuk.Size = new Size(455, 45);
             btnMasuk.TabIndex = 4;
             btnMasuk.Text = "Masuk";
+            btnMasuk.Click += btnMasuk_Click;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
-            label6.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Microsoft Sans Serif", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.FromArgb(125, 137, 149);
             label6.Location = new Point(70, 362);
             label6.Name = "label6";
-            label6.Size = new Size(91, 22);
+            label6.Size = new Size(134, 29);
             label6.TabIndex = 9;
             label6.Text = "Ingat Saya";
             // 
@@ -171,6 +173,7 @@
             chkIngatSaya.UncheckedState.BorderRadius = 2;
             chkIngatSaya.UncheckedState.BorderThickness = 0;
             chkIngatSaya.UncheckedState.FillColor = Color.FromArgb(125, 137, 149);
+        //    chkIngatSaya.Click += chkIngatSaya_Click;
             // 
             // txtPassword
             // 
@@ -184,7 +187,7 @@
             txtPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPassword.Font = new Font("Inter", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            txtPassword.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             txtPassword.ForeColor = Color.FromArgb(45, 45, 45);
             txtPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPassword.Location = new Point(44, 295);
@@ -196,16 +199,17 @@
             txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtPassword.Size = new Size(455, 51);
             txtPassword.TabIndex = 2;
+         //   txtPassword.TextChanged += txtPassword_TextChanged;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Manrope", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.FromArgb(212, 122, 71);
             label5.Location = new Point(43, 265);
             label5.Name = "label5";
-            label5.Size = new Size(111, 26);
+            label5.Size = new Size(166, 33);
             label5.TabIndex = 6;
             label5.Text = "Kata Sandi";
             // 
@@ -221,7 +225,7 @@
             txtEmail.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtEmail.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtEmail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEmail.Font = new Font("Inter", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            txtEmail.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             txtEmail.ForeColor = Color.FromArgb(45, 45, 45);
             txtEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtEmail.Location = new Point(43, 205);
@@ -233,29 +237,30 @@
             txtEmail.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtEmail.Size = new Size(455, 51);
             txtEmail.TabIndex = 1;
+       //     txtEmail.TextChanged += txtEmail_TextChanged;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Manrope", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(212, 122, 71);
             label4.Location = new Point(43, 175);
             label4.Name = "label4";
-            label4.Size = new Size(61, 26);
+            label4.Size = new Size(94, 33);
             label4.TabIndex = 4;
             label4.Text = "Email";
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(10F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(249, 247, 245);
             BackgroundImage = Properties.Resources.bg_login_register;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1330, 1008);
             Controls.Add(guna2GroupBox1);
-            Font = new Font("Manrope", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ForeColor = SystemColors.ControlText;
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -263,7 +268,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             WindowState = FormWindowState.Maximized;
-            Load += Login_Load;
+    //        Load += Login_Load;
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
             ResumeLayout(false);
