@@ -101,10 +101,10 @@
             guna2GroupBox1.FillColor = Color.Transparent;
             guna2GroupBox1.Font = new Font("Manrope", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2GroupBox1.ForeColor = Color.Transparent;
-            guna2GroupBox1.Location = new Point(12, 13);
+            guna2GroupBox1.Location = new Point(34, 15);
             guna2GroupBox1.Name = "guna2GroupBox1";
             guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2GroupBox1.Size = new Size(1590, 99);
+            guna2GroupBox1.Size = new Size(1544, 99);
             guna2GroupBox1.TabIndex = 5;
             // 
             // btnTambahVendor
@@ -123,7 +123,7 @@
             btnTambahVendor.ImageAlign = HorizontalAlignment.Left;
             btnTambahVendor.ImageOffset = new Point(5, 0);
             btnTambahVendor.ImageSize = new Size(30, 20);
-            btnTambahVendor.Location = new Point(1397, 0);
+            btnTambahVendor.Location = new Point(1351, 0);
             btnTambahVendor.Name = "btnTambahVendor";
             btnTambahVendor.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnTambahVendor.Size = new Size(193, 48);
@@ -168,14 +168,14 @@
             guna2GroupBox2.FillColor = Color.FromArgb(45, 45, 45);
             guna2GroupBox2.Font = new Font("Segoe UI", 9F);
             guna2GroupBox2.ForeColor = Color.FromArgb(125, 137, 149);
-            guna2GroupBox2.Location = new Point(12, 118);
+            guna2GroupBox2.Location = new Point(34, 123);
             guna2GroupBox2.Name = "guna2GroupBox2";
             guna2GroupBox2.ShadowDecoration.BorderRadius = 20;
             guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2GroupBox2.ShadowDecoration.Depth = 3;
             guna2GroupBox2.ShadowDecoration.Enabled = true;
             guna2GroupBox2.ShadowDecoration.Shadow = new Padding(10);
-            guna2GroupBox2.Size = new Size(1590, 364);
+            guna2GroupBox2.Size = new Size(1544, 364);
             guna2GroupBox2.TabIndex = 7;
             guna2GroupBox2.Click += guna2GroupBox2_Click;
             // 
@@ -257,7 +257,7 @@
             guna2GroupBox3.ShadowDecoration.Depth = 0;
             guna2GroupBox3.ShadowDecoration.Enabled = true;
             guna2GroupBox3.ShadowDecoration.Shadow = new Padding(10);
-            guna2GroupBox3.Size = new Size(1531, 50);
+            guna2GroupBox3.Size = new Size(1485, 50);
             guna2GroupBox3.TabIndex = 9;
             // 
             // guna2Button1
@@ -304,7 +304,7 @@
             txtCariVendor.SelectedText = "";
             txtCariVendor.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtCariVendor.ShadowDecoration.Depth = 0;
-            txtCariVendor.Size = new Size(1453, 37);
+            txtCariVendor.Size = new Size(1407, 37);
             txtCariVendor.TabIndex = 9;
             // 
             // gbVendorPopUp

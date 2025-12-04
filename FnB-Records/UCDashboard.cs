@@ -21,5 +21,10 @@ namespace FnB_Records
         {
 
         }
+
+        private void UCDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
