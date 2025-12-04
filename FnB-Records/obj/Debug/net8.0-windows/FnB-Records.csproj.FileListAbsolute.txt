@@ -49,30 +49,4 @@ C:\Users\diana\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0
 C:\Users\diana\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB-Records.genruntimeconfig.cache
 C:\Users\diana\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\ref\FnB-Records.dll
 C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.Main_Form.resources
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\FnB-Records.exe
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\FnB-Records.deps.json
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\FnB-Records.runtimeconfig.json
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\FnB-Records.dll
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\FnB-Records.pdb
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\Guna.UI2.dll
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\System.Management.dll
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\runtimes\win\lib\net7.0\System.Management.dll
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB-Records.csproj.AssemblyReference.cache
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.Dashboard.resources
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.Form1.resources
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.Login.resources
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.Main_Form.resources
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.Properties.Resources.resources
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.Register.resources
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB-Records.csproj.GenerateResource.cache
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB-Records.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB-Records.AssemblyInfoInputs.cache
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB-Records.AssemblyInfo.cs
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB-Records.csproj.CoreCompileInputs.cache
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB-Records.sourcelink.json
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB-Reco.656E0BF0.Up2Date
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB-Records.dll
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\refint\FnB-Records.dll
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB-Records.pdb
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB-Records.genruntimeconfig.cache
-C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\ref\FnB-Records.dll
+C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.Dashboard.resources
