@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace FnB_Records
+{
+    public partial class UC_PurchaseOrder : UserControl
+    {
+        public UC_PurchaseOrder()
+        {
+            InitializeComponent();
+        }
+
+        private void btBuatPOBaru_Click(object sender, EventArgs e)
+        {
+            gbPopUpPO.Visible = true;
+        }
+
+        private void btnClosePopUpPO_Click(object sender, EventArgs e)
+        {
+            gbPopUpPO.Visible = false;
+        }
+    }
+}
