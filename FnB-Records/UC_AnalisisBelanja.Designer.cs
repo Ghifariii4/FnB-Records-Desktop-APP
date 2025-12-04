@@ -48,6 +48,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             btnTambahVendor = new Guna.UI2.WinForms.Guna2Button();
             label2 = new Label();
@@ -68,10 +72,17 @@
             label8 = new Label();
             label10 = new Label();
             guna2GroupBox5 = new Guna.UI2.WinForms.Guna2GroupBox();
-            guna2vScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
-            guna2GroupBox6 = new Guna.UI2.WinForms.Guna2GroupBox();
-            label11 = new Label();
             label12 = new Label();
+            label11 = new Label();
+            guna2GroupBox7 = new Guna.UI2.WinForms.Guna2GroupBox();
+            label13 = new Label();
+            label14 = new Label();
+            guna2GroupBox6 = new Guna.UI2.WinForms.Guna2GroupBox();
+            label15 = new Label();
+            label16 = new Label();
+            guna2GroupBox8 = new Guna.UI2.WinForms.Guna2GroupBox();
+            label17 = new Label();
+            label19 = new Label();
             guna2GroupBox1.SuspendLayout();
             guna2GroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
@@ -80,6 +91,9 @@
             guna2GroupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox3).BeginInit();
             guna2GroupBox5.SuspendLayout();
+            guna2GroupBox7.SuspendLayout();
+            guna2GroupBox6.SuspendLayout();
+            guna2GroupBox8.SuspendLayout();
             SuspendLayout();
             // 
             // guna2GroupBox1
@@ -374,50 +388,8 @@
             guna2GroupBox5.ShadowDecoration.CustomizableEdges = customizableEdges18;
             guna2GroupBox5.ShadowDecoration.Enabled = true;
             guna2GroupBox5.ShadowDecoration.Shadow = new Padding(3, 1, 3, 5);
-            guna2GroupBox5.Size = new Size(763, 529);
+            guna2GroupBox5.Size = new Size(755, 529);
             guna2GroupBox5.TabIndex = 25;
-            // 
-            // guna2vScrollBar1
-            // 
-            guna2vScrollBar1.Dock = DockStyle.Right;
-            guna2vScrollBar1.InUpdate = false;
-            guna2vScrollBar1.LargeChange = 10;
-            guna2vScrollBar1.Location = new Point(1598, 0);
-            guna2vScrollBar1.Name = "guna2vScrollBar1";
-            guna2vScrollBar1.ScrollbarSize = 18;
-            guna2vScrollBar1.Size = new Size(18, 2000);
-            guna2vScrollBar1.TabIndex = 26;
-            guna2vScrollBar1.Visible = false;
-            // 
-            // guna2GroupBox6
-            // 
-            guna2GroupBox6.BackColor = Color.Transparent;
-            guna2GroupBox6.BorderColor = Color.DimGray;
-            guna2GroupBox6.BorderRadius = 15;
-            guna2GroupBox6.CustomBorderColor = Color.Empty;
-            guna2GroupBox6.CustomizableEdges = customizableEdges19;
-            guna2GroupBox6.FillColor = Color.FromArgb(45, 45, 45);
-            guna2GroupBox6.Font = new Font("Segoe UI", 9F);
-            guna2GroupBox6.ForeColor = Color.FromArgb(125, 137, 149);
-            guna2GroupBox6.Location = new Point(34, 1154);
-            guna2GroupBox6.Name = "guna2GroupBox6";
-            guna2GroupBox6.ShadowDecoration.BorderRadius = 18;
-            guna2GroupBox6.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2GroupBox6.ShadowDecoration.Enabled = true;
-            guna2GroupBox6.ShadowDecoration.Shadow = new Padding(3, 1, 3, 5);
-            guna2GroupBox6.Size = new Size(763, 529);
-            guna2GroupBox6.TabIndex = 27;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Manrope ExtraBold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.ForeColor = Color.White;
-            label11.Location = new Point(21, 28);
-            label11.Name = "label11";
-            label11.Size = new Size(276, 33);
-            label11.TabIndex = 13;
-            label11.Text = "Trend Belanja Bulanan";
             // 
             // label12
             // 
@@ -430,6 +402,146 @@
             label12.TabIndex = 17;
             label12.Text = "6 bulan terakhir (Data Real)";
             // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Manrope ExtraBold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.ForeColor = Color.White;
+            label11.Location = new Point(21, 28);
+            label11.Name = "label11";
+            label11.Size = new Size(276, 33);
+            label11.TabIndex = 13;
+            label11.Text = "Trend Belanja Bulanan";
+            // 
+            // guna2GroupBox7
+            // 
+            guna2GroupBox7.BackColor = Color.Transparent;
+            guna2GroupBox7.BorderColor = Color.DimGray;
+            guna2GroupBox7.BorderRadius = 15;
+            guna2GroupBox7.Controls.Add(label13);
+            guna2GroupBox7.Controls.Add(label14);
+            guna2GroupBox7.CustomBorderColor = Color.Empty;
+            guna2GroupBox7.CustomizableEdges = customizableEdges19;
+            guna2GroupBox7.FillColor = Color.FromArgb(45, 45, 45);
+            guna2GroupBox7.Font = new Font("Segoe UI", 9F);
+            guna2GroupBox7.ForeColor = Color.FromArgb(125, 137, 149);
+            guna2GroupBox7.Location = new Point(823, 462);
+            guna2GroupBox7.Name = "guna2GroupBox7";
+            guna2GroupBox7.ShadowDecoration.BorderRadius = 18;
+            guna2GroupBox7.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2GroupBox7.ShadowDecoration.Enabled = true;
+            guna2GroupBox7.ShadowDecoration.Shadow = new Padding(3, 1, 3, 5);
+            guna2GroupBox7.Size = new Size(755, 529);
+            guna2GroupBox7.TabIndex = 28;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Inter Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.ForeColor = Color.LightGray;
+            label13.Location = new Point(21, 70);
+            label13.Name = "label13";
+            label13.Size = new Size(292, 23);
+            label13.TabIndex = 17;
+            label13.Text = "Breakdown pengeluaran per kategori";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Manrope ExtraBold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label14.ForeColor = Color.White;
+            label14.Location = new Point(21, 28);
+            label14.Name = "label14";
+            label14.Size = new Size(237, 33);
+            label14.TabIndex = 13;
+            label14.Text = "Distribusi Kategori";
+            // 
+            // guna2GroupBox6
+            // 
+            guna2GroupBox6.BackColor = Color.Transparent;
+            guna2GroupBox6.BorderColor = Color.DimGray;
+            guna2GroupBox6.BorderRadius = 15;
+            guna2GroupBox6.Controls.Add(label15);
+            guna2GroupBox6.Controls.Add(label16);
+            guna2GroupBox6.CustomBorderColor = Color.Empty;
+            guna2GroupBox6.CustomizableEdges = customizableEdges21;
+            guna2GroupBox6.FillColor = Color.FromArgb(45, 45, 45);
+            guna2GroupBox6.Font = new Font("Segoe UI", 9F);
+            guna2GroupBox6.ForeColor = Color.FromArgb(125, 137, 149);
+            guna2GroupBox6.Location = new Point(826, 1028);
+            guna2GroupBox6.Name = "guna2GroupBox6";
+            guna2GroupBox6.ShadowDecoration.BorderRadius = 18;
+            guna2GroupBox6.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            guna2GroupBox6.ShadowDecoration.Enabled = true;
+            guna2GroupBox6.ShadowDecoration.Shadow = new Padding(3, 1, 3, 5);
+            guna2GroupBox6.Size = new Size(755, 529);
+            guna2GroupBox6.TabIndex = 30;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Inter Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label15.ForeColor = Color.LightGray;
+            label15.Location = new Point(21, 70);
+            label15.Name = "label15";
+            label15.Size = new Size(307, 23);
+            label15.TabIndex = 17;
+            label15.Text = "Berdasarkan total pembelian (Estimasi)";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new Font("Manrope ExtraBold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label16.ForeColor = Color.White;
+            label16.Location = new Point(21, 28);
+            label16.Name = "label16";
+            label16.Size = new Size(217, 33);
+            label16.TabIndex = 13;
+            label16.Text = "Top 5 Bahan Baku";
+            // 
+            // guna2GroupBox8
+            // 
+            guna2GroupBox8.BackColor = Color.Transparent;
+            guna2GroupBox8.BorderColor = Color.DimGray;
+            guna2GroupBox8.BorderRadius = 15;
+            guna2GroupBox8.Controls.Add(label17);
+            guna2GroupBox8.Controls.Add(label19);
+            guna2GroupBox8.CustomBorderColor = Color.Empty;
+            guna2GroupBox8.CustomizableEdges = customizableEdges23;
+            guna2GroupBox8.FillColor = Color.FromArgb(45, 45, 45);
+            guna2GroupBox8.Font = new Font("Segoe UI", 9F);
+            guna2GroupBox8.ForeColor = Color.FromArgb(125, 137, 149);
+            guna2GroupBox8.Location = new Point(37, 1028);
+            guna2GroupBox8.Name = "guna2GroupBox8";
+            guna2GroupBox8.ShadowDecoration.BorderRadius = 18;
+            guna2GroupBox8.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            guna2GroupBox8.ShadowDecoration.Enabled = true;
+            guna2GroupBox8.ShadowDecoration.Shadow = new Padding(3, 1, 3, 5);
+            guna2GroupBox8.Size = new Size(755, 529);
+            guna2GroupBox8.TabIndex = 29;
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Font = new Font("Inter Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label17.ForeColor = Color.LightGray;
+            label17.Location = new Point(21, 70);
+            label17.Name = "label17";
+            label17.Size = new Size(314, 23);
+            label17.TabIndex = 17;
+            label17.Text = "Berdasarkan total pembelian (Data Real)";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Font = new Font("Manrope ExtraBold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label19.ForeColor = Color.White;
+            label19.Location = new Point(21, 28);
+            label19.Name = "label19";
+            label19.Size = new Size(167, 33);
+            label19.TabIndex = 13;
+            label19.Text = "Top 5 Vendor";
+            // 
             // UC_AnalisisBelanja
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -437,7 +549,8 @@
             AutoScroll = true;
             BackColor = Color.FromArgb(212, 122, 71);
             Controls.Add(guna2GroupBox6);
-            Controls.Add(guna2vScrollBar1);
+            Controls.Add(guna2GroupBox8);
+            Controls.Add(guna2GroupBox7);
             Controls.Add(guna2GroupBox5);
             Controls.Add(guna2GroupBox4);
             Controls.Add(guna2GroupBox2);
@@ -458,6 +571,12 @@
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox3).EndInit();
             guna2GroupBox5.ResumeLayout(false);
             guna2GroupBox5.PerformLayout();
+            guna2GroupBox7.ResumeLayout(false);
+            guna2GroupBox7.PerformLayout();
+            guna2GroupBox6.ResumeLayout(false);
+            guna2GroupBox6.PerformLayout();
+            guna2GroupBox8.ResumeLayout(false);
+            guna2GroupBox8.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -483,9 +602,16 @@
         private Label label8;
         private Label label10;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox5;
-        private Guna.UI2.WinForms.Guna2VScrollBar guna2vScrollBar1;
-        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox6;
         private Label label11;
         private Label label12;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox7;
+        private Label label13;
+        private Label label14;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox6;
+        private Label label15;
+        private Label label16;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox8;
+        private Label label17;
+        private Label label19;
     }
 }

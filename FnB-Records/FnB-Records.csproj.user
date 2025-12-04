@@ -16,6 +16,9 @@
     <Compile Update="UCDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UC_Analisis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UC_AnalisisBelanja.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -37,5 +40,10 @@
     <Compile Update="UC_Vendor.cs">
       <SubType>UserControl</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="UC_BahanBaku.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
