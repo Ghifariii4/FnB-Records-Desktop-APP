@@ -41,7 +41,7 @@ namespace FnB_Records
 
         }
 
-        private void guna2Button22_Click(object sender, EventArgs e)
+        private void btDashboard_Click(object sender, EventArgs e)
         {
             UCDashboard dashboard = new UCDashboard();
             navigationControl(dashboard);
@@ -51,7 +51,7 @@ namespace FnB_Records
         {
             UCDashboard uc = new UCDashboard();
             navigationControl(uc);
-            btdashboard.Checked = true;
+            btDashboard.Checked = true;
         }
 
         private void btVendor_Click(object sender, EventArgs e)
@@ -89,17 +89,22 @@ namespace FnB_Records
             navigationControl(cabang);
         }
 
-        private void guna2Button15_Click(object sender, EventArgs e)
-        {
-            UC_Analisis analisis = new UC_Analisis();
-            navigationControl(analisis);
-
-        }
-
         private void btAnalisisBelanja_Click(object sender, EventArgs e)
         {
             UC_AnalisisBelanja analisisBelanja = new UC_AnalisisBelanja();
             navigationControl(analisisBelanja);
+        }
+
+        private void btSimulasiKebutuhan_Click(object sender, EventArgs e)
+        {
+            UC_SimulasiKebutuhan simulasiKebutuhan = new UC_SimulasiKebutuhan();
+            navigationControl(simulasiKebutuhan);
+        }
+
+        private void btManajemenInventori_Click(object sender, EventArgs e)
+        {
+            UC_ManajemenInventori manajemenInventori = new UC_ManajemenInventori();
+            navigationControl(manajemenInventori);
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FnB_Records
 {
-    public partial class HasilSimulasiKebutuhanBahan : UserControl
+    public partial class UC_ProduksiOlahan : UserControl
     {
-        public HasilSimulasiKebutuhanBahan()
+        public UC_ProduksiOlahan()
         {
             InitializeComponent();
         }

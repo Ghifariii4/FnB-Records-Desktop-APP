@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
@@ -71,18 +71,24 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2Button12 = new Guna.UI2.WinForms.Guna2Button();
             btVendor = new Guna.UI2.WinForms.Guna2Button();
             label6 = new Label();
-            guna2Button13 = new Guna.UI2.WinForms.Guna2Button();
+            btManajemenInventori = new Guna.UI2.WinForms.Guna2Button();
             btPenjualan = new Guna.UI2.WinForms.Guna2Button();
-            btdashboard = new Guna.UI2.WinForms.Guna2Button();
+            btDashboard = new Guna.UI2.WinForms.Guna2Button();
             btPO = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button14 = new Guna.UI2.WinForms.Guna2Button();
+            btSimulasiKebutuhan = new Guna.UI2.WinForms.Guna2Button();
             btCabang = new Guna.UI2.WinForms.Guna2Button();
             btBahanBaku = new Guna.UI2.WinForms.Guna2Button();
             btResepMenu = new Guna.UI2.WinForms.Guna2Button();
@@ -99,6 +105,11 @@
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             label1 = new Label();
+            guna2GroupBox5 = new Guna.UI2.WinForms.Guna2GroupBox();
+            guna2GroupBox6 = new Guna.UI2.WinForms.Guna2GroupBox();
+            label5 = new Label();
+            guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            label7 = new Label();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             btnExitApp = new Guna.UI2.WinForms.Guna2Button();
             paneluc = new Guna.UI2.WinForms.Guna2Panel();
@@ -110,6 +121,9 @@
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).BeginInit();
             guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
+            guna2GroupBox5.SuspendLayout();
+            guna2GroupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox3).BeginInit();
             guna2Panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -120,11 +134,12 @@
             guna2Panel1.Controls.Add(guna2GroupBox3);
             guna2Panel1.Controls.Add(guna2GroupBox2);
             guna2Panel1.Controls.Add(guna2GroupBox1);
-            guna2Panel1.CustomizableEdges = customizableEdges37;
+            guna2Panel1.Controls.Add(guna2GroupBox5);
+            guna2Panel1.CustomizableEdges = customizableEdges43;
             guna2Panel1.Dock = DockStyle.Left;
             guna2Panel1.Location = new Point(0, 53);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges44;
             guna2Panel1.Size = new Size(300, 1008);
             guna2Panel1.TabIndex = 1;
             // 
@@ -137,11 +152,11 @@
             guna2GroupBox4.Controls.Add(guna2Button12);
             guna2GroupBox4.Controls.Add(btVendor);
             guna2GroupBox4.Controls.Add(label6);
-            guna2GroupBox4.Controls.Add(guna2Button13);
+            guna2GroupBox4.Controls.Add(btManajemenInventori);
             guna2GroupBox4.Controls.Add(btPenjualan);
-            guna2GroupBox4.Controls.Add(btdashboard);
+            guna2GroupBox4.Controls.Add(btDashboard);
             guna2GroupBox4.Controls.Add(btPO);
-            guna2GroupBox4.Controls.Add(guna2Button14);
+            guna2GroupBox4.Controls.Add(btSimulasiKebutuhan);
             guna2GroupBox4.Controls.Add(btCabang);
             guna2GroupBox4.Controls.Add(btBahanBaku);
             guna2GroupBox4.Controls.Add(btResepMenu);
@@ -155,7 +170,7 @@
             guna2GroupBox4.Location = new Point(12, 136);
             guna2GroupBox4.Name = "guna2GroupBox4";
             guna2GroupBox4.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            guna2GroupBox4.Size = new Size(274, 551);
+            guna2GroupBox4.Size = new Size(274, 547);
             guna2GroupBox4.TabIndex = 7;
             // 
             // guna2Button12
@@ -215,7 +230,7 @@
             btVendor.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btVendor.Size = new Size(246, 36);
             btVendor.TabIndex = 26;
-            btVendor.Text = "              Vendor";
+            btVendor.Text = "Vendor";
             btVendor.TextAlign = HorizontalAlignment.Right;
             btVendor.Click += btVendor_Click;
             // 
@@ -230,35 +245,36 @@
             label6.TabIndex = 4;
             label6.Text = "FnB Records";
             // 
-            // guna2Button13
+            // btManajemenInventori
             // 
-            guna2Button13.Animated = true;
-            guna2Button13.AnimatedGIF = true;
-            guna2Button13.BorderRadius = 10;
-            guna2Button13.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            guna2Button13.CheckedState.FillColor = Color.FromArgb(212, 122, 71);
-            guna2Button13.CheckedState.ForeColor = Color.FromArgb(45, 45, 45);
-            guna2Button13.CheckedState.Image = (Image)resources.GetObject("resource.Image2");
-            guna2Button13.Cursor = Cursors.Hand;
-            guna2Button13.CustomizableEdges = customizableEdges5;
-            guna2Button13.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button13.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button13.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button13.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button13.FillColor = Color.FromArgb(45, 45, 45);
-            guna2Button13.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button13.ForeColor = Color.White;
-            guna2Button13.Image = (Image)resources.GetObject("guna2Button13.Image");
-            guna2Button13.ImageAlign = HorizontalAlignment.Right;
-            guna2Button13.ImageSize = new Size(30, 20);
-            guna2Button13.Location = new Point(14, 423);
-            guna2Button13.Name = "guna2Button13";
-            guna2Button13.RightToLeft = RightToLeft.Yes;
-            guna2Button13.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button13.Size = new Size(246, 36);
-            guna2Button13.TabIndex = 34;
-            guna2Button13.Text = "              Manajemen Inventori";
-            guna2Button13.TextAlign = HorizontalAlignment.Right;
+            btManajemenInventori.Animated = true;
+            btManajemenInventori.AnimatedGIF = true;
+            btManajemenInventori.BorderRadius = 10;
+            btManajemenInventori.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            btManajemenInventori.CheckedState.FillColor = Color.FromArgb(212, 122, 71);
+            btManajemenInventori.CheckedState.ForeColor = Color.FromArgb(45, 45, 45);
+            btManajemenInventori.CheckedState.Image = (Image)resources.GetObject("resource.Image2");
+            btManajemenInventori.Cursor = Cursors.Hand;
+            btManajemenInventori.CustomizableEdges = customizableEdges5;
+            btManajemenInventori.DisabledState.BorderColor = Color.DarkGray;
+            btManajemenInventori.DisabledState.CustomBorderColor = Color.DarkGray;
+            btManajemenInventori.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btManajemenInventori.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btManajemenInventori.FillColor = Color.FromArgb(45, 45, 45);
+            btManajemenInventori.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btManajemenInventori.ForeColor = Color.White;
+            btManajemenInventori.Image = (Image)resources.GetObject("btManajemenInventori.Image");
+            btManajemenInventori.ImageAlign = HorizontalAlignment.Right;
+            btManajemenInventori.ImageSize = new Size(30, 20);
+            btManajemenInventori.Location = new Point(14, 423);
+            btManajemenInventori.Name = "btManajemenInventori";
+            btManajemenInventori.RightToLeft = RightToLeft.Yes;
+            btManajemenInventori.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btManajemenInventori.Size = new Size(246, 36);
+            btManajemenInventori.TabIndex = 34;
+            btManajemenInventori.Text = "              Manajemen Inventori";
+            btManajemenInventori.TextAlign = HorizontalAlignment.Right;
+            btManajemenInventori.Click += btManajemenInventori_Click;
             // 
             // btPenjualan
             // 
@@ -291,37 +307,37 @@
             btPenjualan.TextAlign = HorizontalAlignment.Right;
             btPenjualan.Click += btPenjualan_Click;
             // 
-            // btdashboard
+            // btDashboard
             // 
-            btdashboard.Animated = true;
-            btdashboard.AnimatedGIF = true;
-            btdashboard.BorderColor = Color.Transparent;
-            btdashboard.BorderRadius = 10;
-            btdashboard.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            btdashboard.CheckedState.FillColor = Color.FromArgb(212, 122, 71);
-            btdashboard.CheckedState.ForeColor = Color.FromArgb(45, 45, 45);
-            btdashboard.CheckedState.Image = (Image)resources.GetObject("resource.Image4");
-            btdashboard.Cursor = Cursors.Hand;
-            btdashboard.CustomizableEdges = customizableEdges9;
-            btdashboard.DisabledState.BorderColor = Color.DarkGray;
-            btdashboard.DisabledState.CustomBorderColor = Color.DarkGray;
-            btdashboard.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btdashboard.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btdashboard.FillColor = Color.FromArgb(45, 45, 45);
-            btdashboard.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btdashboard.ForeColor = Color.White;
-            btdashboard.Image = Properties.Resources._5;
-            btdashboard.ImageAlign = HorizontalAlignment.Right;
-            btdashboard.ImageSize = new Size(30, 20);
-            btdashboard.Location = new Point(14, 46);
-            btdashboard.Name = "btdashboard";
-            btdashboard.RightToLeft = RightToLeft.Yes;
-            btdashboard.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btdashboard.Size = new Size(246, 36);
-            btdashboard.TabIndex = 25;
-            btdashboard.Text = "              Dashboard";
-            btdashboard.TextAlign = HorizontalAlignment.Right;
-            btdashboard.Click += guna2Button22_Click;
+            btDashboard.Animated = true;
+            btDashboard.AnimatedGIF = true;
+            btDashboard.BorderColor = Color.Transparent;
+            btDashboard.BorderRadius = 10;
+            btDashboard.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            btDashboard.CheckedState.FillColor = Color.FromArgb(212, 122, 71);
+            btDashboard.CheckedState.ForeColor = Color.FromArgb(45, 45, 45);
+            btDashboard.CheckedState.Image = (Image)resources.GetObject("resource.Image4");
+            btDashboard.Cursor = Cursors.Hand;
+            btDashboard.CustomizableEdges = customizableEdges9;
+            btDashboard.DisabledState.BorderColor = Color.DarkGray;
+            btDashboard.DisabledState.CustomBorderColor = Color.DarkGray;
+            btDashboard.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btDashboard.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btDashboard.FillColor = Color.FromArgb(45, 45, 45);
+            btDashboard.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btDashboard.ForeColor = Color.White;
+            btDashboard.Image = Properties.Resources._5;
+            btDashboard.ImageAlign = HorizontalAlignment.Right;
+            btDashboard.ImageSize = new Size(30, 20);
+            btDashboard.Location = new Point(14, 46);
+            btDashboard.Name = "btDashboard";
+            btDashboard.RightToLeft = RightToLeft.Yes;
+            btDashboard.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btDashboard.Size = new Size(246, 36);
+            btDashboard.TabIndex = 25;
+            btDashboard.Text = "Dashboard";
+            btDashboard.TextAlign = HorizontalAlignment.Right;
+            btDashboard.Click += btDashboard_Click;
             // 
             // btPO
             // 
@@ -354,35 +370,36 @@
             btPO.TextAlign = HorizontalAlignment.Right;
             btPO.Click += btPO_Click;
             // 
-            // guna2Button14
+            // btSimulasiKebutuhan
             // 
-            guna2Button14.Animated = true;
-            guna2Button14.AnimatedGIF = true;
-            guna2Button14.BorderRadius = 10;
-            guna2Button14.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            guna2Button14.CheckedState.FillColor = Color.FromArgb(212, 122, 71);
-            guna2Button14.CheckedState.ForeColor = Color.FromArgb(45, 45, 45);
-            guna2Button14.CheckedState.Image = (Image)resources.GetObject("resource.Image6");
-            guna2Button14.Cursor = Cursors.Hand;
-            guna2Button14.CustomizableEdges = customizableEdges13;
-            guna2Button14.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button14.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button14.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button14.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button14.FillColor = Color.FromArgb(45, 45, 45);
-            guna2Button14.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button14.ForeColor = Color.White;
-            guna2Button14.Image = (Image)resources.GetObject("guna2Button14.Image");
-            guna2Button14.ImageAlign = HorizontalAlignment.Right;
-            guna2Button14.ImageSize = new Size(30, 20);
-            guna2Button14.Location = new Point(14, 381);
-            guna2Button14.Name = "guna2Button14";
-            guna2Button14.RightToLeft = RightToLeft.Yes;
-            guna2Button14.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2Button14.Size = new Size(246, 36);
-            guna2Button14.TabIndex = 33;
-            guna2Button14.Text = "              Simulasi Kebutuhan";
-            guna2Button14.TextAlign = HorizontalAlignment.Right;
+            btSimulasiKebutuhan.Animated = true;
+            btSimulasiKebutuhan.AnimatedGIF = true;
+            btSimulasiKebutuhan.BorderRadius = 10;
+            btSimulasiKebutuhan.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            btSimulasiKebutuhan.CheckedState.FillColor = Color.FromArgb(212, 122, 71);
+            btSimulasiKebutuhan.CheckedState.ForeColor = Color.FromArgb(45, 45, 45);
+            btSimulasiKebutuhan.CheckedState.Image = (Image)resources.GetObject("resource.Image6");
+            btSimulasiKebutuhan.Cursor = Cursors.Hand;
+            btSimulasiKebutuhan.CustomizableEdges = customizableEdges13;
+            btSimulasiKebutuhan.DisabledState.BorderColor = Color.DarkGray;
+            btSimulasiKebutuhan.DisabledState.CustomBorderColor = Color.DarkGray;
+            btSimulasiKebutuhan.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btSimulasiKebutuhan.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btSimulasiKebutuhan.FillColor = Color.FromArgb(45, 45, 45);
+            btSimulasiKebutuhan.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btSimulasiKebutuhan.ForeColor = Color.White;
+            btSimulasiKebutuhan.Image = (Image)resources.GetObject("btSimulasiKebutuhan.Image");
+            btSimulasiKebutuhan.ImageAlign = HorizontalAlignment.Right;
+            btSimulasiKebutuhan.ImageSize = new Size(30, 20);
+            btSimulasiKebutuhan.Location = new Point(14, 381);
+            btSimulasiKebutuhan.Name = "btSimulasiKebutuhan";
+            btSimulasiKebutuhan.RightToLeft = RightToLeft.Yes;
+            btSimulasiKebutuhan.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btSimulasiKebutuhan.Size = new Size(246, 36);
+            btSimulasiKebutuhan.TabIndex = 33;
+            btSimulasiKebutuhan.Text = "              Simulasi Kebutuhan";
+            btSimulasiKebutuhan.TextAlign = HorizontalAlignment.Right;
+            btSimulasiKebutuhan.Click += btSimulasiKebutuhan_Click;
             // 
             // btCabang
             // 
@@ -442,7 +459,7 @@
             btBahanBaku.ShadowDecoration.CustomizableEdges = customizableEdges18;
             btBahanBaku.Size = new Size(246, 36);
             btBahanBaku.TabIndex = 27;
-            btBahanBaku.Text = "              Bahan Baku";
+            btBahanBaku.Text = "Bahan Baku";
             btBahanBaku.TextAlign = HorizontalAlignment.Right;
             btBahanBaku.Click += btBahanBaku_Click;
             // 
@@ -473,7 +490,7 @@
             btResepMenu.ShadowDecoration.CustomizableEdges = customizableEdges20;
             btResepMenu.Size = new Size(246, 36);
             btResepMenu.TabIndex = 28;
-            btResepMenu.Text = "              Resep Menu";
+            btResepMenu.Text = "Resep Menu";
             btResepMenu.TextAlign = HorizontalAlignment.Right;
             btResepMenu.Click += btResepMenu_Click;
             // 
@@ -688,15 +705,95 @@
             label1.TabIndex = 4;
             label1.Text = "FnB Records";
             // 
+            // guna2GroupBox5
+            // 
+            guna2GroupBox5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            guna2GroupBox5.BackColor = Color.Transparent;
+            guna2GroupBox5.BorderColor = Color.Transparent;
+            guna2GroupBox5.BorderThickness = 2;
+            guna2GroupBox5.Controls.Add(guna2GroupBox6);
+            guna2GroupBox5.Controls.Add(label7);
+            guna2GroupBox5.CustomBorderColor = Color.Gray;
+            guna2GroupBox5.CustomBorderThickness = new Padding(0, 0, 0, 1);
+            guna2GroupBox5.CustomizableEdges = customizableEdges41;
+            guna2GroupBox5.FillColor = Color.Transparent;
+            guna2GroupBox5.Font = new Font("Segoe UI", 9F);
+            guna2GroupBox5.ForeColor = Color.FromArgb(125, 137, 149);
+            guna2GroupBox5.Location = new Point(0, 667);
+            guna2GroupBox5.Name = "guna2GroupBox5";
+            guna2GroupBox5.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            guna2GroupBox5.Size = new Size(300, 20);
+            guna2GroupBox5.TabIndex = 8;
+            // 
+            // guna2GroupBox6
+            // 
+            guna2GroupBox6.Anchor = AnchorStyles.None;
+            guna2GroupBox6.BackColor = Color.Transparent;
+            guna2GroupBox6.BorderColor = Color.Transparent;
+            guna2GroupBox6.BorderRadius = 8;
+            guna2GroupBox6.Controls.Add(label5);
+            guna2GroupBox6.Controls.Add(guna2PictureBox3);
+            guna2GroupBox6.CustomBorderColor = Color.Transparent;
+            guna2GroupBox6.CustomizableEdges = customizableEdges39;
+            guna2GroupBox6.FillColor = Color.FromArgb(240, 177, 0);
+            guna2GroupBox6.Font = new Font("Segoe UI", 9F);
+            guna2GroupBox6.ForeColor = Color.Transparent;
+            guna2GroupBox6.Location = new Point(162, -93);
+            guna2GroupBox6.Name = "guna2GroupBox6";
+            guna2GroupBox6.ShadowDecoration.BorderRadius = 20;
+            guna2GroupBox6.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            guna2GroupBox6.ShadowDecoration.Depth = 20;
+            guna2GroupBox6.ShadowDecoration.Enabled = true;
+            guna2GroupBox6.ShadowDecoration.Shadow = new Padding(0, 3, 10, 10);
+            guna2GroupBox6.Size = new Size(107, 23);
+            guna2GroupBox6.TabIndex = 4;
+            guna2GroupBox6.Text = "guna2GroupBox4";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Inter", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(36, 1);
+            label5.Name = "label5";
+            label5.Size = new Size(65, 18);
+            label5.TabIndex = 8;
+            label5.Text = "Premium";
+            // 
+            // guna2PictureBox3
+            // 
+            guna2PictureBox3.BackgroundImage = Properties.Resources.Blue_and_White_Modern_Login_and_Sign_up_Website_Page_UI_Desktop_Prototype;
+            guna2PictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
+            guna2PictureBox3.CustomizableEdges = customizableEdges37;
+            guna2PictureBox3.Image = Properties.Resources.Logo_FnB_Records_removebg_preview;
+            guna2PictureBox3.ImageRotate = 0F;
+            guna2PictureBox3.Location = new Point(5, -2);
+            guna2PictureBox3.Name = "guna2PictureBox3";
+            guna2PictureBox3.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            guna2PictureBox3.Size = new Size(24, 25);
+            guna2PictureBox3.TabIndex = 7;
+            guna2PictureBox3.TabStop = false;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("League Spartan", 21.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.FromArgb(212, 122, 71);
+            label7.Location = new Point(62, -77);
+            label7.Name = "label7";
+            label7.Size = new Size(170, 43);
+            label7.TabIndex = 4;
+            label7.Text = "FnB Records";
+            // 
             // guna2Panel2
             // 
             guna2Panel2.BackColor = Color.FromArgb(45, 45, 45);
             guna2Panel2.Controls.Add(btnExitApp);
-            guna2Panel2.CustomizableEdges = customizableEdges41;
+            guna2Panel2.CustomizableEdges = customizableEdges47;
             guna2Panel2.Dock = DockStyle.Top;
             guna2Panel2.Location = new Point(0, 0);
             guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges48;
             guna2Panel2.Size = new Size(1920, 53);
             guna2Panel2.TabIndex = 2;
             guna2Panel2.Paint += guna2Panel2_Paint;
@@ -706,7 +803,7 @@
             btnExitApp.Anchor = AnchorStyles.Right;
             btnExitApp.BorderRadius = 10;
             btnExitApp.Cursor = Cursors.Hand;
-            btnExitApp.CustomizableEdges = customizableEdges39;
+            btnExitApp.CustomizableEdges = customizableEdges45;
             btnExitApp.DisabledState.BorderColor = Color.DarkGray;
             btnExitApp.DisabledState.CustomBorderColor = Color.DarkGray;
             btnExitApp.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -719,7 +816,7 @@
             btnExitApp.HoverState.ForeColor = Color.White;
             btnExitApp.Location = new Point(1871, 3);
             btnExitApp.Name = "btnExitApp";
-            btnExitApp.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            btnExitApp.ShadowDecoration.CustomizableEdges = customizableEdges46;
             btnExitApp.Size = new Size(46, 45);
             btnExitApp.TabIndex = 3;
             btnExitApp.Text = "X";
@@ -728,11 +825,11 @@
             // paneluc
             // 
             paneluc.AutoScroll = true;
-            paneluc.CustomizableEdges = customizableEdges43;
+            paneluc.CustomizableEdges = customizableEdges49;
             paneluc.Dock = DockStyle.Fill;
             paneluc.Location = new Point(300, 53);
             paneluc.Name = "paneluc";
-            paneluc.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            paneluc.ShadowDecoration.CustomizableEdges = customizableEdges50;
             paneluc.Size = new Size(1620, 1008);
             paneluc.TabIndex = 4;
             // 
@@ -765,6 +862,11 @@
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
+            guna2GroupBox5.ResumeLayout(false);
+            guna2GroupBox5.PerformLayout();
+            guna2GroupBox6.ResumeLayout(false);
+            guna2GroupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox3).EndInit();
             guna2Panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -791,14 +893,19 @@
         private Guna.UI2.WinForms.Guna2Panel paneluc;
         private Guna.UI2.WinForms.Guna2Button guna2Button12;
         private Guna.UI2.WinForms.Guna2Button btVendor;
-        private Guna.UI2.WinForms.Guna2Button guna2Button13;
-        private Guna.UI2.WinForms.Guna2Button btdashboard;
-        private Guna.UI2.WinForms.Guna2Button guna2Button14;
+        private Guna.UI2.WinForms.Guna2Button btManajemenInventori;
+        private Guna.UI2.WinForms.Guna2Button btDashboard;
+        private Guna.UI2.WinForms.Guna2Button btSimulasiKebutuhan;
         private Guna.UI2.WinForms.Guna2Button btBahanBaku;
         private Guna.UI2.WinForms.Guna2Button btAnalisisBelanja;
         private Guna.UI2.WinForms.Guna2Button btResepMenu;
         private Guna.UI2.WinForms.Guna2Button btCabang;
         private Guna.UI2.WinForms.Guna2Button btPO;
         private Guna.UI2.WinForms.Guna2Button btPenjualan;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox5;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox6;
+        private Label label5;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Label label7;
     }
 }

@@ -64,8 +64,6 @@ C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-
 C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_Cabang.resources
 C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_AnalisisBelanja.resources
 C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_Analisis.resources
-C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.HasilSimulasiKebutuhanBahan.resources
-C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.SimulasiKebutuhanbahan.resources
 C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\FnB-Records.dll.config
 C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
@@ -74,3 +72,6 @@ C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-
 C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\System.Diagnostics.DiagnosticSource.dll
 C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\WinForms.DataVisualization.Utilities.dll
 C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\WinForms.DataVisualization.dll
+C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_SimulasiKebutuhan.resources
+C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_ManajemenInventori.resources
+C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_ProduksiOlahan.resources

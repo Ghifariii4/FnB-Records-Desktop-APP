@@ -126,10 +126,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges84 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges89 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges90 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges87 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges88 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges85 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -222,7 +218,6 @@
             label15 = new Label();
             label16 = new Label();
             guna2GroupBox10 = new Guna.UI2.WinForms.Guna2GroupBox();
-            guna2DataGridView3 = new Guna.UI2.WinForms.Guna2DataGridView();
             guna2GroupBox11 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2Button20 = new Guna.UI2.WinForms.Guna2Button();
             btBuatPOBaru = new Guna.UI2.WinForms.Guna2Button();
@@ -260,7 +255,6 @@
             guna2GroupBox8.SuspendLayout();
             guna2GroupBox9.SuspendLayout();
             guna2GroupBox10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView3).BeginInit();
             guna2GroupBox11.SuspendLayout();
             guna2GroupBox12.SuspendLayout();
             gbPopUpPO.SuspendLayout();
@@ -1634,7 +1628,6 @@
             guna2GroupBox10.BorderColor = Color.FromArgb(45, 45, 45);
             guna2GroupBox10.BorderRadius = 20;
             guna2GroupBox10.BorderThickness = 0;
-            guna2GroupBox10.Controls.Add(guna2DataGridView3);
             guna2GroupBox10.Controls.Add(guna2GroupBox11);
             guna2GroupBox10.CustomBorderColor = Color.Transparent;
             guna2GroupBox10.CustomizableEdges = customizableEdges89;
@@ -1651,66 +1644,6 @@
             guna2GroupBox10.ShadowDecoration.Shadow = new Padding(10);
             guna2GroupBox10.Size = new Size(1544, 364);
             guna2GroupBox10.TabIndex = 19;
-            // 
-            // guna2DataGridView3
-            // 
-            dataGridViewCellStyle13.BackColor = Color.White;
-            guna2DataGridView3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            guna2DataGridView3.BackgroundColor = Color.FromArgb(45, 45, 45);
-            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle14.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle14.ForeColor = Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            guna2DataGridView3.ColumnHeadersHeight = 4;
-            guna2DataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2Transition1.SetDecoration(guna2DataGridView3, Guna.UI2.AnimatorNS.DecorationType.None);
-            dataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = Color.White;
-            dataGridViewCellStyle15.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle15.ForeColor = Color.FromArgb(125, 137, 149);
-            dataGridViewCellStyle15.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle15.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle15.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView3.DefaultCellStyle = dataGridViewCellStyle15;
-            guna2DataGridView3.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView3.Location = new Point(32, 116);
-            guna2DataGridView3.Name = "guna2DataGridView3";
-            dataGridViewCellStyle16.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = SystemColors.Control;
-            dataGridViewCellStyle16.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle16.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
-            guna2DataGridView3.RowHeadersVisible = false;
-            guna2DataGridView3.Size = new Size(1124, 207);
-            guna2DataGridView3.TabIndex = 10;
-            guna2DataGridView3.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            guna2DataGridView3.ThemeStyle.AlternatingRowsStyle.Font = null;
-            guna2DataGridView3.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            guna2DataGridView3.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            guna2DataGridView3.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            guna2DataGridView3.ThemeStyle.BackColor = Color.FromArgb(45, 45, 45);
-            guna2DataGridView3.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView3.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            guna2DataGridView3.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            guna2DataGridView3.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            guna2DataGridView3.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            guna2DataGridView3.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView3.ThemeStyle.HeaderStyle.Height = 4;
-            guna2DataGridView3.ThemeStyle.ReadOnly = false;
-            guna2DataGridView3.ThemeStyle.RowsStyle.BackColor = Color.White;
-            guna2DataGridView3.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            guna2DataGridView3.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            guna2DataGridView3.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(125, 137, 149);
-            guna2DataGridView3.ThemeStyle.RowsStyle.Height = 25;
-            guna2DataGridView3.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView3.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
             // guna2GroupBox11
             // 
@@ -2205,7 +2138,6 @@
             guna2GroupBox9.ResumeLayout(false);
             guna2GroupBox9.PerformLayout();
             guna2GroupBox10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView3).EndInit();
             guna2GroupBox11.ResumeLayout(false);
             guna2GroupBox12.ResumeLayout(false);
             guna2GroupBox12.PerformLayout();
@@ -2280,7 +2212,6 @@
         private Label label15;
         private Label label16;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox10;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView3;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox11;
         private Guna.UI2.WinForms.Guna2Button guna2Button20;
         private Guna.UI2.WinForms.Guna2Button btBuatPOBaru;
