@@ -516,7 +516,6 @@
             // 
             guna2PictureBox4.BackgroundImageLayout = ImageLayout.Stretch;
             guna2PictureBox4.CustomizableEdges = customizableEdges21;
-            guna2PictureBox4.Image = Properties.Resources.Kalender_Logo_putih;
             guna2PictureBox4.ImageRotate = 0F;
             guna2PictureBox4.Location = new Point(19, 29);
             guna2PictureBox4.Name = "guna2PictureBox4";

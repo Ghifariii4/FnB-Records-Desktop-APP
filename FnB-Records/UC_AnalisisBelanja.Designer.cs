@@ -46,6 +46,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -72,6 +75,7 @@
             label8 = new Label();
             label10 = new Label();
             guna2GroupBox5 = new Guna.UI2.WinForms.Guna2GroupBox();
+            chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             label12 = new Label();
             label11 = new Label();
             guna2GroupBox7 = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -91,6 +95,7 @@
             guna2GroupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox3).BeginInit();
             guna2GroupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
             guna2GroupBox7.SuspendLayout();
             guna2GroupBox6.SuspendLayout();
             guna2GroupBox8.SuspendLayout();
@@ -187,7 +192,6 @@
             // 
             guna2PictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             guna2PictureBox1.CustomizableEdges = customizableEdges5;
-            guna2PictureBox1.Image = Properties.Resources.Pengeluaaran_Logo_Merah;
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(411, 19);
             guna2PictureBox1.Name = "guna2PictureBox1";
@@ -196,6 +200,7 @@
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             guna2PictureBox1.TabIndex = 17;
             guna2PictureBox1.TabStop = false;
+            guna2PictureBox1.Click += guna2PictureBox1_Click;
             // 
             // label18
             // 
@@ -257,7 +262,6 @@
             // 
             guna2PictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
             guna2PictureBox2.CustomizableEdges = customizableEdges9;
-            guna2PictureBox2.Image = Properties.Resources.Box_Ungu;
             guna2PictureBox2.ImageRotate = 0F;
             guna2PictureBox2.Location = new Point(411, 19);
             guna2PictureBox2.Name = "guna2PictureBox2";
@@ -327,7 +331,6 @@
             // 
             guna2PictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
             guna2PictureBox3.CustomizableEdges = customizableEdges13;
-            guna2PictureBox3.Image = Properties.Resources.Chart_Biru;
             guna2PictureBox3.ImageRotate = 0F;
             guna2PictureBox3.Location = new Point(411, 19);
             guna2PictureBox3.Name = "guna2PictureBox3";
@@ -375,6 +378,7 @@
             guna2GroupBox5.BackColor = Color.Transparent;
             guna2GroupBox5.BorderColor = Color.DimGray;
             guna2GroupBox5.BorderRadius = 15;
+            guna2GroupBox5.Controls.Add(chart1);
             guna2GroupBox5.Controls.Add(label12);
             guna2GroupBox5.Controls.Add(label11);
             guna2GroupBox5.CustomBorderColor = Color.Empty;
@@ -390,6 +394,22 @@
             guna2GroupBox5.ShadowDecoration.Shadow = new Padding(3, 1, 3, 5);
             guna2GroupBox5.Size = new Size(755, 529);
             guna2GroupBox5.TabIndex = 25;
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            chart1.Legends.Add(legend1);
+            chart1.Location = new Point(21, 134);
+            chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chart1.Series.Add(series1);
+            chart1.Size = new Size(716, 368);
+            chart1.TabIndex = 18;
+            chart1.Text = "chart1";
             // 
             // label12
             // 
@@ -571,6 +591,7 @@
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox3).EndInit();
             guna2GroupBox5.ResumeLayout(false);
             guna2GroupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
             guna2GroupBox7.ResumeLayout(false);
             guna2GroupBox7.PerformLayout();
             guna2GroupBox6.ResumeLayout(false);
@@ -613,5 +634,6 @@
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox8;
         private Label label17;
         private Label label19;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }

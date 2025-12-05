@@ -114,7 +114,6 @@
             txtCariBahanBaku.ShadowDecoration.Depth = 0;
             txtCariBahanBaku.Size = new Size(1851, 153);
             txtCariBahanBaku.TabIndex = 9;
-            txtCariBahanBaku.TextChanged += this.txtCariBahanBaku_TextChanged;
             // 
             // guna2ComboBox1
             // 
@@ -134,7 +133,6 @@
             guna2ComboBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2ComboBox1.Size = new Size(175, 36);
             guna2ComboBox1.TabIndex = 27;
-            guna2ComboBox1.SelectedIndexChanged += this.guna2ComboBox1_SelectedIndexChanged;
             // 
             // guna2Button1
             // 
@@ -200,7 +198,6 @@
             label3.Size = new Size(168, 27);
             label3.TabIndex = 31;
             label3.Text = "Target Produksi *";
-            label3.Click += this.label3_Click;
             // 
             // SimulasiKebutuhanbahan
             // 
