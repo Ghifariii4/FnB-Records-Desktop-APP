@@ -340,11 +340,11 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Font = new Font("JetBrains Mono", 27.7499962F, FontStyle.Bold);
             label9.ForeColor = Color.White;
             label9.Location = new Point(21, 81);
             label9.Name = "label9";
-            label9.Size = new Size(40, 42);
+            label9.Size = new Size(44, 49);
             label9.TabIndex = 15;
             label9.Text = "0";
             // 
@@ -412,11 +412,11 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Font = new Font("JetBrains Mono", 27.7499962F, FontStyle.Bold);
             label6.ForeColor = Color.White;
             label6.Location = new Point(71, 77);
             label6.Name = "label6";
-            label6.Size = new Size(40, 42);
+            label6.Size = new Size(44, 49);
             label6.TabIndex = 15;
             label6.Text = "0";
             // 
@@ -494,11 +494,11 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.Font = new Font("JetBrains Mono", 27.7499962F, FontStyle.Bold);
             label10.ForeColor = Color.White;
             label10.Location = new Point(71, 77);
             label10.Name = "label10";
-            label10.Size = new Size(40, 42);
+            label10.Size = new Size(44, 49);
             label10.TabIndex = 15;
             label10.Text = "0";
             // 
@@ -575,11 +575,11 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.Font = new Font("JetBrains Mono", 27.7499962F, FontStyle.Bold);
             label13.ForeColor = Color.White;
             label13.Location = new Point(21, 77);
             label13.Name = "label13";
-            label13.Size = new Size(107, 42);
+            label13.Size = new Size(110, 49);
             label13.TabIndex = 15;
             label13.Text = "0.0%";
             // 
@@ -955,7 +955,7 @@
             Controls.Add(guna2GroupBox3);
             Controls.Add(guna2GroupBox1);
             Name = "UCDashboard";
-            Size = new Size(1599, 1280);
+            Size = new Size(1582, 1263);
             Load += UCDashboard_Load;
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();

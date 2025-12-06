@@ -413,6 +413,36 @@ namespace FnB_Records.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Email_Icon_Black {
+            get {
+                object obj = ResourceManager.GetObject("Email-Icon-Black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Error_Icon_Red {
+            get {
+                object obj = ResourceManager.GetObject("Error-Icon-Red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Exit_Icon_Black {
+            get {
+                object obj = ResourceManager.GetObject("Exit-Icon-Black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap exit_icon_hitam {
             get {
                 object obj = ResourceManager.GetObject("exit-icon-hitam", resourceCulture);
@@ -496,6 +526,46 @@ namespace FnB_Records.Properties {
         internal static System.Drawing.Bitmap Kart_Icon_White {
             get {
                 object obj = ResourceManager.GetObject("Kart-Icon-White", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lock_Icon_White {
+            get {
+                object obj = ResourceManager.GetObject("Lock-Icon-White", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lock_Icon_White__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Lock-Icon-White (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lock_Icon_White__2_1 {
+            get {
+                object obj = ResourceManager.GetObject("Lock-Icon-White (2)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lock_Icon_White__2_2 {
+            get {
+                object obj = ResourceManager.GetObject("Lock-Icon-White (2)2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -623,6 +693,26 @@ namespace FnB_Records.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Setting_Icon_Black {
+            get {
+                object obj = ResourceManager.GetObject("Setting-Icon-Black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Telephone_Icon_White {
+            get {
+                object obj = ResourceManager.GetObject("Telephone-Icon-White", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Up_Icon_Black {
             get {
                 object obj = ResourceManager.GetObject("Up-Icon-Black", resourceCulture);
@@ -646,6 +736,26 @@ namespace FnB_Records.Properties {
         internal static System.Drawing.Bitmap warna_primer {
             get {
                 object obj = ResourceManager.GetObject("warna primer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap warna_primer__1_ {
+            get {
+                object obj = ResourceManager.GetObject("warna primer (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap warna_primer__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("warna primer (1)1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
