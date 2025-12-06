@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
+using System.Drawing.Drawing2D;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
@@ -15,335 +13,250 @@ namespace FnB_Records
 {
     public partial class UCDashboard : UserControl
     {
-        // Tracking untuk rate limiting
         private DateTime lastRequestTime = DateTime.MinValue;
         private int requestCount = 0;
         private DateTime requestCountResetTime = DateTime.Now;
-        private bool isTyping = false; // Flag untuk cek apakah sedang typing
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            LoadPieChart();
-           // LoadGrafikPenjualanBulanan();
-        }
-
+        private bool isTyping = false;
 
         public UCDashboard()
         {
             InitializeComponent();
+            SetupUI();
+        }
 
-            // Set placeholder text untuk txtprompt
-            txtprompt.Text = "Silahkan tanya Bibot...";
-            txtprompt.ForeColor = Color.Gray;
-
-            // Event untuk menghilangkan placeholder saat fokus
-            txtprompt.Enter += (s, e) =>
+        private void SetupUI()
+        {
+            if (pnlChatContainer != null)
             {
-                if (txtprompt.Text == "Silahkan tanya Bibot...")
+                pnlChatContainer.BackColor = Color.FromArgb(45, 45, 48);
+
+                typeof(Panel).InvokeMember("DoubleBuffered",
+                    System.Reflection.BindingFlags.SetProperty |
+                    System.Reflection.BindingFlags.Instance |
+                    System.Reflection.BindingFlags.NonPublic,
+                    null, pnlChatContainer, new object[] { true });
+            }
+
+            txtpromp.Text = "Silahkan tanya Bibot...";
+            txtpromp.ForeColor = Color.Gray;
+
+            txtpromp.Enter += (s, e) => {
+                if (txtpromp.Text == "Silahkan tanya Bibot...")
                 {
-                    txtprompt.Text = "";
-                    txtprompt.ForeColor = Color.Black;
+                    txtpromp.Text = "";
+                    txtpromp.ForeColor = Color.White;
                 }
             };
 
-            // Event untuk menampilkan kembali placeholder saat kehilangan fokus
-            txtprompt.Leave += (s, e) =>
-            {
-                if (string.IsNullOrWhiteSpace(txtprompt.Text))
+            txtpromp.Leave += (s, e) => {
+                if (string.IsNullOrWhiteSpace(txtpromp.Text))
                 {
-                    txtprompt.Text = "Silahkan tanya Bibot...";
-                    txtprompt.ForeColor = Color.Gray;
+                    txtpromp.Text = "Silahkan tanya Bibot...";
+                    txtpromp.ForeColor = Color.Gray;
                 }
             };
+
+            txtpromp.KeyDown += async (s, e) => {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    e.SuppressKeyPress = true;
+                    await HandleSendAction();
+                }
+            };
+        }
+
+        private async void UCDashboard_Load(object sender, EventArgs e)
+        {
+            LoadPieChart();
+            LoadGrafikPenjualanBulanan();
+
+            await AddChatBubbleTypingEffect("Halo! 👋 Saya Bibot, asisten AI FnB Records.\nAda yang bisa saya bantu hari ini?", false);
         }
 
         private void LoadPieChart()
         {
-            chartDashboard.Series.Clear();
-            chartDashboard.Legends.Clear();
-            chartDashboard.ChartAreas.Clear();
+            if (chartDashboard == null) return;
 
-            // === ChartArea ===
-            var area = new ChartArea("ChartArea1");
-            area.BackColor = Color.FromArgb(45, 45, 45);
-            area.BackSecondaryColor = Color.FromArgb(45, 45, 45);
-            area.BackGradientStyle = GradientStyle.None;
-            chartDashboard.ChartAreas.Add(area);
-
-            // === Legend ===
-            var legend = new Legend("Legend1");
-            legend.BackColor = Color.FromArgb(45, 45, 45);
-            legend.ForeColor = Color.White;
-            chartDashboard.Legends.Add(legend);
-
-            // === Series ===
-            var series = new Series("Kategori");
-            series.ChartType = SeriesChartType.Pie;
-
-            int makanan = 150;
-            int minuman = 200;
-            int dessert = 80;
-            int snack = 120;
-            int dll = 60;
-
-            series.Points.AddXY("Makanan", makanan);
-            series.Points.AddXY("Minuman", minuman);
-            series.Points.AddXY("Dessert", dessert);
-            series.Points.AddXY("Snack", snack);
-            series.Points.AddXY("Dll", dll);
-
-            series.Points[0].Color = Color.RoyalBlue;
-            series.Points[1].Color = Color.LightGreen;
-            series.Points[2].Color = Color.Yellow;
-            series.Points[3].Color = Color.Orange;
-            series.Points[4].Color = Color.MediumPurple;
-
-            series["PieLabelStyle"] = "Disabled";
-
-            chartDashboard.Series.Add(series);
-
-        }
-
-
-        // Fungsi untuk typing animation seperti ChatGPT
-        private async Task TypeText(string text, int delayPerChar = 15)
-        {
-            isTyping = true;
-
-            foreach (char c in text)
+            chartDashboard.SuspendLayout();
+            try
             {
-                richTextBoxAi.AppendText(c.ToString());
-                richTextBoxAi.SelectionStart = richTextBoxAi.TextLength;
-                richTextBoxAi.ScrollToCaret();
+                chartDashboard.Series.Clear();
+                chartDashboard.Legends.Clear();
+                chartDashboard.ChartAreas.Clear();
 
-                // Delay lebih pendek untuk spasi dan newline agar lebih natural
-                if (c == ' ')
-                    await Task.Delay(5);
-                else if (c == '\n')
-                    await Task.Delay(10);
-                else
-                    await Task.Delay(delayPerChar);
+                chartDashboard.AntiAliasing = AntiAliasingStyles.All;
+                chartDashboard.TextAntiAliasingQuality = TextAntiAliasingQuality.High;
+
+                var area = new ChartArea("ChartArea1");
+                area.BackColor = Color.FromArgb(45, 45, 45);
+                area.BackSecondaryColor = Color.FromArgb(45, 45, 45);
+                area.BackGradientStyle = GradientStyle.None;
+                area.Position = new ElementPosition(0, 0, 100, 85);
+                chartDashboard.ChartAreas.Add(area);
+
+                var legend = new Legend("Legend1");
+                legend.BackColor = Color.FromArgb(45, 45, 45);
+                legend.ForeColor = Color.White;
+                legend.Docking = Docking.Bottom;
+                legend.IsTextAutoFit = false;
+                chartDashboard.Legends.Add(legend);
+
+                var series = new Series("Kategori");
+                series.ChartType = SeriesChartType.Pie;
+                series["PieLabelStyle"] = "Disabled";
+                series["PieDrawingStyle"] = "SoftEdge";
+
+                int makanan = 150;
+                int minuman = 200;
+                int dessert = 80;
+                int snack = 120;
+                int dll = 60;
+
+                series.Points.AddXY("Makanan", makanan);
+                series.Points.AddXY("Minuman", minuman);
+                series.Points.AddXY("Dessert", dessert);
+                series.Points.AddXY("Snack", snack);
+                series.Points.AddXY("Dll", dll);
+
+                series.Points[0].Color = Color.RoyalBlue;
+                series.Points[1].Color = Color.LightGreen;
+                series.Points[2].Color = Color.Yellow;
+                series.Points[3].Color = Color.Orange;
+                series.Points[4].Color = Color.MediumPurple;
+
+                chartDashboard.Series.Add(series);
             }
-
-            isTyping = false;
+            finally
+            {
+                chartDashboard.ResumeLayout();
+                chartDashboard.Invalidate();
+            }
         }
 
         private void LoadGrafikPenjualanBulanan()
         {
-            chartpenjualan.Series.Clear();
-            chartpenjualan.ChartAreas.Clear();
+            if (chartpenjualan == null) return;
 
-            // Chart Area
-            var area = new ChartArea("ChartArea1");
-            area.BackColor = Color.FromArgb(45, 45, 45);
-            area.AxisX.LineColor = Color.White;
-            area.AxisY.LineColor = Color.White;
-
-            area.AxisX.LabelStyle.ForeColor = Color.White;
-            area.AxisY.LabelStyle.ForeColor = Color.White;
-
-            area.AxisX.MajorGrid.LineColor = Color.Gray;
-            area.AxisY.MajorGrid.LineColor = Color.Gray;
-
-            chartpenjualan.ChartAreas.Add(area);
-
-            // Series
-            var series = new Series("Penjualan Bulanan");
-            series.ChartType = SeriesChartType.Spline;   // grafik smooth/investasi
-            series.Color = Color.DeepSkyBlue;
-            series.BorderWidth = 3;
-            series.MarkerStyle = MarkerStyle.Circle;
-            series.MarkerSize = 7;
-            series.MarkerColor = Color.White;
-
-            // Data Penjualan per Bulan
-            Dictionary<string, int> dataBulanan = new Dictionary<string, int>()
-    {
-        { "Jan", 120 },
-        { "Feb", 150 },
-        { "Mar", 180 },
-        { "Apr", 200 },
-        { "Mei", 240 },
-        { "Jun", 300 },
-        { "Jul", 320 },
-        { "Agu", 310 },
-        { "Sep", 350 },
-        { "Okt", 400 },
-        { "Nov", 420 },
-        { "Des", 500 }
-    };
-
-            foreach (var item in dataBulanan)
+            chartpenjualan.SuspendLayout();
+            try
             {
-                series.Points.AddXY(item.Key, item.Value);
-            }
+                chartpenjualan.Series.Clear();
+                chartpenjualan.ChartAreas.Clear();
+                chartpenjualan.Legends.Clear();
 
-            chartpenjualan.Series.Add(series);
-        }
+                chartpenjualan.AntiAliasing = AntiAliasingStyles.All;
+                chartpenjualan.TextAntiAliasingQuality = TextAntiAliasingQuality.High;
 
+                var area = new ChartArea("ChartArea1");
+                area.BackColor = Color.FromArgb(45, 45, 45);
+                area.AxisX.LineColor = Color.White;
+                area.AxisY.LineColor = Color.White;
 
+                area.AxisX.LabelStyle.ForeColor = Color.White;
+                area.AxisY.LabelStyle.ForeColor = Color.White;
 
-        // Fungsi untuk smooth scroll
-        private async Task SmoothScrollToBottom()
-        {
-            int targetPosition = richTextBoxAi.Text.Length;
-            int currentPosition = richTextBoxAi.SelectionStart;
-            int steps = 20;
-            int delay = 10;
+                area.AxisX.MajorGrid.LineColor = Color.FromArgb(80, Color.Gray);
+                area.AxisY.MajorGrid.LineColor = Color.FromArgb(80, Color.Gray);
+                chartpenjualan.ChartAreas.Add(area);
 
-            for (int i = 0; i < steps; i++)
-            {
-                int newPosition = currentPosition + ((targetPosition - currentPosition) * (i + 1) / steps);
-                richTextBoxAi.SelectionStart = newPosition;
-                richTextBoxAi.ScrollToCaret();
-                await Task.Delay(delay);
-            }
+                var series = new Series("Penjualan Bulanan");
+                series.ChartType = SeriesChartType.Spline;
+                series.Color = Color.DeepSkyBlue;
+                series.BorderWidth = 3;
+                series.MarkerStyle = MarkerStyle.Circle;
+                series.MarkerSize = 7;
+                series.MarkerColor = Color.White;
 
-            richTextBoxAi.SelectionStart = targetPosition;
-            richTextBoxAi.ScrollToCaret();
-        }
-
-        private async Task<string> AskGemini(string prompt)
-        {
-            // GANTI API KEY ANDA DI SINI - Generate baru di: https://aistudio.google.com/apikey
-            string apiKey = "AIzaSyDdALPaNH5coce61pKqkV7VmmOEuo0K8mo";
-            string url = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={apiKey}";
-
-            string systemPrompt = @"Kamu adalah Bibot, asisten AI yang ahli dalam bisnis Food & Beverage (F&B).
-Kamu HANYA menjawab pertanyaan yang berkaitan dengan:
-- Manajemen restoran, cafe, atau bisnis F&B
-- Menu makanan dan minuman
-- Resep masakan
-- Strategi penjualan F&B
-- Pengelolaan bahan baku dan stok
-- Pricing dan HPP (Harga Pokok Penjualan)
-- Tips dan trik operasional bisnis F&B
-
-Jika user bertanya di luar topik F&B (misalnya tentang politik, teknologi umum, olahraga, dll), 
-kamu dengan sopan menolak dan mengarahkan kembali ke topik F&B dengan berkata:
-'Maaf, Bibot hanya bisa membantu masalah bisnis F&B ya! Ada yang ingin kamu tanyakan tentang menu, resep, atau strategi bisnis kuliner? 😊'
-
-Gaya bicara kamu ramah, profesional, dan helpful.
-
-PENTING: Saat merekomendasikan menu, SELALU gunakan format berikut:
-
-[Nama Menu]
-Menu #[nomor urut]
-[Deskripsi singkat menu]
-
-Bahan:
-[List bahan dengan bullet point atau dash]
-
-Estimasi:
-HPP: Rp [harga]
-Harga Jual: Rp [harga]
-
-Kenapa menu ini?
-[Penjelasan alasan memilih menu ini]
-
----
-
-[Ulangi format di atas untuk menu berikutnya]";
-
-            // Gabungkan system prompt dengan user prompt
-            string fullPrompt = systemPrompt + "\n\nUser: " + prompt + "\n\nBibot:";
-
-            // Buat JSON manual
-            string jsonData = $@"{{
-                ""contents"": [{{
-                    ""parts"": [{{
-                        ""text"": ""{fullPrompt.Replace("\"", "\\\"").Replace("\n", "\\n")}""
-                    }}]
-                }}]
-            }}";
-
-            using (var client = new HttpClient())
-            {
-                try
+                Dictionary<string, int> dataBulanan = new Dictionary<string, int>()
                 {
-                    var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
-                    var response = await client.PostAsync(url, content);
-                    string result = await response.Content.ReadAsStringAsync();
+                    { "Jan", 120 }, { "Feb", 150 }, { "Mar", 180 },
+                    { "Apr", 200 }, { "Mei", 240 }, { "Jun", 300 },
+                    { "Jul", 320 }, { "Agu", 310 }, { "Sep", 350 },
+                    { "Okt", 400 }, { "Nov", 420 }, { "Des", 500 }
+                };
 
-                    // Cek jika response tidak OK (error)
-                    if (!response.IsSuccessStatusCode)
-                    {
-                        try
-                        {
-                            using (JsonDocument errorDoc = JsonDocument.Parse(result))
-                            {
-                                var errorMsg = errorDoc.RootElement
-                                    .GetProperty("error")
-                                    .GetProperty("message")
-                                    .GetString();
-
-                                if (result.Contains("quota") || result.Contains("RESOURCE_EXHAUSTED"))
-                                {
-                                    return "⚠️ Quota API Gemini habis. Silakan:\n" +
-                                           "1. Tunggu 24 jam untuk reset otomatis\n" +
-                                           "2. Atau generate API key baru di: https://makersuite.google.com/app/apikey\n" +
-                                           "3. Ganti API key di kode aplikasi";
-                                }
-
-                                return "Error API: " + errorMsg;
-                            }
-                        }
-                        catch
-                        {
-                            return "Error: " + result;
-                        }
-                    }
-
-                    // Parse response menggunakan System.Text.Json
-                    using (JsonDocument doc = JsonDocument.Parse(result))
-                    {
-                        var root = doc.RootElement;
-
-                        if (root.TryGetProperty("error", out JsonElement error))
-                        {
-                            return "Error: " + error.GetProperty("message").GetString();
-                        }
-
-                        var text = root
-                            .GetProperty("candidates")[0]
-                            .GetProperty("content")
-                            .GetProperty("parts")[0]
-                            .GetProperty("text")
-                            .GetString();
-
-                        return text;
-                    }
-                }
-                catch (Exception ex)
+                foreach (var item in dataBulanan)
                 {
-                    return "Error: " + ex.Message;
+                    series.Points.AddXY(item.Key, item.Value);
                 }
-            }
-        }
 
-        private void guna2GroupBox4_Click(object sender, EventArgs e)
-        {
+                chartpenjualan.Series.Add(series);
+            }
+            finally
+            {
+                chartpenjualan.ResumeLayout();
+                chartpenjualan.Invalidate();
+            }
         }
 
         private async void btnsend_Click_1(object sender, EventArgs e)
         {
-            string prompt = txtprompt.Text.Trim();
+            await HandleSendAction();
+        }
 
-            // Cek apakah masih placeholder atau kosong
-            if (string.IsNullOrEmpty(prompt) || prompt == "Silahkan tanya Bibot...")
+        private async Task HandleSendAction()
+        {
+            string prompt = txtpromp.Text.Trim();
+
+            if (string.IsNullOrEmpty(prompt) || prompt == "Silahkan tanya Bibot...") return;
+            if (isTyping) return;
+
+            AddChatBubble(prompt, true);
+
+            txtpromp.Clear();
+            txtpromp.Focus();
+
+            if (!CheckRateLimit()) return;
+
+            isTyping = true;
+            ChatBubble loadingBubble = AddChatBubble("Sedang berpikir...", false);
+
+            try
             {
-                MessageBox.Show("Isi prompt dulu!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                string response = await AskGemini(prompt);
+                pnlChatContainer.Controls.Remove(loadingBubble);
+                loadingBubble.Dispose();
+                await AddChatBubbleTypingEffect(response, false);
             }
-
-            // Cek apakah sedang typing
-            if (isTyping)
+            catch (Exception ex)
             {
-                MessageBox.Show("Tunggu Bibot selesai mengetik ya! 😊", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                pnlChatContainer.Controls.Remove(loadingBubble);
+                AddChatBubble("Error: " + ex.Message, false);
             }
+            finally
+            {
+                isTyping = false;
+            }
+        }
 
-            // RATE LIMITING - Free tier protection
+        private ChatBubble AddChatBubble(string text, bool isUser)
+        {
+            var bubble = new ChatBubble(text, isUser, pnlChatContainer.Width - 50);
+            pnlChatContainer.Controls.Add(bubble);
+            pnlChatContainer.ScrollControlIntoView(bubble);
+            return bubble;
+        }
+
+        private async Task AddChatBubbleTypingEffect(string fullText, bool isUser)
+        {
+            var bubble = new ChatBubble("", isUser, pnlChatContainer.Width - 50);
+            pnlChatContainer.Controls.Add(bubble);
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (char c in fullText)
+            {
+                sb.Append(c);
+                bubble.UpdateText(sb.ToString());
+                pnlChatContainer.ScrollControlIntoView(bubble);
+
+                int delay = (c == ' ' || c == '.') ? 100 : 80;
+                await Task.Delay(delay);
+            }
+        }
+
+        private bool CheckRateLimit()
+        {
             if ((DateTime.Now - requestCountResetTime).TotalMinutes >= 1)
             {
                 requestCount = 0;
@@ -352,121 +265,165 @@ Kenapa menu ini?
 
             if (requestCount >= 10)
             {
-                MessageBox.Show(
-                    "Terlalu banyak request! Tunggu 1 menit ya 😊\n" +
-                    "Free tier Gemini ada limit 15 request/menit.",
-                    "Rate Limit",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information
-                );
-                return;
+                MessageBox.Show("Tunggu sebentar, limit request tercapai.", "Info");
+                return false;
             }
-
-            var timeSinceLastRequest = (DateTime.Now - lastRequestTime).TotalSeconds;
-            if (timeSinceLastRequest < 4)
-            {
-                int waitTime = (int)(4 - timeSinceLastRequest);
-                MessageBox.Show(
-                    $"Tunggu {waitTime} detik lagi ya! 😊\n" +
-                    "Ini untuk menghemat quota free tier.",
-                    "Rate Limit",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information
-                );
-                return;
-            }
-
-            lastRequestTime = DateTime.Now;
             requestCount++;
+            return true;
+        }
 
-            // Tampilkan prompt user dengan typing effect
-            await TypeText("Anda: " + prompt + "\n\n", 10);
+        private async Task<string> AskGemini(string prompt)
+        {
+            string apiKey = "MASUKKAN_API_KEY_KAMU_DISINI";
+            string url = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={apiKey}";
 
-            // Clear textbox prompt dan kembalikan placeholder
-            txtprompt.Clear();
-            txtprompt.Text = "Silahkan tanya Bibot...";
-            txtprompt.ForeColor = Color.Gray;
-            txtprompt.Focus();
+            string systemPrompt = "Kamu adalah Bibot, asisten bisnis F&B. Jawab dengan sopan, format rapi, gunakan emoji.";
+            string fullPrompt = systemPrompt + "\nUser: " + prompt + "\nBibot:";
 
-            // Tampilkan label Bibot
-            richTextBoxAi.AppendText("Bibot: ");
-
-            // Tampilkan animasi loading dengan dots
-            for (int i = 0; i < 3; i++)
+            var payload = new
             {
-                richTextBoxAi.AppendText(".");
-                await Task.Delay(300);
-            }
-            richTextBoxAi.AppendText(" ");
+                contents = new[]
+                {
+                    new { parts = new[] { new { text = fullPrompt } } }
+                }
+            };
 
-            // Panggil AI
-            string response = await AskGemini(prompt);
+            string jsonPayload = JsonSerializer.Serialize(payload);
 
-            // Hapus dots loading (hapus "Bibot: ... ")
-            int removeLength = "Bibot: ... ".Length;
-            if (richTextBoxAi.TextLength >= removeLength)
+            using (var client = new HttpClient())
             {
-                richTextBoxAi.Select(richTextBoxAi.TextLength - removeLength, removeLength);
-                richTextBoxAi.SelectedText = "";
+                var content = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(url, content);
+                string result = await response.Content.ReadAsStringAsync();
+
+                if (!response.IsSuccessStatusCode) return "Maaf, ada gangguan koneksi ke server AI.";
+
+                using (JsonDocument doc = JsonDocument.Parse(result))
+                {
+                    if (doc.RootElement.TryGetProperty("candidates", out JsonElement candidates) && candidates.GetArrayLength() > 0)
+                    {
+                        return candidates[0].GetProperty("content").GetProperty("parts")[0].GetProperty("text").GetString();
+                    }
+                    return "Maaf, saya tidak mengerti pertanyaan itu.";
+                }
             }
-
-            // Tampilkan label Bibot lagi
-            richTextBoxAi.AppendText("Bibot: ");
-
-            // Tampilkan jawaban AI dengan typing effect (lebih cepat = 15ms per char)
-            await TypeText(response, 15);
-
-            // Tambah newline
-            richTextBoxAi.AppendText("\n\n");
-
-            // Smooth scroll ke bawah
-            await SmoothScrollToBottom();
-        }
-
-        private async void UCDashboard_Load(object sender, EventArgs e)
-        {
-            // Set properti RichTextBox
-            richTextBoxAi.ScrollBars = RichTextBoxScrollBars.Vertical;
-            richTextBoxAi.WordWrap = true;
-
-            // Bibot menyapa saat pertama kali load dengan typing effect
-            richTextBoxAi.Clear();
-            await TypeText("Bibot: Halo! 👋 Saya Bibot, asisten AI untuk bisnis F&B Anda. ", 20);
-            await TypeText("Ada yang bisa saya bantu hari ini? Silahkan bertanya! 😊\n\n", 20);
-        }
-
-        private void richTextBoxAi_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txtprompt_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void guna2GroupBox8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtprompt_TextChanged_1(object sender, EventArgs e)
-        {
-
         }
 
         private void chartDashboard_Click(object sender, EventArgs e)
         {
-
             LoadPieChart();
-        }
-
-        private void guna2GroupBox12_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void chart1_Click(object sender, EventArgs e)
         {
             LoadGrafikPenjualanBulanan();
+        }
+
+        private void richTextBoxAi_TextChanged(object sender, EventArgs e) { }
+        private void txtpromp_TextChanged(object sender, EventArgs e) { }
+        private void guna2GroupBox4_Click(object sender, EventArgs e) { }
+        private void guna2GroupBox8_Click(object sender, EventArgs e) { }
+        private void guna2GroupBox12_Click(object sender, EventArgs e) { }
+        private void txtpromp_TextChanged_1(object sender, EventArgs e) { }
+        private void txtpromp_TextChanged_2(object sender, EventArgs e) { }
+    }
+
+    public class ChatBubble : Panel
+    {
+        private Label lblText;
+        private bool _isUser;
+        private Color _bgColor;
+        private int _maxWidth;
+
+        public ChatBubble(string message, bool isUser, int containerWidth)
+        {
+            _isUser = isUser;
+            _maxWidth = containerWidth;
+
+            this.DoubleBuffered = true;
+            this.Padding = new Padding(10);
+            this.Margin = new Padding(10, 5, 10, 5);
+            this.BackColor = Color.Transparent;
+
+            _bgColor = isUser ? Color.FromArgb(0, 122, 204) : Color.FromArgb(60, 60, 60);
+
+            lblText = new Label();
+            lblText.Text = message;
+            lblText.Font = new Font("Segoe UI", 10f, FontStyle.Regular);
+            lblText.ForeColor = Color.White;
+            lblText.AutoSize = true;
+            lblText.MaximumSize = new Size(_maxWidth * 2 / 3, 0);
+
+            lblText.Click += (s, e) => this.OnClick(e);
+
+            this.Controls.Add(lblText);
+
+            ResizeBubble();
+        }
+
+        public void UpdateText(string newText)
+        {
+            lblText.Text = newText;
+            ResizeBubble();
+            this.Invalidate();
+        }
+
+        private void ResizeBubble()
+        {
+            Size textSize = TextRenderer.MeasureText(lblText.Text, lblText.Font, lblText.MaximumSize, TextFormatFlags.WordBreak);
+
+            int bubbleWidth = textSize.Width + 20;
+            int bubbleHeight = textSize.Height + 20;
+
+            this.Size = new Size(_maxWidth, bubbleHeight + 10);
+
+            if (_isUser)
+            {
+                lblText.Location = new Point(this.Width - bubbleWidth - 5 + 10, 5 + 10);
+            }
+            else
+            {
+                lblText.Location = new Point(5 + 10, 5 + 10);
+            }
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+
+            Size textSize = TextRenderer.MeasureText(lblText.Text, lblText.Font, lblText.MaximumSize, TextFormatFlags.WordBreak);
+            int w = textSize.Width + 25;
+            int h = textSize.Height + 25;
+
+            Rectangle bubbleRect;
+
+            if (_isUser)
+            {
+                bubbleRect = new Rectangle(this.Width - w - 5, 5, w, h);
+            }
+            else
+            {
+                bubbleRect = new Rectangle(5, 5, w, h);
+            }
+
+            using (GraphicsPath path = GetRoundedPath(bubbleRect, 15))
+            using (SolidBrush brush = new SolidBrush(_bgColor))
+            {
+                e.Graphics.FillPath(brush, path);
+            }
+        }
+
+        private GraphicsPath GetRoundedPath(Rectangle rect, int radius)
+        {
+            GraphicsPath path = new GraphicsPath();
+            int d = radius * 2;
+            path.AddArc(rect.X, rect.Y, d, d, 180, 90);
+            path.AddArc(rect.X + rect.Width - d, rect.Y, d, d, 270, 90);
+            path.AddArc(rect.X + rect.Width - d, rect.Y + rect.Height - d, d, d, 0, 90);
+            path.AddArc(rect.X, rect.Y + rect.Height - d, d, d, 90, 90);
+            path.CloseFigure();
+            return path;
         }
     }
 }
