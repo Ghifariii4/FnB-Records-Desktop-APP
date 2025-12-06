@@ -121,14 +121,38 @@
   <data name="11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bg-login-register" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg-login-register.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mahkota" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mahkota.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dashboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dashboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Chart-Biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chart-Biru1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Office-Icon-White" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Office-Icon-White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Play-Icon-Putih" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Play-Icon-Putih.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Garage-Icon-Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Garage-Icon-Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Person-Icon-White" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Person-Icon-White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Warning-Icon-Merah" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Warning-Icon-Merah.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Person-Icon-Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Person-Icon-Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="27" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\27.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,14 +160,17 @@
   <data name="30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Dashboard-Icon-Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dashboard-Icon-Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="18" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\18.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Box-Icon-White" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Box-Icon-White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Download-Icon-Putih" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Download-Icon-Putih.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="add-button-icon-putih" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add-button-icon-putih.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="29" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\29.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,11 +181,17 @@
   <data name="Dashboard-Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dashboard-Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Chief-Icon-White" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chief-Icon-White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Dashboard-Logo-Hitam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dashboard-Logo-Hitam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bg-login-register" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bg-login-register.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Up-Icon-White" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Up-Icon-White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Calc-Icon-Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Calc-Icon-Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Download-Icon-Putih1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Download-Icon-Putih1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,14 +202,26 @@
   <data name="Logo_FnB_Records-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo_FnB_Records-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Up-Icon-Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Up-Icon-Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Garage-Icon-White" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Garage-Icon-White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="18 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\18 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="58" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\58.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="26" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Box-Icon-Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Box-Icon-Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Factory-Icon-White" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Factory-Icon-White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Blue and White Modern Login and Sign-up Website Page UI Desktop Prototype" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Blue and White Modern Login and Sign-up Website Page UI Desktop Prototype.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,14 +229,23 @@
   <data name="exit-icon-hitam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit-icon-hitam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="28" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mahkota" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mahkota.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="add-button-icon-putih" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add-button-icon-putih.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="25" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dashboard-Icon-White" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dashboard-Icon-White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chart-Icon-Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chart-Icon-Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pengeluaaran-Logo-Merah" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pengeluaaran-Logo-Merah1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,16 +253,49 @@
   <data name="Box-Ungu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Box-Ungu1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Chart-Icon-White" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chart-Icon-White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Screenshot 2025-12-04 135042" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Screenshot 2025-12-04 135042.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Office-Icon-Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Office-Icon-Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Factory-Icon-White1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Factory-Icon-White1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kart-Icon-Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kart-Icon-Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search-icon-hitam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search-icon-hitam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Play-Icon-Putih" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Play-Icon-Putih.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Calc-Icon-White" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Calc-Icon-White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kart-Icon-White" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kart-Icon-White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="warna primer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warna primer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Factory-Icon-Black1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Factory-Icon-Black1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chief-Icon-Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chief-Icon-Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Factory-Icon-Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Factory-Icon-Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="59" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\59.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
