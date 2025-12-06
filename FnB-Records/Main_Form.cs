@@ -107,9 +107,16 @@ namespace FnB_Records
             navigationControl(manajemenInventori);
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btProduksiOlahan_Click(object sender, EventArgs e)
         {
+            UC_ProduksiOlahan produksiOlahan = new UC_ProduksiOlahan();
+            navigationControl(produksiOlahan);
+        }
 
+        private void btPengaturan_Click(object sender, EventArgs e)
+        {
+            UC_Pengaturan pengaturan = new UC_Pengaturan(); 
+            navigationControl(pengaturan);
         }
     }
 }
