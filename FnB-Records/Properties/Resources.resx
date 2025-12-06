@@ -127,6 +127,12 @@
   <data name="search-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Play-Icon-Putih" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Play-Icon-Putih.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screenshot_2025-12-06_173623-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot_2025-12-06_173623-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Warning-Icon-Merah" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Warning-Icon-Merah.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -208,7 +214,7 @@
   <data name="search-icon-hitam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search-icon-hitam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Play-Icon-Putih" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Play-Icon-Putih.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Screenshot_2025-12-06_174632-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot_2025-12-06_174632-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

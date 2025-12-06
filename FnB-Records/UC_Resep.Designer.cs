@@ -161,13 +161,14 @@
             gbResepPopUp.FillColor = Color.FromArgb(249, 247, 245);
             gbResepPopUp.Font = new Font("Segoe UI", 9F);
             gbResepPopUp.ForeColor = Color.FromArgb(125, 137, 149);
-            gbResepPopUp.Location = new Point(604, 104);
+            gbResepPopUp.Location = new Point(690, 139);
+            gbResepPopUp.Margin = new Padding(3, 4, 3, 4);
             gbResepPopUp.Name = "gbResepPopUp";
             gbResepPopUp.ShadowDecoration.BorderRadius = 15;
             gbResepPopUp.ShadowDecoration.CustomizableEdges = customizableEdges30;
             gbResepPopUp.ShadowDecoration.Depth = 10;
             gbResepPopUp.ShadowDecoration.Shadow = new Padding(0, 10, 10, 10);
-            gbResepPopUp.Size = new Size(540, 873);
+            gbResepPopUp.Size = new Size(617, 1164);
             gbResepPopUp.TabIndex = 17;
             gbResepPopUp.Visible = false;
             // 
@@ -177,9 +178,9 @@
             guna2Transition1.SetDecoration(label16, Guna.UI2.AnimatorNS.DecorationType.None);
             label16.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label16.ForeColor = Color.Black;
-            label16.Location = new Point(17, 683);
+            label16.Location = new Point(19, 911);
             label16.Name = "label16";
-            label16.Size = new Size(142, 22);
+            label16.Size = new Size(181, 27);
             label16.TabIndex = 40;
             label16.Text = "Harga Jual target";
             // 
@@ -199,15 +200,15 @@
             guna2TextBox2.Font = new Font("Manrope", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2TextBox2.ForeColor = Color.FromArgb(45, 45, 45);
             guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(17, 709);
-            guna2TextBox2.Margin = new Padding(4);
+            guna2TextBox2.Location = new Point(19, 945);
+            guna2TextBox2.Margin = new Padding(5, 5, 5, 5);
             guna2TextBox2.Name = "guna2TextBox2";
             guna2TextBox2.PlaceholderForeColor = Color.FromArgb(45, 45, 45);
             guna2TextBox2.PlaceholderText = "0";
             guna2TextBox2.SelectedText = "";
             guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2TextBox2.ShadowDecoration.Depth = 0;
-            guna2TextBox2.Size = new Size(504, 46);
+            guna2TextBox2.Size = new Size(576, 61);
             guna2TextBox2.TabIndex = 39;
             // 
             // guna2GroupBox6
@@ -228,10 +229,11 @@
             guna2GroupBox6.FillColor = Color.FromArgb(227, 201, 189);
             guna2GroupBox6.Font = new Font("Segoe UI", 9F);
             guna2GroupBox6.ForeColor = Color.FromArgb(125, 137, 149);
-            guna2GroupBox6.Location = new Point(17, 531);
+            guna2GroupBox6.Location = new Point(19, 708);
+            guna2GroupBox6.Margin = new Padding(3, 4, 3, 4);
             guna2GroupBox6.Name = "guna2GroupBox6";
             guna2GroupBox6.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2GroupBox6.Size = new Size(504, 140);
+            guna2GroupBox6.Size = new Size(576, 187);
             guna2GroupBox6.TabIndex = 38;
             // 
             // label15
@@ -240,9 +242,9 @@
             guna2Transition1.SetDecoration(label15, Guna.UI2.AnimatorNS.DecorationType.None);
             label15.Font = new Font("JetBrains Mono", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label15.ForeColor = Color.Black;
-            label15.Location = new Point(396, 92);
+            label15.Location = new Point(453, 123);
             label15.Name = "label15";
-            label15.Size = new Size(90, 21);
+            label15.Size = new Size(108, 26);
             label15.TabIndex = 39;
             label15.Text = "Rp. 0.00";
             // 
@@ -252,9 +254,9 @@
             guna2Transition1.SetDecoration(label14, Guna.UI2.AnimatorNS.DecorationType.None);
             label14.Font = new Font("JetBrains Mono", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label14.ForeColor = Color.Black;
-            label14.Location = new Point(396, 65);
+            label14.Location = new Point(453, 87);
             label14.Name = "label14";
-            label14.Size = new Size(90, 21);
+            label14.Size = new Size(108, 26);
             label14.TabIndex = 38;
             label14.Text = "Rp. 0.00";
             // 
@@ -264,9 +266,9 @@
             guna2Transition1.SetDecoration(label13, Guna.UI2.AnimatorNS.DecorationType.None);
             label13.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label13.ForeColor = Color.Black;
-            label13.Location = new Point(251, 90);
+            label13.Location = new Point(287, 120);
             label13.Name = "label13";
-            label13.Size = new Size(15, 23);
+            label13.Size = new Size(18, 28);
             label13.TabIndex = 37;
             label13.Text = ":";
             // 
@@ -276,9 +278,9 @@
             guna2Transition1.SetDecoration(label12, Guna.UI2.AnimatorNS.DecorationType.None);
             label12.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label12.ForeColor = Color.Black;
-            label12.Location = new Point(251, 63);
+            label12.Location = new Point(287, 84);
             label12.Name = "label12";
-            label12.Size = new Size(15, 23);
+            label12.Size = new Size(18, 28);
             label12.TabIndex = 36;
             label12.Text = ":";
             // 
@@ -288,9 +290,9 @@
             guna2Transition1.SetDecoration(label11, Guna.UI2.AnimatorNS.DecorationType.None);
             label11.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label11.ForeColor = Color.Black;
-            label11.Location = new Point(18, 90);
+            label11.Location = new Point(21, 120);
             label11.Name = "label11";
-            label11.Size = new Size(181, 23);
+            label11.Size = new Size(226, 28);
             label11.TabIndex = 35;
             label11.Text = "Harga Jual Disarankan";
             // 
@@ -300,9 +302,9 @@
             guna2Transition1.SetDecoration(label10, Guna.UI2.AnimatorNS.DecorationType.None);
             label10.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.Black;
-            label10.Location = new Point(18, 63);
+            label10.Location = new Point(21, 84);
             label10.Name = "label10";
-            label10.Size = new Size(42, 23);
+            label10.Size = new Size(53, 28);
             label10.TabIndex = 34;
             label10.Text = "HPP";
             // 
@@ -312,9 +314,9 @@
             guna2Transition1.SetDecoration(label9, Guna.UI2.AnimatorNS.DecorationType.None);
             label9.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.Black;
-            label9.Location = new Point(18, 19);
+            label9.Location = new Point(21, 25);
             label9.Name = "label9";
-            label9.Size = new Size(141, 22);
+            label9.Size = new Size(180, 27);
             label9.TabIndex = 33;
             label9.Text = "Perhitungan HPP";
             // 
@@ -344,10 +346,11 @@
             guna2GroupBox4.FillColor = Color.Transparent;
             guna2GroupBox4.Font = new Font("Segoe UI", 9F);
             guna2GroupBox4.ForeColor = Color.FromArgb(125, 137, 149);
-            guna2GroupBox4.Location = new Point(17, 16);
+            guna2GroupBox4.Location = new Point(19, 21);
+            guna2GroupBox4.Margin = new Padding(3, 4, 3, 4);
             guna2GroupBox4.Name = "guna2GroupBox4";
             guna2GroupBox4.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            guna2GroupBox4.Size = new Size(504, 755);
+            guna2GroupBox4.Size = new Size(576, 1007);
             guna2GroupBox4.TabIndex = 12;
             // 
             // guna2Button2
@@ -364,12 +367,13 @@
             guna2Button2.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button2.ForeColor = Color.FromArgb(45, 45, 45);
             guna2Button2.ImageSize = new Size(30, 20);
-            guna2Button2.Location = new Point(458, 456);
+            guna2Button2.Location = new Point(523, 608);
+            guna2Button2.Margin = new Padding(3, 4, 3, 4);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.BorderRadius = 10;
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Button2.ShadowDecoration.Depth = 4;
-            guna2Button2.Size = new Size(46, 36);
+            guna2Button2.Size = new Size(53, 48);
             guna2Button2.TabIndex = 37;
             guna2Button2.Text = "X";
             // 
@@ -389,15 +393,15 @@
             txtInputStokSaatIni.Font = new Font("JetBrains Mono", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtInputStokSaatIni.ForeColor = Color.FromArgb(45, 45, 45);
             txtInputStokSaatIni.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtInputStokSaatIni.Location = new Point(275, 456);
-            txtInputStokSaatIni.Margin = new Padding(6);
+            txtInputStokSaatIni.Location = new Point(314, 608);
+            txtInputStokSaatIni.Margin = new Padding(7, 8, 7, 8);
             txtInputStokSaatIni.Name = "txtInputStokSaatIni";
             txtInputStokSaatIni.PlaceholderForeColor = Color.FromArgb(45, 45, 45);
             txtInputStokSaatIni.PlaceholderText = "Jumlah";
             txtInputStokSaatIni.SelectedText = "";
             txtInputStokSaatIni.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtInputStokSaatIni.ShadowDecoration.Depth = 0;
-            txtInputStokSaatIni.Size = new Size(174, 36);
+            txtInputStokSaatIni.Size = new Size(199, 48);
             txtInputStokSaatIni.TabIndex = 36;
             // 
             // cbSatuan
@@ -412,10 +416,11 @@
             cbSatuan.Font = new Font("Manrope", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cbSatuan.ForeColor = Color.FromArgb(45, 45, 45);
             cbSatuan.ItemHeight = 30;
-            cbSatuan.Location = new Point(3, 456);
+            cbSatuan.Location = new Point(3, 608);
+            cbSatuan.Margin = new Padding(3, 4, 3, 4);
             cbSatuan.Name = "cbSatuan";
             cbSatuan.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            cbSatuan.Size = new Size(263, 36);
+            cbSatuan.Size = new Size(300, 36);
             cbSatuan.TabIndex = 35;
             // 
             // guna2Button3
@@ -435,10 +440,11 @@
             guna2Button3.ImageAlign = HorizontalAlignment.Left;
             guna2Button3.ImageOffset = new Point(5, 0);
             guna2Button3.ImageSize = new Size(20, 10);
-            guna2Button3.Location = new Point(350, 407);
+            guna2Button3.Location = new Point(400, 543);
+            guna2Button3.Margin = new Padding(3, 4, 3, 4);
             guna2Button3.Name = "guna2Button3";
             guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Button3.Size = new Size(154, 37);
+            guna2Button3.Size = new Size(176, 49);
             guna2Button3.TabIndex = 34;
             guna2Button3.Text = "Tambah Resep";
             guna2Button3.TextAlign = HorizontalAlignment.Left;
@@ -450,9 +456,9 @@
             guna2Transition1.SetDecoration(label8, Guna.UI2.AnimatorNS.DecorationType.None);
             label8.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.Black;
-            label8.Location = new Point(3, 412);
+            label8.Location = new Point(3, 549);
             label8.Name = "label8";
-            label8.Size = new Size(119, 22);
+            label8.Size = new Size(154, 27);
             label8.TabIndex = 32;
             label8.Text = "Bahan - Bahan";
             // 
@@ -462,9 +468,9 @@
             guna2Transition1.SetDecoration(label7, Guna.UI2.AnimatorNS.DecorationType.None);
             label7.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.Black;
-            label7.Location = new Point(0, 316);
+            label7.Location = new Point(0, 421);
             label7.Name = "label7";
-            label7.Size = new Size(107, 22);
+            label7.Size = new Size(138, 27);
             label7.TabIndex = 31;
             label7.Text = "Jumlah Porsi";
             // 
@@ -484,15 +490,15 @@
             guna2TextBox1.Font = new Font("Manrope", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2TextBox1.ForeColor = Color.FromArgb(45, 45, 45);
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(0, 342);
-            guna2TextBox1.Margin = new Padding(4);
+            guna2TextBox1.Location = new Point(0, 456);
+            guna2TextBox1.Margin = new Padding(5, 5, 5, 5);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PlaceholderForeColor = Color.FromArgb(45, 45, 45);
             guna2TextBox1.PlaceholderText = "Ayam Bakar Bumbu Rujak";
             guna2TextBox1.SelectedText = "";
             guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2TextBox1.ShadowDecoration.Depth = 0;
-            guna2TextBox1.Size = new Size(504, 46);
+            guna2TextBox1.Size = new Size(576, 61);
             guna2TextBox1.TabIndex = 30;
             // 
             // txtInputAlamat
@@ -512,8 +518,8 @@
             txtInputAlamat.Font = new Font("Manrope", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtInputAlamat.ForeColor = Color.FromArgb(45, 45, 45);
             txtInputAlamat.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtInputAlamat.Location = new Point(0, 222);
-            txtInputAlamat.Margin = new Padding(4);
+            txtInputAlamat.Location = new Point(0, 296);
+            txtInputAlamat.Margin = new Padding(5, 5, 5, 5);
             txtInputAlamat.Multiline = true;
             txtInputAlamat.Name = "txtInputAlamat";
             txtInputAlamat.PlaceholderForeColor = Color.FromArgb(45, 45, 45);
@@ -521,7 +527,7 @@
             txtInputAlamat.SelectedText = "";
             txtInputAlamat.ShadowDecoration.CustomizableEdges = customizableEdges16;
             txtInputAlamat.ShadowDecoration.Depth = 0;
-            txtInputAlamat.Size = new Size(504, 79);
+            txtInputAlamat.Size = new Size(576, 105);
             txtInputAlamat.TabIndex = 29;
             // 
             // btnClosePopUpBahanBaku
@@ -539,12 +545,13 @@
             btnClosePopUpBahanBaku.ForeColor = Color.FromArgb(45, 45, 45);
             btnClosePopUpBahanBaku.Image = Properties.Resources.exit_icon_hitam;
             btnClosePopUpBahanBaku.ImageSize = new Size(30, 20);
-            btnClosePopUpBahanBaku.Location = new Point(458, 3);
+            btnClosePopUpBahanBaku.Location = new Point(523, 4);
+            btnClosePopUpBahanBaku.Margin = new Padding(3, 4, 3, 4);
             btnClosePopUpBahanBaku.Name = "btnClosePopUpBahanBaku";
             btnClosePopUpBahanBaku.ShadowDecoration.BorderRadius = 10;
             btnClosePopUpBahanBaku.ShadowDecoration.CustomizableEdges = customizableEdges18;
             btnClosePopUpBahanBaku.ShadowDecoration.Depth = 4;
-            btnClosePopUpBahanBaku.Size = new Size(46, 41);
+            btnClosePopUpBahanBaku.Size = new Size(53, 55);
             btnClosePopUpBahanBaku.TabIndex = 15;
             btnClosePopUpBahanBaku.Click += btnClosePopUpBahanBaku_Click;
             // 
@@ -554,9 +561,9 @@
             guna2Transition1.SetDecoration(label6, Guna.UI2.AnimatorNS.DecorationType.None);
             label6.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.Black;
-            label6.Location = new Point(0, 196);
+            label6.Location = new Point(0, 261);
             label6.Name = "label6";
-            label6.Size = new Size(82, 22);
+            label6.Size = new Size(103, 27);
             label6.TabIndex = 16;
             label6.Text = "Deskripsi";
             // 
@@ -566,9 +573,9 @@
             guna2Transition1.SetDecoration(label5, Guna.UI2.AnimatorNS.DecorationType.None);
             label5.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(0, 112);
+            label5.Location = new Point(0, 149);
             label5.Name = "label5";
-            label5.Size = new Size(106, 22);
+            label5.Size = new Size(132, 27);
             label5.TabIndex = 14;
             label5.Text = "Nama Resep";
             // 
@@ -588,15 +595,15 @@
             txtInputNamaBahan.Font = new Font("Manrope", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtInputNamaBahan.ForeColor = Color.FromArgb(45, 45, 45);
             txtInputNamaBahan.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtInputNamaBahan.Location = new Point(0, 137);
-            txtInputNamaBahan.Margin = new Padding(4);
+            txtInputNamaBahan.Location = new Point(0, 183);
+            txtInputNamaBahan.Margin = new Padding(5, 5, 5, 5);
             txtInputNamaBahan.Name = "txtInputNamaBahan";
             txtInputNamaBahan.PlaceholderForeColor = Color.FromArgb(45, 45, 45);
             txtInputNamaBahan.PlaceholderText = "Ayam Bakar Bumbu Rujak";
             txtInputNamaBahan.SelectedText = "";
             txtInputNamaBahan.ShadowDecoration.CustomizableEdges = customizableEdges20;
             txtInputNamaBahan.ShadowDecoration.Depth = 0;
-            txtInputNamaBahan.Size = new Size(504, 46);
+            txtInputNamaBahan.Size = new Size(576, 61);
             txtInputNamaBahan.TabIndex = 13;
             // 
             // label4
@@ -605,9 +612,9 @@
             guna2Transition1.SetDecoration(label4, Guna.UI2.AnimatorNS.DecorationType.None);
             label4.Font = new Font("Inter", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(45, 45, 45);
-            label4.Location = new Point(0, 50);
+            label4.Location = new Point(0, 67);
             label4.Name = "label4";
-            label4.Size = new Size(446, 22);
+            label4.Size = new Size(567, 27);
             label4.TabIndex = 13;
             label4.Text = "Masukkan informasi resep dan bahan-bahan yang dibutuhkan";
             // 
@@ -617,9 +624,9 @@
             guna2Transition1.SetDecoration(label3, Guna.UI2.AnimatorNS.DecorationType.None);
             label3.Font = new Font("Manrope", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(0, 18);
+            label3.Location = new Point(0, 24);
             label3.Name = "label3";
-            label3.Size = new Size(194, 26);
+            label3.Size = new Size(244, 33);
             label3.TabIndex = 1;
             label3.Text = "Tambah Resep Baru";
             // 
@@ -634,10 +641,11 @@
             guna2GroupBox5.FillColor = Color.Transparent;
             guna2GroupBox5.Font = new Font("Segoe UI", 9F);
             guna2GroupBox5.ForeColor = Color.FromArgb(125, 137, 149);
-            guna2GroupBox5.Location = new Point(0, 395);
+            guna2GroupBox5.Location = new Point(0, 527);
+            guna2GroupBox5.Margin = new Padding(3, 4, 3, 4);
             guna2GroupBox5.Name = "guna2GroupBox5";
             guna2GroupBox5.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            guna2GroupBox5.Size = new Size(504, 114);
+            guna2GroupBox5.Size = new Size(576, 152);
             guna2GroupBox5.TabIndex = 15;
             // 
             // btnBatalPopUp
@@ -655,13 +663,14 @@
             btnBatalPopUp.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBatalPopUp.ForeColor = Color.FromArgb(45, 45, 45);
             btnBatalPopUp.ImageSize = new Size(30, 20);
-            btnBatalPopUp.Location = new Point(320, 777);
+            btnBatalPopUp.Location = new Point(366, 1036);
+            btnBatalPopUp.Margin = new Padding(3, 4, 3, 4);
             btnBatalPopUp.Name = "btnBatalPopUp";
             btnBatalPopUp.ShadowDecoration.BorderRadius = 10;
             btnBatalPopUp.ShadowDecoration.CustomizableEdges = customizableEdges26;
             btnBatalPopUp.ShadowDecoration.Depth = 4;
             btnBatalPopUp.ShadowDecoration.Enabled = true;
-            btnBatalPopUp.Size = new Size(87, 41);
+            btnBatalPopUp.Size = new Size(99, 55);
             btnBatalPopUp.TabIndex = 14;
             btnBatalPopUp.Text = "Batal";
             // 
@@ -680,13 +689,14 @@
             btnSimpanPopUp.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSimpanPopUp.ForeColor = Color.White;
             btnSimpanPopUp.ImageSize = new Size(30, 20);
-            btnSimpanPopUp.Location = new Point(413, 777);
+            btnSimpanPopUp.Location = new Point(472, 1036);
+            btnSimpanPopUp.Margin = new Padding(3, 4, 3, 4);
             btnSimpanPopUp.Name = "btnSimpanPopUp";
             btnSimpanPopUp.ShadowDecoration.BorderRadius = 10;
             btnSimpanPopUp.ShadowDecoration.CustomizableEdges = customizableEdges28;
             btnSimpanPopUp.ShadowDecoration.Depth = 4;
             btnSimpanPopUp.ShadowDecoration.Enabled = true;
-            btnSimpanPopUp.Size = new Size(108, 41);
+            btnSimpanPopUp.Size = new Size(123, 55);
             btnSimpanPopUp.TabIndex = 13;
             btnSimpanPopUp.Text = "Simpan";
             // 
@@ -707,10 +717,11 @@
             btTambahResep.ImageAlign = HorizontalAlignment.Left;
             btTambahResep.ImageOffset = new Point(5, 0);
             btTambahResep.ImageSize = new Size(30, 20);
-            btTambahResep.Location = new Point(1362, 0);
+            btTambahResep.Location = new Point(1557, 0);
+            btTambahResep.Margin = new Padding(3, 4, 3, 4);
             btTambahResep.Name = "btTambahResep";
             btTambahResep.ShadowDecoration.CustomizableEdges = customizableEdges32;
-            btTambahResep.Size = new Size(182, 48);
+            btTambahResep.Size = new Size(208, 64);
             btTambahResep.TabIndex = 6;
             btTambahResep.Text = "Tambah Resep";
             btTambahResep.TextAlign = HorizontalAlignment.Left;
@@ -723,9 +734,9 @@
             guna2Transition1.SetDecoration(label2, Guna.UI2.AnimatorNS.DecorationType.None);
             label2.Font = new Font("Inter", 12F);
             label2.ForeColor = Color.FromArgb(45, 45, 45);
-            label2.Location = new Point(3, 48);
+            label2.Location = new Point(3, 64);
             label2.Name = "label2";
-            label2.Size = new Size(435, 23);
+            label2.Size = new Size(553, 28);
             label2.TabIndex = 2;
             label2.Text = "Buat dan kelola resep dengan perhitungan HPP otomatis";
             // 
@@ -737,7 +748,7 @@
             label1.ForeColor = Color.Black;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(368, 50);
+            label1.Size = new Size(467, 64);
             label1.TabIndex = 0;
             label1.Text = "Kelola  Resep Menu";
             // 
@@ -755,14 +766,15 @@
             guna2GroupBox2.FillColor = Color.FromArgb(45, 45, 45);
             guna2GroupBox2.Font = new Font("Segoe UI", 9F);
             guna2GroupBox2.ForeColor = Color.FromArgb(125, 137, 149);
-            guna2GroupBox2.Location = new Point(34, 123);
+            guna2GroupBox2.Location = new Point(39, 164);
+            guna2GroupBox2.Margin = new Padding(3, 4, 3, 4);
             guna2GroupBox2.Name = "guna2GroupBox2";
             guna2GroupBox2.ShadowDecoration.BorderRadius = 20;
             guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges40;
             guna2GroupBox2.ShadowDecoration.Depth = 3;
             guna2GroupBox2.ShadowDecoration.Enabled = true;
             guna2GroupBox2.ShadowDecoration.Shadow = new Padding(10);
-            guna2GroupBox2.Size = new Size(1544, 364);
+            guna2GroupBox2.Size = new Size(1765, 485);
             guna2GroupBox2.TabIndex = 16;
             // 
             // dgvDataVendor
@@ -790,7 +802,8 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvDataVendor.DefaultCellStyle = dataGridViewCellStyle3;
             dgvDataVendor.GridColor = Color.FromArgb(231, 229, 255);
-            dgvDataVendor.Location = new Point(32, 116);
+            dgvDataVendor.Location = new Point(37, 155);
+            dgvDataVendor.Margin = new Padding(3, 4, 3, 4);
             dgvDataVendor.Name = "dgvDataVendor";
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = SystemColors.Control;
@@ -801,7 +814,9 @@
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
             dgvDataVendor.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvDataVendor.RowHeadersVisible = false;
-            dgvDataVendor.Size = new Size(1124, 207);
+            dgvDataVendor.RowHeadersWidth = 51;
+            dgvDataVendor.RowTemplate.Height = 25;
+            dgvDataVendor.Size = new Size(1285, 276);
             dgvDataVendor.TabIndex = 10;
             dgvDataVendor.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvDataVendor.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -838,14 +853,15 @@
             guna2Transition1.SetDecoration(guna2GroupBox3, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2GroupBox3.Font = new Font("Segoe UI", 9F);
             guna2GroupBox3.ForeColor = Color.FromArgb(125, 137, 149);
-            guna2GroupBox3.Location = new Point(32, 19);
+            guna2GroupBox3.Location = new Point(37, 25);
+            guna2GroupBox3.Margin = new Padding(3, 4, 3, 4);
             guna2GroupBox3.Name = "guna2GroupBox3";
             guna2GroupBox3.ShadowDecoration.BorderRadius = 0;
             guna2GroupBox3.ShadowDecoration.CustomizableEdges = customizableEdges38;
             guna2GroupBox3.ShadowDecoration.Depth = 0;
             guna2GroupBox3.ShadowDecoration.Enabled = true;
             guna2GroupBox3.ShadowDecoration.Shadow = new Padding(10);
-            guna2GroupBox3.Size = new Size(1485, 50);
+            guna2GroupBox3.Size = new Size(1697, 67);
             guna2GroupBox3.TabIndex = 9;
             // 
             // guna2Button1
@@ -864,10 +880,11 @@
             guna2Button1.ForeColor = Color.White;
             guna2Button1.Image = Properties.Resources.search_icon_hitam;
             guna2Button1.ImageSize = new Size(45, 30);
-            guna2Button1.Location = new Point(16, 4);
+            guna2Button1.Location = new Point(18, 5);
+            guna2Button1.Margin = new Padding(3, 4, 3, 4);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges34;
-            guna2Button1.Size = new Size(42, 41);
+            guna2Button1.Size = new Size(48, 55);
             guna2Button1.TabIndex = 7;
             guna2Button1.TextAlign = HorizontalAlignment.Left;
             // 
@@ -886,15 +903,15 @@
             txtCariBahanBaku.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtCariBahanBaku.Font = new Font("Manrope", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCariBahanBaku.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtCariBahanBaku.Location = new Point(60, 7);
-            txtCariBahanBaku.Margin = new Padding(4);
+            txtCariBahanBaku.Location = new Point(69, 9);
+            txtCariBahanBaku.Margin = new Padding(5, 5, 5, 5);
             txtCariBahanBaku.Name = "txtCariBahanBaku";
             txtCariBahanBaku.PlaceholderForeColor = Color.FromArgb(45, 45, 45);
             txtCariBahanBaku.PlaceholderText = "Cari Resep.....";
             txtCariBahanBaku.SelectedText = "";
             txtCariBahanBaku.ShadowDecoration.CustomizableEdges = customizableEdges36;
             txtCariBahanBaku.ShadowDecoration.Depth = 0;
-            txtCariBahanBaku.Size = new Size(1407, 37);
+            txtCariBahanBaku.Size = new Size(1608, 49);
             txtCariBahanBaku.TabIndex = 9;
             // 
             // guna2GroupBox1
@@ -909,23 +926,25 @@
             guna2GroupBox1.FillColor = Color.Transparent;
             guna2GroupBox1.Font = new Font("Manrope", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2GroupBox1.ForeColor = Color.Transparent;
-            guna2GroupBox1.Location = new Point(34, 15);
+            guna2GroupBox1.Location = new Point(39, 20);
+            guna2GroupBox1.Margin = new Padding(3, 4, 3, 4);
             guna2GroupBox1.Name = "guna2GroupBox1";
             guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges42;
-            guna2GroupBox1.Size = new Size(1544, 99);
+            guna2GroupBox1.Size = new Size(1765, 132);
             guna2GroupBox1.TabIndex = 15;
             // 
             // UC_Resep
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(212, 122, 71);
             Controls.Add(gbResepPopUp);
             Controls.Add(guna2GroupBox2);
             Controls.Add(guna2GroupBox1);
             guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "UC_Resep";
-            Size = new Size(1616, 1027);
+            Size = new Size(1847, 1369);
             Load += UC_Resep_Load;
             gbResepPopUp.ResumeLayout(false);
             gbResepPopUp.PerformLayout();

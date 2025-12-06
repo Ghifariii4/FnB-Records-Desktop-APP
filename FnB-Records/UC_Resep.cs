@@ -19,6 +19,7 @@ namespace FnB_Records
 
         private void btTambahResep_Click(object sender, EventArgs e)
         {
+
             gbResepPopUp.Visible = true;
         }
 
