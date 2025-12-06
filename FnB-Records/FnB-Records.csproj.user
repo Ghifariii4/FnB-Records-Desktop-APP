@@ -4,6 +4,9 @@
     <Compile Update="UC_ManajemenInventori.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UC_Pengaturan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UC_ProduksiOlahan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -23,9 +26,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UCDashboard.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="UC_Analisis.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UC_AnalisisBelanja.cs">
