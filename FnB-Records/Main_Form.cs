@@ -106,5 +106,10 @@ namespace FnB_Records
             UC_ManajemenInventori manajemenInventori = new UC_ManajemenInventori();
             navigationControl(manajemenInventori);
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
