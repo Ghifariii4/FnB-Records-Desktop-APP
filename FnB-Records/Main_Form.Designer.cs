@@ -90,7 +90,7 @@
             label7 = new Label();
             guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
             btProduksiOlahan = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            btKeluar = new Guna.UI2.WinForms.Guna2Button();
             btPengaturan = new Guna.UI2.WinForms.Guna2Button();
             btVendor = new Guna.UI2.WinForms.Guna2Button();
             label6 = new Label();
@@ -235,7 +235,7 @@
             guna2GroupBox4.BorderColor = Color.Transparent;
             guna2GroupBox4.BorderThickness = 0;
             guna2GroupBox4.Controls.Add(btProduksiOlahan);
-            guna2GroupBox4.Controls.Add(guna2Button2);
+            guna2GroupBox4.Controls.Add(btKeluar);
             guna2GroupBox4.Controls.Add(btPengaturan);
             guna2GroupBox4.Controls.Add(btVendor);
             guna2GroupBox4.Controls.Add(label6);
@@ -292,34 +292,35 @@
             btProduksiOlahan.TextOffset = new Point(0, 3);
             btProduksiOlahan.Click += btProduksiOlahan_Click;
             // 
-            // guna2Button2
+            // btKeluar
             // 
-            guna2Button2.Animated = true;
-            guna2Button2.AnimatedGIF = true;
-            guna2Button2.BorderRadius = 10;
-            guna2Button2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            guna2Button2.CheckedState.FillColor = Color.FromArgb(212, 122, 71);
-            guna2Button2.CheckedState.ForeColor = Color.FromArgb(45, 45, 45);
-            guna2Button2.CheckedState.Image = Properties.Resources.Exit_Icon_Black;
-            guna2Button2.Cursor = Cursors.Hand;
-            guna2Button2.CustomizableEdges = customizableEdges9;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.FillColor = Color.FromArgb(45, 45, 45);
-            guna2Button2.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button2.ForeColor = Color.FromArgb(211, 47, 47);
-            guna2Button2.Image = Properties.Resources.warna_primer;
-            guna2Button2.ImageAlign = HorizontalAlignment.Right;
-            guna2Button2.Location = new Point(28, 669);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.RightToLeft = RightToLeft.Yes;
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Button2.Size = new Size(246, 36);
-            guna2Button2.TabIndex = 37;
-            guna2Button2.Text = "Keluar";
-            guna2Button2.TextAlign = HorizontalAlignment.Right;
+            btKeluar.Animated = true;
+            btKeluar.AnimatedGIF = true;
+            btKeluar.BorderRadius = 10;
+            btKeluar.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            btKeluar.CheckedState.FillColor = Color.FromArgb(212, 122, 71);
+            btKeluar.CheckedState.ForeColor = Color.FromArgb(45, 45, 45);
+            btKeluar.CheckedState.Image = Properties.Resources.Exit_Icon_Black;
+            btKeluar.Cursor = Cursors.Hand;
+            btKeluar.CustomizableEdges = customizableEdges9;
+            btKeluar.DisabledState.BorderColor = Color.DarkGray;
+            btKeluar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btKeluar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btKeluar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btKeluar.FillColor = Color.FromArgb(45, 45, 45);
+            btKeluar.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btKeluar.ForeColor = Color.FromArgb(211, 47, 47);
+            btKeluar.Image = Properties.Resources.warna_primer;
+            btKeluar.ImageAlign = HorizontalAlignment.Right;
+            btKeluar.Location = new Point(28, 669);
+            btKeluar.Name = "btKeluar";
+            btKeluar.RightToLeft = RightToLeft.Yes;
+            btKeluar.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btKeluar.Size = new Size(246, 36);
+            btKeluar.TabIndex = 37;
+            btKeluar.Text = "Keluar";
+            btKeluar.TextAlign = HorizontalAlignment.Right;
+            btKeluar.Click += btKeluar_Click;
             // 
             // btPengaturan
             // 
@@ -910,6 +911,7 @@
             paneluc.ShadowDecoration.CustomizableEdges = customizableEdges54;
             paneluc.Size = new Size(1620, 1008);
             paneluc.TabIndex = 4;
+            paneluc.Paint += paneluc_Paint;
             // 
             // Main_Form
             // 
@@ -986,6 +988,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Label label7;
         private Guna.UI2.WinForms.Guna2Button btPengaturan;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btKeluar;
     }
 }

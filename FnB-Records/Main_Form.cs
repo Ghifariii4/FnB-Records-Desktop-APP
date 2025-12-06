@@ -115,8 +115,37 @@ namespace FnB_Records
 
         private void btPengaturan_Click(object sender, EventArgs e)
         {
-            UC_Pengaturan pengaturan = new UC_Pengaturan(); 
+            UC_Pengaturan pengaturan = new UC_Pengaturan();
             navigationControl(pengaturan);
+        }
+
+        private void btKeluar_Click(object sender, EventArgs e)
+        {
+            // 1. Tampilkan Dialog Konfirmasi
+            DialogResult dialog = MessageBox.Show("Apakah Anda yakin ingin keluar dari aplikasi?",
+                                                  "Konfirmasi Logout",
+                                                  MessageBoxButtons.YesNo,
+                                                  MessageBoxIcon.Question);
+
+            // 2. Jika user memilih 'Yes'
+            if (dialog == DialogResult.Yes)
+            {
+                // A. Hapus data session di memori (Penting untuk keamanan)
+                // Kita panggil fungsi ClearSession yang ada di Form Login
+                Login.GlobalSession.ClearSession();
+
+                // B. Buka Form Login kembali
+                Login formLogin = new Login();
+                formLogin.Show();
+
+                // C. Tutup Form Utama (Main_Form) saat ini
+                this.Close();
+            }
+        }
+
+        private void paneluc_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
