@@ -109,7 +109,7 @@
             label3 = new Label();
             guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             gbStatusRole = new Guna.UI2.WinForms.Guna2GroupBox();
-            label4 = new Label();
+            lblStatusRole = new Label();
             guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             label2 = new Label();
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -764,7 +764,7 @@
             gbStatusRole.BackColor = Color.Transparent;
             gbStatusRole.BorderColor = Color.Transparent;
             gbStatusRole.BorderRadius = 8;
-            gbStatusRole.Controls.Add(label4);
+            gbStatusRole.Controls.Add(lblStatusRole);
             gbStatusRole.Controls.Add(guna2PictureBox2);
             gbStatusRole.CustomBorderColor = Color.Transparent;
             gbStatusRole.CustomizableEdges = customizableEdges39;
@@ -783,16 +783,16 @@
             gbStatusRole.Text = "guna2GroupBox4";
             gbStatusRole.Click += gbStatusRole_Click;
             // 
-            // label4
+            // lblStatusRole
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Inter", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(36, 1);
-            label4.Name = "label4";
-            label4.Size = new Size(65, 18);
-            label4.TabIndex = 8;
-            label4.Text = "Premium";
+            lblStatusRole.AutoSize = true;
+            lblStatusRole.Font = new Font("Inter", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblStatusRole.ForeColor = Color.White;
+            lblStatusRole.Location = new Point(36, 1);
+            lblStatusRole.Name = "lblStatusRole";
+            lblStatusRole.Size = new Size(65, 18);
+            lblStatusRole.TabIndex = 8;
+            lblStatusRole.Text = "Premium";
             // 
             // guna2PictureBox2
             // 
@@ -969,7 +969,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox4;
         private Label label6;
-        private Label label4;
+        private Label lblStatusRole;
         private Guna.UI2.WinForms.Guna2Panel paneluc;
         private Guna.UI2.WinForms.Guna2Button btProduksiOlahan;
         private Guna.UI2.WinForms.Guna2Button btVendor;

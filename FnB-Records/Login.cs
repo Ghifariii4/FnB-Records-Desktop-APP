@@ -144,7 +144,6 @@ namespace FnB_Records
         // Event Klik Daftar (Belum ada form register, jadi pesan saja dulu)
         private void lblToDaftar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Fitur pendaftaran belum dibuat.");
              Register reg = new Register();
              reg.Show();
              this.Hide();
@@ -164,11 +163,6 @@ namespace FnB_Records
                 BusinessName = null;
                 CurrentUserRole = null;
                 CurrentUserEmail = null;
-
-                Properties.Settings.Default.StatusIngat = false;
-                Properties.Settings.Default.DisimpanEmail = "";
-                Properties.Settings.Default.DisimpanPassword = "";
-                Properties.Settings.Default.Save();
             }
         }
     }
