@@ -41,8 +41,15 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2GroupBox12 = new Guna.UI2.WinForms.Guna2GroupBox();
             label1 = new Label();
             label16 = new Label();
@@ -57,6 +64,19 @@
             labelHasil = new Label();
             gbHasilSimulasiPopUp = new Guna.UI2.WinForms.Guna2GroupBox();
             labelEstimasiBiayaKekurangan = new Label();
+            guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            label8 = new Label();
+            guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            label9 = new Label();
+            label10 = new Label();
+            label11 = new Label();
+            label12 = new Label();
+            label13 = new Label();
+            label14 = new Label();
+            label15 = new Label();
+            label17 = new Label();
+            guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             label7 = new Label();
@@ -65,11 +85,18 @@
             label5 = new Label();
             labelPorsi = new Label();
             label2 = new Label();
+            guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
+            label18 = new Label();
+            label19 = new Label();
             guna2GroupBox12.SuspendLayout();
             guna2GroupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).BeginInit();
             gbHasilSimulasiPopUp.SuspendLayout();
+            guna2GroupBox2.SuspendLayout();
+            guna2GroupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox2).BeginInit();
             guna2GroupBox1.SuspendLayout();
+            guna2GroupBox4.SuspendLayout();
             SuspendLayout();
             // 
             // guna2GroupBox12
@@ -225,6 +252,7 @@
             // guna2CirclePictureBox1
             // 
             guna2CirclePictureBox1.BackColor = Color.Transparent;
+            guna2CirclePictureBox1.Image = Properties.Resources.Screenshot_2025_12_06_174632_removebg_preview;
             guna2CirclePictureBox1.ImageRotate = 0F;
             guna2CirclePictureBox1.Location = new Point(42, 32);
             guna2CirclePictureBox1.Margin = new Padding(3, 2, 3, 2);
@@ -299,6 +327,187 @@
             labelEstimasiBiayaKekurangan.TabIndex = 34;
             labelEstimasiBiayaKekurangan.Text = "Label Estimasi";
             // 
+            // guna2GroupBox2
+            // 
+            guna2GroupBox2.BackColor = Color.Transparent;
+            guna2GroupBox2.BorderColor = Color.FromArgb(255, 247, 237);
+            guna2GroupBox2.BorderRadius = 15;
+            guna2GroupBox2.Controls.Add(label8);
+            guna2GroupBox2.Controls.Add(guna2GroupBox3);
+            guna2GroupBox2.Controls.Add(label9);
+            guna2GroupBox2.Controls.Add(label10);
+            guna2GroupBox2.Controls.Add(label11);
+            guna2GroupBox2.Controls.Add(label12);
+            guna2GroupBox2.Controls.Add(label13);
+            guna2GroupBox2.Controls.Add(label14);
+            guna2GroupBox2.Controls.Add(label15);
+            guna2GroupBox2.Controls.Add(label17);
+            guna2GroupBox2.Controls.Add(guna2CirclePictureBox2);
+            guna2GroupBox2.CustomBorderColor = Color.FromArgb(255, 247, 237);
+            guna2GroupBox2.CustomizableEdges = customizableEdges19;
+            guna2GroupBox2.FillColor = Color.FromArgb(255, 247, 237);
+            guna2GroupBox2.Font = new Font("Segoe UI", 9F);
+            guna2GroupBox2.ForeColor = Color.FromArgb(255, 247, 237);
+            guna2GroupBox2.Location = new Point(57, 289);
+            guna2GroupBox2.Margin = new Padding(3, 2, 3, 2);
+            guna2GroupBox2.Name = "guna2GroupBox2";
+            guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2GroupBox2.Size = new Size(1530, 163);
+            guna2GroupBox2.TabIndex = 35;
+            guna2GroupBox2.Text = " ";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
+            label8.Font = new Font("Inter Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.FromArgb(45, 45, 45);
+            label8.Location = new Point(1168, 98);
+            label8.Name = "label8";
+            label8.Size = new Size(126, 23);
+            label8.TabIndex = 34;
+            label8.Text = "Label Estimasi";
+            // 
+            // guna2GroupBox3
+            // 
+            guna2GroupBox3.BackColor = Color.Transparent;
+            guna2GroupBox3.BorderColor = Color.Transparent;
+            guna2GroupBox3.BorderRadius = 10;
+            guna2GroupBox3.Controls.Add(guna2HtmlLabel1);
+            guna2GroupBox3.CustomBorderColor = Color.FromArgb(212, 9, 36);
+            guna2GroupBox3.CustomizableEdges = customizableEdges16;
+            guna2GroupBox3.FillColor = Color.FromArgb(212, 9, 36);
+            guna2GroupBox3.Font = new Font("Segoe UI", 9F);
+            guna2GroupBox3.ForeColor = Color.Transparent;
+            guna2GroupBox3.Location = new Point(96, 128);
+            guna2GroupBox3.Margin = new Padding(3, 2, 3, 2);
+            guna2GroupBox3.Name = "guna2GroupBox3";
+            guna2GroupBox3.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            guna2GroupBox3.Size = new Size(318, 22);
+            guna2GroupBox3.TabIndex = 33;
+            // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Inter", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.ForeColor = Color.White;
+            guna2HtmlLabel1.Location = new Point(16, 0);
+            guna2HtmlLabel1.Margin = new Padding(3, 2, 3, 2);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(279, 23);
+            guna2HtmlLabel1.TabIndex = 37;
+            guna2HtmlLabel1.Text = "Stok Tidak Mencukupi - Perlu Pembelian";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.Transparent;
+            label9.Font = new Font("Inter Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.FromArgb(45, 45, 45);
+            label9.Location = new Point(1138, 98);
+            label9.Name = "label9";
+            label9.Size = new Size(31, 23);
+            label9.TabIndex = 33;
+            label9.Text = "Rp";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.BackColor = Color.Transparent;
+            label10.Font = new Font("Inter", 12F);
+            label10.ForeColor = Color.FromArgb(45, 45, 45);
+            label10.Location = new Point(1138, 64);
+            label10.Name = "label10";
+            label10.Size = new Size(212, 23);
+            label10.TabIndex = 9;
+            label10.Text = "Estimasi Biaya Kekurangan";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.BackColor = Color.Transparent;
+            label11.Font = new Font("Inter Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.ForeColor = Color.FromArgb(45, 45, 45);
+            label11.Location = new Point(693, 98);
+            label11.Name = "label11";
+            label11.Size = new Size(181, 23);
+            label11.TabIndex = 8;
+            label11.Text = "Label Maksimal Porsi";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.BackColor = Color.Transparent;
+            label12.Font = new Font("Inter", 12F);
+            label12.ForeColor = Color.FromArgb(45, 45, 45);
+            label12.Location = new Point(693, 64);
+            label12.Name = "label12";
+            label12.Size = new Size(188, 23);
+            label12.TabIndex = 7;
+            label12.Text = "Maksimal Bisa Produksi";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.BackColor = Color.Transparent;
+            label13.Font = new Font("Inter Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.ForeColor = Color.FromArgb(45, 45, 45);
+            label13.Location = new Point(96, 98);
+            label13.Name = "label13";
+            label13.Size = new Size(99, 23);
+            label13.TabIndex = 6;
+            label13.Text = "Label Porsi";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.BackColor = Color.Transparent;
+            label14.Font = new Font("Inter", 12F);
+            label14.ForeColor = Color.FromArgb(45, 45, 45);
+            label14.Location = new Point(97, 64);
+            label14.Name = "label14";
+            label14.Size = new Size(129, 23);
+            label14.TabIndex = 5;
+            label14.Text = "Target Produksi";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.BackColor = Color.Transparent;
+            label15.Font = new Font("Inter Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label15.ForeColor = Color.FromArgb(45, 45, 45);
+            label15.Location = new Point(240, 32);
+            label15.Name = "label15";
+            label15.Size = new Size(98, 23);
+            label15.TabIndex = 4;
+            label15.Text = "Label Hasil";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.BackColor = Color.Transparent;
+            label17.Font = new Font("Inter Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label17.ForeColor = Color.FromArgb(45, 45, 45);
+            label17.Location = new Point(97, 32);
+            label17.Name = "label17";
+            label17.Size = new Size(133, 23);
+            label17.TabIndex = 3;
+            label17.Text = "Hasil Simulasi :";
+            // 
+            // guna2CirclePictureBox2
+            // 
+            guna2CirclePictureBox2.BackColor = Color.Transparent;
+            guna2CirclePictureBox2.Image = Properties.Resources.Screenshot_2025_12_06_174136_removebg_preview;
+            guna2CirclePictureBox2.ImageRotate = 0F;
+            guna2CirclePictureBox2.Location = new Point(42, 32);
+            guna2CirclePictureBox2.Margin = new Padding(3, 2, 3, 2);
+            guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
+            guna2CirclePictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            guna2CirclePictureBox2.Size = new Size(50, 55);
+            guna2CirclePictureBox2.TabIndex = 0;
+            guna2CirclePictureBox2.TabStop = false;
+            // 
             // guna2GroupBox1
             // 
             guna2GroupBox1.BackColor = Color.Transparent;
@@ -322,7 +531,7 @@
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Inter", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel2.ForeColor = Color.White;
-            guna2HtmlLabel2.Location = new Point(3, 0);
+            guna2HtmlLabel2.Location = new Point(16, 0);
             guna2HtmlLabel2.Margin = new Padding(3, 2, 3, 2);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(292, 23);
@@ -401,11 +610,56 @@
             label2.TabIndex = 5;
             label2.Text = "Target Produksi";
             // 
+            // guna2GroupBox4
+            // 
+            guna2GroupBox4.BackColor = Color.Transparent;
+            guna2GroupBox4.BorderColor = Color.White;
+            guna2GroupBox4.BorderRadius = 15;
+            guna2GroupBox4.Controls.Add(label19);
+            guna2GroupBox4.Controls.Add(label18);
+            guna2GroupBox4.CustomBorderColor = Color.White;
+            guna2GroupBox4.CustomizableEdges = customizableEdges21;
+            guna2GroupBox4.Font = new Font("Segoe UI", 9F);
+            guna2GroupBox4.ForeColor = Color.White;
+            guna2GroupBox4.Location = new Point(31, 483);
+            guna2GroupBox4.Margin = new Padding(3, 2, 3, 2);
+            guna2GroupBox4.Name = "guna2GroupBox4";
+            guna2GroupBox4.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            guna2GroupBox4.Size = new Size(1530, 283);
+            guna2GroupBox4.TabIndex = 35;
+            guna2GroupBox4.Text = " ";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.BackColor = Color.Transparent;
+            label18.Font = new Font("Inter", 12F);
+            label18.ForeColor = Color.FromArgb(45, 45, 45);
+            label18.Location = new Point(671, 130);
+            label18.Name = "label18";
+            label18.Size = new Size(188, 23);
+            label18.TabIndex = 8;
+            label18.Text = "Maksimal Bisa Produksi";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.BackColor = Color.Transparent;
+            label19.Font = new Font("Inter Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label19.ForeColor = Color.FromArgb(45, 45, 45);
+            label19.Location = new Point(35, 31);
+            label19.Name = "label19";
+            label19.Size = new Size(133, 23);
+            label19.TabIndex = 9;
+            label19.Text = "Hasil Simulasi :";
+            // 
             // UC_SimulasiKebutuhan
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(212, 122, 71);
+            Controls.Add(guna2GroupBox4);
+            Controls.Add(guna2GroupBox2);
             Controls.Add(gbHasilSimulasiPopUp);
             Controls.Add(guna2GroupBox12);
             Controls.Add(guna2GroupBox7);
@@ -420,8 +674,15 @@
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).EndInit();
             gbHasilSimulasiPopUp.ResumeLayout(false);
             gbHasilSimulasiPopUp.PerformLayout();
+            guna2GroupBox2.ResumeLayout(false);
+            guna2GroupBox2.PerformLayout();
+            guna2GroupBox3.ResumeLayout(false);
+            guna2GroupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox2).EndInit();
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
+            guna2GroupBox4.ResumeLayout(false);
+            guna2GroupBox4.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -449,5 +710,21 @@
         private Label labelEstimasiBiayaKekurangan;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
+        private Label label8;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Label label9;
+        private Label label10;
+        private Label label11;
+        private Label label12;
+        private Label label13;
+        private Label label14;
+        private Label label15;
+        private Label label17;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox4;
+        private Label label18;
+        private Label label19;
     }
 }
