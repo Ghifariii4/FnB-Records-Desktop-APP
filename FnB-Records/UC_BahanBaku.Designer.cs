@@ -64,10 +64,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges55 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_BahanBaku));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -90,6 +86,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges55 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_BahanBaku));
             btnClosePopUpBahanBaku = new Guna.UI2.WinForms.Guna2Button();
             label6 = new Label();
             label5 = new Label();
@@ -117,8 +117,6 @@
             label2 = new Label();
             label1 = new Label();
             gbBahanBakuPopUp = new Guna.UI2.WinForms.Guna2GroupBox();
-            guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             guna2GroupBox5 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2GroupBox6 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -138,14 +136,16 @@
             label18 = new Label();
             guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             guna2GroupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDataVendor).BeginInit();
             guna2GroupBox3.SuspendLayout();
             guna2GroupBox2.SuspendLayout();
             gbBahanBakuPopUp.SuspendLayout();
-            guna2GroupBox1.SuspendLayout();
             guna2GroupBox5.SuspendLayout();
             guna2GroupBox6.SuspendLayout();
+            guna2GroupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // btnClosePopUpBahanBaku
@@ -730,45 +730,6 @@
             gbBahanBakuPopUp.Visible = false;
             gbBahanBakuPopUp.Click += gbBahanBakuPopUp_Click;
             // 
-            // guna2GroupBox1
-            // 
-            guna2GroupBox1.BorderColor = Color.Transparent;
-            guna2GroupBox1.Controls.Add(btTambahBahanBaku);
-            guna2GroupBox1.Controls.Add(label2);
-            guna2GroupBox1.Controls.Add(label1);
-            guna2GroupBox1.CustomBorderColor = Color.Transparent;
-            guna2GroupBox1.CustomizableEdges = customizableEdges55;
-            guna2Transition1.SetDecoration(guna2GroupBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            guna2GroupBox1.FillColor = Color.Transparent;
-            guna2GroupBox1.Font = new Font("Manrope", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2GroupBox1.ForeColor = Color.Transparent;
-            guna2GroupBox1.Location = new Point(34, 15);
-            guna2GroupBox1.Name = "guna2GroupBox1";
-            guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges56;
-            guna2GroupBox1.Size = new Size(1544, 99);
-            guna2GroupBox1.TabIndex = 12;
-            guna2GroupBox1.Click += guna2GroupBox1_Click;
-            // 
-            // guna2Transition1
-            // 
-            guna2Transition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = (PointF)resources.GetObject("animation1.BlindCoeff");
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = (PointF)resources.GetObject("animation1.MosaicCoeff");
-            animation1.MosaicShift = (PointF)resources.GetObject("animation1.MosaicShift");
-            animation1.MosaicSize = 0;
-            animation1.Padding = new Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = (PointF)resources.GetObject("animation1.ScaleCoeff");
-            animation1.SlideCoeff = (PointF)resources.GetObject("animation1.SlideCoeff");
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            guna2Transition1.DefaultAnimation = animation1;
-            // 
             // guna2GroupBox5
             // 
             guna2GroupBox5.BackColor = Color.Transparent;
@@ -1139,6 +1100,45 @@
             guna2Button4.TabIndex = 13;
             guna2Button4.Text = "Simpan";
             // 
+            // guna2GroupBox1
+            // 
+            guna2GroupBox1.BorderColor = Color.Transparent;
+            guna2GroupBox1.Controls.Add(btTambahBahanBaku);
+            guna2GroupBox1.Controls.Add(label2);
+            guna2GroupBox1.Controls.Add(label1);
+            guna2GroupBox1.CustomBorderColor = Color.Transparent;
+            guna2GroupBox1.CustomizableEdges = customizableEdges55;
+            guna2Transition1.SetDecoration(guna2GroupBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            guna2GroupBox1.FillColor = Color.Transparent;
+            guna2GroupBox1.Font = new Font("Manrope", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guna2GroupBox1.ForeColor = Color.Transparent;
+            guna2GroupBox1.Location = new Point(34, 15);
+            guna2GroupBox1.Name = "guna2GroupBox1";
+            guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges56;
+            guna2GroupBox1.Size = new Size(1544, 99);
+            guna2GroupBox1.TabIndex = 12;
+            guna2GroupBox1.Click += guna2GroupBox1_Click;
+            // 
+            // guna2Transition1
+            // 
+            guna2Transition1.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = (PointF)resources.GetObject("animation1.BlindCoeff");
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = (PointF)resources.GetObject("animation1.MosaicCoeff");
+            animation1.MosaicShift = (PointF)resources.GetObject("animation1.MosaicShift");
+            animation1.MosaicSize = 0;
+            animation1.Padding = new Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = (PointF)resources.GetObject("animation1.ScaleCoeff");
+            animation1.SlideCoeff = (PointF)resources.GetObject("animation1.SlideCoeff");
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            guna2Transition1.DefaultAnimation = animation1;
+            // 
             // UC_BahanBaku
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1157,11 +1157,11 @@
             guna2GroupBox3.ResumeLayout(false);
             guna2GroupBox2.ResumeLayout(false);
             gbBahanBakuPopUp.ResumeLayout(false);
-            guna2GroupBox1.ResumeLayout(false);
-            guna2GroupBox1.PerformLayout();
             guna2GroupBox5.ResumeLayout(false);
             guna2GroupBox6.ResumeLayout(false);
             guna2GroupBox6.PerformLayout();
+            guna2GroupBox1.ResumeLayout(false);
+            guna2GroupBox1.PerformLayout();
             ResumeLayout(false);
         }
 

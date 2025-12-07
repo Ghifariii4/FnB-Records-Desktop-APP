@@ -379,7 +379,7 @@ namespace FnB_Records
 
         private void btnBatal_Click(object sender, EventArgs e)
         {
-            idVendorTerpilih = 0;
+                idVendorTerpilih = 0;
             gbEditVendor.Visible = false;
         }
 
@@ -387,6 +387,11 @@ namespace FnB_Records
         {
             gbEditVendor.Visible = false;
             idVendorTerpilih = 0;
+        }
+
+        private void guna2GroupBox1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

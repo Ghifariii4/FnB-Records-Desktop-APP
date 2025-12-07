@@ -144,6 +144,7 @@
             guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2GroupBox1.Size = new Size(1544, 99);
             guna2GroupBox1.TabIndex = 5;
+            guna2GroupBox1.Click += guna2GroupBox1_Click_1;
             // 
             // btnTambahVendor
             // 
@@ -397,7 +398,7 @@
             gbEditVendor.FillColor = Color.FromArgb(249, 247, 245);
             gbEditVendor.Font = new Font("Segoe UI", 9F);
             gbEditVendor.ForeColor = Color.FromArgb(125, 137, 149);
-            gbEditVendor.Location = new Point(615, 337);
+            gbEditVendor.Location = new Point(3, 3);
             gbEditVendor.Name = "gbEditVendor";
             gbEditVendor.ShadowDecoration.BorderRadius = 15;
             gbEditVendor.ShadowDecoration.CustomizableEdges = customizableEdges30;
@@ -642,8 +643,9 @@
             // 
             // gbVendorPopUp
             // 
-            gbVendorPopUp.BackColor = Color.White;
+            gbVendorPopUp.BackColor = Color.Transparent;
             gbVendorPopUp.BorderRadius = 15;
+            gbVendorPopUp.Controls.Add(gbEditVendor);
             gbVendorPopUp.Controls.Add(btnBatalPopUp);
             gbVendorPopUp.Controls.Add(btnSimpanPopUp);
             gbVendorPopUp.Controls.Add(guna2GroupBox4);
@@ -902,7 +904,6 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(212, 122, 71);
-            Controls.Add(gbEditVendor);
             Controls.Add(gbVendorPopUp);
             Controls.Add(guna2GroupBox1);
             Controls.Add(guna2GroupBox2);
