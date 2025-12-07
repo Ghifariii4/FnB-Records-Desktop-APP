@@ -224,7 +224,6 @@
             // guna2CirclePictureBox1
             // 
             guna2CirclePictureBox1.BackColor = Color.Transparent;
-            guna2CirclePictureBox1.Image = Properties.Resources.Screenshot_2025_12_06_174632_removebg_preview;
             guna2CirclePictureBox1.ImageRotate = 0F;
             guna2CirclePictureBox1.Location = new Point(48, 43);
             guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
