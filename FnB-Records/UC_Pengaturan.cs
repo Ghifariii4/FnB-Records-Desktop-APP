@@ -105,6 +105,9 @@ namespace FnB_Records
         // ============================================
         // UPDATE UI ROLE (FREE/PREMIUM)
         // ============================================
+        // ============================================
+        // UPDATE UI ROLE (FREE/PREMIUM)
+        // ============================================
         private void UpdateRoleUI(string role)
         {
             if (role == "premium")
@@ -112,22 +115,14 @@ namespace FnB_Records
                 // Status Premium
                 lblrole.Text = "Premium ✨";
                 lblrole.ForeColor = Color.White;
-
-                // Guna2Panel/GroupBox FillColor kuning
-                gbStatusRole.FillColor = Color.Gold;
-                // Atau jika pakai warna custom
-                // gbStatusRole.FillColor = Color.FromArgb(255, 215, 0); // Gold
+                gbStatusRole.FillColor = Color.Gold; // Gold untuk Premium
             }
             else
             {
                 // Status Free
                 lblrole.Text = "Free";
                 lblrole.ForeColor = Color.White;
-
-                // Guna2Panel/GroupBox FillColor hijau
-                gbStatusRole.FillColor = Color.LimeGreen;
-                // Atau jika pakai warna custom
-                // gbStatusRole.FillColor = Color.FromArgb(50, 205, 50); // LimeGreen
+                gbStatusRole.FillColor = Color.FromArgb(34, 139, 34); // Hijau Tua untuk Free ✅
             }
         }
         private void UpdateStatusPicture(bool emailVerified)
