@@ -348,7 +348,7 @@ namespace FnB_Records
                             Label lblItem = new Label();
                             lblItem.Text = $"{rank}. {menuName} ({sold} terjual)";
                             lblItem.ForeColor = Color.Black;
-                            lblItem.Font = new Font("Inter; 14,25pt", 10, FontStyle.Bold);
+                            lblItem.Font = new Font("Inter; 14,25pt", 13, FontStyle.Bold);
                             lblItem.AutoSize = true;
                             lblItem.Margin = new Padding(10, 5, 0, 5);
 
@@ -378,7 +378,7 @@ namespace FnB_Records
                     {
                         if (!reader.HasRows)
                         {
-                            Label lblAman = new Label { Text = "Stok Aman 👍", ForeColor = Color.LightGreen, AutoSize = true, Font = new Font("Segoe UI", 10) };
+                            Label lblAman = new Label { Text = "Stok Aman 👍", ForeColor = Color.LightGreen, AutoSize = true, Font = new Font("Segoe UI", 14) };
                             flowLayoutPanel1.Controls.Add(lblAman);
                             return;
                         }
@@ -392,7 +392,7 @@ namespace FnB_Records
                             Label lblAlert = new Label();
                             lblAlert.Text = $"⚠️ {name}: Sisa {stock} {unit}";
                             lblAlert.ForeColor = Color.Salmon;
-                            lblAlert.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+                            lblAlert.Font = new Font("Segoe UI", 14, FontStyle.Bold);
                             lblAlert.AutoSize = true;
                             lblAlert.Margin = new Padding(3, 3, 3, 5);
 
