@@ -107,7 +107,7 @@ namespace FnB_Records
                 AutoSize = true,
                 AutoScroll = true,
                 WrapContents = false,
-                Location = new Point(17, 500),
+                Location = new Point(17, 470),
                 Width = 504,
                 MaximumSize = new Size(504, 250),
                 Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right
@@ -133,15 +133,16 @@ namespace FnB_Records
                 Margin = new Padding(3, 3, 3, 3)
             };
 
-            // ComboBox Bahan
-            var cb = new ComboBox
+            // ComboBox Bahan dengan border radius
+            var cb = new Guna.UI2.WinForms.Guna2ComboBox
             {
                 Name = "cbPilihBahan",
                 DropDownStyle = ComboBoxStyle.DropDownList,
                 Left = 0,
                 Top = 5,
                 Width = 280,
-                Font = new Font("Manrope", 11.999999F)
+                Font = new Font("Manrope", 11.999999F),
+                BorderRadius = 5
             };
 
             cb.DataSource = new BindingList<Ingredient>(bahanList.ToList());
@@ -154,16 +155,18 @@ namespace FnB_Records
                 if (idx >= 0) cb.SelectedIndex = idx;
             }
 
-            // TextBox Jumlah
-            var txtQty = new TextBox
+            // TextBox Jumlah dengan border radius
+            var txtQty = new Guna.UI2.WinForms.Guna2TextBox
             {
                 Name = "txtInputJumlahBahan",
                 Left = cb.Right + 8,
                 Top = 5,
                 Width = 130,
+                Height = 30,
                 Text = qtyText ?? "",
                 Font = new Font("Manrope", 11.999999F),
-                BorderStyle = BorderStyle.FixedSingle
+                BorderRadius = 5,
+                BorderColor = Color.Gainsboro
             };
 
             // Button Hapus
@@ -332,6 +335,15 @@ namespace FnB_Records
                 Width = 60,
                 ImageLayout = DataGridViewImageCellLayout.Zoom
             };
+            // Tambahkan image dari resources jika ada
+            try
+            {
+                colEdit.Image = Properties.Resources.draw_1798785;
+            }
+            catch
+            {
+                // Jika image tidak ada, column tetap ada tapi tanpa icon
+            }
             dgvResepMenu.Columns.Add(colEdit);
 
             // Column Delete
@@ -342,6 +354,15 @@ namespace FnB_Records
                 Width = 60,
                 ImageLayout = DataGridViewImageCellLayout.Zoom
             };
+            // Tambahkan image dari resources jika ada
+            try
+            {
+                colDelete.Image = Properties.Resources.trash_9787142;
+            }
+            catch
+            {
+                // Jika image tidak ada, column tetap ada tapi tanpa icon
+            }
             dgvResepMenu.Columns.Add(colDelete);
 
             dgvResepMenu.RowHeadersVisible = false;
