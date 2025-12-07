@@ -112,46 +112,58 @@ namespace FnB_Records
                 // Status Premium
                 lblrole.Text = "Premium ✨";
                 lblrole.ForeColor = Color.White;
+
+                // Guna2Panel/GroupBox FillColor kuning
                 gbStatusRole.FillColor = Color.Gold;
+                // Atau jika pakai warna custom
+                // gbStatusRole.FillColor = Color.FromArgb(255, 215, 0); // Gold
             }
             else
             {
                 // Status Free
                 lblrole.Text = "Free";
                 lblrole.ForeColor = Color.White;
+
+                // Guna2Panel/GroupBox FillColor hijau
                 gbStatusRole.FillColor = Color.LimeGreen;
+                // Atau jika pakai warna custom
+                // gbStatusRole.FillColor = Color.FromArgb(50, 205, 50); // LimeGreen
             }
         }
-
-        // ============================================
-        // UPDATE GAMBAR STATUS BERDASARKAN VERIFIKASI EMAIL
-        // ============================================
         private void UpdateStatusPicture(bool emailVerified)
         {
             try
             {
                 if (emailVerified)
                 {
+                    // Coba load gambar dari Resources
                     try
                     {
+                        // GANTI NAMA INI SESUAI NAMA RESOURCE ANDA
+                        // Contoh: jika nama resource adalah "_29" atau "verified29"
                         guna2PictureBox1.Image = Properties.Resources._29;
                         guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
                     catch
                     {
+                        // Jika resource tidak ada, gunakan background color hijau
                         guna2PictureBox1.Image = null;
                         guna2PictureBox1.BackColor = Color.LimeGreen;
                     }
                 }
                 else
                 {
+                    // Email belum terverifikasi
                     try
                     {
-                        guna2PictureBox1.Image = Properties.Resources.unverified;
+                        // GANTI NAMA INI SESUAI NAMA RESOURCE ANDA
+                        // Contoh: jika nama resource adalah "ErrorIconRed" tanpa spasi dan tanda -
+                        guna2PictureBox1.Image = Properties.Resources.unferivied;
                         guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
                     catch
                     {
+                        // Jika resource tidak ada, gunakan background color orange
                         guna2PictureBox1.Image = null;
                         guna2PictureBox1.BackColor = Color.Orange;
                     }
@@ -159,6 +171,7 @@ namespace FnB_Records
             }
             catch (Exception ex)
             {
+                // Fallback ke warna jika ada error
                 guna2PictureBox1.Image = null;
                 guna2PictureBox1.BackColor = emailVerified ? Color.LimeGreen : Color.Orange;
             }
@@ -201,25 +214,17 @@ namespace FnB_Records
         {
             if (isEmailVerified)
             {
-                // Email sudah terverifikasi
                 lblstatusverifikasiemail.Text = "✅ Email Terverifikasi";
-                lblstatusverifikasiemail.ForeColor = Color.White;
+                lblstatusverifikasiemail.ForeColor = Color.Green;
                 btnverifemail.Enabled = false;
                 btnverifemail.Text = "Terverifikasi";
-
-                // Warna label email putih untuk terverifikasi
-                lblemail.ForeColor = Color.White;
             }
             else
             {
-                // Email belum terverifikasi
                 lblstatusverifikasiemail.Text = "⚠️ Email Belum Terverifikasi";
                 lblstatusverifikasiemail.ForeColor = Color.Orange;
                 btnverifemail.Enabled = true;
                 btnverifemail.Text = "Verifikasi Email";
-
-                // Warna label email orange untuk belum terverifikasi
-                lblemail.ForeColor = Color.Orange;
             }
 
             // Update gambar berdasarkan status verifikasi
@@ -229,7 +234,7 @@ namespace FnB_Records
         // ============================================
         // KIRIM KODE VERIFIKASI EMAIL
         // ============================================
-        private async void btnverifemail_Click_1(object sender, EventArgs e)
+        private async void btnverifemail_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(currentUserEmail))
             {
@@ -342,6 +347,7 @@ namespace FnB_Records
             string email = txtemail.Text.Trim();
             string noTelp = txtnotelp.Text.Trim();
 
+            // Validasi input
             if (string.IsNullOrWhiteSpace(namaBisnis))
             {
                 MessageBox.Show("Nama bisnis tidak boleh kosong!", "Validasi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -356,16 +362,19 @@ namespace FnB_Records
                 return;
             }
 
+            // Cek apakah ada perubahan
             bool emailBerubah = email != originalUserEmail;
             bool namaBerubah = namaBisnis != originalBusinessName;
             bool noTelpBerubah = txtnotelp.Text != (string.IsNullOrEmpty(txtnotelp.Text) ? "" : txtnotelp.Text);
 
+            // Jika tidak ada perubahan sama sekali
             if (!emailBerubah && !namaBerubah && !noTelpBerubah)
             {
                 MessageBox.Show("Tidak ada perubahan yang dilakukan.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
+            // PENTING: Jika email berubah, beri peringatan
             if (emailBerubah)
             {
                 var result = MessageBox.Show(
@@ -396,6 +405,7 @@ namespace FnB_Records
                     if (conn.State != System.Data.ConnectionState.Open)
                         conn.Open();
 
+                    // Cek apakah email baru sudah digunakan user lain
                     if (emailBerubah)
                     {
                         string checkQuery = "SELECT COUNT(*) FROM users WHERE email = @email AND id != @userId";
@@ -418,6 +428,7 @@ namespace FnB_Records
                         }
                     }
 
+                    // Update profil ke database
                     string updateQuery = @"
                         UPDATE users 
                         SET business_name = @businessName,
@@ -436,12 +447,18 @@ namespace FnB_Records
                         await cmd.ExecuteNonQueryAsync();
                     }
 
+                    // Update data lokal dan GlobalSession
                     if (emailBerubah)
                     {
+                        // Update semua referensi email
                         originalUserEmail = email;
                         currentUserEmail = email;
                         GlobalSession.CurrentUserEmail = email;
+
+                        // Update label email
                         lblemail.Text = email;
+
+                        // Set status verifikasi menjadi false
                         isEmailVerified = false;
                         UpdateVerificationUI();
                     }
@@ -452,6 +469,7 @@ namespace FnB_Records
                         GlobalSession.BusinessName = namaBisnis;
                     }
 
+                    // Tampilkan pesan sukses
                     string message = "✅ Profil berhasil diperbarui!";
 
                     if (emailBerubah)
@@ -465,22 +483,19 @@ namespace FnB_Records
 
                     MessageBox.Show(message, "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                    // Jika email berubah, highlight tombol verifikasi
                     if (emailBerubah)
                     {
                         btnverifemail.BackColor = Color.Orange;
-                        await System.Threading.Tasks.Task.Delay(500);
-
-                        if (btnverifemail.InvokeRequired)
+                        System.Threading.Tasks.Task.Delay(500).ContinueWith(_ =>
                         {
-                            btnverifemail.Invoke(new Action(() =>
+                            if (btnverifemail.InvokeRequired)
                             {
-                                btnverifemail.BackColor = Color.FromArgb(94, 148, 255);
-                            }));
-                        }
-                        else
-                        {
-                            btnverifemail.BackColor = Color.FromArgb(94, 148, 255);
-                        }
+                                btnverifemail.Invoke(new Action(() => {
+                                    btnverifemail.BackColor = Color.FromArgb(94, 148, 255);
+                                }));
+                            }
+                        });
                     }
                 }
             }
@@ -589,11 +604,6 @@ namespace FnB_Records
         // ============================================
         // EVENT HANDLERS
         // ============================================
-        private void UC_Pengaturan_Load(object sender, EventArgs e)
-        {
-            // Load event - bisa digunakan untuk inisialisasi tambahan jika diperlukan
-        }
-
         private void lblstatusverifikasiemail_Click(object sender, EventArgs e)
         {
             if (!isEmailVerified)
@@ -624,6 +634,7 @@ namespace FnB_Records
 
         private void lblemail_Click(object sender, EventArgs e)
         {
+            // Saat label email diklik, tampilkan info lengkap
             MessageBox.Show(
                 $"📧 Email Login Saat Ini:\n{currentUserEmail}\n\n" +
                 $"Status Verifikasi: {(isEmailVerified ? "✅ Terverifikasi" : "⚠️ Belum Terverifikasi")}\n\n" +
@@ -635,9 +646,10 @@ namespace FnB_Records
             );
         }
 
-        private void txtnamabisnis_TextChanged(object sender, EventArgs e)
+        private void txtInputNamaBahan_TextChanged(object sender, EventArgs e)
         {
-            // Event untuk perubahan nama bisnis - bisa ditambahkan validasi real-time jika diperlukan
+            // Tidak perlu implementasi khusus
+            // Perubahan akan terdeteksi saat klik Simpan Perubahan
         }
 
         private void txtemail_TextChanged(object sender, EventArgs e)
@@ -759,6 +771,7 @@ namespace FnB_Records
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
+            // Tampilkan informasi status verifikasi email
             string statusMessage = isEmailVerified
                 ? "✅ Email Terverifikasi\n\n" +
                   $"Email: {currentUserEmail}\n\n" +
@@ -776,16 +789,11 @@ namespace FnB_Records
             );
         }
 
-        private void lblrole_Click(object sender, EventArgs e)
-        {
-            // Event untuk klik label role - bisa menampilkan info tentang role
-            gbStatusRole_Click(sender, e); // Redirect ke event handler gbStatusRole
-        }
-
         private void gbStatusRole_Click(object sender, EventArgs e)
         {
             try
             {
+                // Ambil role dari database
                 Koneksi db = new Koneksi();
                 using (var conn = db.GetKoneksi())
                 {
@@ -803,6 +811,7 @@ namespace FnB_Records
                         {
                             string role = result.ToString();
 
+                            // Tampilkan info detail
                             string statusInfo = role == "premium"
                                 ? "✨ Status Premium Aktif\n\n" +
                                   "Fitur yang Anda miliki:\n" +
@@ -826,7 +835,9 @@ namespace FnB_Records
                             MessageBox.Show(
                                 statusInfo,
                                 role == "premium" ? "Status Premium" : "Status Free",
-                                MessageBoxButtons.OK,MessageBoxIcon.Information);
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information
+                            );
                         }
                     }
                 }
@@ -835,6 +846,19 @@ namespace FnB_Records
             {
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        // Event handler tambahan jika ada di designer
+        private void btnsimpanprofil_Click_1(object sender, EventArgs e)
+        {
+            // Redirect ke method utama
+            btnsimpanprofil_Click(sender, e);
+        }
+
+        private void btnkirimkode_Click(object sender, EventArgs e)
+        {
+            // Method ini tidak digunakan karena tidak ada tombol kirim kode
+            // Semua proses dilakukan via tombol Simpan Perubahan
         }
     }
 }

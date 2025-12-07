@@ -763,9 +763,9 @@ namespace FnB_Records.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap unverified {
+        internal static System.Drawing.Bitmap unferivied {
             get {
-                object obj = ResourceManager.GetObject("unverified", resourceCulture);
+                object obj = ResourceManager.GetObject("unferivied", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -786,6 +786,16 @@ namespace FnB_Records.Properties {
         internal static System.Drawing.Bitmap Up_Icon_White {
             get {
                 object obj = ResourceManager.GetObject("Up-Icon-White", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap verified {
+            get {
+                object obj = ResourceManager.GetObject("verified", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
