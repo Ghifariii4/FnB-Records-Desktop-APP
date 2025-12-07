@@ -1,54 +1,69 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\",
+  "WorkspaceRootPath": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\diana\\source\\repos\\fnb-records-desktop-app\\fnb-records\\ucdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:ucdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\hp-victus\\source\\repos\\fnb-records-desktop-app\\fnb-records\\uc_bahanbaku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_bahanbaku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\diana\\source\\repos\\fnb-records-desktop-app\\fnb-records\\ucdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:ucdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\diana\\source\\repos\\fnb-records-desktop-app\\fnb-records\\ucdashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:ucdashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\uc_bahanbaku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\hp-victus\\source\\repos\\fnb-records-desktop-app\\fnb-records\\uc_bahanbaku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_bahanbaku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\uc_vendor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_vendor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\hp-victus\\source\\repos\\fnb-records-desktop-app\\fnb-records\\uc_simulasikebutuhan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_simulasikebutuhan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\diana\\source\\repos\\fnb-records-desktop-app\\fnb-records\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\hp-victus\\source\\repos\\fnb-records-desktop-app\\fnb-records\\uc_simulasikebutuhan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_simulasikebutuhan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\hp-victus\\source\\repos\\fnb-records-desktop-app\\fnb-records\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\uc_resep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_resep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\main_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:main_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\uc_penjualan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\main_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:main_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\hp-victus\\source\\repos\\fnb-records-desktop-app\\fnb-records\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\hp-victus\\source\\repos\\fnb-records-desktop-app\\fnb-records\\ucdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:ucdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\ucdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:ucdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\uc_vendor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_vendor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|c:\\users\\hp-victus\\source\\repos\\fnb-records-desktop-app\\fnb-records\\ucdashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:ucdashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\uc_resep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_resep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\uc_penjualan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7EC2B4D5-2259-628F-2F8B-6613FB69133B}|FnB-Records.csproj|solutionrelative:uc_penjualan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +73,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 310,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,42 +89,102 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UCDashboard.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UCDashboard.cs",
-              "RelativeDocumentMoniker": "UCDashboard.cs",
-              "ToolTip": "C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UCDashboard.cs [Design]",
-              "RelativeToolTip": "UCDashboard.cs [Design]",
+              "Title": "UC_BahanBaku.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_BahanBaku.cs",
+              "RelativeDocumentMoniker": "UC_BahanBaku.cs",
+              "ToolTip": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_BahanBaku.cs [Design]",
+              "RelativeToolTip": "UC_BahanBaku.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-06T14:44:14.563Z",
+              "WhenOpened": "2025-12-07T04:49:10.372Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UCDashboard.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UCDashboard.Designer.cs",
-              "RelativeDocumentMoniker": "UCDashboard.Designer.cs",
-              "ToolTip": "C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UCDashboard.Designer.cs",
-              "RelativeToolTip": "UCDashboard.Designer.cs",
-              "ViewState": "AgIAAMUCAAAAAAAAAAAnwMUCAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UC_BahanBaku.cs",
+              "DocumentMoniker": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_BahanBaku.cs",
+              "RelativeDocumentMoniker": "UC_BahanBaku.cs",
+              "ToolTip": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_BahanBaku.cs",
+              "RelativeToolTip": "UC_BahanBaku.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAIwCEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-06T12:36:26.793Z",
+              "WhenOpened": "2025-12-07T04:41:05.449Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 2,
+              "Title": "UC_SimulasiKebutuhan.cs",
+              "DocumentMoniker": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_SimulasiKebutuhan.cs",
+              "RelativeDocumentMoniker": "UC_SimulasiKebutuhan.cs",
+              "ToolTip": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_SimulasiKebutuhan.cs",
+              "RelativeToolTip": "UC_SimulasiKebutuhan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T04:25:32.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UC_SimulasiKebutuhan.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_SimulasiKebutuhan.cs",
+              "RelativeDocumentMoniker": "UC_SimulasiKebutuhan.cs",
+              "ToolTip": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_SimulasiKebutuhan.cs [Design]",
+              "RelativeToolTip": "UC_SimulasiKebutuhan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T04:25:14.731Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T04:21:37.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UCDashboard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UCDashboard.cs",
+              "RelativeDocumentMoniker": "UCDashboard.cs",
+              "ToolTip": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UCDashboard.cs [Design]",
+              "RelativeToolTip": "UCDashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T14:44:14.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UCDashboard.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UCDashboard.Designer.cs",
+              "RelativeDocumentMoniker": "UCDashboard.Designer.cs",
+              "ToolTip": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UCDashboard.Designer.cs",
+              "RelativeToolTip": "UCDashboard.Designer.cs",
+              "ViewState": "AgIAAMUCAAAAAAAAAAAnwMUCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T12:36:26.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "UC_Penjualan.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_Penjualan.cs",
+              "DocumentMoniker": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_Penjualan.cs",
               "RelativeDocumentMoniker": "UC_Penjualan.cs",
               "ToolTip": "C:\\Users\\HYPE AMD\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_Penjualan.cs [Design]",
               "RelativeToolTip": "..\\..\\..\\..\\..\\HYPE AMD\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_Penjualan.cs [Design]",
@@ -118,92 +193,78 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "UC_Resep.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_Resep.cs",
+              "DocumentMoniker": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_Resep.cs",
               "RelativeDocumentMoniker": "UC_Resep.cs",
               "ToolTip": "C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_Resep.cs [Design]",
-              "RelativeToolTip": "UC_Resep.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_Resep.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-03T04:37:35.317Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "Main_Form.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Main_Form.cs",
+              "DocumentMoniker": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Main_Form.cs",
               "RelativeDocumentMoniker": "Main_Form.cs",
-              "ToolTip": "C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Main_Form.cs [Design]",
+              "ToolTip": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Main_Form.cs [Design]",
               "RelativeToolTip": "Main_Form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-02T10:26:06.951Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UC_BahanBaku.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_BahanBaku.cs",
-              "RelativeDocumentMoniker": "UC_BahanBaku.cs",
-              "ToolTip": "C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_BahanBaku.cs [Design]",
-              "RelativeToolTip": "UC_BahanBaku.cs [Design]",
+              "DocumentIndex": 10,
+              "Title": "UC_Vendor.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_Vendor.cs",
+              "RelativeDocumentMoniker": "UC_Vendor.cs",
+              "ToolTip": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_Vendor.cs [Design]",
+              "RelativeToolTip": "UC_Vendor.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T04:37:32.027Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-12-03T04:37:38.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UCDashboard.cs",
+              "DocumentMoniker": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UCDashboard.cs",
+              "RelativeDocumentMoniker": "UCDashboard.cs",
+              "ToolTip": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UCDashboard.cs",
+              "RelativeToolTip": "UCDashboard.cs",
+              "ViewState": "AgIAAIEBAAAAAAAAAAAuwJEBAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T07:04:06.983Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "UC_Vendor.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_Vendor.cs",
-              "RelativeDocumentMoniker": "UC_Vendor.cs",
-              "ToolTip": "C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UC_Vendor.cs [Design]",
-              "RelativeToolTip": "UC_Vendor.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T04:37:38.125Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UCDashboard.cs",
-              "DocumentMoniker": "C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UCDashboard.cs",
-              "RelativeDocumentMoniker": "UCDashboard.cs",
-              "ToolTip": "C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\UCDashboard.cs",
-              "RelativeToolTip": "UCDashboard.cs",
-              "ViewState": "AgIAAIEBAAAAAAAAAAAuwJEBAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T07:04:06.983Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "Register.cs",
-              "DocumentMoniker": "C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Register.cs",
+              "DocumentMoniker": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Register.cs",
               "RelativeDocumentMoniker": "Register.cs",
-              "ToolTip": "C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Register.cs",
+              "ToolTip": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Register.cs",
               "RelativeToolTip": "Register.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAQwFUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAANMAAAAAAAAAAAAYwOgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-02T04:54:07.25Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "Register.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Register.cs",
+              "DocumentMoniker": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Register.cs",
               "RelativeDocumentMoniker": "Register.cs",
-              "ToolTip": "C:\\Users\\HYPE AMD\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Register.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\HYPE AMD\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Register.cs [Design]",
+              "ToolTip": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Register.cs [Design]*",
+              "RelativeToolTip": "Register.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-02T04:53:36.244Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "Login.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Login.cs",
+              "DocumentMoniker": "C:\\Users\\HP-VICTUS\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Login.cs",
               "RelativeDocumentMoniker": "Login.cs",
               "ToolTip": "C:\\Users\\HYPE AMD\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Login.cs [Design]",
               "RelativeToolTip": "..\\..\\..\\..\\..\\HYPE AMD\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Login.cs [Design]",
@@ -212,12 +273,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Form1.cs",
               "ToolTip": "C:\\Users\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\diana\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-02T04:48:18.695Z"
             }

@@ -46,8 +46,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -68,6 +66,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_BahanBaku));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnClosePopUpBahanBaku = new Guna.UI2.WinForms.Guna2Button();
             label6 = new Label();
             label5 = new Label();
@@ -84,7 +84,6 @@
             label10 = new Label();
             txtInputStokSaatIni = new Guna.UI2.WinForms.Guna2TextBox();
             label9 = new Label();
-            cbSatuan = new Guna.UI2.WinForms.Guna2ComboBox();
             txtInputHargaPerSatuan = new Guna.UI2.WinForms.Guna2TextBox();
             label8 = new Label();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -97,6 +96,7 @@
             gbBahanBakuPopUp = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
+            cbSatuan = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2GroupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDataVendor).BeginInit();
             guna2GroupBox3.SuspendLayout();
@@ -228,6 +228,7 @@
             btnBatalPopUp.Size = new Size(87, 41);
             btnBatalPopUp.TabIndex = 14;
             btnBatalPopUp.Text = "Batal";
+            btnBatalPopUp.Click += btnBatalPopUp_Click;
             // 
             // txtCariBahanBaku
             // 
@@ -420,25 +421,6 @@
             label9.Size = new Size(107, 22);
             label9.TabIndex = 23;
             label9.Text = "Stok Saat Ini";
-            // 
-            // cbSatuan
-            // 
-            cbSatuan.BackColor = Color.Transparent;
-            cbSatuan.CustomizableEdges = customizableEdges17;
-            guna2Transition1.SetDecoration(cbSatuan, Guna.UI2.AnimatorNS.DecorationType.None);
-            cbSatuan.DrawMode = DrawMode.OwnerDrawFixed;
-            cbSatuan.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbSatuan.FocusedColor = Color.FromArgb(94, 148, 255);
-            cbSatuan.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            cbSatuan.Font = new Font("Manrope", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cbSatuan.ForeColor = Color.FromArgb(45, 45, 45);
-            cbSatuan.ItemHeight = 30;
-            cbSatuan.Items.AddRange(new object[] { "Kilogram (kg)", "Gram (g)", "Liter (L)", "Mililiter (mL)", "Pieces (pcs)", "Pack", "Box" });
-            cbSatuan.Location = new Point(0, 221);
-            cbSatuan.Name = "cbSatuan";
-            cbSatuan.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            cbSatuan.Size = new Size(234, 36);
-            cbSatuan.TabIndex = 22;
             // 
             // txtInputHargaPerSatuan
             // 
@@ -723,6 +705,25 @@
             animation1.TransparencyCoeff = 0F;
             guna2Transition1.DefaultAnimation = animation1;
             // 
+            // cbSatuan
+            // 
+            cbSatuan.BackColor = Color.Transparent;
+            cbSatuan.CustomizableEdges = customizableEdges17;
+            guna2Transition1.SetDecoration(cbSatuan, Guna.UI2.AnimatorNS.DecorationType.None);
+            cbSatuan.DrawMode = DrawMode.OwnerDrawFixed;
+            cbSatuan.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbSatuan.FocusedColor = Color.FromArgb(94, 148, 255);
+            cbSatuan.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cbSatuan.Font = new Font("Manrope", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbSatuan.ForeColor = Color.FromArgb(45, 45, 45);
+            cbSatuan.ItemHeight = 30;
+            cbSatuan.Items.AddRange(new object[] { "Kilogram (kg)", "Gram (g)", "Liter (L)", "Mililiter (mL)", "Pieces (pcs)", "Pack", "Box" });
+            cbSatuan.Location = new Point(0, 221);
+            cbSatuan.Name = "cbSatuan";
+            cbSatuan.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            cbSatuan.Size = new Size(234, 36);
+            cbSatuan.TabIndex = 22;
+            // 
             // UC_BahanBaku
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -734,6 +735,7 @@
             guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             Name = "UC_BahanBaku";
             Size = new Size(1616, 1027);
+            Load += UC_BahanBaku_Load;
             guna2GroupBox4.ResumeLayout(false);
             guna2GroupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDataVendor).EndInit();
@@ -770,11 +772,11 @@
         private Label label8;
         private Guna.UI2.WinForms.Guna2TextBox txtInputStokSaatIni;
         private Label label9;
-        private Guna.UI2.WinForms.Guna2ComboBox cbSatuan;
         private Guna.UI2.WinForms.Guna2ComboBox cbVendor;
         private Label label11;
         private Guna.UI2.WinForms.Guna2TextBox txtInputStokMinimum;
         private Label label10;
         private Guna.UI2.WinForms.Guna2Transition guna2Transition1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbSatuan;
     }
 }
