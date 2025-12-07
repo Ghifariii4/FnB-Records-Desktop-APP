@@ -14,11 +14,27 @@ namespace FnB_Records
 {
     public partial class UC_Vendor : UserControl
     {
-        private int currentUserId = 1;
+        private int currentUserId => Login.GlobalSession.CurrentUserId;
+
         private int idVendorTerpilih = 0;
+
         public UC_Vendor()
         {
             InitializeComponent();
+            gbEditVendor.BackColor = Color.White;
+            gbVendorPopUp.BackColor = Color.White;
+        }
+
+        private void UC_Vendor_Load(object sender, EventArgs e)
+        {
+            // SAFETY CHECK: (Sama seperti UC_BahanBaku)
+            // Jika aplikasi dijalankan langsung tanpa Login (User ID 0), paksa jadi 1 untuk testing.
+            if (Login.GlobalSession.CurrentUserId == 0)
+            {
+                Login.GlobalSession.CurrentUserId = 1;
+            }
+
+            LoadDataVendor("");
         }
 
 
@@ -82,10 +98,6 @@ namespace FnB_Records
             gbVendorPopUp.Visible = false;
         }
 
-        private void UC_Vendor_Load(object sender, EventArgs e)
-        {
-            LoadDataVendor("");
-        }
 
         private void dgvDataVendor_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -379,7 +391,7 @@ namespace FnB_Records
 
         private void btnBatal_Click(object sender, EventArgs e)
         {
-            idVendorTerpilih = 0;
+                idVendorTerpilih = 0;
             gbEditVendor.Visible = false;
         }
 
@@ -387,6 +399,11 @@ namespace FnB_Records
         {
             gbEditVendor.Visible = false;
             idVendorTerpilih = 0;
+        }
+
+        private void guna2GroupBox1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

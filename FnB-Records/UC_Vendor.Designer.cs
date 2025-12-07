@@ -295,8 +295,6 @@
             dgvDataVendor.ThemeStyle.RowsStyle.SelectionBackColor = Color.White;
             dgvDataVendor.ThemeStyle.RowsStyle.SelectionForeColor = Color.Black;
             dgvDataVendor.CellContentClick += dgvDataVendor_CellContentClick;
-            dgvDataVendor.CellMouseEnter += dgvDataVendor_CellMouseEnter;
-            dgvDataVendor.CellMouseLeave += dgvDataVendor_CellMouseLeave;
             // 
             // Edit
             // 
@@ -397,7 +395,7 @@
             gbEditVendor.FillColor = Color.FromArgb(249, 247, 245);
             gbEditVendor.Font = new Font("Segoe UI", 9F);
             gbEditVendor.ForeColor = Color.FromArgb(125, 137, 149);
-            gbEditVendor.Location = new Point(615, 337);
+            gbEditVendor.Location = new Point(615, 316);
             gbEditVendor.Name = "gbEditVendor";
             gbEditVendor.ShadowDecoration.BorderRadius = 15;
             gbEditVendor.ShadowDecoration.CustomizableEdges = customizableEdges76;

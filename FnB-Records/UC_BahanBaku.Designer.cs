@@ -46,28 +46,30 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_BahanBaku));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnClosePopUpBahanBaku = new Guna.UI2.WinForms.Guna2Button();
             label6 = new Label();
             label5 = new Label();
@@ -84,23 +86,32 @@
             label10 = new Label();
             txtInputStokSaatIni = new Guna.UI2.WinForms.Guna2TextBox();
             label9 = new Label();
+            cbSatuan = new Guna.UI2.WinForms.Guna2ComboBox();
             txtInputHargaPerSatuan = new Guna.UI2.WinForms.Guna2TextBox();
             label8 = new Label();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            dgvDataVendor = new Guna.UI2.WinForms.Guna2DataGridView();
             guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            guna2GroupBox5 = new Guna.UI2.WinForms.Guna2GroupBox();
+            dgvDataBahanBaku = new Guna.UI2.WinForms.Guna2DataGridView();
+            colNamaBahan = new DataGridViewTextBoxColumn();
+            colVendor = new DataGridViewTextBoxColumn();
+            colHarga = new DataGridViewTextBoxColumn();
+            colStok = new DataGridViewTextBoxColumn();
+            colStatus = new DataGridViewTextBoxColumn();
+            Edit = new DataGridViewImageColumn();
+            Hapus = new DataGridViewImageColumn();
             btTambahBahanBaku = new Guna.UI2.WinForms.Guna2Button();
             label2 = new Label();
             label1 = new Label();
             gbBahanBakuPopUp = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
-            cbSatuan = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2GroupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvDataVendor).BeginInit();
             guna2GroupBox3.SuspendLayout();
             guna2GroupBox2.SuspendLayout();
+            guna2GroupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvDataBahanBaku).BeginInit();
             gbBahanBakuPopUp.SuspendLayout();
             guna2GroupBox1.SuspendLayout();
             SuspendLayout();
@@ -255,6 +266,7 @@
             txtCariBahanBaku.ShadowDecoration.Depth = 0;
             txtCariBahanBaku.Size = new Size(1407, 37);
             txtCariBahanBaku.TabIndex = 9;
+            txtCariBahanBaku.TextChanged += txtCariBahanBaku_TextChanged;
             // 
             // btnSimpanPopUp
             // 
@@ -422,6 +434,26 @@
             label9.TabIndex = 23;
             label9.Text = "Stok Saat Ini";
             // 
+            // cbSatuan
+            // 
+            cbSatuan.BackColor = Color.Transparent;
+            cbSatuan.CustomizableEdges = customizableEdges17;
+            guna2Transition1.SetDecoration(cbSatuan, Guna.UI2.AnimatorNS.DecorationType.None);
+            cbSatuan.DrawMode = DrawMode.OwnerDrawFixed;
+            cbSatuan.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbSatuan.FocusedColor = Color.FromArgb(94, 148, 255);
+            cbSatuan.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cbSatuan.Font = new Font("Manrope SemiBold", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cbSatuan.ForeColor = Color.FromArgb(45, 45, 45);
+            cbSatuan.ItemHeight = 30;
+            cbSatuan.Items.AddRange(new object[] { "Kilogram (kg)", "Gram (g)", "Liter (L)", "Mililiter (mL)", "Pieces (pcs)", "Pack", "Box" });
+            cbSatuan.Location = new Point(0, 221);
+            cbSatuan.Name = "cbSatuan";
+            cbSatuan.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            cbSatuan.Size = new Size(234, 36);
+            cbSatuan.StartIndex = 0;
+            cbSatuan.TabIndex = 22;
+            // 
             // txtInputHargaPerSatuan
             // 
             txtInputHargaPerSatuan.BorderColor = Color.Gainsboro;
@@ -484,66 +516,6 @@
             guna2Button1.TabIndex = 7;
             guna2Button1.TextAlign = HorizontalAlignment.Left;
             // 
-            // dgvDataVendor
-            // 
-            dataGridViewCellStyle1.BackColor = Color.White;
-            dgvDataVendor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dgvDataVendor.BackgroundColor = Color.FromArgb(45, 45, 45);
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvDataVendor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvDataVendor.ColumnHeadersHeight = 4;
-            dgvDataVendor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2Transition1.SetDecoration(dgvDataVendor, Guna.UI2.AnimatorNS.DecorationType.None);
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(125, 137, 149);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvDataVendor.DefaultCellStyle = dataGridViewCellStyle3;
-            dgvDataVendor.GridColor = Color.FromArgb(231, 229, 255);
-            dgvDataVendor.Location = new Point(32, 116);
-            dgvDataVendor.Name = "dgvDataVendor";
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvDataVendor.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            dgvDataVendor.RowHeadersVisible = false;
-            dgvDataVendor.Size = new Size(1124, 207);
-            dgvDataVendor.TabIndex = 10;
-            dgvDataVendor.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            dgvDataVendor.ThemeStyle.AlternatingRowsStyle.Font = null;
-            dgvDataVendor.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            dgvDataVendor.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            dgvDataVendor.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            dgvDataVendor.ThemeStyle.BackColor = Color.FromArgb(45, 45, 45);
-            dgvDataVendor.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            dgvDataVendor.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            dgvDataVendor.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvDataVendor.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            dgvDataVendor.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            dgvDataVendor.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvDataVendor.ThemeStyle.HeaderStyle.Height = 4;
-            dgvDataVendor.ThemeStyle.ReadOnly = false;
-            dgvDataVendor.ThemeStyle.RowsStyle.BackColor = Color.White;
-            dgvDataVendor.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvDataVendor.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            dgvDataVendor.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(125, 137, 149);
-            dgvDataVendor.ThemeStyle.RowsStyle.Height = 25;
-            dgvDataVendor.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dgvDataVendor.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            // 
             // guna2GroupBox3
             // 
             guna2GroupBox3.BackColor = Color.Transparent;
@@ -573,10 +545,10 @@
             guna2GroupBox2.BorderColor = Color.FromArgb(45, 45, 45);
             guna2GroupBox2.BorderRadius = 20;
             guna2GroupBox2.BorderThickness = 0;
-            guna2GroupBox2.Controls.Add(dgvDataVendor);
+            guna2GroupBox2.Controls.Add(guna2GroupBox5);
             guna2GroupBox2.Controls.Add(guna2GroupBox3);
             guna2GroupBox2.CustomBorderColor = Color.Transparent;
-            guna2GroupBox2.CustomizableEdges = customizableEdges27;
+            guna2GroupBox2.CustomizableEdges = customizableEdges29;
             guna2Transition1.SetDecoration(guna2GroupBox2, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2GroupBox2.FillColor = Color.FromArgb(45, 45, 45);
             guna2GroupBox2.Font = new Font("Segoe UI", 9F);
@@ -584,18 +556,153 @@
             guna2GroupBox2.Location = new Point(34, 123);
             guna2GroupBox2.Name = "guna2GroupBox2";
             guna2GroupBox2.ShadowDecoration.BorderRadius = 20;
-            guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges30;
             guna2GroupBox2.ShadowDecoration.Depth = 3;
             guna2GroupBox2.ShadowDecoration.Enabled = true;
             guna2GroupBox2.ShadowDecoration.Shadow = new Padding(10);
-            guna2GroupBox2.Size = new Size(1544, 364);
+            guna2GroupBox2.Size = new Size(1544, 838);
             guna2GroupBox2.TabIndex = 13;
+            // 
+            // guna2GroupBox5
+            // 
+            guna2GroupBox5.BorderRadius = 15;
+            guna2GroupBox5.Controls.Add(dgvDataBahanBaku);
+            guna2GroupBox5.CustomBorderColor = Color.Empty;
+            guna2GroupBox5.CustomizableEdges = customizableEdges27;
+            guna2Transition1.SetDecoration(guna2GroupBox5, Guna.UI2.AnimatorNS.DecorationType.None);
+            guna2GroupBox5.FillColor = SystemColors.ButtonFace;
+            guna2GroupBox5.Font = new Font("Segoe UI", 9F);
+            guna2GroupBox5.ForeColor = Color.FromArgb(125, 137, 149);
+            guna2GroupBox5.Location = new Point(32, 112);
+            guna2GroupBox5.Name = "guna2GroupBox5";
+            guna2GroupBox5.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            guna2GroupBox5.Size = new Size(1485, 691);
+            guna2GroupBox5.TabIndex = 13;
+            // 
+            // dgvDataBahanBaku
+            // 
+            dgvDataBahanBaku.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(247, 248, 249);
+            dgvDataBahanBaku.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(232, 234, 237);
+            dataGridViewCellStyle2.Font = new Font("Inter", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvDataBahanBaku.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvDataBahanBaku.ColumnHeadersHeight = 40;
+            dgvDataBahanBaku.Columns.AddRange(new DataGridViewColumn[] { colNamaBahan, colVendor, colHarga, colStok, colStatus, Edit, Hapus });
+            guna2Transition1.SetDecoration(dgvDataBahanBaku, Guna.UI2.AnimatorNS.DecorationType.None);
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Inter SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(45, 45, 45);
+            dataGridViewCellStyle3.SelectionBackColor = Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvDataBahanBaku.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvDataBahanBaku.GridColor = SystemColors.ButtonFace;
+            dgvDataBahanBaku.Location = new Point(18, 0);
+            dgvDataBahanBaku.Name = "dgvDataBahanBaku";
+            dgvDataBahanBaku.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvDataBahanBaku.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dgvDataBahanBaku.RowHeadersVisible = false;
+            dgvDataBahanBaku.RowTemplate.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDataBahanBaku.RowTemplate.Height = 40;
+            dgvDataBahanBaku.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            dgvDataBahanBaku.Size = new Size(1467, 671);
+            dgvDataBahanBaku.TabIndex = 11;
+            dgvDataBahanBaku.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
+            dgvDataBahanBaku.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(247, 248, 249);
+            dgvDataBahanBaku.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgvDataBahanBaku.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgvDataBahanBaku.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgvDataBahanBaku.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvDataBahanBaku.ThemeStyle.BackColor = Color.White;
+            dgvDataBahanBaku.ThemeStyle.GridColor = SystemColors.ButtonFace;
+            dgvDataBahanBaku.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(232, 234, 237);
+            dgvDataBahanBaku.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvDataBahanBaku.ThemeStyle.HeaderStyle.Font = new Font("Inter", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dgvDataBahanBaku.ThemeStyle.HeaderStyle.ForeColor = Color.Black;
+            dgvDataBahanBaku.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvDataBahanBaku.ThemeStyle.HeaderStyle.Height = 40;
+            dgvDataBahanBaku.ThemeStyle.ReadOnly = true;
+            dgvDataBahanBaku.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvDataBahanBaku.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvDataBahanBaku.ThemeStyle.RowsStyle.Font = new Font("Inter SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dgvDataBahanBaku.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(45, 45, 45);
+            dgvDataBahanBaku.ThemeStyle.RowsStyle.Height = 40;
+            dgvDataBahanBaku.ThemeStyle.RowsStyle.SelectionBackColor = Color.White;
+            dgvDataBahanBaku.ThemeStyle.RowsStyle.SelectionForeColor = Color.Black;
+            dgvDataBahanBaku.CellContentClick += dgvDataBahanBaku_CellContentClick;
+            dgvDataBahanBaku.CellMouseEnter += dgvDataBahanBaku_CellMouseEnter;
+            dgvDataBahanBaku.CellMouseLeave += dgvDataBahanBaku_CellMouseLeave;
+            // 
+            // colNamaBahan
+            // 
+            colNamaBahan.DataPropertyName = "nama_bahan";
+            colNamaBahan.HeaderText = "Nama bahan";
+            colNamaBahan.Name = "colNamaBahan";
+            colNamaBahan.ReadOnly = true;
+            // 
+            // colVendor
+            // 
+            colVendor.DataPropertyName = "nama_vendor";
+            colVendor.HeaderText = "Vendor";
+            colVendor.Name = "colVendor";
+            colVendor.ReadOnly = true;
+            // 
+            // colHarga
+            // 
+            colHarga.DataPropertyName = "harga_display";
+            colHarga.HeaderText = "Harga/Unit";
+            colHarga.Name = "colHarga";
+            colHarga.ReadOnly = true;
+            // 
+            // colStok
+            // 
+            colStok.DataPropertyName = "stok_display";
+            colStok.HeaderText = "Stok";
+            colStok.Name = "colStok";
+            colStok.ReadOnly = true;
+            // 
+            // colStatus
+            // 
+            colStatus.DataPropertyName = "status";
+            colStatus.HeaderText = "Status";
+            colStatus.Name = "colStatus";
+            colStatus.ReadOnly = true;
+            // 
+            // Edit
+            // 
+            Edit.HeaderText = "Edit";
+            Edit.Image = (Image)resources.GetObject("Edit.Image");
+            Edit.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            Edit.Name = "Edit";
+            Edit.ReadOnly = true;
+            // 
+            // Hapus
+            // 
+            Hapus.HeaderText = "Hapus";
+            Hapus.Image = (Image)resources.GetObject("Hapus.Image");
+            Hapus.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            Hapus.Name = "Hapus";
+            Hapus.ReadOnly = true;
             // 
             // btTambahBahanBaku
             // 
             btTambahBahanBaku.BorderRadius = 10;
             btTambahBahanBaku.Cursor = Cursors.Hand;
-            btTambahBahanBaku.CustomizableEdges = customizableEdges29;
+            btTambahBahanBaku.CustomizableEdges = customizableEdges31;
             guna2Transition1.SetDecoration(btTambahBahanBaku, Guna.UI2.AnimatorNS.DecorationType.None);
             btTambahBahanBaku.DisabledState.BorderColor = Color.DarkGray;
             btTambahBahanBaku.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -610,7 +717,7 @@
             btTambahBahanBaku.ImageSize = new Size(30, 20);
             btTambahBahanBaku.Location = new Point(1318, 0);
             btTambahBahanBaku.Name = "btTambahBahanBaku";
-            btTambahBahanBaku.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            btTambahBahanBaku.ShadowDecoration.CustomizableEdges = customizableEdges32;
             btTambahBahanBaku.Size = new Size(226, 48);
             btTambahBahanBaku.TabIndex = 6;
             btTambahBahanBaku.Text = "Tambah Bahan Baku";
@@ -644,22 +751,22 @@
             // 
             // gbBahanBakuPopUp
             // 
-            gbBahanBakuPopUp.BackColor = Color.Transparent;
+            gbBahanBakuPopUp.BackColor = Color.White;
             gbBahanBakuPopUp.BorderRadius = 15;
             gbBahanBakuPopUp.Controls.Add(guna2GroupBox4);
             gbBahanBakuPopUp.Controls.Add(btnBatalPopUp);
             gbBahanBakuPopUp.Controls.Add(btnSimpanPopUp);
             gbBahanBakuPopUp.CustomBorderColor = Color.White;
             gbBahanBakuPopUp.CustomBorderThickness = new Padding(0);
-            gbBahanBakuPopUp.CustomizableEdges = customizableEdges31;
+            gbBahanBakuPopUp.CustomizableEdges = customizableEdges33;
             guna2Transition1.SetDecoration(gbBahanBakuPopUp, Guna.UI2.AnimatorNS.DecorationType.None);
             gbBahanBakuPopUp.FillColor = Color.FromArgb(249, 247, 245);
             gbBahanBakuPopUp.Font = new Font("Segoe UI", 9F);
             gbBahanBakuPopUp.ForeColor = Color.FromArgb(125, 137, 149);
-            gbBahanBakuPopUp.Location = new Point(604, 101);
+            gbBahanBakuPopUp.Location = new Point(604, 299);
             gbBahanBakuPopUp.Name = "gbBahanBakuPopUp";
             gbBahanBakuPopUp.ShadowDecoration.BorderRadius = 15;
-            gbBahanBakuPopUp.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            gbBahanBakuPopUp.ShadowDecoration.CustomizableEdges = customizableEdges34;
             gbBahanBakuPopUp.ShadowDecoration.Depth = 10;
             gbBahanBakuPopUp.ShadowDecoration.Shadow = new Padding(0, 10, 10, 10);
             gbBahanBakuPopUp.Size = new Size(540, 534);
@@ -673,17 +780,16 @@
             guna2GroupBox1.Controls.Add(label2);
             guna2GroupBox1.Controls.Add(label1);
             guna2GroupBox1.CustomBorderColor = Color.Transparent;
-            guna2GroupBox1.CustomizableEdges = customizableEdges33;
+            guna2GroupBox1.CustomizableEdges = customizableEdges35;
             guna2Transition1.SetDecoration(guna2GroupBox1, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2GroupBox1.FillColor = Color.Transparent;
             guna2GroupBox1.Font = new Font("Manrope", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2GroupBox1.ForeColor = Color.Transparent;
             guna2GroupBox1.Location = new Point(34, 15);
             guna2GroupBox1.Name = "guna2GroupBox1";
-            guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges36;
             guna2GroupBox1.Size = new Size(1544, 99);
             guna2GroupBox1.TabIndex = 12;
-            guna2GroupBox1.Click += guna2GroupBox1_Click;
             // 
             // guna2Transition1
             // 
@@ -705,25 +811,6 @@
             animation1.TransparencyCoeff = 0F;
             guna2Transition1.DefaultAnimation = animation1;
             // 
-            // cbSatuan
-            // 
-            cbSatuan.BackColor = Color.Transparent;
-            cbSatuan.CustomizableEdges = customizableEdges17;
-            guna2Transition1.SetDecoration(cbSatuan, Guna.UI2.AnimatorNS.DecorationType.None);
-            cbSatuan.DrawMode = DrawMode.OwnerDrawFixed;
-            cbSatuan.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbSatuan.FocusedColor = Color.FromArgb(94, 148, 255);
-            cbSatuan.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            cbSatuan.Font = new Font("Manrope", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cbSatuan.ForeColor = Color.FromArgb(45, 45, 45);
-            cbSatuan.ItemHeight = 30;
-            cbSatuan.Items.AddRange(new object[] { "Kilogram (kg)", "Gram (g)", "Liter (L)", "Mililiter (mL)", "Pieces (pcs)", "Pack", "Box" });
-            cbSatuan.Location = new Point(0, 221);
-            cbSatuan.Name = "cbSatuan";
-            cbSatuan.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            cbSatuan.Size = new Size(234, 36);
-            cbSatuan.TabIndex = 22;
-            // 
             // UC_BahanBaku
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -734,13 +821,14 @@
             Controls.Add(guna2GroupBox1);
             guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             Name = "UC_BahanBaku";
-            Size = new Size(1616, 1027);
+            Size = new Size(1616, 1200);
             Load += UC_BahanBaku_Load;
             guna2GroupBox4.ResumeLayout(false);
             guna2GroupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvDataVendor).EndInit();
             guna2GroupBox3.ResumeLayout(false);
             guna2GroupBox2.ResumeLayout(false);
+            guna2GroupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvDataBahanBaku).EndInit();
             gbBahanBakuPopUp.ResumeLayout(false);
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
@@ -760,7 +848,6 @@
         private Guna.UI2.WinForms.Guna2Button btnSimpanPopUp;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox4;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvDataVendor;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
         private Guna.UI2.WinForms.Guna2Button btTambahBahanBaku;
@@ -778,5 +865,14 @@
         private Label label10;
         private Guna.UI2.WinForms.Guna2Transition guna2Transition1;
         private Guna.UI2.WinForms.Guna2ComboBox cbSatuan;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox5;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvDataBahanBaku;
+        private DataGridViewTextBoxColumn colNamaBahan;
+        private DataGridViewTextBoxColumn colVendor;
+        private DataGridViewTextBoxColumn colHarga;
+        private DataGridViewTextBoxColumn colStok;
+        private DataGridViewTextBoxColumn colStatus;
+        private DataGridViewImageColumn Edit;
+        private DataGridViewImageColumn Hapus;
     }
 }
