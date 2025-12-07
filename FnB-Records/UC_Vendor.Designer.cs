@@ -144,7 +144,6 @@
             guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2GroupBox1.Size = new Size(1544, 99);
             guna2GroupBox1.TabIndex = 5;
-            guna2GroupBox1.Click += guna2GroupBox1_Click;
             // 
             // btnTambahVendor
             // 
@@ -214,7 +213,7 @@
             guna2GroupBox2.ShadowDecoration.Depth = 3;
             guna2GroupBox2.ShadowDecoration.Enabled = true;
             guna2GroupBox2.ShadowDecoration.Shadow = new Padding(10);
-            guna2GroupBox2.Size = new Size(1544, 593);
+            guna2GroupBox2.Size = new Size(1544, 857);
             guna2GroupBox2.TabIndex = 7;
             guna2GroupBox2.Click += guna2GroupBox2_Click;
             // 
@@ -230,7 +229,7 @@
             guna2GroupBox5.Location = new Point(32, 127);
             guna2GroupBox5.Name = "guna2GroupBox5";
             guna2GroupBox5.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2GroupBox5.Size = new Size(1485, 308);
+            guna2GroupBox5.Size = new Size(1485, 691);
             guna2GroupBox5.TabIndex = 12;
             // 
             // dgvDataVendor
@@ -250,8 +249,8 @@
             dgvDataVendor.Columns.AddRange(new DataGridViewColumn[] { Edit, Hapus });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(125, 137, 149);
+            dataGridViewCellStyle3.Font = new Font("Inter SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(45, 45, 45);
             dataGridViewCellStyle3.SelectionBackColor = Color.White;
             dataGridViewCellStyle3.SelectionForeColor = Color.Black;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
@@ -259,6 +258,7 @@
             dgvDataVendor.GridColor = SystemColors.ButtonFace;
             dgvDataVendor.Location = new Point(9, 5);
             dgvDataVendor.Name = "dgvDataVendor";
+            dgvDataVendor.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = SystemColors.Control;
             dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
@@ -270,7 +270,7 @@
             dgvDataVendor.RowHeadersVisible = false;
             dgvDataVendor.RowTemplate.Height = 40;
             dgvDataVendor.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dgvDataVendor.Size = new Size(1467, 288);
+            dgvDataVendor.Size = new Size(1467, 671);
             dgvDataVendor.TabIndex = 11;
             dgvDataVendor.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
             dgvDataVendor.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(247, 248, 249);
@@ -286,15 +286,17 @@
             dgvDataVendor.ThemeStyle.HeaderStyle.ForeColor = Color.Black;
             dgvDataVendor.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgvDataVendor.ThemeStyle.HeaderStyle.Height = 40;
-            dgvDataVendor.ThemeStyle.ReadOnly = false;
+            dgvDataVendor.ThemeStyle.ReadOnly = true;
             dgvDataVendor.ThemeStyle.RowsStyle.BackColor = Color.White;
             dgvDataVendor.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvDataVendor.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            dgvDataVendor.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(125, 137, 149);
+            dgvDataVendor.ThemeStyle.RowsStyle.Font = new Font("Inter SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dgvDataVendor.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(45, 45, 45);
             dgvDataVendor.ThemeStyle.RowsStyle.Height = 40;
             dgvDataVendor.ThemeStyle.RowsStyle.SelectionBackColor = Color.White;
             dgvDataVendor.ThemeStyle.RowsStyle.SelectionForeColor = Color.Black;
             dgvDataVendor.CellContentClick += dgvDataVendor_CellContentClick;
+            dgvDataVendor.CellMouseEnter += dgvDataVendor_CellMouseEnter;
+            dgvDataVendor.CellMouseLeave += dgvDataVendor_CellMouseLeave;
             // 
             // Edit
             // 
@@ -302,6 +304,7 @@
             Edit.Image = (Image)resources.GetObject("Edit.Image");
             Edit.ImageLayout = DataGridViewImageCellLayout.Zoom;
             Edit.Name = "Edit";
+            Edit.ReadOnly = true;
             // 
             // Hapus
             // 
@@ -309,6 +312,7 @@
             Hapus.Image = (Image)resources.GetObject("Hapus.Image");
             Hapus.ImageLayout = DataGridViewImageCellLayout.Zoom;
             Hapus.Name = "Hapus";
+            Hapus.ReadOnly = true;
             // 
             // guna2GroupBox3
             // 
@@ -382,7 +386,7 @@
             // 
             // gbEditVendor
             // 
-            gbEditVendor.BackColor = Color.Transparent;
+            gbEditVendor.BackColor = Color.White;
             gbEditVendor.BorderRadius = 15;
             gbEditVendor.Controls.Add(btnBatal);
             gbEditVendor.Controls.Add(btnPerbarui);
@@ -393,7 +397,7 @@
             gbEditVendor.FillColor = Color.FromArgb(249, 247, 245);
             gbEditVendor.Font = new Font("Segoe UI", 9F);
             gbEditVendor.ForeColor = Color.FromArgb(125, 137, 149);
-            gbEditVendor.Location = new Point(599, 120);
+            gbEditVendor.Location = new Point(615, 337);
             gbEditVendor.Name = "gbEditVendor";
             gbEditVendor.ShadowDecoration.BorderRadius = 15;
             gbEditVendor.ShadowDecoration.CustomizableEdges = customizableEdges30;
@@ -638,7 +642,7 @@
             // 
             // gbVendorPopUp
             // 
-            gbVendorPopUp.BackColor = Color.Transparent;
+            gbVendorPopUp.BackColor = Color.White;
             gbVendorPopUp.BorderRadius = 15;
             gbVendorPopUp.Controls.Add(btnBatalPopUp);
             gbVendorPopUp.Controls.Add(btnSimpanPopUp);
@@ -649,11 +653,12 @@
             gbVendorPopUp.FillColor = Color.FromArgb(249, 247, 245);
             gbVendorPopUp.Font = new Font("Segoe UI", 9F);
             gbVendorPopUp.ForeColor = Color.FromArgb(125, 137, 149);
-            gbVendorPopUp.Location = new Point(615, 97);
+            gbVendorPopUp.Location = new Point(615, 316);
             gbVendorPopUp.Name = "gbVendorPopUp";
             gbVendorPopUp.ShadowDecoration.BorderRadius = 15;
             gbVendorPopUp.ShadowDecoration.CustomizableEdges = customizableEdges46;
-            gbVendorPopUp.ShadowDecoration.Depth = 10;
+            gbVendorPopUp.ShadowDecoration.Depth = 20;
+            gbVendorPopUp.ShadowDecoration.Enabled = true;
             gbVendorPopUp.ShadowDecoration.Shadow = new Padding(0, 10, 10, 10);
             gbVendorPopUp.Size = new Size(445, 497);
             gbVendorPopUp.TabIndex = 11;

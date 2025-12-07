@@ -62,6 +62,7 @@ namespace FnB_Records
 
                         LoadDataVendor("");
                         BersihkanInput();
+                        gbVendorPopUp.Visible = false;
                     }
                 }
             }
@@ -88,37 +89,72 @@ namespace FnB_Records
 
         private void dgvDataVendor_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Cek agar tidak error jika klik header (RowIndex < 0)
             if (e.RowIndex < 0) return;
 
-            // --- LOGIKA TOMBOL HAPUS (Yang tadi) ---
-            if (dgvDataVendor.Columns[e.ColumnIndex].Name == "Hapus")
+            // Ambil nama kolom yang diklik
+            string colName = dgvDataVendor.Columns[e.ColumnIndex].Name;
+
+            // Ambil ID dari kolom tersembunyi "id" (Pastikan kolom 'id' ada di query SQL Anda)
+            // Gunakan TryParse untuk keamanan jika nilai null/error
+            if (dgvDataVendor.Rows[e.RowIndex].Cells["id"].Value != null &&
+                int.TryParse(dgvDataVendor.Rows[e.RowIndex].Cells["id"].Value.ToString(), out int idDipilih))
             {
-                // ... (Kode hapus yang tadi, biarkan saja) ...
-            }
+                // --- LOGIKA HAPUS ---
+                if (colName == "Hapus")
+                {
+                    string namaVendor = dgvDataVendor.Rows[e.RowIndex].Cells["name"].Value.ToString();
 
-            // --- LOGIKA TOMBOL EDIT (BARU) ---
-            else if (dgvDataVendor.Columns[e.ColumnIndex].Name == "Edit")
-            {
-                // 1. Ambil data dari baris yang diklik
-                DataGridViewRow row = dgvDataVendor.Rows[e.RowIndex];
+                    // Tampilkan Konfirmasi
+                    DialogResult dialog = MessageBox.Show(
+                        $"Apakah Anda yakin ingin menghapus vendor '{namaVendor}'?\nData yang dihapus tidak dapat dikembalikan.",
+                        "Konfirmasi Hapus",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning);
 
-                // 2. Simpan ID ke variabel global
-                idVendorTerpilih = Convert.ToInt32(row.Cells["id"].Value);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        HapusVendor(idDipilih);
+                    }
+                }
+                // --- LOGIKA EDIT (Tetap seperti kode Anda) ---
+                else if (colName == "Edit")
+                {
+                    idVendorTerpilih = idDipilih;
+                    txtEditNamaVendor.Text = dgvDataVendor.Rows[e.RowIndex].Cells["name"].Value.ToString();
+                    txtEditKontak.Text = dgvDataVendor.Rows[e.RowIndex].Cells["contact"].Value.ToString();
+                    txtEditAlamat.Text = dgvDataVendor.Rows[e.RowIndex].Cells["address"].Value.ToString();
 
-                // 3. Auto-Fill: Masukkan data grid ke Textbox Edit
-                // Pastikan nama textbox di form Edit Anda sesuai kode ini
-                txtEditNamaVendor.Text = row.Cells["name"].Value.ToString();
-                txtEditKontak.Text = row.Cells["contact"].Value.ToString();
-                txtEditAlamat.Text = row.Cells["address"].Value.ToString();
-
-                // 4. Munculkan GroupBox Edit
-                gbEditVendor.Visible = true;
-
-                // Opsional: Bawa panel ke paling depan agar tidak tertutup
-                gbEditVendor.BringToFront();
+                    gbEditVendor.Visible = true;
+                    gbEditVendor.BringToFront();
+                }
             }
         }
 
+        // 1. Saat Mouse Masuk ke Sel (Hover)
+        private void dgvDataVendor_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            // Pastikan yang di-hover bukan header (RowIndex >= 0)
+            if (e.RowIndex >= 0)
+            {
+                string colName = dgvDataVendor.Columns[e.ColumnIndex].Name;
+
+                // Cek apakah kolom tersebut adalah Edit atau Hapus
+                if (colName == "Edit" || colName == "Hapus")
+                {
+                    dgvDataVendor.Cursor = Cursors.Hand;
+                }
+            }
+        }
+
+        // 2. Saat Mouse Keluar dari Sel
+        private void dgvDataVendor_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            // Kembalikan kursor ke bentuk panah biasa (Default)
+            dgvDataVendor.Cursor = Cursors.Default;
+        }
+
+        // 2. FUNGSI EKSEKUSI HAPUS KE DATABASE
         private void HapusVendor(int id)
         {
             try
@@ -126,32 +162,39 @@ namespace FnB_Records
                 Koneksi koneksiDB = new Koneksi();
                 using (NpgsqlConnection conn = koneksiDB.GetKoneksi())
                 {
-                    // Query Delete
-                    string query = "DELETE FROM vendors WHERE id = @id";
+                    if (conn.State != ConnectionState.Open) conn.Open();
+
+                    // Query Hapus
+                    string query = "DELETE FROM vendors WHERE id = @id AND user_id = @uid";
 
                     using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@id", id);
-                        cmd.ExecuteNonQuery();
+                        // Pastikan hanya menghapus milik user yang sedang login (Keamanan)
+                        cmd.Parameters.AddWithValue("@uid", currentUserId);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Data vendor berhasil dihapus.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            // Refresh tabel agar data hilang dari tampilan
+                            LoadDataVendor(txtCariVendor.Text);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Data tidak ditemukan atau sudah terhapus.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                 }
-
-                MessageBox.Show("Data vendor berhasil dihapus.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // Refresh Grid (Gunakan text pencarian agar user tetap di konteks pencarian yang sama)
-                LoadDataVendor(txtCariVendor.Text);
             }
             catch (PostgresException ex)
             {
-                // Menangani Error Foreign Key (Relasi Database)
-                // Kode '23503' adalah foreign_key_violation di PostgreSQL
+                // Menangani Error Foreign Key (Jika vendor dipakai di tabel bahan baku/pembelian)
                 if (ex.SqlState == "23503")
                 {
-                    MessageBox.Show(
-                        "Gagal menghapus! Vendor ini sedang digunakan di data lain (Bahan Baku atau Pembelian). Hapus data terkait terlebih dahulu.",
-                        "Gagal Hapus",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
+                    MessageBox.Show("Gagal menghapus! Vendor ini sedang digunakan dalam data Bahan Baku atau Pembelian. Hapus data terkait terlebih dahulu.",
+                        "Gagal Hapus", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {

@@ -31,10 +31,13 @@ namespace FnB_Records
 
         private void SetupUI()
         {
-            // Setup Panel Chat
+            // Setup Panel Chat dengan AutoScroll
             if (pnlChatContainer != null)
             {
                 pnlChatContainer.BackColor = Color.FromArgb(45, 45, 48);
+                pnlChatContainer.AutoScroll = true; // Enable scroll
+                pnlChatContainer.Padding = new Padding(0, 0, 5, 0); // Space untuk scrollbar
+
                 typeof(Panel).InvokeMember("DoubleBuffered",
                     System.Reflection.BindingFlags.SetProperty |
                     System.Reflection.BindingFlags.Instance |
@@ -42,21 +45,38 @@ namespace FnB_Records
                     null, pnlChatContainer, new object[] { true });
             }
 
+            // Setup placeholder text
             txtpromp.Text = "Silahkan tanya Bibot...";
             txtpromp.ForeColor = Color.Gray;
 
-            txtpromp.Enter += (s, e) => {
-                if (txtpromp.Text == "Silahkan tanya Bibot...") { txtpromp.Text = ""; txtpromp.ForeColor = Color.White; }
+            txtpromp.Enter += (s, e) =>
+            {
+                if (txtpromp.Text == "Silahkan tanya Bibot...")
+                {
+                    txtpromp.Text = "";
+                    txtpromp.ForeColor = Color.White;
+                }
             };
 
-            txtpromp.Leave += (s, e) => {
-                if (string.IsNullOrWhiteSpace(txtpromp.Text)) { txtpromp.Text = "Silahkan tanya Bibot..."; txtpromp.ForeColor = Color.Gray; }
+            txtpromp.Leave += (s, e) =>
+            {
+                if (string.IsNullOrWhiteSpace(txtpromp.Text))
+                {
+                    txtpromp.Text = "Silahkan tanya Bibot...";
+                    txtpromp.ForeColor = Color.Gray;
+                }
             };
 
-            txtpromp.KeyDown += async (s, e) => {
-                if (e.KeyCode == Keys.Enter) { e.SuppressKeyPress = true; await HandleSendAction(); }
+            txtpromp.KeyDown += async (s, e) =>
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    e.SuppressKeyPress = true;
+                    await HandleSendAction();
+                }
             };
         }
+
 
         private async void UCDashboard_Load(object sender, EventArgs e)
         {
@@ -460,8 +480,8 @@ namespace FnB_Records
 
         private async Task<string> AskGemini(string prompt)
         {
-            string apiKey = "API_KEY_ANDA";
-            string url = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={apiKey}";
+            string apiKey = "AIzaSyDuDStYrv5Xuu57tICXyal5MgRi6OLzyyQ";
+            string url = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={apiKey}";
 
             string context = $"Nama Bisnis: {Login.GlobalSession.BusinessName}. Saya adalah pemilik bisnis F&B. Jawablah terkait manajemen stok, penjualan, atau strategi marketing.";
             string fullPrompt = $"{context}\nUser bertanya: {prompt}\nJawab:";
@@ -557,6 +577,7 @@ namespace FnB_Records
                 e.Graphics.FillPath(brush, path);
             }
         }
+
 
         private GraphicsPath GetRoundedPath(Rectangle rect, int radius)
         {
