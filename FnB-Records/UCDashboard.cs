@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -68,9 +69,37 @@ namespace FnB_Records
         private async void UCDashboard_Load(object sender, EventArgs e)
         {
             LoadPieChart();
-            LoadGrafikPenjualanBulanan();
+            LoadPanelInfo();
 
             await AddChatBubbleTypingEffect("Halo! 👋 Saya Bibot, asisten AI FnB Records.\nAda yang bisa saya bantu hari ini?", false);
+        }
+
+        private void LoadPanelInfo()
+        {
+            UC_Panel_MenuTerlaris panelMenuTerlaris = new UC_Panel_MenuTerlaris();
+            navigationControlPanelMenuTerlaris(panelMenuTerlaris);
+
+
+        }
+
+        private void navigationControlPanelMenuTerlaris(UserControl uc)
+        {
+            uc.Dock = DockStyle.Fill;
+            pnlMenuTerlaris.Controls.Clear();
+            pnlMenuTerlaris.Controls.Add(uc);
+            uc.BringToFront();
+
+            // --- CARA GUNA UI ---
+
+            // Buat objek Elipse baru
+            Guna2Elipse elipse = new Guna2Elipse();
+
+            // Tentukan seberapa melengkung (misal 20)
+            elipse.BorderRadius = 15;
+
+            // Targetkan ke panel pembungkusnya (pnlMenuTerlaris) 
+            // atau langsung ke uc-nya (elipse.TargetControl = uc;)
+            elipse.TargetControl = pnlMenuTerlaris;
         }
 
         private void LoadPieChart()
@@ -130,62 +159,6 @@ namespace FnB_Records
             {
                 chartDashboard.ResumeLayout();
                 chartDashboard.Invalidate();
-            }
-        }
-
-        private void LoadGrafikPenjualanBulanan()
-        {
-            if (chartpenjualan == null) return;
-
-            chartpenjualan.SuspendLayout();
-            try
-            {
-                chartpenjualan.Series.Clear();
-                chartpenjualan.ChartAreas.Clear();
-                chartpenjualan.Legends.Clear();
-
-                chartpenjualan.AntiAliasing = AntiAliasingStyles.All;
-                chartpenjualan.TextAntiAliasingQuality = TextAntiAliasingQuality.High;
-
-                var area = new ChartArea("ChartArea1");
-                area.BackColor = Color.FromArgb(45, 45, 45);
-                area.AxisX.LineColor = Color.White;
-                area.AxisY.LineColor = Color.White;
-
-                area.AxisX.LabelStyle.ForeColor = Color.White;
-                area.AxisY.LabelStyle.ForeColor = Color.White;
-
-                area.AxisX.MajorGrid.LineColor = Color.FromArgb(80, Color.Gray);
-                area.AxisY.MajorGrid.LineColor = Color.FromArgb(80, Color.Gray);
-                chartpenjualan.ChartAreas.Add(area);
-
-                var series = new Series("Penjualan Bulanan");
-                series.ChartType = SeriesChartType.Spline;
-                series.Color = Color.DeepSkyBlue;
-                series.BorderWidth = 3;
-                series.MarkerStyle = MarkerStyle.Circle;
-                series.MarkerSize = 7;
-                series.MarkerColor = Color.White;
-
-                Dictionary<string, int> dataBulanan = new Dictionary<string, int>()
-                {
-                    { "Jan", 120 }, { "Feb", 150 }, { "Mar", 180 },
-                    { "Apr", 200 }, { "Mei", 240 }, { "Jun", 300 },
-                    { "Jul", 320 }, { "Agu", 310 }, { "Sep", 350 },
-                    { "Okt", 400 }, { "Nov", 420 }, { "Des", 500 }
-                };
-
-                foreach (var item in dataBulanan)
-                {
-                    series.Points.AddXY(item.Key, item.Value);
-                }
-
-                chartpenjualan.Series.Add(series);
-            }
-            finally
-            {
-                chartpenjualan.ResumeLayout();
-                chartpenjualan.Invalidate();
             }
         }
 
@@ -314,10 +287,6 @@ namespace FnB_Records
             LoadPieChart();
         }
 
-        private void chart1_Click(object sender, EventArgs e)
-        {
-            LoadGrafikPenjualanBulanan();
-        }
 
         private void richTextBoxAi_TextChanged(object sender, EventArgs e) { }
         private void txtpromp_TextChanged(object sender, EventArgs e) { }

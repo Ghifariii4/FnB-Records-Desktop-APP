@@ -135,3 +135,4 @@ C:\Users\diana\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0
 C:\Users\diana\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_Penjualan.resources
 C:\Users\diana\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_ProduksiOlahan.resources
 C:\Users\diana\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_SimulasiKebutuhan.resources
+C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_Panel_MenuTerlaris.resources

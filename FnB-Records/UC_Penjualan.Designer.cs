@@ -98,9 +98,10 @@
             guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             label6 = new Label();
             guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
+            label3 = new Label();
+            label4 = new Label();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             label18 = new Label();
-            label9 = new Label();
             label5 = new Label();
             guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             label8 = new Label();
@@ -156,11 +157,11 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Font = new Font("Inter", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.ForeColor = Color.White;
+            label13.Font = new Font("JetBrains Mono", 27.7499962F, FontStyle.Bold);
+            label13.ForeColor = Color.FromArgb(148, 64, 221);
             label13.Location = new Point(21, 77);
             label13.Name = "label13";
-            label13.Size = new Size(121, 53);
+            label13.Size = new Size(110, 49);
             label13.TabIndex = 15;
             label13.Text = "0.0%";
             // 
@@ -214,22 +215,22 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Font = new Font("Inter", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.ForeColor = Color.White;
+            label10.Font = new Font("JetBrains Mono", 27.7499962F, FontStyle.Bold);
+            label10.ForeColor = Color.FromArgb(46, 125, 50);
             label10.Location = new Point(71, 77);
             label10.Name = "label10";
-            label10.Size = new Size(48, 53);
+            label10.Size = new Size(44, 49);
             label10.TabIndex = 15;
             label10.Text = "0";
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Font = new Font("Inter", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.ForeColor = Color.White;
+            label11.Font = new Font("JetBrains Mono", 27.7499962F, FontStyle.Bold);
+            label11.ForeColor = Color.FromArgb(46, 125, 50);
             label11.Location = new Point(13, 77);
             label11.Name = "label11";
-            label11.Size = new Size(70, 53);
+            label11.Size = new Size(66, 49);
             label11.TabIndex = 16;
             label11.Text = "Rp";
             // 
@@ -284,11 +285,11 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Inter", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Font = new Font("JetBrains Mono", 27.7499962F, FontStyle.Bold);
             label6.ForeColor = Color.White;
             label6.Location = new Point(71, 77);
             label6.Name = "label6";
-            label6.Size = new Size(48, 53);
+            label6.Size = new Size(44, 49);
             label6.TabIndex = 15;
             label6.Text = "0";
             // 
@@ -297,9 +298,10 @@
             guna2GroupBox3.BackColor = Color.Transparent;
             guna2GroupBox3.BorderColor = Color.DimGray;
             guna2GroupBox3.BorderRadius = 15;
+            guna2GroupBox3.Controls.Add(label3);
+            guna2GroupBox3.Controls.Add(label4);
             guna2GroupBox3.Controls.Add(guna2PictureBox1);
             guna2GroupBox3.Controls.Add(label18);
-            guna2GroupBox3.Controls.Add(label9);
             guna2GroupBox3.Controls.Add(label5);
             guna2GroupBox3.CustomBorderColor = Color.Empty;
             guna2GroupBox3.CustomizableEdges = customizableEdges11;
@@ -314,6 +316,28 @@
             guna2GroupBox3.ShadowDecoration.Shadow = new Padding(3, 1, 3, 5);
             guna2GroupBox3.Size = new Size(355, 200);
             guna2GroupBox3.TabIndex = 20;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("JetBrains Mono", 27.7499962F, FontStyle.Bold);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(79, 77);
+            label3.Name = "label3";
+            label3.Size = new Size(44, 49);
+            label3.TabIndex = 18;
+            label3.Text = "0";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("JetBrains Mono", 27.7499962F, FontStyle.Bold);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(21, 77);
+            label4.Name = "label4";
+            label4.Size = new Size(66, 49);
+            label4.TabIndex = 19;
+            label4.Text = "Rp";
             // 
             // guna2PictureBox1
             // 
@@ -334,22 +358,11 @@
             label18.AutoSize = true;
             label18.Font = new Font("Inter Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label18.ForeColor = Color.LightGray;
-            label18.Location = new Point(21, 161);
+            label18.Location = new Point(21, 160);
             label18.Name = "label18";
             label18.Size = new Size(74, 17);
             label18.TabIndex = 16;
             label18.Text = "0 Transaksi";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Inter", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.White;
-            label9.Location = new Point(21, 81);
-            label9.Name = "label9";
-            label9.Size = new Size(48, 53);
-            label9.TabIndex = 15;
-            label9.Text = "0";
             // 
             // label5
             // 
@@ -379,11 +392,11 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Inter", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Font = new Font("JetBrains Mono", 27.7499962F, FontStyle.Bold);
             label8.ForeColor = Color.White;
             label8.Location = new Point(13, 77);
             label8.Name = "label8";
-            label8.Size = new Size(70, 53);
+            label8.Size = new Size(66, 49);
             label8.TabIndex = 16;
             label8.Text = "Rp";
             // 
@@ -392,7 +405,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(21, 19);
+            label7.Location = new Point(16, 19);
             label7.Name = "label7";
             label7.Size = new Size(85, 23);
             label7.TabIndex = 12;
@@ -516,6 +529,7 @@
             // 
             guna2PictureBox4.BackgroundImageLayout = ImageLayout.Stretch;
             guna2PictureBox4.CustomizableEdges = customizableEdges21;
+            guna2PictureBox4.Image = Properties.Resources.Calendar_Icon_White;
             guna2PictureBox4.ImageRotate = 0F;
             guna2PictureBox4.Location = new Point(19, 29);
             guna2PictureBox4.Name = "guna2PictureBox4";
@@ -703,7 +717,7 @@
             gbInputPenjualanPopUp.FillColor = Color.FromArgb(249, 247, 245);
             gbInputPenjualanPopUp.Font = new Font("Segoe UI", 9F);
             gbInputPenjualanPopUp.ForeColor = Color.FromArgb(125, 137, 149);
-            gbInputPenjualanPopUp.Location = new Point(538, 77);
+            gbInputPenjualanPopUp.Location = new Point(555, 299);
             gbInputPenjualanPopUp.Name = "gbInputPenjualanPopUp";
             gbInputPenjualanPopUp.ShadowDecoration.BorderRadius = 15;
             gbInputPenjualanPopUp.ShadowDecoration.CustomizableEdges = customizableEdges54;
@@ -1084,7 +1098,6 @@
         private Label label6;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
         private Label label18;
-        private Label label9;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Label label5;
         private Label label8;
@@ -1122,5 +1135,7 @@
         private Label label30;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Label label3;
+        private Label label4;
     }
 }
