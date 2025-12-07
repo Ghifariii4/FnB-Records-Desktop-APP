@@ -491,7 +491,8 @@ namespace FnB_Records
                         {
                             if (btnverifemail.InvokeRequired)
                             {
-                                btnverifemail.Invoke(new Action(() => {
+                                btnverifemail.Invoke(new Action(() =>
+                                {
                                     btnverifemail.BackColor = Color.FromArgb(94, 148, 255);
                                 }));
                             }
@@ -859,6 +860,11 @@ namespace FnB_Records
         {
             // Method ini tidak digunakan karena tidak ada tombol kirim kode
             // Semua proses dilakukan via tombol Simpan Perubahan
+        }
+
+        private void UC_Pengaturan_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
