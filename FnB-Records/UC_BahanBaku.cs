@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FnB_Records.Koneksi_DB;
+using Npgsql;
 
 namespace FnB_Records
 {
     public partial class UC_BahanBaku : UserControl
     {
+        Koneksi conn = new Koneksi();
+
+
         public UC_BahanBaku()
         {
             InitializeComponent();
@@ -62,6 +67,11 @@ namespace FnB_Records
         private void btnBatalPopUp_Click(object sender, EventArgs e)
         {
             gbBahanBakuPopUp.Visible = false;
+        }
+
+        private void gbBahanBakuPopUp_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
