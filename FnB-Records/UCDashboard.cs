@@ -480,7 +480,7 @@ namespace FnB_Records
 
         private async Task<string> AskGemini(string prompt)
         {
-            string apiKey = "AIzaSyDuDStYrv5Xuu57tICXyal5MgRi6OLzyyQ";
+            string apiKey = "AIzaSyCRCiVBrZeWLGBOFAF_fwmbFhY1lv37gwk";
             string url = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={apiKey}";
 
             string context = $"Nama Bisnis: {Login.GlobalSession.BusinessName}. Saya adalah pemilik bisnis F&B. Jawablah terkait manajemen stok, penjualan, atau strategi marketing.";
@@ -516,6 +516,11 @@ namespace FnB_Records
         private void guna2GroupBox12_Click(object sender, EventArgs e) { }
         private void txtpromp_TextChanged_1(object sender, EventArgs e) { }
         private void txtpromp_TextChanged_2(object sender, EventArgs e) { }
+
+        private void pnlChatContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
     public class ChatBubble : Panel
