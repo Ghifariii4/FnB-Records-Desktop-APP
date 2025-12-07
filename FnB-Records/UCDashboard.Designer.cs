@@ -691,6 +691,7 @@
             pnlChatContainer.Name = "pnlChatContainer";
             pnlChatContainer.Size = new Size(1502, 267);
             pnlChatContainer.TabIndex = 14;
+            pnlChatContainer.Paint += pnlChatContainer_Paint;
             // 
             // label23
             // 
@@ -816,11 +817,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Inter", 12F);
+            label1.Font = new Font("Microsoft Sans Serif", 12F);
             label1.ForeColor = Color.White;
             label1.Location = new Point(28, 58);
             label1.Name = "label1";
-            label1.Size = new Size(348, 23);
+            label1.Size = new Size(324, 20);
             label1.TabIndex = 16;
             label1.Text = "Breakdown penjualan per kategori (Estimasi)";
             // 
@@ -965,11 +966,11 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Font = new Font("Inter", 12F);
+            label13.Font = new Font("Microsoft Sans Serif", 12F);
             label13.ForeColor = Color.FromArgb(45, 45, 45);
             label13.Location = new Point(77, 16);
             label13.Name = "label13";
-            label13.Size = new Size(212, 23);
+            label13.Size = new Size(208, 20);
             label13.TabIndex = 20;
             label13.Text = "Revenue Bulanan Rata-rata";
             // 
@@ -1020,11 +1021,11 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Inter", 12F);
+            label6.Font = new Font("Microsoft Sans Serif", 12F);
             label6.ForeColor = Color.FromArgb(45, 45, 45);
             label6.Location = new Point(77, 16);
             label6.Name = "label6";
-            label6.Size = new Size(108, 23);
+            label6.Size = new Size(98, 20);
             label6.TabIndex = 20;
             label6.Text = "Profit Margin";
             // 
@@ -1075,11 +1076,11 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Inter", 12F);
+            label9.Font = new Font("Microsoft Sans Serif", 12F);
             label9.ForeColor = Color.FromArgb(45, 45, 45);
             label9.Location = new Point(77, 16);
             label9.Name = "label9";
-            label9.Size = new Size(207, 23);
+            label9.Size = new Size(196, 20);
             label9.TabIndex = 20;
             label9.Text = "Total Transaksi (Tahun Ini)";
             // 
@@ -1130,11 +1131,11 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Inter", 12F);
+            label3.Font = new Font("Microsoft Sans Serif", 12F);
             label3.ForeColor = Color.FromArgb(45, 45, 45);
             label3.Location = new Point(77, 16);
             label3.Name = "label3";
-            label3.Size = new Size(133, 23);
+            label3.Size = new Size(125, 20);
             label3.TabIndex = 20;
             label3.Text = "Avg Order Value";
             // 
@@ -1160,11 +1161,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Inter", 12F);
+            label2.Font = new Font("Microsoft Sans Serif", 12F);
             label2.ForeColor = Color.White;
             label2.Location = new Point(24, 58);
             label2.Name = "label2";
-            label2.Size = new Size(216, 23);
+            label2.Size = new Size(206, 20);
             label2.TabIndex = 17;
             label2.Text = "KPI bisnis Anda (Data Real)";
             // 
@@ -1228,11 +1229,11 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Font = new Font("Inter", 12F);
+            label10.Font = new Font("Microsoft Sans Serif", 12F);
             label10.ForeColor = Color.White;
             label10.Location = new Point(21, 53);
             label10.Name = "label10";
-            label10.Size = new Size(272, 23);
+            label10.Size = new Size(258, 20);
             label10.TabIndex = 18;
             label10.Text = "Trend 12 bulan terakhir (Data Real)";
             // 

@@ -433,6 +433,16 @@ namespace FnB_Records.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap draw_1798785 {
+            get {
+                object obj = ResourceManager.GetObject("draw_1798785", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Email_Icon_Black {
             get {
                 object obj = ResourceManager.GetObject("Email-Icon-Black", resourceCulture);
@@ -776,6 +786,16 @@ namespace FnB_Records.Properties {
         internal static System.Drawing.Bitmap Telephone_Icon_White {
             get {
                 object obj = ResourceManager.GetObject("Telephone-Icon-White", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trash_9787142 {
+            get {
+                object obj = ResourceManager.GetObject("trash_9787142", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

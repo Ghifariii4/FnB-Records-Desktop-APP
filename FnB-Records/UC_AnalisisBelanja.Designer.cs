@@ -63,42 +63,49 @@
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_AnalisisBelanja));
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            btnTambahVendor = new Guna.UI2.WinForms.Guna2Button();
+            cbsemuawaktu = new Guna.UI2.WinForms.Guna2ComboBox();
+            btnEksporLaporancsv = new Guna.UI2.WinForms.Guna2Button();
             label2 = new Label();
             label1 = new Label();
             guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             label18 = new Label();
-            label9 = new Label();
+            lbltotalpengeluaran = new Label();
             label5 = new Label();
             guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             label3 = new Label();
-            label4 = new Label();
+            lblrata2po = new Label();
             label6 = new Label();
             guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             label7 = new Label();
-            label8 = new Label();
+            lbltotalpo = new Label();
             label10 = new Label();
             guna2GroupBox5 = new Guna.UI2.WinForms.Guna2GroupBox();
-            chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            charttrendbelanja6bulanterakhir = new System.Windows.Forms.DataVisualization.Charting.Chart();
             label12 = new Label();
             label11 = new Label();
             guna2GroupBox7 = new Guna.UI2.WinForms.Guna2GroupBox();
-            chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            chartbreakdownpengeluaranperkategori = new System.Windows.Forms.DataVisualization.Charting.Chart();
             label13 = new Label();
             label14 = new Label();
             guna2GroupBox6 = new Guna.UI2.WinForms.Guna2GroupBox();
-            chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            chart5bahanbakuberdasarpembelian = new System.Windows.Forms.DataVisualization.Charting.Chart();
             label15 = new Label();
             label16 = new Label();
             guna2GroupBox8 = new Guna.UI2.WinForms.Guna2GroupBox();
-            label20 = new Label();
             label17 = new Label();
             label19 = new Label();
+            dgvtopVendor = new Guna.UI2.WinForms.Guna2DataGridView();
+            Edit = new DataGridViewImageColumn();
+            Hapus = new DataGridViewImageColumn();
             guna2GroupBox1.SuspendLayout();
             guna2GroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
@@ -107,19 +114,20 @@
             guna2GroupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox3).BeginInit();
             guna2GroupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)charttrendbelanja6bulanterakhir).BeginInit();
             guna2GroupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)chart3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)chartbreakdownpengeluaranperkategori).BeginInit();
             guna2GroupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)chart2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)chart5bahanbakuberdasarpembelian).BeginInit();
             guna2GroupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvtopVendor).BeginInit();
             SuspendLayout();
             // 
             // guna2GroupBox1
             // 
             guna2GroupBox1.BorderColor = Color.Transparent;
-            guna2GroupBox1.Controls.Add(guna2ComboBox1);
-            guna2GroupBox1.Controls.Add(btnTambahVendor);
+            guna2GroupBox1.Controls.Add(cbsemuawaktu);
+            guna2GroupBox1.Controls.Add(btnEksporLaporancsv);
             guna2GroupBox1.Controls.Add(label2);
             guna2GroupBox1.Controls.Add(label1);
             guna2GroupBox1.CustomBorderColor = Color.Transparent;
@@ -133,64 +141,66 @@
             guna2GroupBox1.Size = new Size(1544, 99);
             guna2GroupBox1.TabIndex = 13;
             // 
-            // guna2ComboBox1
+            // cbsemuawaktu
             // 
-            guna2ComboBox1.BackColor = Color.Transparent;
-            guna2ComboBox1.BorderColor = Color.Transparent;
-            guna2ComboBox1.BorderRadius = 10;
-            guna2ComboBox1.Cursor = Cursors.Hand;
-            guna2ComboBox1.CustomizableEdges = customizableEdges1;
-            guna2ComboBox1.DrawMode = DrawMode.OwnerDrawFixed;
-            guna2ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            guna2ComboBox1.FillColor = Color.FromArgb(45, 45, 45);
-            guna2ComboBox1.FocusedColor = Color.Transparent;
-            guna2ComboBox1.FocusedState.BorderColor = Color.Transparent;
-            guna2ComboBox1.Font = new Font("Manrope SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2ComboBox1.ForeColor = Color.White;
-            guna2ComboBox1.ItemHeight = 42;
-            guna2ComboBox1.Items.AddRange(new object[] { "Semua Waktu", "1 Bulan Terakhir", "3 Bulan Terakhir", "6 Bulan Terakhir", "1 Tahun Terakhir" });
-            guna2ComboBox1.ItemsAppearance.BackColor = Color.FromArgb(42, 42, 42);
-            guna2ComboBox1.Location = new Point(1150, 0);
-            guna2ComboBox1.Name = "guna2ComboBox1";
-            guna2ComboBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2ComboBox1.Size = new Size(197, 48);
-            guna2ComboBox1.StartIndex = 0;
-            guna2ComboBox1.TabIndex = 7;
-            guna2ComboBox1.TextOffset = new Point(10, 0);
+            cbsemuawaktu.BackColor = Color.Transparent;
+            cbsemuawaktu.BorderColor = Color.Transparent;
+            cbsemuawaktu.BorderRadius = 10;
+            cbsemuawaktu.Cursor = Cursors.Hand;
+            cbsemuawaktu.CustomizableEdges = customizableEdges1;
+            cbsemuawaktu.DrawMode = DrawMode.OwnerDrawFixed;
+            cbsemuawaktu.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbsemuawaktu.FillColor = Color.FromArgb(45, 45, 45);
+            cbsemuawaktu.FocusedColor = Color.Transparent;
+            cbsemuawaktu.FocusedState.BorderColor = Color.Transparent;
+            cbsemuawaktu.Font = new Font("Manrope SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cbsemuawaktu.ForeColor = Color.White;
+            cbsemuawaktu.ItemHeight = 42;
+            cbsemuawaktu.Items.AddRange(new object[] { "Semua Waktu", "1 Bulan Terakhir", "3 Bulan Terakhir", "6 Bulan Terakhir", "1 Tahun Terakhir" });
+            cbsemuawaktu.ItemsAppearance.BackColor = Color.FromArgb(42, 42, 42);
+            cbsemuawaktu.Location = new Point(1150, 0);
+            cbsemuawaktu.Name = "cbsemuawaktu";
+            cbsemuawaktu.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            cbsemuawaktu.Size = new Size(197, 48);
+            cbsemuawaktu.StartIndex = 0;
+            cbsemuawaktu.TabIndex = 7;
+            cbsemuawaktu.TextOffset = new Point(10, 0);
+            cbsemuawaktu.SelectedIndexChanged += cbsemuawaktu_SelectedIndexChanged;
             // 
-            // btnTambahVendor
+            // btnEksporLaporancsv
             // 
-            btnTambahVendor.BorderRadius = 10;
-            btnTambahVendor.Cursor = Cursors.Hand;
-            btnTambahVendor.CustomizableEdges = customizableEdges3;
-            btnTambahVendor.DisabledState.BorderColor = Color.DarkGray;
-            btnTambahVendor.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnTambahVendor.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnTambahVendor.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnTambahVendor.FillColor = Color.FromArgb(45, 45, 45);
-            btnTambahVendor.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnTambahVendor.ForeColor = Color.White;
-            btnTambahVendor.Image = Properties.Resources.Download_Icon_Putih1;
-            btnTambahVendor.ImageAlign = HorizontalAlignment.Left;
-            btnTambahVendor.ImageOffset = new Point(5, 0);
-            btnTambahVendor.ImageSize = new Size(30, 20);
-            btnTambahVendor.Location = new Point(1364, 0);
-            btnTambahVendor.Name = "btnTambahVendor";
-            btnTambahVendor.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnTambahVendor.Size = new Size(180, 48);
-            btnTambahVendor.TabIndex = 6;
-            btnTambahVendor.Text = "Ekspor Laporan";
-            btnTambahVendor.TextAlign = HorizontalAlignment.Left;
-            btnTambahVendor.TextOffset = new Point(5, 0);
+            btnEksporLaporancsv.BorderRadius = 10;
+            btnEksporLaporancsv.Cursor = Cursors.Hand;
+            btnEksporLaporancsv.CustomizableEdges = customizableEdges3;
+            btnEksporLaporancsv.DisabledState.BorderColor = Color.DarkGray;
+            btnEksporLaporancsv.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEksporLaporancsv.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEksporLaporancsv.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEksporLaporancsv.FillColor = Color.FromArgb(45, 45, 45);
+            btnEksporLaporancsv.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEksporLaporancsv.ForeColor = Color.White;
+            btnEksporLaporancsv.Image = Properties.Resources.Download_Icon_Putih1;
+            btnEksporLaporancsv.ImageAlign = HorizontalAlignment.Left;
+            btnEksporLaporancsv.ImageOffset = new Point(5, 0);
+            btnEksporLaporancsv.ImageSize = new Size(30, 20);
+            btnEksporLaporancsv.Location = new Point(1364, 0);
+            btnEksporLaporancsv.Name = "btnEksporLaporancsv";
+            btnEksporLaporancsv.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnEksporLaporancsv.Size = new Size(180, 48);
+            btnEksporLaporancsv.TabIndex = 6;
+            btnEksporLaporancsv.Text = "Ekspor Laporan";
+            btnEksporLaporancsv.TextAlign = HorizontalAlignment.Left;
+            btnEksporLaporancsv.TextOffset = new Point(5, 0);
+            btnEksporLaporancsv.Click += btnEksporLaporancsv_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Inter", 12F);
+            label2.Font = new Font("Microsoft Sans Serif", 12F);
             label2.ForeColor = Color.FromArgb(45, 45, 45);
             label2.Location = new Point(3, 48);
             label2.Name = "label2";
-            label2.Size = new Size(529, 23);
+            label2.Size = new Size(496, 20);
             label2.TabIndex = 2;
             label2.Text = "Analisis lengkap pembelanjaan bahan baku dari data Purchase Order";
             // 
@@ -212,7 +222,7 @@
             guna2GroupBox3.BorderRadius = 15;
             guna2GroupBox3.Controls.Add(guna2PictureBox1);
             guna2GroupBox3.Controls.Add(label18);
-            guna2GroupBox3.Controls.Add(label9);
+            guna2GroupBox3.Controls.Add(lbltotalpengeluaran);
             guna2GroupBox3.Controls.Add(label5);
             guna2GroupBox3.CustomBorderColor = Color.Empty;
             guna2GroupBox3.CustomizableEdges = customizableEdges9;
@@ -246,24 +256,25 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Font = new Font("Inter Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label18.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label18.ForeColor = Color.LightGray;
             label18.Location = new Point(21, 201);
             label18.Name = "label18";
-            label18.Size = new Size(178, 23);
+            label18.Size = new Size(187, 20);
             label18.TabIndex = 16;
             label18.Text = "Dari 0 Purchase Order";
             // 
-            // label9
+            // lbltotalpengeluaran
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("JetBrains Mono ExtraBold", 27.7499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.White;
-            label9.Location = new Point(21, 101);
-            label9.Name = "label9";
-            label9.Size = new Size(44, 49);
-            label9.TabIndex = 15;
-            label9.Text = "0";
+            lbltotalpengeluaran.AutoSize = true;
+            lbltotalpengeluaran.Font = new Font("JetBrains Mono ExtraBold", 27.7499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbltotalpengeluaran.ForeColor = Color.White;
+            lbltotalpengeluaran.Location = new Point(21, 101);
+            lbltotalpengeluaran.Name = "lbltotalpengeluaran";
+            lbltotalpengeluaran.Size = new Size(44, 49);
+            lbltotalpengeluaran.TabIndex = 15;
+            lbltotalpengeluaran.Text = "0";
+            lbltotalpengeluaran.Click += lbltotalpengeluaran_Click;
             // 
             // label5
             // 
@@ -283,7 +294,7 @@
             guna2GroupBox2.BorderRadius = 15;
             guna2GroupBox2.Controls.Add(guna2PictureBox2);
             guna2GroupBox2.Controls.Add(label3);
-            guna2GroupBox2.Controls.Add(label4);
+            guna2GroupBox2.Controls.Add(lblrata2po);
             guna2GroupBox2.Controls.Add(label6);
             guna2GroupBox2.CustomBorderColor = Color.Empty;
             guna2GroupBox2.CustomizableEdges = customizableEdges13;
@@ -316,24 +327,25 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Inter Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.LightGray;
             label3.Location = new Point(21, 201);
             label3.Name = "label3";
-            label3.Size = new Size(158, 23);
+            label3.Size = new Size(166, 20);
             label3.TabIndex = 16;
             label3.Text = "Per Purchase Order";
             // 
-            // label4
+            // lblrata2po
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("JetBrains Mono ExtraBold", 27.7499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(21, 101);
-            label4.Name = "label4";
-            label4.Size = new Size(44, 49);
-            label4.TabIndex = 15;
-            label4.Text = "0";
+            lblrata2po.AutoSize = true;
+            lblrata2po.Font = new Font("JetBrains Mono ExtraBold", 27.7499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblrata2po.ForeColor = Color.White;
+            lblrata2po.Location = new Point(21, 101);
+            lblrata2po.Name = "lblrata2po";
+            lblrata2po.Size = new Size(44, 49);
+            lblrata2po.TabIndex = 15;
+            lblrata2po.Text = "0";
+            lblrata2po.Click += lblrata2po_Click;
             // 
             // label6
             // 
@@ -353,7 +365,7 @@
             guna2GroupBox4.BorderRadius = 15;
             guna2GroupBox4.Controls.Add(guna2PictureBox3);
             guna2GroupBox4.Controls.Add(label7);
-            guna2GroupBox4.Controls.Add(label8);
+            guna2GroupBox4.Controls.Add(lbltotalpo);
             guna2GroupBox4.Controls.Add(label10);
             guna2GroupBox4.CustomBorderColor = Color.Empty;
             guna2GroupBox4.CustomizableEdges = customizableEdges17;
@@ -386,24 +398,25 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Inter Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.LightGray;
             label7.Location = new Point(21, 201);
             label7.Name = "label7";
-            label7.Size = new Size(187, 23);
+            label7.Size = new Size(198, 20);
             label7.TabIndex = 16;
             label7.Text = "Purchase Order Selesai";
             // 
-            // label8
+            // lbltotalpo
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("JetBrains Mono ExtraBold", 27.7499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.ForeColor = Color.White;
-            label8.Location = new Point(21, 101);
-            label8.Name = "label8";
-            label8.Size = new Size(44, 49);
-            label8.TabIndex = 15;
-            label8.Text = "0";
+            lbltotalpo.AutoSize = true;
+            lbltotalpo.Font = new Font("JetBrains Mono ExtraBold", 27.7499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbltotalpo.ForeColor = Color.White;
+            lbltotalpo.Location = new Point(21, 101);
+            lbltotalpo.Name = "lbltotalpo";
+            lbltotalpo.Size = new Size(44, 49);
+            lbltotalpo.TabIndex = 15;
+            lbltotalpo.Text = "0";
+            lbltotalpo.Click += lbltotalpo_Click;
             // 
             // label10
             // 
@@ -421,7 +434,7 @@
             guna2GroupBox5.BackColor = Color.Transparent;
             guna2GroupBox5.BorderColor = Color.DimGray;
             guna2GroupBox5.BorderRadius = 15;
-            guna2GroupBox5.Controls.Add(chart1);
+            guna2GroupBox5.Controls.Add(charttrendbelanja6bulanterakhir);
             guna2GroupBox5.Controls.Add(label12);
             guna2GroupBox5.Controls.Add(label11);
             guna2GroupBox5.CustomBorderColor = Color.Empty;
@@ -438,31 +451,32 @@
             guna2GroupBox5.Size = new Size(755, 529);
             guna2GroupBox5.TabIndex = 25;
             // 
-            // chart1
+            // charttrendbelanja6bulanterakhir
             // 
             chartArea1.Name = "ChartArea1";
-            chart1.ChartAreas.Add(chartArea1);
-            chart1.Cursor = Cursors.Cross;
+            charttrendbelanja6bulanterakhir.ChartAreas.Add(chartArea1);
+            charttrendbelanja6bulanterakhir.Cursor = Cursors.Cross;
             legend1.Name = "Legend1";
-            chart1.Legends.Add(legend1);
-            chart1.Location = new Point(21, 134);
-            chart1.Name = "chart1";
+            charttrendbelanja6bulanterakhir.Legends.Add(legend1);
+            charttrendbelanja6bulanterakhir.Location = new Point(21, 134);
+            charttrendbelanja6bulanterakhir.Name = "charttrendbelanja6bulanterakhir";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
-            chart1.Series.Add(series1);
-            chart1.Size = new Size(716, 368);
-            chart1.TabIndex = 18;
-            chart1.Text = "chart1";
+            charttrendbelanja6bulanterakhir.Series.Add(series1);
+            charttrendbelanja6bulanterakhir.Size = new Size(716, 368);
+            charttrendbelanja6bulanterakhir.TabIndex = 18;
+            charttrendbelanja6bulanterakhir.Text = "chart1";
+            charttrendbelanja6bulanterakhir.Click += charttrendbelanja6bulanterakhir_Click;
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Font = new Font("Inter Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label12.ForeColor = Color.LightGray;
             label12.Location = new Point(21, 70);
             label12.Name = "label12";
-            label12.Size = new Size(216, 23);
+            label12.Size = new Size(232, 20);
             label12.TabIndex = 17;
             label12.Text = "6 bulan terakhir (Data Real)";
             // 
@@ -482,7 +496,7 @@
             guna2GroupBox7.BackColor = Color.Transparent;
             guna2GroupBox7.BorderColor = Color.DimGray;
             guna2GroupBox7.BorderRadius = 15;
-            guna2GroupBox7.Controls.Add(chart3);
+            guna2GroupBox7.Controls.Add(chartbreakdownpengeluaranperkategori);
             guna2GroupBox7.Controls.Add(label13);
             guna2GroupBox7.Controls.Add(label14);
             guna2GroupBox7.CustomBorderColor = Color.Empty;
@@ -499,31 +513,32 @@
             guna2GroupBox7.Size = new Size(755, 529);
             guna2GroupBox7.TabIndex = 28;
             // 
-            // chart3
+            // chartbreakdownpengeluaranperkategori
             // 
             chartArea2.Name = "ChartArea1";
-            chart3.ChartAreas.Add(chartArea2);
-            chart3.Cursor = Cursors.Cross;
+            chartbreakdownpengeluaranperkategori.ChartAreas.Add(chartArea2);
+            chartbreakdownpengeluaranperkategori.Cursor = Cursors.Cross;
             legend2.Name = "Legend1";
-            chart3.Legends.Add(legend2);
-            chart3.Location = new Point(21, 134);
-            chart3.Name = "chart3";
+            chartbreakdownpengeluaranperkategori.Legends.Add(legend2);
+            chartbreakdownpengeluaranperkategori.Location = new Point(21, 134);
+            chartbreakdownpengeluaranperkategori.Name = "chartbreakdownpengeluaranperkategori";
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
             series2.Name = "Series1";
-            chart3.Series.Add(series2);
-            chart3.Size = new Size(716, 368);
-            chart3.TabIndex = 19;
-            chart3.Text = "chart3";
+            chartbreakdownpengeluaranperkategori.Series.Add(series2);
+            chartbreakdownpengeluaranperkategori.Size = new Size(716, 368);
+            chartbreakdownpengeluaranperkategori.TabIndex = 19;
+            chartbreakdownpengeluaranperkategori.Text = "chart3";
+            chartbreakdownpengeluaranperkategori.Click += chartbreakdownpengeluaranperkategori_Click;
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Font = new Font("Inter Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = Color.LightGray;
             label13.Location = new Point(21, 70);
             label13.Name = "label13";
-            label13.Size = new Size(292, 23);
+            label13.Size = new Size(304, 20);
             label13.TabIndex = 17;
             label13.Text = "Breakdown pengeluaran per kategori";
             // 
@@ -543,7 +558,7 @@
             guna2GroupBox6.BackColor = Color.Transparent;
             guna2GroupBox6.BorderColor = Color.DimGray;
             guna2GroupBox6.BorderRadius = 15;
-            guna2GroupBox6.Controls.Add(chart2);
+            guna2GroupBox6.Controls.Add(chart5bahanbakuberdasarpembelian);
             guna2GroupBox6.Controls.Add(label15);
             guna2GroupBox6.Controls.Add(label16);
             guna2GroupBox6.CustomBorderColor = Color.Empty;
@@ -560,31 +575,32 @@
             guna2GroupBox6.Size = new Size(755, 529);
             guna2GroupBox6.TabIndex = 30;
             // 
-            // chart2
+            // chart5bahanbakuberdasarpembelian
             // 
             chartArea3.Name = "ChartArea1";
-            chart2.ChartAreas.Add(chartArea3);
-            chart2.Cursor = Cursors.Cross;
+            chart5bahanbakuberdasarpembelian.ChartAreas.Add(chartArea3);
+            chart5bahanbakuberdasarpembelian.Cursor = Cursors.Cross;
             legend3.Name = "Legend1";
-            chart2.Legends.Add(legend3);
-            chart2.Location = new Point(20, 110);
-            chart2.Name = "chart2";
+            chart5bahanbakuberdasarpembelian.Legends.Add(legend3);
+            chart5bahanbakuberdasarpembelian.Location = new Point(20, 110);
+            chart5bahanbakuberdasarpembelian.Name = "chart5bahanbakuberdasarpembelian";
             series3.ChartArea = "ChartArea1";
             series3.Legend = "Legend1";
             series3.Name = "Series1";
-            chart2.Series.Add(series3);
-            chart2.Size = new Size(716, 368);
-            chart2.TabIndex = 19;
-            chart2.Text = "chart2";
+            chart5bahanbakuberdasarpembelian.Series.Add(series3);
+            chart5bahanbakuberdasarpembelian.Size = new Size(716, 368);
+            chart5bahanbakuberdasarpembelian.TabIndex = 19;
+            chart5bahanbakuberdasarpembelian.Text = "chart2";
+            chart5bahanbakuberdasarpembelian.Click += chart5bahanbakuberdasarpembelian_Click;
             // 
             // label15
             // 
             label15.AutoSize = true;
-            label15.Font = new Font("Inter Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label15.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label15.ForeColor = Color.LightGray;
             label15.Location = new Point(21, 70);
             label15.Name = "label15";
-            label15.Size = new Size(307, 23);
+            label15.Size = new Size(324, 20);
             label15.TabIndex = 17;
             label15.Text = "Berdasarkan total pembelian (Estimasi)";
             // 
@@ -604,7 +620,7 @@
             guna2GroupBox8.BackColor = Color.Transparent;
             guna2GroupBox8.BorderColor = Color.DimGray;
             guna2GroupBox8.BorderRadius = 15;
-            guna2GroupBox8.Controls.Add(label20);
+            guna2GroupBox8.Controls.Add(dgvtopVendor);
             guna2GroupBox8.Controls.Add(label17);
             guna2GroupBox8.Controls.Add(label19);
             guna2GroupBox8.CustomBorderColor = Color.Empty;
@@ -620,26 +636,16 @@
             guna2GroupBox8.ShadowDecoration.Shadow = new Padding(3, 1, 3, 5);
             guna2GroupBox8.Size = new Size(755, 529);
             guna2GroupBox8.TabIndex = 29;
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Font = new Font("Inter Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label20.ForeColor = Color.LightGray;
-            label20.Location = new Point(284, 279);
-            label20.Name = "label20";
-            label20.Size = new Size(211, 23);
-            label20.TabIndex = 18;
-            label20.Text = "Belum ada vendor saat ini.";
+            guna2GroupBox8.Click += guna2GroupBox8_Click;
             // 
             // label17
             // 
             label17.AutoSize = true;
-            label17.Font = new Font("Inter Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label17.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label17.ForeColor = Color.LightGray;
             label17.Location = new Point(21, 70);
             label17.Name = "label17";
-            label17.Size = new Size(314, 23);
+            label17.Size = new Size(337, 20);
             label17.TabIndex = 17;
             label17.Text = "Berdasarkan total pembelian (Data Real)";
             // 
@@ -653,6 +659,86 @@
             label19.Size = new Size(167, 33);
             label19.TabIndex = 13;
             label19.Text = "Top 5 Vendor";
+            // 
+            // dgvtopVendor
+            // 
+            dgvtopVendor.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(247, 248, 249);
+            dgvtopVendor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(232, 234, 237);
+            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvtopVendor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvtopVendor.ColumnHeadersHeight = 40;
+            dgvtopVendor.Columns.AddRange(new DataGridViewColumn[] { Edit, Hapus });
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(45, 45, 45);
+            dataGridViewCellStyle3.SelectionBackColor = Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvtopVendor.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvtopVendor.GridColor = SystemColors.ButtonFace;
+            dgvtopVendor.Location = new Point(66, 137);
+            dgvtopVendor.Name = "dgvtopVendor";
+            dgvtopVendor.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvtopVendor.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dgvtopVendor.RowHeadersVisible = false;
+            dgvtopVendor.RowTemplate.Height = 40;
+            dgvtopVendor.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            dgvtopVendor.Size = new Size(616, 327);
+            dgvtopVendor.TabIndex = 18;
+            dgvtopVendor.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
+            dgvtopVendor.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(247, 248, 249);
+            dgvtopVendor.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgvtopVendor.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgvtopVendor.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgvtopVendor.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvtopVendor.ThemeStyle.BackColor = Color.White;
+            dgvtopVendor.ThemeStyle.GridColor = SystemColors.ButtonFace;
+            dgvtopVendor.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(232, 234, 237);
+            dgvtopVendor.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvtopVendor.ThemeStyle.HeaderStyle.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dgvtopVendor.ThemeStyle.HeaderStyle.ForeColor = Color.Black;
+            dgvtopVendor.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvtopVendor.ThemeStyle.HeaderStyle.Height = 40;
+            dgvtopVendor.ThemeStyle.ReadOnly = true;
+            dgvtopVendor.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvtopVendor.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvtopVendor.ThemeStyle.RowsStyle.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dgvtopVendor.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(45, 45, 45);
+            dgvtopVendor.ThemeStyle.RowsStyle.Height = 40;
+            dgvtopVendor.ThemeStyle.RowsStyle.SelectionBackColor = Color.White;
+            dgvtopVendor.ThemeStyle.RowsStyle.SelectionForeColor = Color.Black;
+            dgvtopVendor.CellContentClick += dgvtopVendor_CellContentClick;
+            // 
+            // Edit
+            // 
+            Edit.HeaderText = "Edit";
+            Edit.Image = (Image)resources.GetObject("Edit.Image");
+            Edit.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            Edit.Name = "Edit";
+            Edit.ReadOnly = true;
+            // 
+            // Hapus
+            // 
+            Hapus.HeaderText = "Hapus";
+            Hapus.Image = (Image)resources.GetObject("Hapus.Image");
+            Hapus.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            Hapus.Name = "Hapus";
+            Hapus.ReadOnly = true;
             // 
             // UC_AnalisisBelanja
             // 
@@ -683,38 +769,39 @@
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox3).EndInit();
             guna2GroupBox5.ResumeLayout(false);
             guna2GroupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)charttrendbelanja6bulanterakhir).EndInit();
             guna2GroupBox7.ResumeLayout(false);
             guna2GroupBox7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)chart3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)chartbreakdownpengeluaranperkategori).EndInit();
             guna2GroupBox6.ResumeLayout(false);
             guna2GroupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)chart2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)chart5bahanbakuberdasarpembelian).EndInit();
             guna2GroupBox8.ResumeLayout(false);
             guna2GroupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvtopVendor).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
-        private Guna.UI2.WinForms.Guna2Button btnTambahVendor;
+        private Guna.UI2.WinForms.Guna2Button btnEksporLaporancsv;
         private Label label2;
         private Label label1;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Label label18;
-        private Label label9;
+        private Label lbltotalpengeluaran;
         private Label label5;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Label label3;
-        private Label label4;
+        private Label lblrata2po;
         private Label label6;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox4;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Label label7;
-        private Label label8;
+        private Label lbltotalpo;
         private Label label10;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox5;
         private Label label11;
@@ -728,10 +815,12 @@
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox8;
         private Label label17;
         private Label label19;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private Label label20;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart charttrendbelanja6bulanterakhir;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartbreakdownpengeluaranperkategori;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart5bahanbakuberdasarpembelian;
+        private Guna.UI2.WinForms.Guna2ComboBox cbsemuawaktu;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvtopVendor;
+        private DataGridViewImageColumn Edit;
+        private DataGridViewImageColumn Hapus;
     }
 }
