@@ -433,7 +433,6 @@
             guna2GroupBox2.BorderColor = Color.FromArgb(45, 45, 45);
             guna2GroupBox2.BorderRadius = 20;
             guna2GroupBox2.BorderThickness = 0;
-            guna2GroupBox2.Controls.Add(gbEditCabang);
             guna2GroupBox2.Controls.Add(gbCabangPopUp);
             guna2GroupBox2.Controls.Add(dgvDataCabang);
             guna2GroupBox2.Controls.Add(txtCariCabang);
@@ -465,7 +464,7 @@
             gbEditCabang.FillColor = Color.FromArgb(249, 247, 245);
             gbEditCabang.Font = new Font("Segoe UI", 9F);
             gbEditCabang.ForeColor = Color.FromArgb(125, 137, 149);
-            gbEditCabang.Location = new Point(234, 174);
+            gbEditCabang.Location = new Point(3, 3);
             gbEditCabang.Name = "gbEditCabang";
             gbEditCabang.ShadowDecoration.BorderRadius = 15;
             gbEditCabang.ShadowDecoration.CustomizableEdges = customizableEdges36;
@@ -711,6 +710,7 @@
             // 
             gbCabangPopUp.BackColor = Color.White;
             gbCabangPopUp.BorderRadius = 15;
+            gbCabangPopUp.Controls.Add(gbEditCabang);
             gbCabangPopUp.Controls.Add(btnBatalPopUp);
             gbCabangPopUp.Controls.Add(btnSimpanPopUp);
             gbCabangPopUp.Controls.Add(guna2GroupBox4);

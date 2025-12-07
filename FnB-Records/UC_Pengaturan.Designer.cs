@@ -860,7 +860,7 @@
             label16.ForeColor = Color.White;
             label16.Location = new Point(22, 24);
             label16.Name = "label16";
-            label16.Size = new Size(195, 33);
+            label16.Size = new Size(194, 33);
             label16.TabIndex = 12;
             label16.Text = "Ubah Password";
             // 
@@ -885,6 +885,7 @@
             Controls.Add(guna2GroupBox1);
             Name = "UC_Pengaturan";
             Size = new Size(1620, 2000);
+            Load += UC_Pengaturan_Load;
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
             guna2GroupBox7.ResumeLayout(false);

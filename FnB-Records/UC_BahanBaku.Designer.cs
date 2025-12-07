@@ -54,22 +54,44 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges55 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges57 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges58 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_BahanBaku));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_BahanBaku));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnClosePopUpBahanBaku = new Guna.UI2.WinForms.Guna2Button();
             label6 = new Label();
             label5 = new Label();
@@ -107,6 +129,26 @@
             gbBahanBakuPopUp = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
+            panel1 = new Panel();
+            gbEditBahanBakuPopUp = new Guna.UI2.WinForms.Guna2GroupBox();
+            guna2GroupBox7 = new Guna.UI2.WinForms.Guna2GroupBox();
+            cbEditVendor = new Guna.UI2.WinForms.Guna2ComboBox();
+            label7 = new Label();
+            txtEditStokMinimum = new Guna.UI2.WinForms.Guna2TextBox();
+            label12 = new Label();
+            txtEditStokSaatini = new Guna.UI2.WinForms.Guna2TextBox();
+            label13 = new Label();
+            cbEditSatuan = new Guna.UI2.WinForms.Guna2ComboBox();
+            txtEditHargaPerSatuan = new Guna.UI2.WinForms.Guna2TextBox();
+            label14 = new Label();
+            btCloseEditPopUp = new Guna.UI2.WinForms.Guna2Button();
+            label15 = new Label();
+            label16 = new Label();
+            txtEditNamaBahan = new Guna.UI2.WinForms.Guna2TextBox();
+            label17 = new Label();
+            label18 = new Label();
+            btBatalEdit = new Guna.UI2.WinForms.Guna2Button();
+            btSimpanEdit = new Guna.UI2.WinForms.Guna2Button();
             guna2GroupBox4.SuspendLayout();
             guna2GroupBox3.SuspendLayout();
             guna2GroupBox2.SuspendLayout();
@@ -114,6 +156,8 @@
             ((System.ComponentModel.ISupportInitialize)dgvDataBahanBaku).BeginInit();
             gbBahanBakuPopUp.SuspendLayout();
             guna2GroupBox1.SuspendLayout();
+            gbEditBahanBakuPopUp.SuspendLayout();
+            guna2GroupBox7.SuspendLayout();
             SuspendLayout();
             // 
             // btnClosePopUpBahanBaku
@@ -545,10 +589,11 @@
             guna2GroupBox2.BorderColor = Color.FromArgb(45, 45, 45);
             guna2GroupBox2.BorderRadius = 20;
             guna2GroupBox2.BorderThickness = 0;
+            guna2GroupBox2.Controls.Add(gbEditBahanBakuPopUp);
             guna2GroupBox2.Controls.Add(guna2GroupBox5);
             guna2GroupBox2.Controls.Add(guna2GroupBox3);
             guna2GroupBox2.CustomBorderColor = Color.Transparent;
-            guna2GroupBox2.CustomizableEdges = customizableEdges29;
+            guna2GroupBox2.CustomizableEdges = customizableEdges51;
             guna2Transition1.SetDecoration(guna2GroupBox2, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2GroupBox2.FillColor = Color.FromArgb(45, 45, 45);
             guna2GroupBox2.Font = new Font("Segoe UI", 9F);
@@ -556,11 +601,11 @@
             guna2GroupBox2.Location = new Point(34, 123);
             guna2GroupBox2.Name = "guna2GroupBox2";
             guna2GroupBox2.ShadowDecoration.BorderRadius = 20;
-            guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges52;
             guna2GroupBox2.ShadowDecoration.Depth = 3;
             guna2GroupBox2.ShadowDecoration.Enabled = true;
             guna2GroupBox2.ShadowDecoration.Shadow = new Padding(10);
-            guna2GroupBox2.Size = new Size(1544, 838);
+            guna2GroupBox2.Size = new Size(1544, 871);
             guna2GroupBox2.TabIndex = 13;
             // 
             // guna2GroupBox5
@@ -568,15 +613,15 @@
             guna2GroupBox5.BorderRadius = 15;
             guna2GroupBox5.Controls.Add(dgvDataBahanBaku);
             guna2GroupBox5.CustomBorderColor = Color.Empty;
-            guna2GroupBox5.CustomizableEdges = customizableEdges27;
+            guna2GroupBox5.CustomizableEdges = customizableEdges49;
             guna2Transition1.SetDecoration(guna2GroupBox5, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2GroupBox5.FillColor = SystemColors.ButtonFace;
             guna2GroupBox5.Font = new Font("Segoe UI", 9F);
             guna2GroupBox5.ForeColor = Color.FromArgb(125, 137, 149);
             guna2GroupBox5.Location = new Point(32, 112);
             guna2GroupBox5.Name = "guna2GroupBox5";
-            guna2GroupBox5.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            guna2GroupBox5.Size = new Size(1485, 691);
+            guna2GroupBox5.ShadowDecoration.CustomizableEdges = customizableEdges50;
+            guna2GroupBox5.Size = new Size(1485, 715);
             guna2GroupBox5.TabIndex = 13;
             // 
             // dgvDataBahanBaku
@@ -598,13 +643,13 @@
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Inter SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(45, 45, 45);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(125, 137, 149);
             dataGridViewCellStyle3.SelectionBackColor = Color.White;
             dataGridViewCellStyle3.SelectionForeColor = Color.Black;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvDataBahanBaku.DefaultCellStyle = dataGridViewCellStyle3;
             dgvDataBahanBaku.GridColor = SystemColors.ButtonFace;
-            dgvDataBahanBaku.Location = new Point(18, 0);
+            dgvDataBahanBaku.Location = new Point(18, 26);
             dgvDataBahanBaku.Name = "dgvDataBahanBaku";
             dgvDataBahanBaku.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -619,7 +664,7 @@
             dgvDataBahanBaku.RowTemplate.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvDataBahanBaku.RowTemplate.Height = 40;
             dgvDataBahanBaku.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dgvDataBahanBaku.Size = new Size(1467, 671);
+            dgvDataBahanBaku.Size = new Size(1449, 665);
             dgvDataBahanBaku.TabIndex = 11;
             dgvDataBahanBaku.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
             dgvDataBahanBaku.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(247, 248, 249);
@@ -639,7 +684,7 @@
             dgvDataBahanBaku.ThemeStyle.RowsStyle.BackColor = Color.White;
             dgvDataBahanBaku.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvDataBahanBaku.ThemeStyle.RowsStyle.Font = new Font("Inter SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dgvDataBahanBaku.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(45, 45, 45);
+            dgvDataBahanBaku.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(125, 137, 149);
             dgvDataBahanBaku.ThemeStyle.RowsStyle.Height = 40;
             dgvDataBahanBaku.ThemeStyle.RowsStyle.SelectionBackColor = Color.White;
             dgvDataBahanBaku.ThemeStyle.RowsStyle.SelectionForeColor = Color.Black;
@@ -702,7 +747,7 @@
             // 
             btTambahBahanBaku.BorderRadius = 10;
             btTambahBahanBaku.Cursor = Cursors.Hand;
-            btTambahBahanBaku.CustomizableEdges = customizableEdges31;
+            btTambahBahanBaku.CustomizableEdges = customizableEdges53;
             guna2Transition1.SetDecoration(btTambahBahanBaku, Guna.UI2.AnimatorNS.DecorationType.None);
             btTambahBahanBaku.DisabledState.BorderColor = Color.DarkGray;
             btTambahBahanBaku.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -717,7 +762,7 @@
             btTambahBahanBaku.ImageSize = new Size(30, 20);
             btTambahBahanBaku.Location = new Point(1318, 0);
             btTambahBahanBaku.Name = "btTambahBahanBaku";
-            btTambahBahanBaku.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            btTambahBahanBaku.ShadowDecoration.CustomizableEdges = customizableEdges54;
             btTambahBahanBaku.Size = new Size(226, 48);
             btTambahBahanBaku.TabIndex = 6;
             btTambahBahanBaku.Text = "Tambah Bahan Baku";
@@ -758,7 +803,7 @@
             gbBahanBakuPopUp.Controls.Add(btnSimpanPopUp);
             gbBahanBakuPopUp.CustomBorderColor = Color.White;
             gbBahanBakuPopUp.CustomBorderThickness = new Padding(0);
-            gbBahanBakuPopUp.CustomizableEdges = customizableEdges33;
+            gbBahanBakuPopUp.CustomizableEdges = customizableEdges55;
             guna2Transition1.SetDecoration(gbBahanBakuPopUp, Guna.UI2.AnimatorNS.DecorationType.None);
             gbBahanBakuPopUp.FillColor = Color.FromArgb(249, 247, 245);
             gbBahanBakuPopUp.Font = new Font("Segoe UI", 9F);
@@ -766,7 +811,7 @@
             gbBahanBakuPopUp.Location = new Point(604, 299);
             gbBahanBakuPopUp.Name = "gbBahanBakuPopUp";
             gbBahanBakuPopUp.ShadowDecoration.BorderRadius = 15;
-            gbBahanBakuPopUp.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            gbBahanBakuPopUp.ShadowDecoration.CustomizableEdges = customizableEdges56;
             gbBahanBakuPopUp.ShadowDecoration.Depth = 10;
             gbBahanBakuPopUp.ShadowDecoration.Shadow = new Padding(0, 10, 10, 10);
             gbBahanBakuPopUp.Size = new Size(540, 534);
@@ -780,14 +825,14 @@
             guna2GroupBox1.Controls.Add(label2);
             guna2GroupBox1.Controls.Add(label1);
             guna2GroupBox1.CustomBorderColor = Color.Transparent;
-            guna2GroupBox1.CustomizableEdges = customizableEdges35;
+            guna2GroupBox1.CustomizableEdges = customizableEdges57;
             guna2Transition1.SetDecoration(guna2GroupBox1, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2GroupBox1.FillColor = Color.Transparent;
             guna2GroupBox1.Font = new Font("Manrope", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2GroupBox1.ForeColor = Color.Transparent;
             guna2GroupBox1.Location = new Point(34, 15);
             guna2GroupBox1.Name = "guna2GroupBox1";
-            guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges58;
             guna2GroupBox1.Size = new Size(1544, 99);
             guna2GroupBox1.TabIndex = 12;
             // 
@@ -811,11 +856,391 @@
             animation1.TransparencyCoeff = 0F;
             guna2Transition1.DefaultAnimation = animation1;
             // 
+            // panel1
+            // 
+            guna2Transition1.SetDecoration(panel1, Guna.UI2.AnimatorNS.DecorationType.None);
+            panel1.Location = new Point(671, 1023);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(340, 64);
+            panel1.TabIndex = 21;
+            // 
+            // gbEditBahanBakuPopUp
+            // 
+            gbEditBahanBakuPopUp.BackColor = Color.White;
+            gbEditBahanBakuPopUp.BorderRadius = 15;
+            gbEditBahanBakuPopUp.Controls.Add(guna2GroupBox7);
+            gbEditBahanBakuPopUp.Controls.Add(btBatalEdit);
+            gbEditBahanBakuPopUp.Controls.Add(btSimpanEdit);
+            gbEditBahanBakuPopUp.CustomBorderColor = Color.White;
+            gbEditBahanBakuPopUp.CustomBorderThickness = new Padding(0);
+            gbEditBahanBakuPopUp.CustomizableEdges = customizableEdges47;
+            guna2Transition1.SetDecoration(gbEditBahanBakuPopUp, Guna.UI2.AnimatorNS.DecorationType.None);
+            gbEditBahanBakuPopUp.FillColor = Color.FromArgb(249, 247, 245);
+            gbEditBahanBakuPopUp.Font = new Font("Segoe UI", 9F);
+            gbEditBahanBakuPopUp.ForeColor = Color.FromArgb(125, 137, 149);
+            gbEditBahanBakuPopUp.Location = new Point(568, 179);
+            gbEditBahanBakuPopUp.Name = "gbEditBahanBakuPopUp";
+            gbEditBahanBakuPopUp.ShadowDecoration.BorderRadius = 15;
+            gbEditBahanBakuPopUp.ShadowDecoration.CustomizableEdges = customizableEdges48;
+            gbEditBahanBakuPopUp.ShadowDecoration.Depth = 10;
+            gbEditBahanBakuPopUp.ShadowDecoration.Shadow = new Padding(0, 10, 10, 10);
+            gbEditBahanBakuPopUp.Size = new Size(540, 534);
+            gbEditBahanBakuPopUp.TabIndex = 15;
+            gbEditBahanBakuPopUp.Visible = false;
+            // 
+            // guna2GroupBox7
+            // 
+            guna2GroupBox7.BackColor = Color.Transparent;
+            guna2GroupBox7.BorderRadius = 15;
+            guna2GroupBox7.BorderThickness = 0;
+            guna2GroupBox7.Controls.Add(cbEditVendor);
+            guna2GroupBox7.Controls.Add(label7);
+            guna2GroupBox7.Controls.Add(txtEditStokMinimum);
+            guna2GroupBox7.Controls.Add(label12);
+            guna2GroupBox7.Controls.Add(txtEditStokSaatini);
+            guna2GroupBox7.Controls.Add(label13);
+            guna2GroupBox7.Controls.Add(cbEditSatuan);
+            guna2GroupBox7.Controls.Add(txtEditHargaPerSatuan);
+            guna2GroupBox7.Controls.Add(label14);
+            guna2GroupBox7.Controls.Add(btCloseEditPopUp);
+            guna2GroupBox7.Controls.Add(label15);
+            guna2GroupBox7.Controls.Add(label16);
+            guna2GroupBox7.Controls.Add(txtEditNamaBahan);
+            guna2GroupBox7.Controls.Add(label17);
+            guna2GroupBox7.Controls.Add(label18);
+            guna2GroupBox7.CustomBorderColor = Color.Transparent;
+            guna2GroupBox7.CustomizableEdges = customizableEdges41;
+            guna2Transition1.SetDecoration(guna2GroupBox7, Guna.UI2.AnimatorNS.DecorationType.None);
+            guna2GroupBox7.FillColor = Color.Transparent;
+            guna2GroupBox7.Font = new Font("Segoe UI", 9F);
+            guna2GroupBox7.ForeColor = Color.FromArgb(125, 137, 149);
+            guna2GroupBox7.Location = new Point(17, 16);
+            guna2GroupBox7.Name = "guna2GroupBox7";
+            guna2GroupBox7.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            guna2GroupBox7.Size = new Size(504, 443);
+            guna2GroupBox7.TabIndex = 12;
+            // 
+            // cbEditVendor
+            // 
+            cbEditVendor.BackColor = Color.Transparent;
+            cbEditVendor.CustomizableEdges = customizableEdges27;
+            guna2Transition1.SetDecoration(cbEditVendor, Guna.UI2.AnimatorNS.DecorationType.None);
+            cbEditVendor.DrawMode = DrawMode.OwnerDrawFixed;
+            cbEditVendor.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbEditVendor.FocusedColor = Color.FromArgb(94, 148, 255);
+            cbEditVendor.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cbEditVendor.Font = new Font("Manrope", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbEditVendor.ForeColor = Color.FromArgb(45, 45, 45);
+            cbEditVendor.ItemHeight = 30;
+            cbEditVendor.Location = new Point(0, 386);
+            cbEditVendor.Name = "cbEditVendor";
+            cbEditVendor.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            cbEditVendor.Size = new Size(234, 36);
+            cbEditVendor.TabIndex = 28;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            guna2Transition1.SetDecoration(label7, Guna.UI2.AnimatorNS.DecorationType.None);
+            label7.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.Black;
+            label7.Location = new Point(0, 361);
+            label7.Name = "label7";
+            label7.Size = new Size(65, 22);
+            label7.TabIndex = 27;
+            label7.Text = "Vendor";
+            // 
+            // txtEditStokMinimum
+            // 
+            txtEditStokMinimum.BorderColor = Color.Gainsboro;
+            txtEditStokMinimum.BorderRadius = 5;
+            txtEditStokMinimum.Cursor = Cursors.IBeam;
+            txtEditStokMinimum.CustomizableEdges = customizableEdges29;
+            guna2Transition1.SetDecoration(txtEditStokMinimum, Guna.UI2.AnimatorNS.DecorationType.None);
+            txtEditStokMinimum.DefaultText = "";
+            txtEditStokMinimum.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtEditStokMinimum.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtEditStokMinimum.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtEditStokMinimum.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtEditStokMinimum.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtEditStokMinimum.Font = new Font("JetBrains Mono", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtEditStokMinimum.ForeColor = Color.FromArgb(45, 45, 45);
+            txtEditStokMinimum.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtEditStokMinimum.Location = new Point(270, 304);
+            txtEditStokMinimum.Margin = new Padding(6);
+            txtEditStokMinimum.Name = "txtEditStokMinimum";
+            txtEditStokMinimum.PlaceholderForeColor = Color.FromArgb(45, 45, 45);
+            txtEditStokMinimum.PlaceholderText = "10";
+            txtEditStokMinimum.SelectedText = "";
+            txtEditStokMinimum.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            txtEditStokMinimum.ShadowDecoration.Depth = 0;
+            txtEditStokMinimum.Size = new Size(234, 36);
+            txtEditStokMinimum.TabIndex = 26;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            guna2Transition1.SetDecoration(label12, Guna.UI2.AnimatorNS.DecorationType.None);
+            label12.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.ForeColor = Color.Black;
+            label12.Location = new Point(270, 279);
+            label12.Name = "label12";
+            label12.Size = new Size(120, 22);
+            label12.TabIndex = 25;
+            label12.Text = "Stok Minimum";
+            // 
+            // txtEditStokSaatini
+            // 
+            txtEditStokSaatini.BorderColor = Color.Gainsboro;
+            txtEditStokSaatini.BorderRadius = 5;
+            txtEditStokSaatini.Cursor = Cursors.IBeam;
+            txtEditStokSaatini.CustomizableEdges = customizableEdges31;
+            guna2Transition1.SetDecoration(txtEditStokSaatini, Guna.UI2.AnimatorNS.DecorationType.None);
+            txtEditStokSaatini.DefaultText = "";
+            txtEditStokSaatini.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtEditStokSaatini.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtEditStokSaatini.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtEditStokSaatini.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtEditStokSaatini.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtEditStokSaatini.Font = new Font("JetBrains Mono", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtEditStokSaatini.ForeColor = Color.FromArgb(45, 45, 45);
+            txtEditStokSaatini.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtEditStokSaatini.Location = new Point(0, 304);
+            txtEditStokSaatini.Margin = new Padding(6);
+            txtEditStokSaatini.Name = "txtEditStokSaatini";
+            txtEditStokSaatini.PlaceholderForeColor = Color.FromArgb(45, 45, 45);
+            txtEditStokSaatini.PlaceholderText = "100";
+            txtEditStokSaatini.SelectedText = "";
+            txtEditStokSaatini.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            txtEditStokSaatini.ShadowDecoration.Depth = 0;
+            txtEditStokSaatini.Size = new Size(234, 36);
+            txtEditStokSaatini.TabIndex = 24;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            guna2Transition1.SetDecoration(label13, Guna.UI2.AnimatorNS.DecorationType.None);
+            label13.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.ForeColor = Color.Black;
+            label13.Location = new Point(0, 279);
+            label13.Name = "label13";
+            label13.Size = new Size(107, 22);
+            label13.TabIndex = 23;
+            label13.Text = "Stok Saat Ini";
+            // 
+            // cbEditSatuan
+            // 
+            cbEditSatuan.BackColor = Color.Transparent;
+            cbEditSatuan.CustomizableEdges = customizableEdges33;
+            guna2Transition1.SetDecoration(cbEditSatuan, Guna.UI2.AnimatorNS.DecorationType.None);
+            cbEditSatuan.DrawMode = DrawMode.OwnerDrawFixed;
+            cbEditSatuan.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbEditSatuan.FocusedColor = Color.FromArgb(94, 148, 255);
+            cbEditSatuan.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cbEditSatuan.Font = new Font("Manrope SemiBold", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cbEditSatuan.ForeColor = Color.FromArgb(45, 45, 45);
+            cbEditSatuan.ItemHeight = 30;
+            cbEditSatuan.Items.AddRange(new object[] { "Kilogram (kg)", "Gram (g)", "Liter (L)", "Mililiter (mL)", "Pieces (pcs)", "Pack", "Box" });
+            cbEditSatuan.Location = new Point(0, 221);
+            cbEditSatuan.Name = "cbEditSatuan";
+            cbEditSatuan.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            cbEditSatuan.Size = new Size(234, 36);
+            cbEditSatuan.StartIndex = 0;
+            cbEditSatuan.TabIndex = 22;
+            // 
+            // txtEditHargaPerSatuan
+            // 
+            txtEditHargaPerSatuan.BorderColor = Color.Gainsboro;
+            txtEditHargaPerSatuan.BorderRadius = 5;
+            txtEditHargaPerSatuan.Cursor = Cursors.IBeam;
+            txtEditHargaPerSatuan.CustomizableEdges = customizableEdges35;
+            guna2Transition1.SetDecoration(txtEditHargaPerSatuan, Guna.UI2.AnimatorNS.DecorationType.None);
+            txtEditHargaPerSatuan.DefaultText = "";
+            txtEditHargaPerSatuan.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtEditHargaPerSatuan.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtEditHargaPerSatuan.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtEditHargaPerSatuan.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtEditHargaPerSatuan.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtEditHargaPerSatuan.Font = new Font("JetBrains Mono", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtEditHargaPerSatuan.ForeColor = Color.FromArgb(45, 45, 45);
+            txtEditHargaPerSatuan.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtEditHargaPerSatuan.Location = new Point(270, 221);
+            txtEditHargaPerSatuan.Margin = new Padding(6);
+            txtEditHargaPerSatuan.Name = "txtEditHargaPerSatuan";
+            txtEditHargaPerSatuan.PlaceholderForeColor = Color.FromArgb(45, 45, 45);
+            txtEditHargaPerSatuan.PlaceholderText = "10.000";
+            txtEditHargaPerSatuan.SelectedText = "";
+            txtEditHargaPerSatuan.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            txtEditHargaPerSatuan.ShadowDecoration.Depth = 0;
+            txtEditHargaPerSatuan.Size = new Size(234, 36);
+            txtEditHargaPerSatuan.TabIndex = 21;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            guna2Transition1.SetDecoration(label14, Guna.UI2.AnimatorNS.DecorationType.None);
+            label14.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label14.ForeColor = Color.Black;
+            label14.Location = new Point(270, 196);
+            label14.Name = "label14";
+            label14.Size = new Size(144, 22);
+            label14.TabIndex = 20;
+            label14.Text = "Harga per Satuan";
+            // 
+            // btCloseEditPopUp
+            // 
+            btCloseEditPopUp.BorderRadius = 10;
+            btCloseEditPopUp.Cursor = Cursors.Hand;
+            btCloseEditPopUp.CustomizableEdges = customizableEdges37;
+            guna2Transition1.SetDecoration(btCloseEditPopUp, Guna.UI2.AnimatorNS.DecorationType.None);
+            btCloseEditPopUp.DisabledState.BorderColor = Color.DarkGray;
+            btCloseEditPopUp.DisabledState.CustomBorderColor = Color.DarkGray;
+            btCloseEditPopUp.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btCloseEditPopUp.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btCloseEditPopUp.FillColor = Color.FromArgb(249, 247, 245);
+            btCloseEditPopUp.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btCloseEditPopUp.ForeColor = Color.FromArgb(45, 45, 45);
+            btCloseEditPopUp.Image = Properties.Resources.exit_icon_hitam;
+            btCloseEditPopUp.ImageSize = new Size(30, 20);
+            btCloseEditPopUp.Location = new Point(458, 3);
+            btCloseEditPopUp.Name = "btCloseEditPopUp";
+            btCloseEditPopUp.ShadowDecoration.BorderRadius = 10;
+            btCloseEditPopUp.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            btCloseEditPopUp.ShadowDecoration.Depth = 4;
+            btCloseEditPopUp.Size = new Size(46, 41);
+            btCloseEditPopUp.TabIndex = 15;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            guna2Transition1.SetDecoration(label15, Guna.UI2.AnimatorNS.DecorationType.None);
+            label15.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label15.ForeColor = Color.Black;
+            label15.Location = new Point(0, 196);
+            label15.Name = "label15";
+            label15.Size = new Size(66, 22);
+            label15.TabIndex = 16;
+            label15.Text = "Satuan";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            guna2Transition1.SetDecoration(label16, Guna.UI2.AnimatorNS.DecorationType.None);
+            label16.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label16.ForeColor = Color.Black;
+            label16.Location = new Point(0, 112);
+            label16.Name = "label16";
+            label16.Size = new Size(104, 22);
+            label16.TabIndex = 14;
+            label16.Text = "Nama Bahan";
+            // 
+            // txtEditNamaBahan
+            // 
+            txtEditNamaBahan.BorderColor = Color.Gainsboro;
+            txtEditNamaBahan.BorderRadius = 5;
+            txtEditNamaBahan.Cursor = Cursors.IBeam;
+            txtEditNamaBahan.CustomizableEdges = customizableEdges39;
+            guna2Transition1.SetDecoration(txtEditNamaBahan, Guna.UI2.AnimatorNS.DecorationType.None);
+            txtEditNamaBahan.DefaultText = "";
+            txtEditNamaBahan.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtEditNamaBahan.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtEditNamaBahan.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtEditNamaBahan.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtEditNamaBahan.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtEditNamaBahan.Font = new Font("Manrope", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtEditNamaBahan.ForeColor = Color.FromArgb(45, 45, 45);
+            txtEditNamaBahan.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtEditNamaBahan.Location = new Point(0, 137);
+            txtEditNamaBahan.Margin = new Padding(4);
+            txtEditNamaBahan.Name = "txtEditNamaBahan";
+            txtEditNamaBahan.PlaceholderForeColor = Color.FromArgb(45, 45, 45);
+            txtEditNamaBahan.PlaceholderText = "Keju Cheddar";
+            txtEditNamaBahan.SelectedText = "";
+            txtEditNamaBahan.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            txtEditNamaBahan.ShadowDecoration.Depth = 0;
+            txtEditNamaBahan.Size = new Size(504, 46);
+            txtEditNamaBahan.TabIndex = 13;
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            guna2Transition1.SetDecoration(label17, Guna.UI2.AnimatorNS.DecorationType.None);
+            label17.Font = new Font("Inter", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label17.ForeColor = Color.FromArgb(45, 45, 45);
+            label17.Location = new Point(0, 50);
+            label17.Name = "label17";
+            label17.Size = new Size(326, 22);
+            label17.TabIndex = 13;
+            label17.Text = "Masukkan informasi bahan baku di bawah ini";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            guna2Transition1.SetDecoration(label18, Guna.UI2.AnimatorNS.DecorationType.None);
+            label18.Font = new Font("Manrope", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label18.ForeColor = Color.Black;
+            label18.Location = new Point(0, 18);
+            label18.Name = "label18";
+            label18.Size = new Size(159, 26);
+            label18.TabIndex = 1;
+            label18.Text = "Edit Bahan Baku";
+            // 
+            // btBatalEdit
+            // 
+            btBatalEdit.BackColor = Color.Transparent;
+            btBatalEdit.BorderRadius = 10;
+            btBatalEdit.Cursor = Cursors.Hand;
+            btBatalEdit.CustomizableEdges = customizableEdges43;
+            guna2Transition1.SetDecoration(btBatalEdit, Guna.UI2.AnimatorNS.DecorationType.None);
+            btBatalEdit.DisabledState.BorderColor = Color.DarkGray;
+            btBatalEdit.DisabledState.CustomBorderColor = Color.DarkGray;
+            btBatalEdit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btBatalEdit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btBatalEdit.FillColor = Color.White;
+            btBatalEdit.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btBatalEdit.ForeColor = Color.FromArgb(45, 45, 45);
+            btBatalEdit.ImageSize = new Size(30, 20);
+            btBatalEdit.Location = new Point(320, 465);
+            btBatalEdit.Name = "btBatalEdit";
+            btBatalEdit.ShadowDecoration.BorderRadius = 10;
+            btBatalEdit.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            btBatalEdit.ShadowDecoration.Depth = 4;
+            btBatalEdit.ShadowDecoration.Enabled = true;
+            btBatalEdit.Size = new Size(87, 41);
+            btBatalEdit.TabIndex = 14;
+            btBatalEdit.Text = "Batal";
+            // 
+            // btSimpanEdit
+            // 
+            btSimpanEdit.BackColor = Color.Transparent;
+            btSimpanEdit.BorderRadius = 10;
+            btSimpanEdit.Cursor = Cursors.Hand;
+            btSimpanEdit.CustomizableEdges = customizableEdges45;
+            guna2Transition1.SetDecoration(btSimpanEdit, Guna.UI2.AnimatorNS.DecorationType.None);
+            btSimpanEdit.DisabledState.BorderColor = Color.DarkGray;
+            btSimpanEdit.DisabledState.CustomBorderColor = Color.DarkGray;
+            btSimpanEdit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btSimpanEdit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btSimpanEdit.FillColor = Color.FromArgb(45, 45, 45);
+            btSimpanEdit.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btSimpanEdit.ForeColor = Color.White;
+            btSimpanEdit.ImageSize = new Size(30, 20);
+            btSimpanEdit.Location = new Point(413, 465);
+            btSimpanEdit.Name = "btSimpanEdit";
+            btSimpanEdit.ShadowDecoration.BorderRadius = 10;
+            btSimpanEdit.ShadowDecoration.CustomizableEdges = customizableEdges46;
+            btSimpanEdit.ShadowDecoration.Depth = 4;
+            btSimpanEdit.ShadowDecoration.Enabled = true;
+            btSimpanEdit.Size = new Size(108, 41);
+            btSimpanEdit.TabIndex = 13;
+            btSimpanEdit.Text = "Simpan";
+            // 
             // UC_BahanBaku
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(212, 122, 71);
+            Controls.Add(panel1);
             Controls.Add(gbBahanBakuPopUp);
             Controls.Add(guna2GroupBox2);
             Controls.Add(guna2GroupBox1);
@@ -832,6 +1257,9 @@
             gbBahanBakuPopUp.ResumeLayout(false);
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
+            gbEditBahanBakuPopUp.ResumeLayout(false);
+            guna2GroupBox7.ResumeLayout(false);
+            guna2GroupBox7.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -874,5 +1302,25 @@
         private DataGridViewTextBoxColumn colStatus;
         private DataGridViewImageColumn Edit;
         private DataGridViewImageColumn Hapus;
+        private Panel panel1;
+        private Guna.UI2.WinForms.Guna2GroupBox gbEditBahanBakuPopUp;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox7;
+        private Guna.UI2.WinForms.Guna2ComboBox cbEditVendor;
+        private Label label7;
+        private Guna.UI2.WinForms.Guna2TextBox txtEditStokMinimum;
+        private Label label12;
+        private Guna.UI2.WinForms.Guna2TextBox txtEditStokSaatini;
+        private Label label13;
+        private Guna.UI2.WinForms.Guna2ComboBox cbEditSatuan;
+        private Guna.UI2.WinForms.Guna2TextBox txtEditHargaPerSatuan;
+        private Label label14;
+        private Guna.UI2.WinForms.Guna2Button btCloseEditPopUp;
+        private Label label15;
+        private Label label16;
+        private Guna.UI2.WinForms.Guna2TextBox txtEditNamaBahan;
+        private Label label17;
+        private Label label18;
+        private Guna.UI2.WinForms.Guna2Button btBatalEdit;
+        private Guna.UI2.WinForms.Guna2Button btSimpanEdit;
     }
 }
