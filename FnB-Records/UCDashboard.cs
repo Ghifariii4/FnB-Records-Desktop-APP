@@ -144,7 +144,7 @@ namespace FnB_Records
             {
                 lblStatusRole.Text = "Free";
                 lblStatusRole.ForeColor = Color.White;
-                gbStatusRole.FillColor = Color.FromArgb(34, 139, 34); // Hijau Tua Elegan ✅
+                gbStatusRole.FillColor = Color.FromArgb(34, 139, 34);
             }
 
             if (!isVerified)

@@ -10,6 +10,7 @@ namespace FnB_Records
     public partial class UC_Penjualan : UserControl
     {
         private int currentUserId => Login.GlobalSession.CurrentUserId;
+        private int? editingSalesId = null; // Penanda Edit
 
         public UC_Penjualan()
         {
@@ -17,12 +18,11 @@ namespace FnB_Records
             gbInputPenjualanPopUp.BackColor = Color.White;
         }
 
-        // --- 1. SETUP EVENT & LOAD ---
+        // --- 1. SETUP & EVENTS ---
         private void UC_Penjualan_Load(object sender, EventArgs e)
         {
             if (currentUserId == 0) Login.GlobalSession.CurrentUserId = 1;
 
-            // Setting Default Tanggal
             dtpFilterTanggal.Value = DateTime.Now;
             dtpTanggalPenjualan.Value = DateTime.Now;
             dtpTanggalPenjualan.MinDate = DateTime.Today;
@@ -49,9 +49,12 @@ namespace FnB_Records
             btnClosePopUpBahanBaku.Click += btnClosePopUpBahanBaku_Click;
             btnBatalPopUp.Click += btnBatalPopUp_Click;
             btnSimpanPopUp.Click += btnSimpanPopUp_Click;
+
+            // Event Klik Grid (Edit/Hapus)
+            dgvDataBahanBaku.CellContentClick += dgvDataBahanBaku_CellContentClick;
         }
 
-        // --- 2. LOAD DATA (FIX SUBTOTAL) ---
+        // --- 2. LOAD DATA ---
         private void LoadDataPenjualan()
         {
             try
@@ -67,11 +70,10 @@ namespace FnB_Records
                             r.name AS nama_menu, 
                             s.qty AS jumlah_qty, 
                             s.selling_price AS harga_jual, 
-                            (s.qty * s.selling_price) AS subtotal, -- Pastikan ini sesuai
-                            s.tax AS ppn,
-                            s.total_price AS total_harga,
-                            s.profit,
-                            s.total_hpp AS hpp
+                            s.total_price AS total_harga, 
+                            s.profit AS profit, 
+                            s.total_hpp AS hpp, 
+                            s.tax AS ppn
                         FROM sales s
                         JOIN recipes r ON s.recipe_id = r.id
                         WHERE s.user_id = @uid 
@@ -90,6 +92,7 @@ namespace FnB_Records
 
                         dgvDataBahanBaku.AutoGenerateColumns = false;
                         dgvDataBahanBaku.DataSource = dt;
+
                         FormatKolom();
                         HitungRingkasan(dt);
                     }
@@ -98,7 +101,7 @@ namespace FnB_Records
             catch (Exception ex) { MessageBox.Show("Gagal Load Data: " + ex.Message); }
         }
 
-        // --- 3. LOGIKA SIMPAN & KURANGI STOK ---
+        // --- 3. SIMPAN PENJUALAN (INSERT / UPDATE) ---
         private void btnSimpanPopUp_Click(object sender, EventArgs e)
         {
             if (cbMenu.SelectedValue == null || string.IsNullOrWhiteSpace(inputJumlahTerjual.Text))
@@ -127,12 +130,19 @@ namespace FnB_Records
                 {
                     if (conn.State != ConnectionState.Open) conn.Open();
 
-                    // GUNAKAN TRANSAKSI: Agar Simpan Penjualan & Kurangi Stok atomic (sukses semua atau gagal semua)
                     using (var trans = conn.BeginTransaction())
                     {
                         try
                         {
-                            // A. Simpan Data Penjualan
+                            // A. Jika EDIT: Kembalikan Stok Lama Dulu
+                            if (editingSalesId != null)
+                            {
+                                RestoreStock(editingSalesId.Value, conn, trans);
+                                // Hapus data lama agar diganti baru (simpel update)
+                                new NpgsqlCommand($"DELETE FROM sales WHERE id={editingSalesId}", conn, trans).ExecuteNonQuery();
+                            }
+
+                            // B. Simpan Data Baru
                             string sqlSales = @"INSERT INTO sales 
                                 (user_id, recipe_id, qty, selling_price, discount, other_fees, tax, revenue, profit, total_price, total_hpp, sale_date, created_at)
                                 VALUES 
@@ -155,40 +165,12 @@ namespace FnB_Records
                                 cmd.ExecuteNonQuery();
                             }
 
-                            // B. Kurangi Stok Bahan Baku (LOGIKA BARU)
-                            // Ambil bahan-bahan dari resep ini
-                            string sqlBahan = "SELECT ingredient_id, amount FROM recipe_ingredients WHERE recipe_id = @rid";
-                            using (var cmdGetBahan = new NpgsqlCommand(sqlBahan, conn, trans))
-                            {
-                                cmdGetBahan.Parameters.AddWithValue("@rid", recipeId);
-                                using (var reader = cmdGetBahan.ExecuteReader())
-                                {
-                                    // Tampung dulu data bahan agar reader bisa ditutup sebelum update
-                                    var bahanList = new System.Collections.Generic.List<(int id, double amount)>();
-                                    while (reader.Read())
-                                    {
-                                        bahanList.Add((reader.GetInt32(0), reader.GetDouble(1)));
-                                    }
-                                    reader.Close(); // Tutup reader
+                            // C. Kurangi Stok Baru
+                            ReduceStock(recipeId, qty, conn, trans);
 
-                                    // Lakukan Update Stok
-                                    foreach (var bahan in bahanList)
-                                    {
-                                        double jumlahTerpakai = bahan.amount * qty; // Takaran x Jumlah Porsi Terjual
+                            trans.Commit();
+                            MessageBox.Show(editingSalesId == null ? "Penjualan disimpan!" : "Penjualan diperbarui!", "Sukses");
 
-                                        string sqlUpdateStok = "UPDATE ingredients SET stock = stock - @jml WHERE id = @iid";
-                                        using (var cmdUpdate = new NpgsqlCommand(sqlUpdateStok, conn, trans))
-                                        {
-                                            cmdUpdate.Parameters.AddWithValue("@jml", jumlahTerpakai);
-                                            cmdUpdate.Parameters.AddWithValue("@iid", bahan.id);
-                                            cmdUpdate.ExecuteNonQuery();
-                                        }
-                                    }
-                                }
-                            }
-
-                            trans.Commit(); // Simpan Permanen
-                            MessageBox.Show("Penjualan disimpan & Stok berkurang!", "Sukses");
                             gbInputPenjualanPopUp.Visible = false;
                             BersihkanInput();
                             LoadDataPenjualan();
@@ -196,16 +178,172 @@ namespace FnB_Records
                         }
                         catch (Exception ex)
                         {
-                            trans.Rollback(); // Batalkan semua jika error
+                            trans.Rollback();
                             throw ex;
                         }
                     }
                 }
             }
-            catch (Exception ex) { MessageBox.Show("Gagal menyimpan: " + ex.Message, "Error"); }
+            catch (Exception ex) { MessageBox.Show("Gagal menyimpan: " + ex.Message); }
         }
 
-        // --- 4. HITUNG RINGKASAN ---
+        // --- 4. KLIK GRID (EDIT & HAPUS) ---
+        // --- PERBAIKAN: KLIK GRID (AMBIL ID DARI SUMBER DATA LANGSUNG) ---
+        private void dgvDataBahanBaku_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // 1. Cek validasi baris (bukan header)
+            if (e.RowIndex < 0) return;
+
+            // 2. Ambil baris data ASLI di balik layar (Bukan Visual Cell)
+            // DataBoundItem adalah representasi baris dari DataTable
+            if (dgvDataBahanBaku.Rows[e.RowIndex].DataBoundItem is DataRowView row)
+            {
+                // 3. Ambil ID langsung dari data mentah (Aman meskipun kolom id di-hide)
+                int salesId = Convert.ToInt32(row["id"]);
+
+                // Ambil nama kolom tombol yang diklik
+                string colName = dgvDataBahanBaku.Columns[e.ColumnIndex].Name;
+
+                // --- LOGIKA HAPUS ---
+                if (colName == "Hapus")
+                {
+                    if (MessageBox.Show("Hapus transaksi ini? Stok akan dikembalikan.", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+                        HapusTransaksi(salesId);
+                    }
+                }
+                // --- LOGIKA EDIT ---
+                else if (colName == "Edit")
+                {
+                    LoadDataForEdit(salesId);
+                }
+            }
+        }
+
+        private void HapusTransaksi(int id)
+        {
+            try
+            {
+                Koneksi db = new Koneksi();
+                using (NpgsqlConnection conn = db.GetKoneksi())
+                {
+                    if (conn.State != ConnectionState.Open) conn.Open();
+                    using (var trans = conn.BeginTransaction())
+                    {
+                        try
+                        {
+                            RestoreStock(id, conn, trans); // Kembalikan stok
+                            new NpgsqlCommand($"DELETE FROM sales WHERE id={id}", conn, trans).ExecuteNonQuery();
+
+                            trans.Commit();
+                            MessageBox.Show("Transaksi dihapus.");
+                            LoadDataPenjualan();
+                            HitungTotalSemuaTransaksi();
+                        }
+                        catch { trans.Rollback(); throw; }
+                    }
+                }
+            }
+            catch (Exception ex) { MessageBox.Show("Gagal hapus: " + ex.Message); }
+        }
+
+        private void LoadDataForEdit(int id)
+        {
+            try
+            {
+                Koneksi db = new Koneksi();
+                using (NpgsqlConnection conn = db.GetKoneksi())
+                {
+                    if (conn.State != ConnectionState.Open) conn.Open();
+                    string sql = "SELECT * FROM sales WHERE id = @id";
+                    using (var cmd = new NpgsqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", id);
+                        using (var r = cmd.ExecuteReader())
+                        {
+                            if (r.Read())
+                            {
+                                editingSalesId = id;
+                                cbMenu.SelectedValue = r["recipe_id"];
+                                inputJumlahTerjual.Text = r["qty"].ToString();
+                                inputHargaJual.Text = Convert.ToDouble(r["selling_price"]).ToString("N0");
+                                inputDiskon.Text = Convert.ToDouble(r["discount"]).ToString("N0");
+                                inputBiayaLain.Text = Convert.ToDouble(r["other_fees"]).ToString("N0");
+                                dtpTanggalPenjualan.Value = Convert.ToDateTime(r["sale_date"]);
+
+                                label16.Text = "Edit Penjualan"; // Ubah Judul Popup
+                                btnSimpanPopUp.Text = "Update";
+                                gbInputPenjualanPopUp.Visible = true;
+                                gbInputPenjualanPopUp.BringToFront();
+                                HitungEstimasiLive();
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex) { MessageBox.Show("Gagal load edit: " + ex.Message); }
+        }
+
+        // --- 5. LOGIKA STOK (KURANGI & KEMBALIKAN) ---
+
+        // Fungsi mengurangi stok saat jual
+        private void ReduceStock(int recipeId, int qty, NpgsqlConnection conn, NpgsqlTransaction trans)
+        {
+            string sql = "SELECT ingredient_id, amount FROM recipe_ingredients WHERE recipe_id=@rid";
+            using (var cmd = new NpgsqlCommand(sql, conn, trans))
+            {
+                cmd.Parameters.AddWithValue("@rid", recipeId);
+                using (var r = cmd.ExecuteReader())
+                {
+                    var list = new System.Collections.Generic.List<(int, double)>();
+                    while (r.Read()) list.Add((r.GetInt32(0), r.GetDouble(1)));
+                    r.Close();
+
+                    foreach (var item in list)
+                    {
+                        double used = item.Item2 * qty;
+                        new NpgsqlCommand($"UPDATE ingredients SET stock = stock - {used} WHERE id={item.Item1}", conn, trans).ExecuteNonQuery();
+                    }
+                }
+            }
+        }
+
+        // Fungsi mengembalikan stok saat hapus/edit
+        private void RestoreStock(int salesId, NpgsqlConnection conn, NpgsqlTransaction trans)
+        {
+            // Ambil data resep & qty dari penjualan lama
+            int rid = 0, qty = 0;
+            using (var cmd = new NpgsqlCommand($"SELECT recipe_id, qty FROM sales WHERE id={salesId}", conn, trans))
+            using (var r = cmd.ExecuteReader())
+            {
+                if (r.Read()) { rid = r.GetInt32(0); qty = r.GetInt32(1); }
+            }
+
+            if (rid > 0 && qty > 0)
+            {
+                // Ambil bahan dari resep tersebut
+                string sql = "SELECT ingredient_id, amount FROM recipe_ingredients WHERE recipe_id=@rid";
+                using (var cmd = new NpgsqlCommand(sql, conn, trans))
+                {
+                    cmd.Parameters.AddWithValue("@rid", rid);
+                    using (var r = cmd.ExecuteReader())
+                    {
+                        var list = new System.Collections.Generic.List<(int, double)>();
+                        while (r.Read()) list.Add((r.GetInt32(0), r.GetDouble(1)));
+                        r.Close();
+
+                        // Kembalikan stok (stock + used)
+                        foreach (var item in list)
+                        {
+                            double used = item.Item2 * qty;
+                            new NpgsqlCommand($"UPDATE ingredients SET stock = stock + {used} WHERE id={item.Item1}", conn, trans).ExecuteNonQuery();
+                        }
+                    }
+                }
+            }
+        }
+
+        // --- UTILS ---
         private void HitungRingkasan(DataTable dt)
         {
             double totalPendapatan = 0, totalHPP = 0, totalLaba = 0;
@@ -216,12 +354,31 @@ namespace FnB_Records
                 totalLaba += row["profit"] != DBNull.Value ? Convert.ToDouble(row["profit"]) : 0;
             }
             double margin = (totalPendapatan > 0) ? (totalLaba / totalPendapatan) * 100 : 0;
-
             System.Globalization.CultureInfo id = System.Globalization.CultureInfo.GetCultureInfo("id-ID");
+
             if (lblPendapatan != null) lblPendapatan.Text = totalPendapatan.ToString("C0", id);
             if (lblTotal_Hpp != null) lblTotal_Hpp.Text = totalHPP.ToString("C0", id);
             if (lblLaba != null) lblLaba.Text = totalLaba.ToString("C0", id);
             if (lbl_Margin != null) lbl_Margin.Text = margin.ToString("0.0") + "%";
+        }
+
+        private void HitungTotalSemuaTransaksi()
+        {
+            try
+            {
+                Koneksi db = new Koneksi();
+                using (NpgsqlConnection conn = db.GetKoneksi())
+                {
+                    if (conn.State != ConnectionState.Open) conn.Open();
+                    using (NpgsqlCommand cmd = new NpgsqlCommand("SELECT COUNT(*) FROM sales WHERE user_id = @uid", conn))
+                    {
+                        cmd.Parameters.AddWithValue("@uid", currentUserId);
+                        long jumlah = Convert.ToInt64(cmd.ExecuteScalar());
+                        if (lblTotalTransaksi != null) lblTotalTransaksi.Text = jumlah.ToString() + " Transaksi";
+                    }
+                }
+            }
+            catch { }
         }
 
         private void HitungEstimasiLive()
@@ -256,13 +413,6 @@ namespace FnB_Records
                 guna2GroupBox9.Visible = true;
             }
             catch { }
-        }
-
-        // --- HELPER LAINNYA ---
-        private double ParseCurrency(string text)
-        {
-            if (string.IsNullOrWhiteSpace(text)) return 0;
-            return double.TryParse(text.Replace(".", "").Replace(",", ""), out double result) ? result : 0;
         }
 
         private double HitungHPP(int recipeId)
@@ -336,6 +486,12 @@ namespace FnB_Records
             catch { }
         }
 
+        private double ParseCurrency(string text)
+        {
+            if (string.IsNullOrWhiteSpace(text)) return 0;
+            return double.TryParse(text.Replace(".", "").Replace(",", ""), out double result) ? result : 0;
+        }
+
         private void FormatKolom()
         {
             System.Globalization.CultureInfo id = System.Globalization.CultureInfo.GetCultureInfo("id-ID");
@@ -347,40 +503,6 @@ namespace FnB_Records
                     dgvDataBahanBaku.Columns[colName].DefaultCellStyle.Format = "C0";
                     dgvDataBahanBaku.Columns[colName].DefaultCellStyle.FormatProvider = id;
                 }
-            }
-        }
-
-        // --- FUNGSI KHUSUS: HITUNG TOTAL SEMUA TRANSAKSI (DARI DATABASE) ---
-        private void HitungTotalSemuaTransaksi()
-        {
-            try
-            {
-                Koneksi db = new Koneksi();
-                using (NpgsqlConnection conn = db.GetKoneksi())
-                {
-                    if (conn.State != ConnectionState.Open) conn.Open();
-
-                    // Query menghitung jumlah SEMUA data penjualan user ini (Tanpa filter tanggal)
-                    string sql = "SELECT COUNT(*) FROM sales WHERE user_id = @uid";
-
-                    using (NpgsqlCommand cmd = new NpgsqlCommand(sql, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@uid", currentUserId);
-
-                        // ExecuteScalar: Mengambil satu nilai angka hasil COUNT
-                        long jumlah = Convert.ToInt64(cmd.ExecuteScalar());
-
-                        // Tampilkan ke Label
-                        if (lblTotalTransaksi != null)
-                        {
-                            lblTotalTransaksi.Text = jumlah.ToString() + " Transaksi";
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Gagal hitung total transaksi: " + ex.Message);
             }
         }
 
@@ -398,6 +520,10 @@ namespace FnB_Records
 
         private void BersihkanInput()
         {
+            editingSalesId = null;
+            label16.Text = "Input Penjualan Baru";
+            btnSimpanPopUp.Text = "Simpan";
+
             cbMenu.SelectedIndex = -1;
             inputHargaJual.Clear(); inputJumlahTerjual.Clear(); inputDiskon.Clear(); inputBiayaLain.Clear();
             dtpTanggalPenjualan.Value = DateTime.Now;
