@@ -114,13 +114,11 @@
             guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
             label14 = new Label();
             lblPendapatan = new Label();
-            label8 = new Label();
             guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             label7 = new Label();
             guna2GroupBox5 = new Guna.UI2.WinForms.Guna2GroupBox();
             label19 = new Label();
             lblLaba = new Label();
-            label11 = new Label();
             guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             label12 = new Label();
             guna2GroupBox6 = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -169,9 +167,9 @@
             label22 = new Label();
             panel1 = new Panel();
             guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
-            label4 = new Label();
-            label10 = new Label();
             chartGrafikPenjualanBulanan = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            label10 = new Label();
+            label4 = new Label();
             guna2GroupBox1.SuspendLayout();
             gbStatusRole.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbPremium).BeginInit();
@@ -401,7 +399,6 @@
             guna2GroupBox4.BorderRadius = 15;
             guna2GroupBox4.Controls.Add(label14);
             guna2GroupBox4.Controls.Add(lblPendapatan);
-            guna2GroupBox4.Controls.Add(label8);
             guna2GroupBox4.Controls.Add(guna2PictureBox4);
             guna2GroupBox4.Controls.Add(label7);
             guna2GroupBox4.CustomBorderColor = Color.Empty;
@@ -435,22 +432,11 @@
             lblPendapatan.AutoSize = true;
             lblPendapatan.Font = new Font("JetBrains Mono", 27.7499962F, FontStyle.Bold);
             lblPendapatan.ForeColor = Color.White;
-            lblPendapatan.Location = new Point(71, 77);
+            lblPendapatan.Location = new Point(21, 81);
             lblPendapatan.Name = "lblPendapatan";
-            lblPendapatan.Size = new Size(44, 49);
+            lblPendapatan.Size = new Size(110, 49);
             lblPendapatan.TabIndex = 15;
-            lblPendapatan.Text = "0";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.ForeColor = Color.White;
-            label8.Location = new Point(13, 77);
-            label8.Name = "label8";
-            label8.Size = new Size(68, 42);
-            label8.TabIndex = 16;
-            label8.Text = "Rp";
+            lblPendapatan.Text = "Rp 0";
             // 
             // guna2PictureBox4
             // 
@@ -484,7 +470,6 @@
             guna2GroupBox5.BorderRadius = 15;
             guna2GroupBox5.Controls.Add(label19);
             guna2GroupBox5.Controls.Add(lblLaba);
-            guna2GroupBox5.Controls.Add(label11);
             guna2GroupBox5.Controls.Add(guna2PictureBox5);
             guna2GroupBox5.Controls.Add(label12);
             guna2GroupBox5.CustomBorderColor = Color.Empty;
@@ -517,22 +502,11 @@
             lblLaba.AutoSize = true;
             lblLaba.Font = new Font("JetBrains Mono", 27.7499962F, FontStyle.Bold);
             lblLaba.ForeColor = Color.White;
-            lblLaba.Location = new Point(71, 77);
+            lblLaba.Location = new Point(21, 81);
             lblLaba.Name = "lblLaba";
-            lblLaba.Size = new Size(44, 49);
+            lblLaba.Size = new Size(110, 49);
             lblLaba.TabIndex = 15;
-            lblLaba.Text = "0";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.ForeColor = Color.White;
-            label11.Location = new Point(13, 77);
-            label11.Name = "label11";
-            label11.Size = new Size(68, 42);
-            label11.TabIndex = 16;
-            label11.Text = "Rp";
+            lblLaba.Text = "Rp 0";
             // 
             // guna2PictureBox5
             // 
@@ -859,7 +833,7 @@
             chartDashboard.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             chartDashboard.Legends.Add(legend1);
-            chartDashboard.Location = new Point(28, 127);
+            chartDashboard.Location = new Point(31, 127);
             chartDashboard.Name = "chartDashboard";
             chartDashboard.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
             series1.ChartArea = "ChartArea1";
@@ -869,7 +843,6 @@
             chartDashboard.Series.Add(series1);
             chartDashboard.Size = new Size(681, 321);
             chartDashboard.TabIndex = 15;
-            chartDashboard.Text = "chart1";
             chartDashboard.Click += chartDashboard_Click;
             // 
             // label16
@@ -1208,7 +1181,7 @@
             // 
             // panel1
             // 
-            panel1.Location = new Point(239, 2324);
+            panel1.Location = new Point(643, 2229);
             panel1.Name = "panel1";
             panel1.Size = new Size(340, 64);
             panel1.TabIndex = 20;
@@ -1235,16 +1208,22 @@
             guna2GroupBox2.Size = new Size(1548, 497);
             guna2GroupBox2.TabIndex = 21;
             // 
-            // label4
+            // chartGrafikPenjualanBulanan
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(21, 29);
-            label4.Name = "label4";
-            label4.Size = new Size(244, 24);
-            label4.TabIndex = 12;
-            label4.Text = "Grafik Penjualan Bulanan";
+            chartArea2.Name = "ChartArea1";
+            chartGrafikPenjualanBulanan.ChartAreas.Add(chartArea2);
+            chartGrafikPenjualanBulanan.Cursor = Cursors.Cross;
+            legend2.Name = "Legend1";
+            chartGrafikPenjualanBulanan.Legends.Add(legend2);
+            chartGrafikPenjualanBulanan.Location = new Point(24, 109);
+            chartGrafikPenjualanBulanan.Name = "chartGrafikPenjualanBulanan";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            chartGrafikPenjualanBulanan.Series.Add(series2);
+            chartGrafikPenjualanBulanan.Size = new Size(1502, 348);
+            chartGrafikPenjualanBulanan.TabIndex = 19;
+            chartGrafikPenjualanBulanan.Text = "chart1";
             // 
             // label10
             // 
@@ -1257,21 +1236,16 @@
             label10.TabIndex = 18;
             label10.Text = "Trend 12 bulan terakhir (Data Real)";
             // 
-            // chartGrafikPenjualanBulanan
+            // label4
             // 
-            chartArea2.Name = "ChartArea1";
-            chartGrafikPenjualanBulanan.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            chartGrafikPenjualanBulanan.Legends.Add(legend2);
-            chartGrafikPenjualanBulanan.Location = new Point(24, 109);
-            chartGrafikPenjualanBulanan.Name = "chartGrafikPenjualanBulanan";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            chartGrafikPenjualanBulanan.Series.Add(series2);
-            chartGrafikPenjualanBulanan.Size = new Size(1502, 348);
-            chartGrafikPenjualanBulanan.TabIndex = 19;
-            chartGrafikPenjualanBulanan.Text = "chart1";
+            label4.AutoSize = true;
+            label4.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(21, 29);
+            label4.Name = "label4";
+            label4.Size = new Size(244, 24);
+            label4.TabIndex = 12;
+            label4.Text = "Grafik Penjualan Bulanan";
             // 
             // UCDashboard
             // 
@@ -1292,7 +1266,7 @@
             Controls.Add(guna2GroupBox3);
             Controls.Add(guna2GroupBox1);
             Name = "UCDashboard";
-            Size = new Size(1582, 4000);
+            Size = new Size(1582, 2306);
             Load += UCDashboard_Load;
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
@@ -1359,7 +1333,6 @@
         private Label label7;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox5;
         private Label lblLaba;
-        private Label label11;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
         private Label label12;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox6;
@@ -1391,7 +1364,6 @@
         private Label label23;
         private FlowLayoutPanel pnlChatContainer;
         private Guna.UI2.WinForms.Guna2Button btRefresh;
-        private Label label8;
         private Guna.UI2.WinForms.Guna2Panel pnlMenuTerlaris;
         private FlowLayoutPanel flowLayoutPanel1;
         private Label label1;
