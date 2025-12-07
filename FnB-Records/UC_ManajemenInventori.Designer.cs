@@ -206,7 +206,7 @@
             label1.ForeColor = Color.Black;
             label1.Location = new Point(-5, 0);
             label1.Name = "label1";
-            label1.Size = new Size(404, 50);
+            label1.Size = new Size(403, 50);
             label1.TabIndex = 0;
             label1.Text = "Manajemen Inventori";
             // 
@@ -526,7 +526,7 @@
             cmbStatus.Font = new Font("Manrope SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cmbStatus.ForeColor = Color.FromArgb(45, 45, 45);
             cmbStatus.ItemHeight = 44;
-            cmbStatus.Items.AddRange(new object[] { "Semua Waktu", "Kritis", "Stok Rendah", "Normal", "Aman" });
+            cmbStatus.Items.AddRange(new object[] { "Semua Status", "Kritis", "Stok Rendah", "Normal", "Aman" });
             cmbStatus.ItemsAppearance.BackColor = Color.White;
             cmbStatus.Location = new Point(1246, 43);
             cmbStatus.Name = "cmbStatus";
@@ -707,7 +707,7 @@
             // 
             // dataGridViewImageColumn1
             // 
-            dataGridViewImageColumn1.HeaderText = "Edit";
+            dataGridViewImageColumn1.HeaderText = "Tambah";
             dataGridViewImageColumn1.Image = (Image)resources.GetObject("dataGridViewImageColumn1.Image");
             dataGridViewImageColumn1.ImageLayout = DataGridViewImageCellLayout.Zoom;
             dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
@@ -715,7 +715,7 @@
             // 
             // dataGridViewImageColumn2
             // 
-            dataGridViewImageColumn2.HeaderText = "Hapus";
+            dataGridViewImageColumn2.HeaderText = "Kurangi";
             dataGridViewImageColumn2.Image = (Image)resources.GetObject("dataGridViewImageColumn2.Image");
             dataGridViewImageColumn2.ImageLayout = DataGridViewImageCellLayout.Zoom;
             dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
@@ -739,13 +739,13 @@
             label14.ForeColor = Color.White;
             label14.Location = new Point(22, 24);
             label14.Name = "label14";
-            label14.Size = new Size(399, 33);
+            label14.Size = new Size(400, 33);
             label14.TabIndex = 12;
             label14.Text = "Daftar Inventori (Data Real-time)";
             // 
             // gbPopupStok
             // 
-            gbPopupStok.BackColor = Color.FromArgb(212, 122, 71);
+            gbPopupStok.BackColor = Color.White;
             gbPopupStok.BorderRadius = 15;
             gbPopupStok.Controls.Add(btnBatalStok);
             gbPopupStok.Controls.Add(btnSimpanStok);
@@ -756,13 +756,13 @@
             gbPopupStok.FillColor = Color.FromArgb(249, 247, 245);
             gbPopupStok.Font = new Font("Segoe UI", 9F);
             gbPopupStok.ForeColor = Color.FromArgb(125, 137, 149);
-            gbPopupStok.Location = new Point(621, 379);
+            gbPopupStok.Location = new Point(586, 221);
             gbPopupStok.Name = "gbPopupStok";
             gbPopupStok.ShadowDecoration.BorderRadius = 15;
             gbPopupStok.ShadowDecoration.CustomizableEdges = customizableEdges46;
             gbPopupStok.ShadowDecoration.Depth = 10;
             gbPopupStok.ShadowDecoration.Shadow = new Padding(0, 10, 10, 10);
-            gbPopupStok.Size = new Size(458, 557);
+            gbPopupStok.Size = new Size(445, 497);
             gbPopupStok.TabIndex = 20;
             gbPopupStok.Visible = false;
             // 
@@ -780,7 +780,7 @@
             btnBatalStok.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBatalStok.ForeColor = Color.FromArgb(45, 45, 45);
             btnBatalStok.ImageSize = new Size(30, 20);
-            btnBatalStok.Location = new Point(228, 485);
+            btnBatalStok.Location = new Point(228, 420);
             btnBatalStok.Name = "btnBatalStok";
             btnBatalStok.ShadowDecoration.BorderRadius = 10;
             btnBatalStok.ShadowDecoration.CustomizableEdges = customizableEdges36;
@@ -804,7 +804,7 @@
             btnSimpanStok.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSimpanStok.ForeColor = Color.White;
             btnSimpanStok.ImageSize = new Size(30, 20);
-            btnSimpanStok.Location = new Point(321, 485);
+            btnSimpanStok.Location = new Point(321, 420);
             btnSimpanStok.Name = "btnSimpanStok";
             btnSimpanStok.ShadowDecoration.BorderRadius = 10;
             btnSimpanStok.ShadowDecoration.CustomizableEdges = customizableEdges38;
@@ -835,7 +835,7 @@
             guna2GroupBox9.Location = new Point(17, 16);
             guna2GroupBox9.Name = "guna2GroupBox9";
             guna2GroupBox9.ShadowDecoration.CustomizableEdges = customizableEdges44;
-            guna2GroupBox9.Size = new Size(412, 452);
+            guna2GroupBox9.Size = new Size(412, 385);
             guna2GroupBox9.TabIndex = 12;
             // 
             // nudJumlahStok
@@ -1030,8 +1030,6 @@
         private Label label14;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox8;
         private Guna.UI2.WinForms.Guna2DataGridView dgvManajemenInventori;
-        private DataGridViewImageColumn dataGridViewImageColumn1;
-        private DataGridViewImageColumn dataGridViewImageColumn2;
         private Guna.UI2.WinForms.Guna2GroupBox gbPopupStok;
         private Guna.UI2.WinForms.Guna2Button btnBatalStok;
         private Guna.UI2.WinForms.Guna2Button btnSimpanStok;
@@ -1045,5 +1043,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtEditNamaVendor;
         private Label lblStokSaatIniPopup;
         private NumericUpDown nudJumlahStok;
+        private DataGridViewImageColumn dataGridViewImageColumn1;
+        private DataGridViewImageColumn dataGridViewImageColumn2;
     }
 }

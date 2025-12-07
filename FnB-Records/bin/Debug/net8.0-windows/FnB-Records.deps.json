@@ -156,6 +156,7 @@
           }
         }
       },
+      "System.CodeDom/7.0.0": {},
       "System.Diagnostics.DiagnosticSource/9.0.11": {
         "runtime": {
           "lib/net8.0/System.Diagnostics.DiagnosticSource.dll": {
@@ -165,6 +166,9 @@
         }
       },
       "System.Management/7.0.0": {
+        "dependencies": {
+          "System.CodeDom": "7.0.0"
+        },
         "runtime": {
           "lib/net7.0/System.Management.dll": {
             "assemblyVersion": "4.0.0.0",
@@ -285,6 +289,13 @@
       "sha512": "sha512-ksDMxCoiEMuQLOCVI1tJwMl0xfx51NOhftxfmAuyH7ugHf4GbsrWYD/9LCfO3ofptsewjyUFIJcs4+1eB7BzJg==",
       "path": "pdfsharp/6.2.3",
       "hashPath": "pdfsharp.6.2.3.nupkg.sha512"
+    },
+    "System.CodeDom/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GLltyqEsE5/3IE+zYRP5sNa1l44qKl9v+bfdMcwg+M9qnQf47wK3H0SUR/T+3N4JEQXF3vV4CSuuo0rsg+nq2A==",
+      "path": "system.codedom/7.0.0",
+      "hashPath": "system.codedom.7.0.0.nupkg.sha512"
     },
     "System.Diagnostics.DiagnosticSource/9.0.11": {
       "type": "package",
