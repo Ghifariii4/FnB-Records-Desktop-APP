@@ -181,3 +181,33 @@ C:\Users\HP-VICTUS\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\ne
 C:\Users\HP-VICTUS\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB-Records.pdb
 C:\Users\HP-VICTUS\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB-Records.genruntimeconfig.cache
 C:\Users\HP-VICTUS\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\ref\FnB-Records.dll
+C:\Users\User\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\User\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\User\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\User\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\User\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\PdfSharp.BarCodes.dll
+C:\Users\User\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\PdfSharp.Charting.dll
+C:\Users\User\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\PdfSharp.Cryptography.dll
+C:\Users\User\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\PdfSharp.Quality.dll
+C:\Users\User\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\PdfSharp.Shared.dll
+C:\Users\User\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\PdfSharp.Snippets.dll
+C:\Users\User\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\PdfSharp.System.dll
+C:\Users\User\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\PdfSharp.WPFonts.dll
+C:\Users\User\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\PdfSharp.dll
+C:\Users\User\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\User\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\PdfSharp.BarCodes.dll
+C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\PdfSharp.Charting.dll
+C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\PdfSharp.Cryptography.dll
+C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\PdfSharp.Quality.dll
+C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\PdfSharp.Shared.dll
+C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\PdfSharp.Snippets.dll
+C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\PdfSharp.System.dll
+C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\PdfSharp.WPFonts.dll
+C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\PdfSharp.dll
+C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

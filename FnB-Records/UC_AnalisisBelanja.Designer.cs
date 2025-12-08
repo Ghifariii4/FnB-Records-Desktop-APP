@@ -61,13 +61,15 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_AnalisisBelanja));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             cbsemuawaktu = new Guna.UI2.WinForms.Guna2ComboBox();
             btnEksporLaporancsv = new Guna.UI2.WinForms.Guna2Button();
@@ -101,11 +103,12 @@
             label15 = new Label();
             label16 = new Label();
             guna2GroupBox8 = new Guna.UI2.WinForms.Guna2GroupBox();
-            label17 = new Label();
-            label19 = new Label();
             dgvtopVendor = new Guna.UI2.WinForms.Guna2DataGridView();
             Edit = new DataGridViewImageColumn();
             Hapus = new DataGridViewImageColumn();
+            label17 = new Label();
+            label19 = new Label();
+            guna2GroupBox9 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2GroupBox1.SuspendLayout();
             guna2GroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
@@ -121,6 +124,7 @@
             ((System.ComponentModel.ISupportInitialize)chart5bahanbakuberdasarpembelian).BeginInit();
             guna2GroupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvtopVendor).BeginInit();
+            guna2GroupBox9.SuspendLayout();
             SuspendLayout();
             // 
             // guna2GroupBox1
@@ -620,45 +624,23 @@
             guna2GroupBox8.BackColor = Color.Transparent;
             guna2GroupBox8.BorderColor = Color.DimGray;
             guna2GroupBox8.BorderRadius = 15;
-            guna2GroupBox8.Controls.Add(dgvtopVendor);
             guna2GroupBox8.Controls.Add(label17);
             guna2GroupBox8.Controls.Add(label19);
+            guna2GroupBox8.Controls.Add(guna2GroupBox9);
             guna2GroupBox8.CustomBorderColor = Color.Empty;
-            guna2GroupBox8.CustomizableEdges = customizableEdges25;
+            guna2GroupBox8.CustomizableEdges = customizableEdges27;
             guna2GroupBox8.FillColor = Color.FromArgb(45, 45, 45);
             guna2GroupBox8.Font = new Font("Segoe UI", 9F);
             guna2GroupBox8.ForeColor = Color.FromArgb(125, 137, 149);
             guna2GroupBox8.Location = new Point(37, 1028);
             guna2GroupBox8.Name = "guna2GroupBox8";
             guna2GroupBox8.ShadowDecoration.BorderRadius = 18;
-            guna2GroupBox8.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            guna2GroupBox8.ShadowDecoration.CustomizableEdges = customizableEdges28;
             guna2GroupBox8.ShadowDecoration.Enabled = true;
             guna2GroupBox8.ShadowDecoration.Shadow = new Padding(3, 1, 3, 5);
             guna2GroupBox8.Size = new Size(755, 529);
             guna2GroupBox8.TabIndex = 29;
             guna2GroupBox8.Click += guna2GroupBox8_Click;
-            // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label17.ForeColor = Color.LightGray;
-            label17.Location = new Point(21, 70);
-            label17.Name = "label17";
-            label17.Size = new Size(337, 20);
-            label17.TabIndex = 17;
-            label17.Text = "Berdasarkan total pembelian (Data Real)";
-            // 
-            // label19
-            // 
-            label19.AutoSize = true;
-            label19.Font = new Font("Manrope ExtraBold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label19.ForeColor = Color.White;
-            label19.Location = new Point(21, 28);
-            label19.Name = "label19";
-            label19.Size = new Size(167, 33);
-            label19.TabIndex = 13;
-            label19.Text = "Top 5 Vendor";
             // 
             // dgvtopVendor
             // 
@@ -684,7 +666,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvtopVendor.DefaultCellStyle = dataGridViewCellStyle3;
             dgvtopVendor.GridColor = SystemColors.ButtonFace;
-            dgvtopVendor.Location = new Point(66, 137);
+            dgvtopVendor.Location = new Point(20, 25);
             dgvtopVendor.Name = "dgvtopVendor";
             dgvtopVendor.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -698,7 +680,7 @@
             dgvtopVendor.RowHeadersVisible = false;
             dgvtopVendor.RowTemplate.Height = 40;
             dgvtopVendor.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dgvtopVendor.Size = new Size(616, 327);
+            dgvtopVendor.Size = new Size(676, 353);
             dgvtopVendor.TabIndex = 18;
             dgvtopVendor.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
             dgvtopVendor.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(247, 248, 249);
@@ -740,6 +722,43 @@
             Hapus.Name = "Hapus";
             Hapus.ReadOnly = true;
             // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label17.ForeColor = Color.LightGray;
+            label17.Location = new Point(21, 70);
+            label17.Name = "label17";
+            label17.Size = new Size(337, 20);
+            label17.TabIndex = 17;
+            label17.Text = "Berdasarkan total pembelian (Data Real)";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Font = new Font("Manrope ExtraBold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label19.ForeColor = Color.White;
+            label19.Location = new Point(21, 28);
+            label19.Name = "label19";
+            label19.Size = new Size(167, 33);
+            label19.TabIndex = 13;
+            label19.Text = "Top 5 Vendor";
+            // 
+            // guna2GroupBox9
+            // 
+            guna2GroupBox9.BorderRadius = 15;
+            guna2GroupBox9.Controls.Add(dgvtopVendor);
+            guna2GroupBox9.CustomBorderColor = Color.Empty;
+            guna2GroupBox9.CustomizableEdges = customizableEdges25;
+            guna2GroupBox9.FillColor = SystemColors.ButtonFace;
+            guna2GroupBox9.Font = new Font("Segoe UI", 9F);
+            guna2GroupBox9.ForeColor = Color.FromArgb(125, 137, 149);
+            guna2GroupBox9.Location = new Point(21, 110);
+            guna2GroupBox9.Name = "guna2GroupBox9";
+            guna2GroupBox9.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            guna2GroupBox9.Size = new Size(713, 394);
+            guna2GroupBox9.TabIndex = 31;
+            // 
             // UC_AnalisisBelanja
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -779,6 +798,7 @@
             guna2GroupBox8.ResumeLayout(false);
             guna2GroupBox8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvtopVendor).EndInit();
+            guna2GroupBox9.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -822,5 +842,6 @@
         private Guna.UI2.WinForms.Guna2DataGridView dgvtopVendor;
         private DataGridViewImageColumn Edit;
         private DataGridViewImageColumn Hapus;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox9;
     }
 }

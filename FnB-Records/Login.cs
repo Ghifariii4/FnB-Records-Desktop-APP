@@ -58,19 +58,17 @@ namespace FnB_Records
 
             try
             {
-                // --- BAGIAN INI YANG MEMPERBAIKI ERROR SEBELUMNYA ---
-
-                // 1. Buat Instance class Koneksi (karena Constructor-nya tidak static)
+                // 1. Buat Instance class Koneksi
                 Koneksi db = new Koneksi();
 
-                // 2. Panggil fungsi 'GetKoneksi' (Pakai 'K') bukan 'GetConnection'
+                // 2. Panggil fungsi 'GetKoneksi'
                 using (NpgsqlConnection conn = db.GetKoneksi())
                 {
-                    // Pastikan koneksi terbuka (berjaga-jaga)
+                    // Pastikan koneksi terbuka
                     if (conn.State != System.Data.ConnectionState.Open) conn.Open();
 
-                    // Query: Ambil ID, Nama Bisnis, Password, dan Role
-                    string query = "SELECT id, business_name, password, role FROM users WHERE email = @email LIMIT 1";
+                    // Query: Ambil ID, Nama Bisnis, Password, Role, dan Email Verified
+                    string query = "SELECT id, business_name, password, role, email_verified FROM users WHERE email = @email LIMIT 1";
 
                     using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
                     {
@@ -80,23 +78,24 @@ namespace FnB_Records
                         {
                             if (reader.Read())
                             {
-                                string dbPassword = reader.GetString(2); // Ambil password dari DB (index 2)
+                                string dbPassword = reader.GetString(2); // Password (index 2)
 
                                 // Cek Password (Plain Text)
                                 if (password == dbPassword)
                                 {
                                     // --- LOGIN SUKSES ---
 
-                                    // A. Simpan Data User ke GlobalSession (Memory Sementara)
+                                    // A. Simpan Data User ke GlobalSession
                                     GlobalSession.CurrentUserId = reader.GetInt32(0);
                                     GlobalSession.BusinessName = reader.GetString(1);
                                     GlobalSession.CurrentUserRole = reader.GetString(3);
                                     GlobalSession.CurrentUserEmail = email;
+                                    GlobalSession.IsEmailVerified = reader.IsDBNull(4) ? false : reader.GetBoolean(4);
 
                                     // B. Simpan ke Properties Settings (Ingat Saya)
                                     AturIngatSaya(email, password);
 
-                                    // C. Pindah ke Menu Utama (Ganti 'Main_Form' dengan nama form menu Anda)
+                                    // C. Pindah ke Menu Utama
                                     Main_Form menu = new Main_Form();
                                     menu.Show();
                                     this.Hide();
@@ -141,14 +140,15 @@ namespace FnB_Records
             Properties.Settings.Default.Save();
         }
 
-        // Event Klik Daftar (Belum ada form register, jadi pesan saja dulu)
+        // Event Klik Daftar
         private void lblToDaftar_Click(object sender, EventArgs e)
         {
-             Register reg = new Register();
-             reg.Show();
-             this.Hide();
+            Register reg = new Register();
+            reg.Show();
+            this.Hide();
         }
 
+        // 5. CLASS SESSION (Menyimpan data user yang sedang aktif)
         // 5. CLASS SESSION (Menyimpan data user yang sedang aktif)
         public static class GlobalSession
         {
@@ -156,6 +156,10 @@ namespace FnB_Records
             public static string BusinessName { get; set; }
             public static string CurrentUserRole { get; set; }
             public static string CurrentUserEmail { get; set; }
+            public static bool IsEmailVerified { get; set; }
+
+            // TAMBAHAN: Counter AI Chat untuk Free User
+            public static int FreeUserPromptCount { get; set; } = 0; // ✅ TAMBAHAN INI
 
             public static void ClearSession()
             {
@@ -163,7 +167,11 @@ namespace FnB_Records
                 BusinessName = null;
                 CurrentUserRole = null;
                 CurrentUserEmail = null;
+                IsEmailVerified = false;
+                FreeUserPromptCount = 0; // Reset counter saat logout
             }
         }
+   
+        
     }
 }
