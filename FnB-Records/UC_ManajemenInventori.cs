@@ -1,484 +1,703 @@
 ﻿using FnB_Records.Koneksi_DB;
 using Npgsql;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Linq;
+using System.IO;
+using PdfSharp.Pdf;
+using PdfSharp.Drawing;
+using PdfSharp.Fonts;
 
 namespace FnB_Records
 {
     public partial class UC_ManajemenInventori : UserControl
     {
-        private DataTable dtOriginal = new DataTable();
-        private int idBahanTerpilih = 0;
-        private string satuanTerpilih = "";
+        private int currentUserId = Login.GlobalSession.CurrentUserId;
+        private Koneksi db = new Koneksi();
+
+        // Untuk popup
+        private int selectedIngredientId = 0;
+        private string popupMode = ""; // "tambah" atau "kurang"
+
         public UC_ManajemenInventori()
         {
             InitializeComponent();
-        }
 
-        private void btnExport_Click(object sender, EventArgs e)
-        {
-            if (dgvDataInventori.Rows.Count == 0)
+            // PENTING: Set FontResolver untuk PdfSharp
+            if (GlobalFontSettings.FontResolver == null)
             {
-                MessageBox.Show("Tidak ada data untuk diekspor.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                GlobalFontSettings.FontResolver = new WindowsFontResolver();
             }
 
-            SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "CSV File (*.csv)|*.csv";
-            sfd.FileName = "Laporan_Inventori_" + DateTime.Now.ToString("yyyyMMdd_HHmm") + ".csv";
-
-            if (sfd.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    StringBuilder csvContent = new StringBuilder();
-
-                    // 1. Header Laporan (Agar terlihat profesional)
-                    csvContent.AppendLine("LAPORAN INVENTORI BAHAN BAKU");
-                    csvContent.AppendLine("Tanggal Ekspor:," + DateTime.Now.ToString("dd MMMM yyyy HH:mm"));
-                    csvContent.AppendLine("Total Nilai Aset:," + lblNilaiTotal.Text.Replace("Rp ", "").Trim());
-                    csvContent.AppendLine(); // Baris kosong
-
-                    // 2. Header Tabel
-                    for (int i = 0; i < dgvDataInventori.Columns.Count; i++)
-                    {
-                        if (dgvDataInventori.Columns[i].Visible)
-                        {
-                            csvContent.Append(dgvDataInventori.Columns[i].HeaderText + ",");
-                        }
-                    }
-                    csvContent.AppendLine();
-
-                    // 3. Isi Data
-                    foreach (DataGridViewRow row in dgvDataInventori.Rows)
-                    {
-                        for (int i = 0; i < dgvDataInventori.Columns.Count; i++)
-                        {
-                            if (dgvDataInventori.Columns[i].Visible)
-                            {
-                                string cellValue = row.Cells[i].Value?.ToString().Replace(",", "."); // Ganti koma dengan titik agar CSV aman
-                                csvContent.Append(cellValue + ",");
-                            }
-                        }
-                        csvContent.AppendLine();
-                    }
-
-                    File.WriteAllText(sfd.FileName, csvContent.ToString());
-                    MessageBox.Show("Data berhasil diekspor ke CSV!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Gagal mengekspor data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-
-        private void txtCari_TextChanged(object sender, EventArgs e)
-        {
-            TerapkanFilter();
-        }
-
-        private void cbStatus_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            TerapkanFilter();
-        }
-
-        private void dgvDataInventori_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex < 0) return;
-
-            string colName = dgvDataInventori.Columns[e.ColumnIndex].Name;
-
-            // Ambil Data Row dari baris yang diklik
-            if (dgvDataInventori.Rows[e.RowIndex].DataBoundItem is DataRowView row)
-            {
-                // Simpan data ke variabel global
-                idBahanTerpilih = Convert.ToInt32(row["id"]);
-                satuanTerpilih = row["unit"].ToString();
-                string namaBahan = row["name"].ToString();
-                string stokSaatIni = row["stock"].ToString();
-
-                // --- LOGIKA TOMBOL TAMBAH (+) ---
-                if (colName == "colTambah")
-                {
-                    // 1. Reset Form Input (Kosongkan Teks)
-                    txttbhJumlahMasuk.Text = "";
-                    txttbhCatatan.Text = "";
-
-                    // 2. Set Placeholder Guna UI (Native)
-                    // Ini akan membuat teks samar "Jumlah dalam Kg" otomatis muncul
-                    txttbhJumlahMasuk.PlaceholderText = $"Jumlah dalam {satuanTerpilih}";
-
-                    // 3. Isi Label (HANYA NAMA & ANGKA)
-                    // Teks statis "Tambah Stok :" dihapus dari sini karena sudah ada di Desain Label
-                    lbltbhItem.Text = namaBahan;
-                    lbltbhStok.Text = $"{stokSaatIni} {satuanTerpilih}";
-
-                    // 4. Atur Visibilitas Panel
-                    gbTambahStok.Visible = true;
-                    gbKurangStok.Visible = false;
-                    gbTambahStok.BringToFront();
-                }
-                // --- LOGIKA TOMBOL KURANG (-) ---
-                else if (colName == "colKurang")
-                {
-                    // 1. Reset Form Input (Kosongkan Teks)
-                    txtkrgJumlahKeluar.Text = "";
-                    txtkrgCatatan.Text = "";
-
-                    // 2. Set Placeholder Guna UI (Native)
-                    txtkrgJumlahKeluar.PlaceholderText = $"Jumlah dalam {satuanTerpilih}";
-
-                    // 3. Isi Label (HANYA NAMA & ANGKA)
-                    // Teks statis "Kurangi Stok :" dihapus agar tidak double
-                    lblkrgItem.Text = namaBahan;
-                    lblkrgStok.Text = $"{stokSaatIni} {satuanTerpilih}";
-
-                    // 4. Atur Visibilitas Panel
-                    gbKurangStok.Visible = true;
-                    gbTambahStok.Visible = false;
-                    gbKurangStok.BringToFront();
-                }
-            }
+            this.Load += UC_ManajemenInventori_Load; // PENTING: Pasang event Load
         }
 
         private void UC_ManajemenInventori_Load(object sender, EventArgs e)
         {
-            if (Login.GlobalSession.CurrentUserId == 0) Login.GlobalSession.CurrentUserId = 1;
+            // Pastikan user sudah login
+            if (Login.GlobalSession.CurrentUserId == 0)
+            {
+                Login.GlobalSession.CurrentUserId = 1; // Default untuk testing
+            }
+            currentUserId = Login.GlobalSession.CurrentUserId;
 
-            LoadDataInventori();
-            IsiComboBoxStatus();
+            // Setup dulu sebelum attach events
+            LoadComboStatus();
+            SetupDataGridViewColumns();
+
+            // Attach events SETELAH setup
+            txtCariInventori.TextChanged += TxtCariInventori_TextChanged;
+            cmbStatus.SelectedIndexChanged += CmbStatus_SelectedIndexChanged;
+            btnExportLaporan.Click += BtnExportLaporan_Click;
+            dgvManajemenInventori.CellContentClick += DgvManajemenInventori_CellContentClick;
+            btnSimpanStok.Click += BtnSimpanStok_Click;
+            btnBatalStok.Click += BtnBatalStok_Click;
+
+            // Load data terakhir
+            LoadInventoryData();
+            LoadSummaryLabels();
+
+            // Hide popup saat load
+            gbPopupStok.Visible = false;
         }
 
-        private void LoadDataInventori()
+        #region Load Combo Status
+        private void LoadComboStatus()
+        {
+            cmbStatus.Items.Clear();
+            cmbStatus.Items.Add("Semua Status");
+            cmbStatus.Items.Add("Kritis");
+            cmbStatus.Items.Add("Stok Rendah");
+            cmbStatus.Items.Add("Normal");
+            cmbStatus.Items.Add("Aman");
+            cmbStatus.SelectedIndex = 0;
+        }
+        #endregion
+
+        #region Setup DataGridView Columns
+        private void SetupDataGridViewColumns()
+        {
+            // Clear existing columns
+            dgvManajemenInventori.Columns.Clear();
+
+            // PENTING: Set AutoGenerateColumns = false
+            dgvManajemenInventori.AutoGenerateColumns = false;
+            dgvManajemenInventori.RowHeadersVisible = false;
+            dgvManajemenInventori.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvManajemenInventori.AllowUserToAddRows = false;
+            dgvManajemenInventori.ReadOnly = true;
+            dgvManajemenInventori.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            // Hidden ID Column (untuk referensi)
+            var colId = new DataGridViewTextBoxColumn
+            {
+                Name = "colId",
+                HeaderText = "ID",
+                DataPropertyName = "id",
+                Visible = false
+            };
+            dgvManajemenInventori.Columns.Add(colId);
+
+            // 1. Nama Bahan
+            var colNama = new DataGridViewTextBoxColumn
+            {
+                Name = "colNamaBahan",
+                HeaderText = "Nama Bahan",
+                DataPropertyName = "nama_bahan",
+                FillWeight = 150
+            };
+            dgvManajemenInventori.Columns.Add(colNama);
+
+            // 2. Stok Saat Ini
+            var colStok = new DataGridViewTextBoxColumn
+            {
+                Name = "colStokSaatIni",
+                HeaderText = "Stok Saat Ini",
+                DataPropertyName = "stok_display",
+                FillWeight = 100
+            };
+            dgvManajemenInventori.Columns.Add(colStok);
+
+            // 3. Stok Minimum
+            var colMin = new DataGridViewTextBoxColumn
+            {
+                Name = "colStokMin",
+                HeaderText = "Stok Min",
+                DataPropertyName = "min_stok_display",
+                FillWeight = 100
+            };
+            dgvManajemenInventori.Columns.Add(colMin);
+
+            // 4. Harga/Unit
+            var colHarga = new DataGridViewTextBoxColumn
+            {
+                Name = "colHargaUnit",
+                HeaderText = "Harga/Unit",
+                DataPropertyName = "harga_display",
+                FillWeight = 120
+            };
+            dgvManajemenInventori.Columns.Add(colHarga);
+
+            // 5. Nilai Total
+            var colNilai = new DataGridViewTextBoxColumn
+            {
+                Name = "colNilaiTotal",
+                HeaderText = "Nilai Total",
+                DataPropertyName = "nilai_total_display",
+                FillWeight = 120
+            };
+            dgvManajemenInventori.Columns.Add(colNilai);
+
+            // 6. Status
+            var colStatus = new DataGridViewTextBoxColumn
+            {
+                Name = "colStatus",
+                HeaderText = "Status",
+                DataPropertyName = "status",
+                FillWeight = 100
+            };
+            dgvManajemenInventori.Columns.Add(colStatus);
+
+            // 7. Tambah (Image Column)
+            var colTambah = new DataGridViewImageColumn
+            {
+                Name = "colTambah",
+                HeaderText = "Tambah",
+                FillWeight = 60,
+                ImageLayout = DataGridViewImageCellLayout.Zoom
+            };
+            // Set image jika ada di resources
+            try
+            {
+                colTambah.Image = Properties.Resources.add_button_icon_putih;
+            }
+            catch
+            {
+                // Jika resource tidak ada, buat placeholder
+                var bmp = new Bitmap(30, 30);
+                using (var g = Graphics.FromImage(bmp))
+                {
+                    g.Clear(Color.Green);
+                    g.DrawString("+", new Font("Arial", 16, FontStyle.Bold), Brushes.White, 5, 2);
+                }
+                colTambah.Image = bmp;
+            }
+            dgvManajemenInventori.Columns.Add(colTambah);
+
+            // 8. Kurangi (Image Column)
+            var colKurang = new DataGridViewImageColumn
+            {
+                Name = "colKurangi",
+                HeaderText = "Kurangi",
+                FillWeight = 60,
+                ImageLayout = DataGridViewImageCellLayout.Zoom
+            };
+            // Set image jika ada di resources
+            try
+            {
+                colKurang.Image = Properties.Resources.exit_icon_hitam;
+            }
+            catch
+            {
+                // Jika resource tidak ada, buat placeholder
+                var bmp = new Bitmap(30, 30);
+                using (var g = Graphics.FromImage(bmp))
+                {
+                    g.Clear(Color.Red);
+                    g.DrawString("-", new Font("Arial", 16, FontStyle.Bold), Brushes.White, 8, 2);
+                }
+                colKurang.Image = bmp;
+            }
+            dgvManajemenInventori.Columns.Add(colKurang);
+
+            // Set alignment untuk kolom numerik
+            dgvManajemenInventori.Columns["colStokSaatIni"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgvManajemenInventori.Columns["colStokMin"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgvManajemenInventori.Columns["colHargaUnit"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgvManajemenInventori.Columns["colNilaiTotal"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgvManajemenInventori.Columns["colStatus"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+        }
+        #endregion
+
+        #region Load Inventory Data
+        private void LoadInventoryData(string keyword = "", string statusFilter = "Semua Status")
         {
             try
             {
-                Koneksi db = new Koneksi();
-                using (NpgsqlConnection conn = db.GetKoneksi())
+                using (var conn = db.GetKoneksi())
                 {
                     if (conn.State != ConnectionState.Open) conn.Open();
 
-                    // Ambil semua data bahan baku
                     string query = @"
                         SELECT 
-                            id, 
-                            name, 
-                            stock, 
-                            min_stock, 
-                            unit, 
-                            price,
-                            (stock * price) as total_value
-                        FROM ingredients 
-                        WHERE user_id = @uid 
-                        ORDER BY name ASC";
+                            i.id,
+                            i.name AS nama_bahan,
+                            i.stock,
+                            i.min_stock,
+                            i.price,
+                            i.unit,
+                            (i.stock * i.price) as total_value
+                        FROM ingredients i
+                        WHERE i.user_id = @uid 
+                        AND (i.name ILIKE @search)
+                        ORDER BY i.name ASC";
 
-                    using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                    using (var cmd = new NpgsqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@uid", Login.GlobalSession.CurrentUserId);
+                        cmd.Parameters.AddWithValue("@uid", currentUserId);
+                        cmd.Parameters.AddWithValue("@search", "%" + keyword + "%");
 
-                        using (NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd))
+                        using (var da = new NpgsqlDataAdapter(cmd))
                         {
-                            dtOriginal = new DataTable();
-                            da.Fill(dtOriginal);
+                            DataTable dt = new DataTable();
+                            da.Fill(dt);
 
-                            // Tambahkan kolom 'Status' manual ke DataTable untuk memudahkan filter
-                            dtOriginal.Columns.Add("status_text", typeof(string));
+                            // Tambah kolom display (seperti di UC_BahanBaku)
+                            dt.Columns.Add("stok_display", typeof(string));
+                            dt.Columns.Add("min_stok_display", typeof(string));
+                            dt.Columns.Add("harga_display", typeof(string));
+                            dt.Columns.Add("nilai_total_display", typeof(string));
+                            dt.Columns.Add("status", typeof(string));
 
-                            foreach (DataRow row in dtOriginal.Rows)
+                            // Proses setiap baris
+                            foreach (DataRow row in dt.Rows)
                             {
-                                decimal stock = Convert.ToDecimal(row["stock"]);
-                                decimal minStock = Convert.ToDecimal(row["min_stock"]);
+                                double stock = row["stock"] != DBNull.Value ? Convert.ToDouble(row["stock"]) : 0;
+                                double minStock = row["min_stock"] != DBNull.Value ? Convert.ToDouble(row["min_stock"]) : 0;
+                                double price = row["price"] != DBNull.Value ? Convert.ToDouble(row["price"]) : 0;
+                                string unit = row["unit"]?.ToString() ?? "";
+                                double totalValue = row["total_value"] != DBNull.Value ? Convert.ToDouble(row["total_value"]) : 0;
 
-                                if (stock <= 0) row["status_text"] = "Habis";
-                                else if (stock <= minStock) row["status_text"] = "Stok Rendah";
-                                else row["status_text"] = "Aman";
+                                // Hitung status
+                                string status = GetStockStatus(stock, minStock);
+                                row["status"] = status;
+
+                                // Format display
+                                row["stok_display"] = $"{stock:0.##} {unit}";
+                                row["min_stok_display"] = $"{minStock:0.##} {unit}";
+                                row["harga_display"] = $"Rp {price:#,##0}";
+                                row["nilai_total_display"] = $"Rp {totalValue:#,##0}";
                             }
 
-                            // Tampilkan ke Grid & Hitung Dashboard
-                            TerapkanFilter();
-                            HitungDashboardMetrics();
+                            // Filter berdasarkan status
+                            if (statusFilter != "Semua Status")
+                            {
+                                DataView dv = dt.DefaultView;
+                                dv.RowFilter = $"status = '{statusFilter}'";
+                                dt = dv.ToTable();
+                            }
+
+                            // Bind ke DataGridView
+                            dgvManajemenInventori.DataSource = dt;
+
+                            // Terapkan warna status
+                            ApplyStatusColors();
+                        }
+                    }
+                }
+
+                dgvManajemenInventori.ClearSelection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading inventory: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ApplyStatusColors()
+        {
+            foreach (DataGridViewRow row in dgvManajemenInventori.Rows)
+            {
+                if (row.Cells["colStatus"].Value != null)
+                {
+                    string status = row.Cells["colStatus"].Value.ToString();
+                    var statusCell = row.Cells["colStatus"];
+
+                    if (status == "Kritis")
+                    {
+                        statusCell.Style.BackColor = Color.FromArgb(255, 205, 210);
+                        statusCell.Style.ForeColor = Color.FromArgb(198, 40, 40);
+                    }
+                    else if (status == "Stok Rendah")
+                    {
+                        statusCell.Style.BackColor = Color.FromArgb(255, 243, 224);
+                        statusCell.Style.ForeColor = Color.FromArgb(230, 81, 0);
+                    }
+                    else if (status == "Normal")
+                    {
+                        statusCell.Style.BackColor = Color.FromArgb(232, 245, 233);
+                        statusCell.Style.ForeColor = Color.FromArgb(46, 125, 50);
+                    }
+                    else // Aman
+                    {
+                        statusCell.Style.BackColor = Color.FromArgb(200, 230, 201);
+                        statusCell.Style.ForeColor = Color.FromArgb(27, 94, 32);
+                    }
+                }
+            }
+        }
+
+        private string GetStockStatus(double stock, double minStock)
+        {
+            if (stock == 0)
+                return "Kritis";
+            else if (stock <= minStock)
+                return "Stok Rendah";
+            else if (stock <= minStock * 1.5)
+                return "Normal";
+            else
+                return "Aman";
+        }
+        #endregion
+
+        #region Load Summary Labels
+        private void LoadSummaryLabels()
+        {
+            try
+            {
+                using (var conn = db.GetKoneksi())
+                {
+                    if (conn.State != ConnectionState.Open) conn.Open();
+
+                    string query = @"
+                        SELECT 
+                            COUNT(*) as total_items,
+                            COUNT(CASE WHEN stock = 0 THEN 1 END) as kritis,
+                            COUNT(CASE WHEN stock > 0 AND stock <= min_stock THEN 1 END) as rendah,
+                            COALESCE(SUM(stock * price), 0) as total_value
+                        FROM ingredients
+                        WHERE user_id = @uid";
+
+                    using (var cmd = new NpgsqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@uid", currentUserId);
+
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                lblTotalBahanBaku.Text = reader.GetInt64(0).ToString();
+                                lblStokKritis.Text = reader.GetInt64(1).ToString();
+                                lblStokRendah.Text = reader.GetInt64(2).ToString();
+
+                                double totalValue = Convert.ToDouble(reader.GetValue(3));
+                                lblNilaiInventori.Text = $"Rp {totalValue:#,##0}";
+                            }
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Gagal memuat data inventori: " + ex.Message);
+                MessageBox.Show($"Error loading summary: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
-        private void HitungDashboardMetrics()
+        #region Search & Filter
+        private void TxtCariInventori_TextChanged(object sender, EventArgs e)
         {
-            // Menghitung statistik dari DataTable (dtOriginal) agar tidak perlu query DB lagi
-            int totalItem = dtOriginal.Rows.Count;
-            int stokKritis = 0; // Stok Habis
-            int stokRendah = 0; // Di bawah minimum tapi ada isinya
-            decimal nilaiTotal = 0;
-
-            foreach (DataRow row in dtOriginal.Rows)
-            {
-                decimal stock = Convert.ToDecimal(row["stock"]);
-                decimal minStock = Convert.ToDecimal(row["min_stock"]);
-                decimal totalVal = row["total_value"] != DBNull.Value ? Convert.ToDecimal(row["total_value"]) : 0;
-
-                if (stock <= 0) stokKritis++;
-                else if (stock <= minStock) stokRendah++;
-
-                nilaiTotal += totalVal;
-            }
-
-            // Update Labels
-            lblTotalItem.Text = totalItem.ToString();
-            lblStokKritis.Text = stokKritis.ToString();
-            lblStokRendah.Text = stokRendah.ToString();
-            lblNilaiTotal.Text = "Rp " + nilaiTotal.ToString("N0");
+            LoadInventoryData(txtCariInventori.Text, cmbStatus.SelectedItem?.ToString() ?? "Semua Status");
+            LoadSummaryLabels();
         }
 
-        // --- 2. FILTERING (CARI & COMBOBOX) ---
-        private void IsiComboBoxStatus()
+        private void CmbStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cbStatus.Items.Clear();
-            cbStatus.Items.Add("Semua Status");
-            cbStatus.Items.Add("Aman");
-            cbStatus.Items.Add("Stok Rendah");
-            cbStatus.Items.Add("Habis");
-            cbStatus.SelectedIndex = 0;
+            LoadInventoryData(txtCariInventori.Text, cmbStatus.SelectedItem?.ToString() ?? "Semua Status");
         }
+        #endregion
 
-        private void TerapkanFilter()
+        #region DataGridView Click Events
+        private void DgvManajemenInventori_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string keyword = txtCari.Text.Trim();
-            string statusFilter = cbStatus.SelectedItem?.ToString();
+            if (e.RowIndex < 0) return;
 
-            // Gunakan DataView untuk filter tanpa query ulang
-            DataView dv = dtOriginal.DefaultView;
-            string filterQuery = "";
+            var colName = dgvManajemenInventori.Columns[e.ColumnIndex].Name;
+            var row = dgvManajemenInventori.Rows[e.RowIndex];
 
-            // 1. Filter Pencarian Nama
-            if (!string.IsNullOrEmpty(keyword))
+            // Ambil data dari DataBoundItem (seperti di UC_BahanBaku)
+            if (row.DataBoundItem is DataRowView dataRow)
             {
-                filterQuery += $"name LIKE '%{keyword}%'";
-            }
+                int ingredientId = Convert.ToInt32(dataRow["id"]);
+                string ingredientName = dataRow["nama_bahan"].ToString();
+                double currentStock = dataRow["stock"] != DBNull.Value ? Convert.ToDouble(dataRow["stock"]) : 0;
+                string unit = dataRow["unit"]?.ToString() ?? "";
 
-            // 2. Filter Status Dropdown
-            if (statusFilter != "Semua Status" && !string.IsNullOrEmpty(statusFilter))
-            {
-                if (filterQuery.Length > 0) filterQuery += " AND ";
-                filterQuery += $"status_text = '{statusFilter}'";
-            }
-
-            dv.RowFilter = filterQuery;
-            dgvDataInventori.DataSource = dv;
-
-            FormatTabel();
-        }
-
-        private void FormatTabel()
-        {
-            // 1. Sembunyikan ID dan UserID
-            if (dgvDataInventori.Columns.Contains("id")) dgvDataInventori.Columns["id"].Visible = false;
-            if (dgvDataInventori.Columns.Contains("user_id")) dgvDataInventori.Columns["user_id"].Visible = false;
-            if (dgvDataInventori.Columns.Contains("total_value")) dgvDataInventori.Columns["total_value"].Visible = false;
-
-            // 2. Rename Header
-            SetHeader("name", "Nama Bahan");
-            SetHeader("stock", "Stok Saat Ini");
-            SetHeader("min_stock", "Stok Min");
-            SetHeader("unit", "Satuan");
-            SetHeader("price", "Harga/Unit");
-            SetHeader("status_text", "Status");
-
-            // 3. Format Angka & Alignment
-            if (dgvDataInventori.Columns.Contains("price"))
-            {
-                dgvDataInventori.Columns["price"].DefaultCellStyle.Format = "C0";
-                dgvDataInventori.Columns["price"].DefaultCellStyle.FormatProvider = System.Globalization.CultureInfo.GetCultureInfo("id-ID");
-            }
-
-            dgvDataInventori.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvDataInventori.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            if (dgvDataInventori.Columns.Contains("name"))
-                dgvDataInventori.Columns["name"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-
-            // 4. --- TAMBAHAN TOMBOL AKSI (+ dan -) ---
-
-            // Hapus kolom tombol jika sudah ada (agar tidak duplikat saat reload)
-            if (dgvDataInventori.Columns.Contains("colTambah")) dgvDataInventori.Columns.Remove("colTambah");
-            if (dgvDataInventori.Columns.Contains("colKurang")) dgvDataInventori.Columns.Remove("colKurang");
-
-            // Tombol Tambah (+)
-            DataGridViewButtonColumn btnTambah = new DataGridViewButtonColumn();
-            btnTambah.Name = "colTambah";
-            btnTambah.HeaderText = "Aksi";
-            btnTambah.Text = "➕";
-            btnTambah.UseColumnTextForButtonValue = true;
-            btnTambah.Width = 20;
-
-            // --- TAMBAHAN PENTING ---
-            btnTambah.FlatStyle = FlatStyle.Flat; // Agar warna terlihat
-            btnTambah.DefaultCellStyle.ForeColor = Color.SeaGreen; // Warna Hijau
-            btnTambah.DefaultCellStyle.SelectionForeColor = Color.SeaGreen; // Tetap hijau saat diklik
-                                                                            // ------------------------
-            dgvDataInventori.Columns.Add(btnTambah);
-
-            // Tombol Kurang (-)
-            DataGridViewButtonColumn btnKurang = new DataGridViewButtonColumn();
-            btnKurang.Name = "colKurang";
-            btnKurang.HeaderText = "";
-            btnKurang.Text = "➖";
-            btnKurang.UseColumnTextForButtonValue = true;
-            btnKurang.Width = 20;
-
-            // --- TAMBAHAN PENTING ---
-            btnKurang.FlatStyle = FlatStyle.Flat; // Agar warna terlihat
-            btnKurang.DefaultCellStyle.ForeColor = Color.Crimson; // Warna Merah
-            btnKurang.DefaultCellStyle.SelectionForeColor = Color.Crimson; // Tetap merah saat diklik
-                                                                           // ------------------------
-            dgvDataInventori.Columns.Add(btnKurang);
-
-            // Pindahkan ke Paling Kanan
-            dgvDataInventori.Columns["colTambah"].DisplayIndex = dgvDataInventori.Columns.Count - 2;
-            dgvDataInventori.Columns["colKurang"].DisplayIndex = dgvDataInventori.Columns.Count - 1;
-
-            // 5. Warnai Baris (Status)
-            foreach (DataGridViewRow row in dgvDataInventori.Rows)
-            {
-                string status = row.Cells["status_text"].Value?.ToString();
-                if (status == "Habis")
+                if (colName == "colTambah")
                 {
-                    row.DefaultCellStyle.BackColor = Color.MistyRose;
-                    row.DefaultCellStyle.ForeColor = Color.DarkRed;
+                    ShowPopupStok(ingredientId, ingredientName, currentStock, unit, "tambah");
                 }
-                else if (status == "Stok Rendah")
+                else if (colName == "colKurangi")
                 {
-                    row.DefaultCellStyle.BackColor = Color.LightYellow;
-                    row.DefaultCellStyle.ForeColor = Color.DarkGoldenrod;
+                    ShowPopupStok(ingredientId, ingredientName, currentStock, unit, "kurang");
                 }
             }
-
-            dgvDataInventori.ClearSelection();
         }
+        #endregion
 
-        private void SetHeader(string colName, string text)
+        #region Popup Stok
+        private void ShowPopupStok(int id, string name, double currentStock, string unit, string mode)
         {
-            if (dgvDataInventori.Columns.Contains(colName)) dgvDataInventori.Columns[colName].HeaderText = text;
-        }
+            selectedIngredientId = id;
+            popupMode = mode;
 
-        // --- LOGIKA PLACEHOLDER DINAMIS ---
-
-        private void AturPlaceholder(Guna.UI2.WinForms.Guna2TextBox txt, bool isInit = false)
-        {
-            string placeholderText = $"Jumlah dalam {satuanTerpilih}";
-
-            if (isInit) // Saat form dibuka
+            if (mode == "tambah")
             {
-                txt.Text = placeholderText;
-                txt.ForeColor = Color.Gray;
+                lblPopupTitle.Text = "Tambah Stok";
+                lblPopupTitle.ForeColor = Color.FromArgb(46, 125, 50);
             }
-            else if (txt.Text == placeholderText) // Saat user klik (Enter)
+            else
             {
-                txt.Text = "";
-                txt.ForeColor = Color.Black;
+                lblPopupTitle.Text = "Kurangi Stok";
+                lblPopupTitle.ForeColor = Color.FromArgb(198, 40, 40);
             }
-            else if (string.IsNullOrWhiteSpace(txt.Text)) // Saat user pergi (Leave)
+
+            lblNamaBahanPopup.Text = $"Bahan: {name}";
+            lblStokSaatIniPopup.Text = $"Stok Saat Ini: {currentStock:0.##} {unit}";
+
+            nudJumlahStok.Value = 0;
+            nudJumlahStok.Minimum = 0;
+            nudJumlahStok.Maximum = 999999;
+            nudJumlahStok.DecimalPlaces = 2;
+
+            txtCatatanStok.Text = "";
+
+            gbPopupStok.Visible = true;
+            gbPopupStok.BringToFront();
+        }
+
+        private void BtnSimpanStok_Click(object sender, EventArgs e)
+        {
+            if (nudJumlahStok.Value == 0)
             {
-                txt.Text = placeholderText;
-                txt.ForeColor = Color.Gray;
-            }
-        }
-
-        // Event Enter (Saat textbox diklik)
-        private void txttbhJumlahMasuk_Enter(object sender, EventArgs e) => AturPlaceholder(txttbhJumlahMasuk);
-        private void txtkrgJumlahKeluar_Enter(object sender, EventArgs e) => AturPlaceholder(txtkrgJumlahKeluar);
-
-        // Event Leave (Saat kursor keluar textbox)
-        private void txttbhJumlahMasuk_Leave(object sender, EventArgs e) => AturPlaceholder(txttbhJumlahMasuk, false);
-        private void txtkrgJumlahKeluar_Leave(object sender, EventArgs e) => AturPlaceholder(txtkrgJumlahKeluar, false);
-
-        private void btntbhSimpan_Click(object sender, EventArgs e)
-        {
-            UpdateStokDatabase(true);
-        }
-
-        private void btnkrgSimpan_Click(object sender, EventArgs e)
-        {
-            UpdateStokDatabase(false);
-        }
-
-        private void UpdateStokDatabase(bool isTambah)
-        {
-            Guna.UI2.WinForms.Guna2TextBox txtJumlah = isTambah ? txttbhJumlahMasuk : txtkrgJumlahKeluar;
-            Guna.UI2.WinForms.Guna2TextBox txtCatatan = isTambah ? txttbhCatatan : txtkrgCatatan;
-            Guna.UI2.WinForms.Guna2GroupBox gbTerkait = isTambah ? gbTambahStok : gbKurangStok;
-
-            string inputBersih = txtJumlah.Text.Trim();
-
-            if (!decimal.TryParse(inputBersih, out decimal jumlah) || jumlah <= 0)
-            {
-                MessageBox.Show("Masukkan jumlah yang valid!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Jumlah tidak boleh 0!", "Validasi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             try
             {
-                Koneksi db = new Koneksi();
-                using (NpgsqlConnection conn = db.GetKoneksi())
+                using (var conn = db.GetKoneksi())
                 {
                     if (conn.State != ConnectionState.Open) conn.Open();
 
-                    // Query Update
-                    // Jika Tambah: stock = stock + jumlah
-                    // Jika Kurang: stock = stock - jumlah
-                    string operatorSql = isTambah ? "+" : "-";
-
-                    string query = $@"
-                UPDATE ingredients 
-                SET stock = stock {operatorSql} @qty, 
-                    updated_at = CURRENT_TIMESTAMP 
-                WHERE id = @id AND user_id = @uid";
-
-                    using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                    // Get current stock
+                    double currentStock = 0;
+                    string query = "SELECT stock FROM ingredients WHERE id = @id AND user_id = @uid";
+                    using (var cmd = new NpgsqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@qty", jumlah);
-                        cmd.Parameters.AddWithValue("@id", idBahanTerpilih);
-                        cmd.Parameters.AddWithValue("@uid", Login.GlobalSession.CurrentUserId);
-
-                        int rows = cmd.ExecuteNonQuery();
-
-                        if (rows > 0)
+                        cmd.Parameters.AddWithValue("@id", selectedIngredientId);
+                        cmd.Parameters.AddWithValue("@uid", currentUserId);
+                        var result = cmd.ExecuteScalar();
+                        if (result != null && result != DBNull.Value)
                         {
-                            MessageBox.Show("Stok berhasil diperbarui!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            gbTerkait.Visible = false; // Tutup popup
-                            LoadDataInventori(); // Refresh Grid
-                        }
-                        else
-                        {
-                            MessageBox.Show("Gagal mengupdate stok. Data mungkin sudah dihapus.", "Gagal");
+                            currentStock = Convert.ToDouble(result);
                         }
                     }
+
+                    // Calculate new stock
+                    double jumlah = Convert.ToDouble(nudJumlahStok.Value);
+                    double newStock = popupMode == "tambah" ? currentStock + jumlah : currentStock - jumlah;
+
+                    if (newStock < 0)
+                    {
+                        MessageBox.Show("Stok tidak boleh negatif!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    // Update stock
+                    query = "UPDATE ingredients SET stock = @stock, updated_at = CURRENT_TIMESTAMP WHERE id = @id AND user_id = @uid";
+                    using (var cmd = new NpgsqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@stock", newStock);
+                        cmd.Parameters.AddWithValue("@id", selectedIngredientId);
+                        cmd.Parameters.AddWithValue("@uid", currentUserId);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+
+                MessageBox.Show($"Stok berhasil {(popupMode == "tambah" ? "ditambah" : "dikurangi")}!",
+                    "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                gbPopupStok.Visible = false;
+                LoadInventoryData(txtCariInventori.Text, cmbStatus.SelectedItem?.ToString() ?? "Semua Status");
+                LoadSummaryLabels();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating stock: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnBatalStok_Click(object sender, EventArgs e)
+        {
+            gbPopupStok.Visible = false;
+        }
+        #endregion
+
+        #region Export PDF
+        private void BtnExportLaporan_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Create PDF document
+                PdfDocument document = new PdfDocument();
+                document.Info.Title = "Laporan Inventori";
+
+                PdfPage page = document.AddPage();
+                page.Size = PdfSharp.PageSize.A4;
+                XGraphics gfx = XGraphics.FromPdfPage(page);
+
+                // Fonts - Gunakan XFontStyleEx untuk versi PdfSharp Anda
+                XFont titleFont = new XFont("Arial", 20, XFontStyleEx.Bold);
+                XFont headerFont = new XFont("Arial", 12, XFontStyleEx.Bold);
+                XFont normalFont = new XFont("Arial", 10, XFontStyleEx.Regular);
+                XFont smallFont = new XFont("Arial", 8, XFontStyleEx.Regular);
+
+                double yPos = 40;
+
+                // Title
+                gfx.DrawString("LAPORAN INVENTORI BAHAN BAKU", titleFont, XBrushes.Black,
+                    new XRect(0, yPos, page.Width, 30), XStringFormats.TopCenter);
+                yPos += 40;
+
+                // Date
+                gfx.DrawString($"Tanggal: {DateTime.Now:dd MMMM yyyy}", normalFont, XBrushes.Black,
+                    new XRect(40, yPos, page.Width - 80, 20), XStringFormats.TopLeft);
+                yPos += 30;
+
+                // Summary Box
+                gfx.DrawRectangle(XPens.Black, XBrushes.LightGray, 40, yPos, page.Width - 80, 60);
+                gfx.DrawString($"Total Bahan: {lblTotalBahanBaku.Text}", headerFont, XBrushes.Black, 50, yPos + 15);
+                gfx.DrawString($"Stok Kritis: {lblStokKritis.Text}", normalFont, XBrushes.Red, 50, yPos + 35);
+                gfx.DrawString($"Stok Rendah: {lblStokRendah.Text}", normalFont, XBrushes.Orange, 200, yPos + 35);
+                gfx.DrawString($"Nilai Total: {lblNilaiInventori.Text}", headerFont, XBrushes.Green, 350, yPos + 35);
+                yPos += 80;
+
+                // Table Header
+                gfx.DrawRectangle(XPens.Black, XBrushes.LightBlue, 40, yPos, page.Width - 80, 25);
+                gfx.DrawString("Nama Bahan", headerFont, XBrushes.Black, 45, yPos + 8);
+                gfx.DrawString("Stok", headerFont, XBrushes.Black, 250, yPos + 8);
+                gfx.DrawString("Harga", headerFont, XBrushes.Black, 330, yPos + 8);
+                gfx.DrawString("Total", headerFont, XBrushes.Black, 420, yPos + 8);
+                gfx.DrawString("Status", headerFont, XBrushes.Black, 500, yPos + 8);
+                yPos += 25;
+
+                // Table Data
+                foreach (DataGridViewRow row in dgvManajemenInventori.Rows)
+                {
+                    if (yPos > page.Height - 100) // New page if needed
+                    {
+                        page = document.AddPage();
+                        gfx = XGraphics.FromPdfPage(page);
+                        yPos = 40;
+                    }
+
+                    string nama = row.Cells["colNamaBahan"].Value?.ToString() ?? "";
+                    string stok = row.Cells["colStokSaatIni"].Value?.ToString() ?? "";
+                    string harga = row.Cells["colHargaUnit"].Value?.ToString() ?? "";
+                    string total = row.Cells["colNilaiTotal"].Value?.ToString() ?? "";
+                    string status = row.Cells["colStatus"].Value?.ToString() ?? "";
+
+                    gfx.DrawString(nama, smallFont, XBrushes.Black, 45, yPos + 5);
+                    gfx.DrawString(stok, smallFont, XBrushes.Black, 250, yPos + 5);
+                    gfx.DrawString(harga, smallFont, XBrushes.Black, 330, yPos + 5);
+                    gfx.DrawString(total, smallFont, XBrushes.Black, 420, yPos + 5);
+                    gfx.DrawString(status, smallFont, XBrushes.Black, 500, yPos + 5);
+
+                    gfx.DrawLine(XPens.LightGray, 40, yPos + 20, page.Width - 40, yPos + 20);
+                    yPos += 20;
+                }
+
+                // Save dialog
+                SaveFileDialog saveDialog = new SaveFileDialog
+                {
+                    Filter = "PDF Files|*.pdf",
+                    Title = "Save Laporan Inventori",
+                    FileName = $"Laporan_Inventori_{DateTime.Now:yyyyMMdd}.pdf"
+                };
+
+                if (saveDialog.ShowDialog() == DialogResult.OK)
+                {
+                    document.Save(saveDialog.FileName);
+                    MessageBox.Show("Laporan berhasil diekspor!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Open PDF
+                    System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                    {
+                        FileName = saveDialog.FileName,
+                        UseShellExecute = true
+                    });
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error database: " + ex.Message);
+                MessageBox.Show($"Error exporting PDF: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        #endregion
+    }
+
+    // WindowsFontResolver untuk PdfSharp
+    public class WindowsFontResolver : IFontResolver
+    {
+        public FontResolverInfo ResolveTypeface(string familyName, bool isBold, bool isItalic)
+        {
+            string style = isBold ? "bold" : "regular";
+            string key = (familyName + "#" + style).ToLowerInvariant();
+
+            switch (key)
+            {
+                case "arial#regular": return new FontResolverInfo("arial#regular");
+                case "arial#bold": return new FontResolverInfo("arial#bold");
+                case "verdana#regular": return new FontResolverInfo("verdana#regular");
+                case "verdana#bold": return new FontResolverInfo("verdana#bold");
+                case "helvetica#regular": return new FontResolverInfo("arial#regular");
+                case "helvetica#bold": return new FontResolverInfo("arial#bold");
+                default:
+                    return isBold ? new FontResolverInfo("arial#bold") : new FontResolverInfo("arial#regular");
             }
         }
 
-        // Tombol Batal
-        private void btntbhBatal_Click(object sender, EventArgs e) => gbTambahStok.Visible = false;
-        private void btnkrgBatal_Click(object sender, EventArgs e) => gbKurangStok.Visible = false;
-
-        private void guna2GroupBox3_Click(object sender, EventArgs e)
+        public byte[] GetFont(string faceName)
         {
+            string fileName = null;
+            switch (faceName.ToLowerInvariant())
+            {
+                case "arial#regular": fileName = "arial.ttf"; break;
+                case "arial#bold": fileName = "arialbd.ttf"; break;
+                case "verdana#regular": fileName = "verdana.ttf"; break;
+                case "verdana#bold": fileName = "verdanab.ttf"; break;
+                default:
+                    var parts = faceName.Split('#');
+                    if (parts.Length > 0) fileName = parts[0] + ".ttf";
+                    break;
+            }
 
+            if (string.IsNullOrEmpty(fileName))
+                throw new FileNotFoundException("Font mapping not found for faceName: " + faceName);
+
+            string fontsFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Windows), "Fonts");
+            string fullPath = Path.Combine(fontsFolder, fileName);
+
+            if (!File.Exists(fullPath))
+            {
+                string nameWithoutExt = Path.GetFileNameWithoutExtension(fileName).ToLowerInvariant();
+                foreach (var f in Directory.GetFiles(fontsFolder))
+                {
+                    if (Path.GetFileName(f).ToLowerInvariant().StartsWith(nameWithoutExt))
+                    {
+                        fullPath = f;
+                        break;
+                    }
+                }
+            }
+
+            if (!File.Exists(fullPath))
+                throw new FileNotFoundException($"Font file not found: {fileName}. Expected in {fontsFolder}");
+
+            return File.ReadAllBytes(fullPath);
         }
     }
 }
