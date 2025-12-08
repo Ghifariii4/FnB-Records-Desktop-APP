@@ -23,6 +23,9 @@ namespace FnB_Records
         private DateTime requestCountResetTime = DateTime.Now;
         private bool isTyping = false;
 
+        // KONSTANTA untuk Free User
+        private const int FREE_USER_MAX_PROMPTS = 3;
+
         public UCDashboard()
         {
             InitializeComponent();
@@ -35,8 +38,8 @@ namespace FnB_Records
             if (pnlChatContainer != null)
             {
                 pnlChatContainer.BackColor = Color.FromArgb(45, 45, 48);
-                pnlChatContainer.AutoScroll = true; // Enable scroll
-                pnlChatContainer.Padding = new Padding(0, 0, 5, 0); // Space untuk scrollbar
+                pnlChatContainer.AutoScroll = true;
+                pnlChatContainer.Padding = new Padding(0, 0, 5, 0);
 
                 typeof(Panel).InvokeMember("DoubleBuffered",
                     System.Reflection.BindingFlags.SetProperty |
@@ -77,12 +80,23 @@ namespace FnB_Records
             };
         }
 
-
         private async void UCDashboard_Load(object sender, EventArgs e)
         {
             LoadHeaderInfo();
+            UpdateRoleUI();
             RefreshDashboardData();
-            await AddChatBubbleTypingEffect($"Halo {Login.GlobalSession.BusinessName}! 👋 Saya Bibot.\nLaporan hari ini sudah siap. Ada yang bisa saya bantu?", false);
+
+            // Pesan sambutan dengan info limit untuk Free user
+            string welcomeMessage = $"Halo {Login.GlobalSession.BusinessName}! 👋 Saya Bibot.\nLaporan hari ini sudah siap. Ada yang bisa saya bantu?";
+
+            if (Login.GlobalSession.CurrentUserRole != "premium")
+            {
+                // Ambil counter dari GlobalSession (persistent)
+                int remaining = FREE_USER_MAX_PROMPTS - Login.GlobalSession.FreeUserPromptCount;
+                welcomeMessage += $"\n\n⚠️ Akun Free: Anda memiliki {remaining}/{FREE_USER_MAX_PROMPTS} pertanyaan tersisa.\nUpgrade ke Premium untuk unlimited chat!";
+            }
+
+            await AddChatBubbleTypingEffect(welcomeMessage, false);
         }
 
         private void btRefresh_Click(object sender, EventArgs e)
@@ -109,20 +123,41 @@ namespace FnB_Records
 
         private void LoadHeaderInfo()
         {
-            lblNamaBisnis.Text = Login.GlobalSession.BusinessName;
-            lblEmail.Text = Login.GlobalSession.CurrentUserEmail;
-            lblStatusRole.Text = Login.GlobalSession.CurrentUserRole;
+            lblNamaBisnis.Text = Login.GlobalSession.BusinessName ?? "Nama Bisnis";
+            lblEmail.Text = Login.GlobalSession.CurrentUserEmail ?? "email@example.com";
+            lblStatusRole.Text = Login.GlobalSession.CurrentUserRole ?? "free";
         }
 
-        // --- PERBAIKAN DI SINI: MENGHAPUS conn.Open() ---
+        // --- UPDATE UI ROLE ---
+        private void UpdateRoleUI()
+        {
+            string role = Login.GlobalSession.CurrentUserRole ?? "free";
+            bool isVerified = Login.GlobalSession.IsEmailVerified;
+
+            if (role == "premium")
+            {
+                lblStatusRole.Text = "Premium ✨";
+                lblStatusRole.ForeColor = Color.White;
+                gbStatusRole.FillColor = Color.Gold;
+            }
+            else
+            {
+                lblStatusRole.Text = "Free";
+                lblStatusRole.ForeColor = Color.White;
+                gbStatusRole.FillColor = Color.FromArgb(34, 139, 34); // Hijau Tua Elegan ✅
+            }
+
+            if (!isVerified)
+            {
+                lblStatusRole.Text += " ⚠️";
+            }
+        }
 
         private void LoadSummaryCards()
         {
             Koneksi db = new Koneksi();
-            using (NpgsqlConnection conn = db.GetKoneksi()) // GetKoneksi sudah Open otomatis
+            using (NpgsqlConnection conn = db.GetKoneksi())
             {
-                // conn.Open(); <--- HAPUS INI
-
                 string sql = @"
                     SELECT 
                         COALESCE(COUNT(id), 0) as total_transaksi,
@@ -159,8 +194,6 @@ namespace FnB_Records
             Koneksi db = new Koneksi();
             using (NpgsqlConnection conn = db.GetKoneksi())
             {
-                // conn.Open(); <--- HAPUS INI
-
                 string sql = @"
                     SELECT 
                         COALESCE(AVG(revenue), 0) as avg_order_value,
@@ -221,8 +254,6 @@ namespace FnB_Records
             Koneksi db = new Koneksi();
             using (NpgsqlConnection conn = db.GetKoneksi())
             {
-                // conn.Open(); <--- HAPUS INI
-
                 string sql = @"
                     SELECT 
                         TO_CHAR(sale_date, 'Mon') as bulan,
@@ -277,9 +308,6 @@ namespace FnB_Records
             Koneksi db = new Koneksi();
             using (NpgsqlConnection conn = db.GetKoneksi())
             {
-                // conn.Open(); <--- HAPUS INI
-
-                // Pastikan query ini sesuai dengan struktur tabel Anda
                 string sql = @"
                     SELECT r.name, SUM(s.qty) as total_qty
                     FROM sales s
@@ -323,8 +351,6 @@ namespace FnB_Records
             Koneksi db = new Koneksi();
             using (NpgsqlConnection conn = db.GetKoneksi())
             {
-                // conn.Open(); <--- HAPUS INI
-
                 string sql = @"
                     SELECT r.name, SUM(s.qty) as terjual, SUM(s.revenue) as omset
                     FROM sales s
@@ -348,7 +374,7 @@ namespace FnB_Records
                             Label lblItem = new Label();
                             lblItem.Text = $"{rank}. {menuName} ({sold} terjual)";
                             lblItem.ForeColor = Color.Black;
-                            lblItem.Font = new Font("Inter; 14,25pt", 10, FontStyle.Bold);
+                            lblItem.Font = new Font("Inter; 14,25pt", 13, FontStyle.Bold);
                             lblItem.AutoSize = true;
                             lblItem.Margin = new Padding(10, 5, 0, 5);
 
@@ -367,8 +393,6 @@ namespace FnB_Records
             Koneksi db = new Koneksi();
             using (NpgsqlConnection conn = db.GetKoneksi())
             {
-                // conn.Open(); <--- HAPUS INI
-
                 string sql = "SELECT name, stock, unit FROM ingredients WHERE user_id = @uid AND stock <= min_stock";
 
                 using (NpgsqlCommand cmd = new NpgsqlCommand(sql, conn))
@@ -378,7 +402,7 @@ namespace FnB_Records
                     {
                         if (!reader.HasRows)
                         {
-                            Label lblAman = new Label { Text = "Stok Aman 👍", ForeColor = Color.LightGreen, AutoSize = true, Font = new Font("Segoe UI", 10) };
+                            Label lblAman = new Label { Text = "Stok Aman 👍", ForeColor = Color.LightGreen, AutoSize = true, Font = new Font("Segoe UI", 14) };
                             flowLayoutPanel1.Controls.Add(lblAman);
                             return;
                         }
@@ -392,7 +416,7 @@ namespace FnB_Records
                             Label lblAlert = new Label();
                             lblAlert.Text = $"⚠️ {name}: Sisa {stock} {unit}";
                             lblAlert.ForeColor = Color.Salmon;
-                            lblAlert.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+                            lblAlert.Font = new Font("Segoe UI", 14, FontStyle.Bold);
                             lblAlert.AutoSize = true;
                             lblAlert.Margin = new Padding(3, 3, 3, 5);
 
@@ -403,7 +427,7 @@ namespace FnB_Records
             }
         }
 
-        // --- BAGIAN CHATBOT TIDAK PERLU DIUBAH ---
+        // --- BAGIAN CHATBOT DENGAN LIMIT FREE USER (PERSISTENT) ---
         private async void btnsend_Click_1(object sender, EventArgs e)
         {
             await HandleSendAction();
@@ -414,6 +438,28 @@ namespace FnB_Records
             string prompt = txtpromp.Text.Trim();
             if (string.IsNullOrEmpty(prompt) || prompt == "Silahkan tanya Bibot...") return;
             if (isTyping) return;
+
+            // CEK LIMIT UNTUK FREE USER (Menggunakan GlobalSession yang persistent)
+            if (Login.GlobalSession.CurrentUserRole != "premium")
+            {
+                if (Login.GlobalSession.FreeUserPromptCount >= FREE_USER_MAX_PROMPTS)
+                {
+                    MessageBox.Show(
+                        "🔒 LIMIT TERCAPAI!\n\n" +
+                        $"Akun Free hanya dapat bertanya {FREE_USER_MAX_PROMPTS}x per sesi.\n\n" +
+                        "Upgrade ke Premium untuk:\n" +
+                        "✨ Unlimited AI Chat\n" +
+                        "✨ Advanced Analytics\n" +
+                        "✨ Multi-Branch Management\n" +
+                        "✨ Priority Support\n\n" +
+                        "Hubungi admin untuk upgrade!",
+                        "Fitur Premium",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+                    return;
+                }
+            }
 
             AddChatBubble(prompt, true);
             txtpromp.Clear();
@@ -429,14 +475,35 @@ namespace FnB_Records
                 string response = await AskGemini(prompt);
                 pnlChatContainer.Controls.Remove(loadingBubble);
                 loadingBubble.Dispose();
+
+                // Tambah counter untuk Free user (PERSISTENT di GlobalSession)
+                if (Login.GlobalSession.CurrentUserRole != "premium")
+                {
+                    Login.GlobalSession.FreeUserPromptCount++; // ✅ Update counter di GlobalSession
+                    int remaining = FREE_USER_MAX_PROMPTS - Login.GlobalSession.FreeUserPromptCount;
+
+                    if (remaining > 0)
+                    {
+                        response += $"\n\n📊 Sisa pertanyaan: {remaining}/{FREE_USER_MAX_PROMPTS}";
+                    }
+                    else
+                    {
+                        response += "\n\n🔒 Limit pertanyaan telah habis. Upgrade ke Premium untuk unlimited chat!";
+                    }
+                }
+
                 await AddChatBubbleTypingEffect(response, false);
             }
             catch (Exception ex)
             {
                 pnlChatContainer.Controls.Remove(loadingBubble);
+                loadingBubble.Dispose();
                 AddChatBubble("Error: " + ex.Message, false);
             }
-            finally { isTyping = false; }
+            finally
+            {
+                isTyping = false;
+            }
         }
 
         private ChatBubble AddChatBubble(string text, bool isUser)
@@ -480,8 +547,8 @@ namespace FnB_Records
 
         private async Task<string> AskGemini(string prompt)
         {
-            string apiKey = "AIzaSyCRCiVBrZeWLGBOFAF_fwmbFhY1lv37gwk";
-            string url = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={apiKey}";
+            string apiKey = "AIzaSyCyYVNT_0XTd7q4lcJtGhWNlkyTzsxcwXU";
+            string url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent";
 
             string context = $"Nama Bisnis: {Login.GlobalSession.BusinessName}. Saya adalah pemilik bisnis F&B. Jawablah terkait manajemen stok, penjualan, atau strategi marketing.";
             string fullPrompt = $"{context}\nUser bertanya: {prompt}\nJawab:";
@@ -491,11 +558,16 @@ namespace FnB_Records
 
             using (var client = new HttpClient())
             {
+                client.DefaultRequestHeaders.Add("X-goog-api-key", apiKey);
+
                 var content = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
                 var response = await client.PostAsync(url, content);
                 string result = await response.Content.ReadAsStringAsync();
 
-                if (!response.IsSuccessStatusCode) return "Maaf, koneksi ke server AI terputus.";
+                if (!response.IsSuccessStatusCode)
+                {
+                    return $"Maaf, koneksi ke server AI terputus. Error: {response.StatusCode}";
+                }
 
                 using (JsonDocument doc = JsonDocument.Parse(result))
                 {
@@ -508,6 +580,83 @@ namespace FnB_Records
             }
         }
 
+        // --- EVENT HANDLERS UNTUK STATUS ROLE ---
+        private void gbStatusRole_Click(object sender, EventArgs e)
+        {
+            TampilkanInfoRole();
+        }
+
+        private void lblStatusRole_Click(object sender, EventArgs e)
+        {
+            TampilkanInfoRole();
+        }
+
+        private void TampilkanInfoRole()
+        {
+            string role = Login.GlobalSession.CurrentUserRole ?? "free";
+            bool verified = Login.GlobalSession.IsEmailVerified;
+
+            string message = verified ? "" : "⚠️ EMAIL BELUM TERVERIFIKASI!\n" +
+                                            "Verifikasi email untuk akses penuh.\n\n";
+
+            if (role == "premium")
+            {
+                message += "✨ Status: PREMIUM\n\n" +
+                          "Fitur Aktif:\n" +
+                          "✅ Unlimited Products\n" +
+                          "✅ Unlimited AI Chat with Bibot\n" +
+                          "✅ Multi-Branch Management\n" +
+                          "✅ Advanced Analytics\n" +
+                          "✅ Inventory Management\n" +
+                          "✅ Production Management\n" +
+                          "✅ Priority Support\n\n" +
+                          "Terima kasih telah menjadi member Premium!";
+            }
+            else
+            {
+                int remaining = FREE_USER_MAX_PROMPTS - Login.GlobalSession.FreeUserPromptCount;
+                message += "📦 Status: FREE\n\n" +
+                          "Fitur Tersedia:\n" +
+                          "✅ Basic Product Management\n" +
+                          "✅ Vendor Management\n" +
+                          "✅ Recipe Management\n" +
+                          "✅ Purchase Orders\n" +
+                          "✅ Sales Tracking\n" +
+                          $"⚠️ AI Chat: {remaining}/{FREE_USER_MAX_PROMPTS} pertanyaan tersisa\n\n" +
+                          "🔒 Fitur Terkunci (Premium):\n" +
+                          "• Unlimited AI Chat\n" +
+                          "• Multi-Branch Management\n" +
+                          "• Advanced Analytics\n" +
+                          "• Inventory Management\n" +
+                          "• Production Management\n\n" +
+                          "💡 Upgrade ke Premium untuk akses penuh!\n" +
+                          "Hubungi admin untuk informasi lebih lanjut.";
+            }
+
+            MessageBox.Show(message, "Status Akun", MessageBoxButtons.OK,
+                          role == "premium" ? MessageBoxIcon.Information : MessageBoxIcon.Question);
+        }
+
+        private void pbPremium_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+                "✨ Anda adalah member PREMIUM!\n\n" +
+                "Nikmati semua fitur eksklusif:\n" +
+                "✅ Unlimited Products\n" +
+                "✅ Unlimited AI Chat\n" +
+                "✅ Multi-Branch Management\n" +
+                "✅ Advanced Analytics\n" +
+                "✅ Inventory Management\n" +
+                "✅ Production Management\n" +
+                "✅ Priority Support\n\n" +
+                "Terima kasih atas dukungan Anda! 🎉",
+                "Premium Member",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+        }
+
+        // Event lainnya
         private void chartDashboard_Click(object sender, EventArgs e) { LoadPieChart(); }
         private void richTextBoxAi_TextChanged(object sender, EventArgs e) { }
         private void txtpromp_TextChanged(object sender, EventArgs e) { }
@@ -516,11 +665,7 @@ namespace FnB_Records
         private void guna2GroupBox12_Click(object sender, EventArgs e) { }
         private void txtpromp_TextChanged_1(object sender, EventArgs e) { }
         private void txtpromp_TextChanged_2(object sender, EventArgs e) { }
-
-        private void pnlChatContainer_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        private void pnlChatContainer_Paint(object sender, PaintEventArgs e) { }
     }
 
     public class ChatBubble : Panel
@@ -582,7 +727,6 @@ namespace FnB_Records
                 e.Graphics.FillPath(brush, path);
             }
         }
-
 
         private GraphicsPath GetRoundedPath(Rectangle rect, int radius)
         {

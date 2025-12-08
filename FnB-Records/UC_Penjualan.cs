@@ -17,69 +17,41 @@ namespace FnB_Records
             gbInputPenjualanPopUp.BackColor = Color.White;
         }
 
-        // --- 1. EVENT LOAD ---
+        // --- 1. SETUP EVENT & LOAD ---
         private void UC_Penjualan_Load(object sender, EventArgs e)
         {
-            if (currentUserId == 0) Login.GlobalSession.CurrentUserId = 1; // Safety check
+            if (currentUserId == 0) Login.GlobalSession.CurrentUserId = 1;
 
-            SetupTableStyle(); // Styling tabel agar putih bersih
-            LoadComboMenu();   // Isi dropdown menu
-            LoadDataPenjualan(); // Isi tabel penjualan
+            // Setting Default Tanggal
+            dtpFilterTanggal.Value = DateTime.Now;
+            dtpTanggalPenjualan.Value = DateTime.Now;
+            dtpTanggalPenjualan.MinDate = DateTime.Today;
+
+            SetupTableStyle();
+            LoadComboMenu();
+            AttachInputEvents();
+            LoadDataPenjualan();
+            HitungTotalSemuaTransaksi();
         }
 
-        // --- 2. SETUP TAMPILAN TABEL (PUTIH & BERSIH) ---
-        private void SetupTableStyle()
+        private void AttachInputEvents()
         {
-            dgvDataBahanBaku.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
-            dgvDataBahanBaku.BackgroundColor = Color.White;
-            dgvDataBahanBaku.GridColor = Color.FromArgb(231, 229, 255);
-            dgvDataBahanBaku.BorderStyle = BorderStyle.None;
-            dgvDataBahanBaku.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            inputHargaJual.TextChanged += (s, ev) => HitungEstimasiLive();
+            inputJumlahTerjual.TextChanged += (s, ev) => HitungEstimasiLive();
+            inputDiskon.TextChanged += (s, ev) => HitungEstimasiLive();
+            inputBiayaLain.TextChanged += (s, ev) => HitungEstimasiLive();
+            cbMenu.SelectedIndexChanged += cbMenu_SelectedIndexChanged;
 
-            // Header
-            dgvDataBahanBaku.ColumnHeadersHeight = 50;
-            dgvDataBahanBaku.ColumnHeadersDefaultCellStyle.BackColor = Color.White;
-            dgvDataBahanBaku.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
-            dgvDataBahanBaku.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            dgvDataBahanBaku.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.White;
+            txtCariRiwayatPenjualan.TextChanged += (s, ev) => LoadDataPenjualan();
+            dtpFilterTanggal.ValueChanged += (s, ev) => LoadDataPenjualan();
 
-            // Baris
-            dgvDataBahanBaku.RowTemplate.Height = 45;
-            dgvDataBahanBaku.DefaultCellStyle.BackColor = Color.White;
-            dgvDataBahanBaku.DefaultCellStyle.ForeColor = Color.FromArgb(70, 70, 70);
-            dgvDataBahanBaku.DefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Regular);
-            dgvDataBahanBaku.DefaultCellStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dgvDataBahanBaku.DefaultCellStyle.SelectionForeColor = Color.Black;
-            dgvDataBahanBaku.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
+            btinputPenjualanPopUp.Click += btinputPenjualanPopUp_Click;
+            btnClosePopUpBahanBaku.Click += btnClosePopUpBahanBaku_Click;
+            btnBatalPopUp.Click += btnBatalPopUp_Click;
+            btnSimpanPopUp.Click += btnSimpanPopUp_Click;
         }
 
-        // --- 3. ISI COMBOBOX MENU ---
-        private void LoadComboMenu()
-        {
-            try
-            {
-                Koneksi db = new Koneksi();
-                using (NpgsqlConnection conn = db.GetKoneksi())
-                {
-                    if (conn.State != ConnectionState.Open) conn.Open();
-                    string sql = "SELECT id, name FROM recipes WHERE user_id = @uid ORDER BY name ASC";
-                    using (NpgsqlCommand cmd = new NpgsqlCommand(sql, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@uid", currentUserId);
-                        DataTable dt = new DataTable();
-                        using (NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd)) da.Fill(dt);
-
-                        cbMenu.DataSource = dt;
-                        cbMenu.DisplayMember = "name";
-                        cbMenu.ValueMember = "id";
-                        cbMenu.SelectedIndex = -1;
-                    }
-                }
-            }
-            catch (Exception ex) { MessageBox.Show("Gagal memuat menu: " + ex.Message); }
-        }
-
-        // --- 4. LOAD DATA PENJUALAN ---
+        // --- 2. LOAD DATA (FIX SUBTOTAL) ---
         private void LoadDataPenjualan()
         {
             try
@@ -89,14 +61,17 @@ namespace FnB_Records
                 {
                     if (conn.State != ConnectionState.Open) conn.Open();
 
-                    // Query Ambil Data Penjualan + Nama Menu
                     string sql = @"
-                        SELECT s.id, r.name AS nama_menu, s.qty AS jumlah_qty, s.price AS harga_jual,
-                               (s.qty * s.price) AS subtotal,
-                               s.tax AS ppn,
-                               s.total_price AS total_harga,
-                               s.profit,
-                               (s.total_price - s.profit) AS hpp
+                        SELECT 
+                            s.id, 
+                            r.name AS nama_menu, 
+                            s.qty AS jumlah_qty, 
+                            s.selling_price AS harga_jual, 
+                            (s.qty * s.selling_price) AS subtotal, -- Pastikan ini sesuai
+                            s.tax AS ppn,
+                            s.total_price AS total_harga,
+                            s.profit,
+                            s.total_hpp AS hpp
                         FROM sales s
                         JOIN recipes r ON s.recipe_id = r.id
                         WHERE s.user_id = @uid 
@@ -115,152 +90,181 @@ namespace FnB_Records
 
                         dgvDataBahanBaku.AutoGenerateColumns = false;
                         dgvDataBahanBaku.DataSource = dt;
-
-                        HitungRingkasan(dt); // Update Label Total di bawah
                         FormatKolom();
+                        HitungRingkasan(dt);
                     }
                 }
             }
-            catch (Exception ex) { MessageBox.Show("Gagal memuat data penjualan: " + ex.Message); }
+            catch (Exception ex) { MessageBox.Show("Gagal Load Data: " + ex.Message); }
         }
 
-        private void FormatKolom()
-        {
-            // Format Rupiah untuk kolom angka
-            System.Globalization.CultureInfo id = System.Globalization.CultureInfo.GetCultureInfo("id-ID");
-
-            string[] moneyCols = { "col_HargaJual", "col_subtotal", "col_ppn", "col_total", "col_hpp", "col_profit" };
-            foreach (string col in moneyCols)
-            {
-                if (dgvDataBahanBaku.Columns.Contains(col))
-                {
-                    dgvDataBahanBaku.Columns[col].DefaultCellStyle.Format = "C0";
-                    dgvDataBahanBaku.Columns[col].DefaultCellStyle.FormatProvider = id;
-                }
-            }
-        }
-
-        // --- 5. HITUNG RINGKASAN (TOTAL BAWAH) ---
-        private void HitungRingkasan(DataTable dt)
-        {
-            double totalHPP = 0, subtotal = 0, totalPPN = 0, totalPendapatan = 0, labaBersih = 0;
-
-            foreach (DataRow row in dt.Rows)
-            {
-                totalHPP += Convert.ToDouble(row["hpp"]);
-                subtotal += Convert.ToDouble(row["subtotal"]);
-                totalPPN += Convert.ToDouble(row["ppn"]);
-                totalPendapatan += Convert.ToDouble(row["total_harga"]);
-                labaBersih += Convert.ToDouble(row["profit"]);
-            }
-
-            double margin = (totalPendapatan > 0) ? (labaBersih / totalPendapatan) * 100 : 0;
-
-            // Update Label
-            System.Globalization.CultureInfo id = System.Globalization.CultureInfo.GetCultureInfo("id-ID");
-            lblTotalHpp.Text = totalHPP.ToString("C0", id);
-            lblSubtotal.Text = subtotal.ToString("C0", id);
-            lblPPN.Text = totalPPN.ToString("C0", id);
-            lblTotalPendapatan.Text = totalPendapatan.ToString("C0", id);
-            lblLabaBersih.Text = labaBersih.ToString("C0", id);
-            lblMargin.Text = margin.ToString("0.0") + "%";
-
-            // Tampilkan panel ringkasan
-            guna2GroupBox9.Visible = true;
-        }
-
-        // --- 6. SAAT MEMILIH MENU DI POPUP (AUTO ISI HARGA) ---
-        private void cbMenu_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbMenu.SelectedIndex == -1 || cbMenu.SelectedValue == null) return;
-
-            try
-            {
-                // Ambil harga jual menu dari database
-                if (int.TryParse(cbMenu.SelectedValue.ToString(), out int recipeId))
-                {
-                    Koneksi db = new Koneksi();
-                    using (NpgsqlConnection conn = db.GetKoneksi())
-                    {
-                        string sql = "SELECT price FROM recipes WHERE id = @id";
-                        using (NpgsqlCommand cmd = new NpgsqlCommand(sql, conn))
-                        {
-                            cmd.Parameters.AddWithValue("@id", recipeId);
-                            object result = cmd.ExecuteScalar();
-                            if (result != null)
-                            {
-                                inputHargaJual.Text = Convert.ToDouble(result).ToString("N0");
-                            }
-                        }
-                    }
-                }
-            }
-            catch { }
-        }
-
-        // --- 7. SIMPAN PENJUALAN ---
+        // --- 3. LOGIKA SIMPAN & KURANGI STOK ---
         private void btnSimpanPopUp_Click(object sender, EventArgs e)
         {
             if (cbMenu.SelectedValue == null || string.IsNullOrWhiteSpace(inputJumlahTerjual.Text))
             {
-                MessageBox.Show("Pilih menu dan masukkan jumlah terjual.", "Warning");
-                return;
+                MessageBox.Show("Lengkapi data!", "Peringatan"); return;
             }
 
             try
             {
-                // Bersihkan input angka
-                double hargaJual = double.Parse(inputHargaJual.Text.Replace(".", "").Replace(",", ""));
-                int qty = int.Parse(inputJumlahTerjual.Text.Replace(".", ""));
-                double diskon = string.IsNullOrEmpty(inputDiskon.Text) ? 0 : double.Parse(inputDiskon.Text.Replace(".", ""));
-                double biayaLain = string.IsNullOrEmpty(inputBiayaLain.Text) ? 0 : double.Parse(inputBiayaLain.Text.Replace(".", ""));
+                double harga = ParseCurrency(inputHargaJual.Text);
+                int qty = (int)ParseCurrency(inputJumlahTerjual.Text);
+                double diskon = ParseCurrency(inputDiskon.Text);
+                double biayaLain = ParseCurrency(inputBiayaLain.Text);
                 int recipeId = Convert.ToInt32(cbMenu.SelectedValue);
 
-                // Hitung Keuangan
-                double subtotal = hargaJual * qty;
-                double ppn = subtotal * 0.10; // PPN 10%
-                double total = subtotal + ppn + biayaLain - diskon;
+                double subtotal = harga * qty;
+                double ppn = subtotal * 0.10;
+                double total = (subtotal + ppn + biayaLain) - diskon;
 
-                // Hitung HPP (Modal) untuk menghitung Profit
                 double hppSatuan = HitungHPP(recipeId);
                 double totalHPP = hppSatuan * qty;
-                double profit = (subtotal - totalHPP) - diskon; // Profit bersih (exclude tax & other fees usually)
+                double profit = (subtotal - totalHPP) - diskon;
 
                 Koneksi db = new Koneksi();
                 using (NpgsqlConnection conn = db.GetKoneksi())
                 {
-                    string sql = @"INSERT INTO sales 
-                                (user_id, recipe_id, qty, price, discount, other_fees, tax, revenue, profit, total_price, sale_date, created_at)
-                                VALUES 
-                                (@uid, @rid, @qty, @price, @disc, @fees, @tax, @rev, @prof, @total, @date, CURRENT_TIMESTAMP)";
+                    if (conn.State != ConnectionState.Open) conn.Open();
 
-                    using (NpgsqlCommand cmd = new NpgsqlCommand(sql, conn))
+                    // GUNAKAN TRANSAKSI: Agar Simpan Penjualan & Kurangi Stok atomic (sukses semua atau gagal semua)
+                    using (var trans = conn.BeginTransaction())
                     {
-                        cmd.Parameters.AddWithValue("@uid", currentUserId);
-                        cmd.Parameters.AddWithValue("@rid", recipeId);
-                        cmd.Parameters.AddWithValue("@qty", qty);
-                        cmd.Parameters.AddWithValue("@price", hargaJual);
-                        cmd.Parameters.AddWithValue("@disc", diskon);
-                        cmd.Parameters.AddWithValue("@fees", biayaLain);
-                        cmd.Parameters.AddWithValue("@tax", ppn);
-                        cmd.Parameters.AddWithValue("@rev", subtotal); // Revenue biasanya adalah Subtotal
-                        cmd.Parameters.AddWithValue("@prof", profit);
-                        cmd.Parameters.AddWithValue("@total", total);
-                        cmd.Parameters.AddWithValue("@date", dtpTanggalPenjualan.Value);
+                        try
+                        {
+                            // A. Simpan Data Penjualan
+                            string sqlSales = @"INSERT INTO sales 
+                                (user_id, recipe_id, qty, selling_price, discount, other_fees, tax, revenue, profit, total_price, total_hpp, sale_date, created_at)
+                                VALUES 
+                                (@uid, @rid, @qty, @price, @disc, @fees, @tax, @rev, @prof, @total, @thpp, @date, CURRENT_TIMESTAMP)";
 
-                        cmd.ExecuteNonQuery();
+                            using (var cmd = new NpgsqlCommand(sqlSales, conn, trans))
+                            {
+                                cmd.Parameters.AddWithValue("@uid", currentUserId);
+                                cmd.Parameters.AddWithValue("@rid", recipeId);
+                                cmd.Parameters.AddWithValue("@qty", qty);
+                                cmd.Parameters.AddWithValue("@price", harga);
+                                cmd.Parameters.AddWithValue("@disc", diskon);
+                                cmd.Parameters.AddWithValue("@fees", biayaLain);
+                                cmd.Parameters.AddWithValue("@tax", ppn);
+                                cmd.Parameters.AddWithValue("@rev", subtotal);
+                                cmd.Parameters.AddWithValue("@prof", profit);
+                                cmd.Parameters.AddWithValue("@total", total);
+                                cmd.Parameters.AddWithValue("@thpp", totalHPP);
+                                cmd.Parameters.AddWithValue("@date", dtpTanggalPenjualan.Value);
+                                cmd.ExecuteNonQuery();
+                            }
+
+                            // B. Kurangi Stok Bahan Baku (LOGIKA BARU)
+                            // Ambil bahan-bahan dari resep ini
+                            string sqlBahan = "SELECT ingredient_id, amount FROM recipe_ingredients WHERE recipe_id = @rid";
+                            using (var cmdGetBahan = new NpgsqlCommand(sqlBahan, conn, trans))
+                            {
+                                cmdGetBahan.Parameters.AddWithValue("@rid", recipeId);
+                                using (var reader = cmdGetBahan.ExecuteReader())
+                                {
+                                    // Tampung dulu data bahan agar reader bisa ditutup sebelum update
+                                    var bahanList = new System.Collections.Generic.List<(int id, double amount)>();
+                                    while (reader.Read())
+                                    {
+                                        bahanList.Add((reader.GetInt32(0), reader.GetDouble(1)));
+                                    }
+                                    reader.Close(); // Tutup reader
+
+                                    // Lakukan Update Stok
+                                    foreach (var bahan in bahanList)
+                                    {
+                                        double jumlahTerpakai = bahan.amount * qty; // Takaran x Jumlah Porsi Terjual
+
+                                        string sqlUpdateStok = "UPDATE ingredients SET stock = stock - @jml WHERE id = @iid";
+                                        using (var cmdUpdate = new NpgsqlCommand(sqlUpdateStok, conn, trans))
+                                        {
+                                            cmdUpdate.Parameters.AddWithValue("@jml", jumlahTerpakai);
+                                            cmdUpdate.Parameters.AddWithValue("@iid", bahan.id);
+                                            cmdUpdate.ExecuteNonQuery();
+                                        }
+                                    }
+                                }
+                            }
+
+                            trans.Commit(); // Simpan Permanen
+                            MessageBox.Show("Penjualan disimpan & Stok berkurang!", "Sukses");
+                            gbInputPenjualanPopUp.Visible = false;
+                            BersihkanInput();
+                            LoadDataPenjualan();
+                            HitungTotalSemuaTransaksi();
+                        }
+                        catch (Exception ex)
+                        {
+                            trans.Rollback(); // Batalkan semua jika error
+                            throw ex;
+                        }
                     }
                 }
-
-                MessageBox.Show("Penjualan berhasil disimpan!", "Sukses");
-                gbInputPenjualanPopUp.Visible = false;
-                BersihkanInput();
-                LoadDataPenjualan();
             }
-            catch (Exception ex) { MessageBox.Show("Gagal menyimpan: " + ex.Message); }
+            catch (Exception ex) { MessageBox.Show("Gagal menyimpan: " + ex.Message, "Error"); }
         }
 
-        // Fungsi Helper Hitung HPP dari Resep
+        // --- 4. HITUNG RINGKASAN ---
+        private void HitungRingkasan(DataTable dt)
+        {
+            double totalPendapatan = 0, totalHPP = 0, totalLaba = 0;
+            foreach (DataRow row in dt.Rows)
+            {
+                totalPendapatan += row["total_harga"] != DBNull.Value ? Convert.ToDouble(row["total_harga"]) : 0;
+                totalHPP += row["hpp"] != DBNull.Value ? Convert.ToDouble(row["hpp"]) : 0;
+                totalLaba += row["profit"] != DBNull.Value ? Convert.ToDouble(row["profit"]) : 0;
+            }
+            double margin = (totalPendapatan > 0) ? (totalLaba / totalPendapatan) * 100 : 0;
+
+            System.Globalization.CultureInfo id = System.Globalization.CultureInfo.GetCultureInfo("id-ID");
+            if (lblPendapatan != null) lblPendapatan.Text = totalPendapatan.ToString("C0", id);
+            if (lblTotal_Hpp != null) lblTotal_Hpp.Text = totalHPP.ToString("C0", id);
+            if (lblLaba != null) lblLaba.Text = totalLaba.ToString("C0", id);
+            if (lbl_Margin != null) lbl_Margin.Text = margin.ToString("0.0") + "%";
+        }
+
+        private void HitungEstimasiLive()
+        {
+            try
+            {
+                double harga = ParseCurrency(inputHargaJual.Text);
+                double qty = ParseCurrency(inputJumlahTerjual.Text);
+                double diskon = ParseCurrency(inputDiskon.Text);
+                double biayaLain = ParseCurrency(inputBiayaLain.Text);
+
+                double subtotal = harga * qty;
+                double ppn = subtotal * 0.10;
+                double totalAkhir = (subtotal + ppn + biayaLain) - diskon;
+
+                double hppSatuan = 0;
+                if (cbMenu.SelectedValue != null && int.TryParse(cbMenu.SelectedValue.ToString(), out int rid))
+                {
+                    hppSatuan = HitungHPP(rid);
+                }
+                double totalHPP = hppSatuan * qty;
+                double profitBersih = (subtotal - totalHPP) - diskon;
+                double margin = (subtotal > 0) ? (profitBersih / subtotal) * 100 : 0;
+
+                System.Globalization.CultureInfo id = System.Globalization.CultureInfo.GetCultureInfo("id-ID");
+                lblTotalHpp.Text = totalHPP.ToString("C0", id);
+                lblSubtotal.Text = subtotal.ToString("C0", id);
+                lblPPN.Text = ppn.ToString("C0", id);
+                lblTotalPendapatan.Text = totalAkhir.ToString("C0", id);
+                lblLabaBersih.Text = profitBersih.ToString("C0", id);
+                lblMargin.Text = margin.ToString("0.0") + "%";
+                guna2GroupBox9.Visible = true;
+            }
+            catch { }
+        }
+
+        // --- HELPER LAINNYA ---
+        private double ParseCurrency(string text)
+        {
+            if (string.IsNullOrWhiteSpace(text)) return 0;
+            return double.TryParse(text.Replace(".", "").Replace(",", ""), out double result) ? result : 0;
+        }
+
         private double HitungHPP(int recipeId)
         {
             double hpp = 0;
@@ -269,49 +273,141 @@ namespace FnB_Records
                 Koneksi db = new Koneksi();
                 using (NpgsqlConnection conn = db.GetKoneksi())
                 {
-                    // Hitung total harga bahan baku berdasarkan komposisi resep
-                    // Asumsi: tabel ingredients punya kolom 'price' per satuan
-                    string sql = @"
-                        SELECT COALESCE(SUM(ri.amount * (i.price / 1)), 0) 
-                        FROM recipe_ingredients ri
-                        JOIN ingredients i ON ri.ingredient_id = i.id
-                        WHERE ri.recipe_id = @rid";
-
+                    if (conn.State != ConnectionState.Open) conn.Open();
+                    string sql = "SELECT COALESCE(hpp, 0) FROM recipes WHERE id = @rid";
                     using (NpgsqlCommand cmd = new NpgsqlCommand(sql, conn))
                     {
                         cmd.Parameters.AddWithValue("@rid", recipeId);
-                        hpp = Convert.ToDouble(cmd.ExecuteScalar());
+                        object result = cmd.ExecuteScalar();
+                        if (result != null) hpp = Convert.ToDouble(result);
                     }
                 }
             }
-            catch { hpp = 0; } // Jika gagal, anggap HPP 0
+            catch { hpp = 0; }
             return hpp;
         }
 
-        // --- UTILITIES ---
+        private void LoadComboMenu()
+        {
+            try
+            {
+                Koneksi db = new Koneksi();
+                using (NpgsqlConnection conn = db.GetKoneksi())
+                {
+                    if (conn.State != ConnectionState.Open) conn.Open();
+                    string sql = "SELECT id, name FROM recipes WHERE user_id = @uid ORDER BY name ASC";
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@uid", currentUserId);
+                        DataTable dt = new DataTable();
+                        using (NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd)) da.Fill(dt);
+                        cbMenu.DataSource = dt; cbMenu.DisplayMember = "name"; cbMenu.ValueMember = "id"; cbMenu.SelectedIndex = -1;
+                    }
+                }
+            }
+            catch { }
+        }
+
+        private void cbMenu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbMenu.SelectedValue == null) return;
+            try
+            {
+                if (int.TryParse(cbMenu.SelectedValue.ToString(), out int rid))
+                {
+                    Koneksi db = new Koneksi();
+                    using (NpgsqlConnection conn = db.GetKoneksi())
+                    {
+                        if (conn.State != ConnectionState.Open) conn.Open();
+                        string sql = "SELECT suggested_price FROM recipes WHERE id = @id";
+                        using (NpgsqlCommand cmd = new NpgsqlCommand(sql, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@id", rid);
+                            object res = cmd.ExecuteScalar();
+                            if (res != null)
+                            {
+                                inputHargaJual.Text = Convert.ToDouble(res).ToString("N0");
+                                HitungEstimasiLive();
+                            }
+                        }
+                    }
+                }
+            }
+            catch { }
+        }
+
+        private void FormatKolom()
+        {
+            System.Globalization.CultureInfo id = System.Globalization.CultureInfo.GetCultureInfo("id-ID");
+            string[] moneyCols = { "col_HargaJual", "col_subtotal", "col_ppn", "col_total", "col_hpp", "col_profit" };
+            foreach (string colName in moneyCols)
+            {
+                if (dgvDataBahanBaku.Columns.Contains(colName))
+                {
+                    dgvDataBahanBaku.Columns[colName].DefaultCellStyle.Format = "C0";
+                    dgvDataBahanBaku.Columns[colName].DefaultCellStyle.FormatProvider = id;
+                }
+            }
+        }
+
+        // --- FUNGSI KHUSUS: HITUNG TOTAL SEMUA TRANSAKSI (DARI DATABASE) ---
+        private void HitungTotalSemuaTransaksi()
+        {
+            try
+            {
+                Koneksi db = new Koneksi();
+                using (NpgsqlConnection conn = db.GetKoneksi())
+                {
+                    if (conn.State != ConnectionState.Open) conn.Open();
+
+                    // Query menghitung jumlah SEMUA data penjualan user ini (Tanpa filter tanggal)
+                    string sql = "SELECT COUNT(*) FROM sales WHERE user_id = @uid";
+
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@uid", currentUserId);
+
+                        // ExecuteScalar: Mengambil satu nilai angka hasil COUNT
+                        long jumlah = Convert.ToInt64(cmd.ExecuteScalar());
+
+                        // Tampilkan ke Label
+                        if (lblTotalTransaksi != null)
+                        {
+                            lblTotalTransaksi.Text = jumlah.ToString() + " Transaksi";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal hitung total transaksi: " + ex.Message);
+            }
+        }
+
+        private void SetupTableStyle()
+        {
+            dgvDataBahanBaku.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
+            dgvDataBahanBaku.BackgroundColor = Color.White;
+            dgvDataBahanBaku.BorderStyle = BorderStyle.None;
+            dgvDataBahanBaku.ColumnHeadersHeight = 50;
+            dgvDataBahanBaku.ColumnHeadersDefaultCellStyle.BackColor = Color.White;
+            dgvDataBahanBaku.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dgvDataBahanBaku.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            dgvDataBahanBaku.RowTemplate.Height = 45;
+        }
+
         private void BersihkanInput()
         {
             cbMenu.SelectedIndex = -1;
-            inputHargaJual.Clear();
-            inputJumlahTerjual.Clear();
-            inputDiskon.Clear();
-            inputBiayaLain.Clear();
+            inputHargaJual.Clear(); inputJumlahTerjual.Clear(); inputDiskon.Clear(); inputBiayaLain.Clear();
+            dtpTanggalPenjualan.Value = DateTime.Now;
+            guna2GroupBox9.Visible = false;
         }
 
-        // Event UI
-        private void btinputPenjualanPopUp_Click(object sender, EventArgs e)
-        {
-            BersihkanInput();
-            gbInputPenjualanPopUp.Visible = true;
-            gbInputPenjualanPopUp.BringToFront();
-        }
-
+        private void btinputPenjualanPopUp_Click(object sender, EventArgs e) { BersihkanInput(); gbInputPenjualanPopUp.Visible = true; gbInputPenjualanPopUp.BringToFront(); }
         private void btnClosePopUpBahanBaku_Click(object sender, EventArgs e) => gbInputPenjualanPopUp.Visible = false;
         private void btnBatalPopUp_Click(object sender, EventArgs e) => gbInputPenjualanPopUp.Visible = false;
-        private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e) => LoadDataPenjualan(); // Filter tanggal
-        private void txtCariRiwayatPenjualan_TextChanged(object sender, EventArgs e) => LoadDataPenjualan(); // Filter pencarian
-
-        // Event kosong dari designer
+        private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e) { }
         private void label43_Click(object sender, EventArgs e) { }
     }
 }
