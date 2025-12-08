@@ -280,7 +280,7 @@ namespace FnB_Records
                                     cmd.ExecuteNonQuery();
                                 }
 
-                                // Hapus detail lama - TABEL YANG BENAR: recipe_items
+                                // Hapus detail lama
                                 using (var cmdDel = new NpgsqlCommand("DELETE FROM recipe_items WHERE recipe_id=@rid", conn, trans))
                                 {
                                     cmdDel.Parameters.AddWithValue("@rid", recipeId);
@@ -288,7 +288,7 @@ namespace FnB_Records
                                 }
                             }
 
-                            // B. Detail Bahan - TABEL: recipe_items, KOLOM: qty
+                            // B. Detail Bahan
                             foreach (Panel p in flowPanelBahan.Controls.OfType<Panel>())
                             {
                                 var cb = p.Controls.OfType<Guna.UI2.WinForms.Guna2ComboBox>().FirstOrDefault();
@@ -302,7 +302,6 @@ namespace FnB_Records
                                     {
                                         int ingredientId = (int)cb.SelectedValue;
 
-                                        // PERBAIKAN: Gunakan recipe_items dan kolom qty
                                         string sqlIng = @"
                                             INSERT INTO recipe_items (recipe_id, ingredient_id, qty, created_at) 
                                             VALUES (@rid, @iid, @qty, NOW())";
@@ -361,7 +360,7 @@ namespace FnB_Records
                         }
                     }
 
-                    // Detail Bahan - TABEL YANG BENAR: recipe_items
+                    // Detail Bahan
                     flowPanelBahan.Controls.Clear();
                     string sqlDet = "SELECT ingredient_id, qty FROM recipe_items WHERE recipe_id=@rid";
                     using (var cmd = new NpgsqlCommand(sqlDet, conn))
@@ -454,7 +453,7 @@ namespace FnB_Records
                                 dgvResepMenu.Rows[idx].Cells["col_name"].Value = r["name"];
 
                                 int srv = r.GetInt32(2);
-                                double hppTotal = r.GetDouble(3); // HPP Total
+                                double hppTotal = r.GetDouble(3);
                                 double hppPerPorsi = srv > 0 ? hppTotal / srv : 0;
                                 double price = r.GetDouble(4);
                                 double profit = price - hppPerPorsi;
@@ -511,7 +510,7 @@ namespace FnB_Records
                     {
                         using (var conn = db.GetKoneksi())
                         {
-                            // Hapus detail dulu - TABEL YANG BENAR: recipe_items
+                            // Hapus detail dulu
                             using (var cmd = new NpgsqlCommand("DELETE FROM recipe_items WHERE recipe_id=@id", conn))
                             {
                                 cmd.Parameters.AddWithValue("@id", id);
@@ -549,5 +548,6 @@ namespace FnB_Records
         private void BtnBatalPopUpResep_Click(object sender, EventArgs e) => gbResepPopUp.Visible = false;
         private void TxtCariResep_TextChanged(object sender, EventArgs e) => LoadRecipes(txtCariResep.Text);
         private void dgvResepMenu_CellContentClick_1(object sender, DataGridViewCellEventArgs e) { }
+        private void guna2GroupBox1_Click(object sender, EventArgs e) { }
     }
 }

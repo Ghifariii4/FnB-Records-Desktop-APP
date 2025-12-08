@@ -14,13 +14,29 @@ namespace FnB_Records
 {
     public partial class UC_ProduksiOlahan : UserControl
     {
+        // ✅ TAMBAHKAN CLASS RECIPEITEM DI SINI
+        private class RecipeItem
+        {
+            public int Id { get; set; }
+            public string Name { get; set; }
+            public double Hpp { get; set; }
+            public double SuggestedPrice { get; set; }
+            public int ServingSize { get; set; }
+            public string DisplayText { get; set; } // ✅ Field biasa, bukan computed property
+
+            public override string ToString()
+            {
+                return DisplayText; // ✅ Override ToString untuk fallback
+            }
+        }
+
         private int selectedBatchId = 0;
         private bool isEditMode = false;
 
         public UC_ProduksiOlahan()
         {
             InitializeComponent();
-            gbEditCabang.Visible = false; // Panel input hidden saat awal
+            gbEditCabang.Visible = false;
         }
 
         private void UC_ProduksiOlahan_Load(object sender, EventArgs e)
@@ -108,7 +124,6 @@ namespace FnB_Records
 
                             dgvBatch.DataSource = dt;
 
-                            // Setup kolom
                             if (dgvBatch.Columns.Count > 0)
                             {
                                 dgvBatch.Columns["id"].Visible = false;
@@ -118,7 +133,6 @@ namespace FnB_Records
                                 dgvBatch.Columns["start_date"].HeaderText = "Tanggal Mulai";
                                 dgvBatch.Columns["status_display"].HeaderText = "Status";
 
-                                // Tambah kolom button Detail
                                 if (!dgvBatch.Columns.Contains("btnDetail"))
                                 {
                                     DataGridViewButtonColumn btnCol = new DataGridViewButtonColumn();
@@ -139,15 +153,18 @@ namespace FnB_Records
             }
         }
 
+        // ✅ PERBAIKAN UTAMA: LoadRecipeCombo dengan BindingList
         private void LoadRecipeCombo()
         {
             try
             {
+                var recipeList = new List<RecipeItem>();
+
                 Koneksi db = new Koneksi();
                 using (NpgsqlConnection conn = db.GetKoneksi())
                 {
                     string sql = @"
-                        SELECT id, name, hpp, suggested_price
+                        SELECT id, name, hpp, suggested_price, serving_size
                         FROM recipes
                         WHERE user_id = @uid
                         ORDER BY name";
@@ -156,22 +173,58 @@ namespace FnB_Records
                     {
                         cmd.Parameters.AddWithValue("@uid", Login.GlobalSession.CurrentUserId);
 
-                        DataTable dt = new DataTable();
-                        using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(cmd))
+                        using (NpgsqlDataReader reader = cmd.ExecuteReader())
                         {
-                            adapter.Fill(dt);
-                        }
+                            while (reader.Read())
+                            {
+                                int id = reader.GetInt32(0);
+                                string name = reader.GetString(1);
+                                double hpp = reader.GetDouble(2);
+                                double suggestedPrice = reader.GetDouble(3);
+                                int servingSize = reader.GetInt32(4);
 
-                        cbresep.DataSource = dt;
-                        cbresep.DisplayMember = "name";
-                        cbresep.ValueMember = "id";
-                        cbresep.SelectedIndex = -1;
+                                recipeList.Add(new RecipeItem
+                                {
+                                    Id = id,
+                                    Name = name,
+                                    Hpp = hpp,
+                                    SuggestedPrice = suggestedPrice,
+                                    ServingSize = servingSize,
+                                    DisplayText = $"{name} ({servingSize} porsi, HPP: Rp {hpp:#,##0})" // ✅ Set DisplayText
+                                });
+                            }
+                        }
                     }
+                }
+
+                // ✅ Gunakan BindingList
+                cbresep.DataSource = new BindingList<RecipeItem>(recipeList);
+                cbresep.DisplayMember = "DisplayText"; // ✅ Gunakan DisplayText
+                cbresep.ValueMember = "Id";
+                cbresep.SelectedIndex = -1;
+
+                // ✅ Debug: Cek jumlah item
+                Console.WriteLine($"Loaded {recipeList.Count} recipes");
+                foreach (var item in recipeList)
+                {
+                    Console.WriteLine($"- {item.DisplayText}");
+                }
+
+                if (recipeList.Count == 0)
+                {
+                    MessageBox.Show(
+                        "Belum ada resep tersedia!\n\n" +
+                        "Silakan buat resep terlebih dahulu di menu 'Resep Menu'.",
+                        "Info",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading recipes: " + ex.Message);
+                MessageBox.Show("Error loading recipes: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -181,7 +234,6 @@ namespace FnB_Records
 
         private void btBuatPOBaru_Click(object sender, EventArgs e)
         {
-            // Tampilkan panel input untuk buat batch baru
             gbEditCabang.Visible = true;
             isEditMode = false;
             selectedBatchId = 0;
@@ -193,7 +245,7 @@ namespace FnB_Records
         private void btnsimpan_Click(object sender, EventArgs e)
         {
             // Validasi input
-            if (cbresep.SelectedIndex == -1)
+            if (cbresep.SelectedValue == null || !(cbresep.SelectedValue is int))
             {
                 MessageBox.Show("Pilih resep terlebih dahulu!", "Validasi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -217,10 +269,42 @@ namespace FnB_Records
                 Koneksi db = new Koneksi();
                 using (NpgsqlConnection conn = db.GetKoneksi())
                 {
+                    // ✅ Ambil recipe_id dengan aman
+                    int recipeId = (int)cbresep.SelectedValue;
+
+                    // ✅ Validasi recipe exists dan milik user yang benar
+                    string checkRecipeSql = "SELECT COUNT(*) FROM recipes WHERE id = @recipe_id AND user_id = @uid";
+                    using (NpgsqlCommand checkCmd = new NpgsqlCommand(checkRecipeSql, conn))
+                    {
+                        checkCmd.Parameters.AddWithValue("@recipe_id", recipeId);
+                        checkCmd.Parameters.AddWithValue("@uid", Login.GlobalSession.CurrentUserId);
+
+                        long recipeCount = (long)checkCmd.ExecuteScalar();
+                        if (recipeCount == 0)
+                        {
+                            MessageBox.Show("Resep tidak ditemukan atau bukan milik Anda!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            LoadRecipeCombo(); // Reload combo
+                            return;
+                        }
+                    }
+
+                    // ✅ Validasi resep punya bahan
+                    string checkItemsSql = "SELECT COUNT(*) FROM recipe_items WHERE recipe_id = @recipe_id";
+                    using (NpgsqlCommand checkCmd = new NpgsqlCommand(checkItemsSql, conn))
+                    {
+                        checkCmd.Parameters.AddWithValue("@recipe_id", recipeId);
+
+                        long itemsCount = (long)checkCmd.ExecuteScalar();
+                        if (itemsCount == 0)
+                        {
+                            MessageBox.Show("Resep ini belum memiliki bahan baku!\n\nTambahkan bahan terlebih dahulu di menu Resep Menu.",
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+
                     // Generate batch number
                     string batchNumber = GenerateBatchNumber(conn);
-
-                    int recipeId = Convert.ToInt32(cbresep.SelectedValue);
 
                     // Cek ketersediaan stok bahan baku
                     if (!CheckMaterialAvailability(conn, recipeId, targetQty))
@@ -250,23 +334,58 @@ namespace FnB_Records
                         cmd.Parameters.AddWithValue("@recipe_id", recipeId);
                         cmd.Parameters.AddWithValue("@target_qty", targetQty);
                         cmd.Parameters.AddWithValue("@start_date", dttanggalmulai.Value.Date);
-                        cmd.Parameters.AddWithValue("@notes", txtInputcatatan.Text ?? "");
 
-                        cmd.ExecuteNonQuery();
+                        if (string.IsNullOrWhiteSpace(txtInputcatatan.Text))
+                            cmd.Parameters.AddWithValue("@notes", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@notes", txtInputcatatan.Text);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show($"✅ Batch produksi berhasil dibuat!\n\nNo. Batch: {batchNumber}",
+                                "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            LoadDashboardStats();
+                            LoadBatchData();
+                            gbEditCabang.Visible = false;
+                            ClearForm();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Gagal menyimpan batch!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
-
-                    MessageBox.Show($"✅ Batch produksi berhasil dibuat!\n\nNo. Batch: {batchNumber}", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // Refresh data
-                    LoadDashboardStats();
-                    LoadBatchData();
-                    gbEditCabang.Visible = false;
-                    ClearForm();
                 }
+            }
+            catch (NpgsqlException ex)
+            {
+                string errorMsg = "Error menyimpan batch:\n\n";
+
+                if (ex.SqlState == "23503")
+                {
+                    errorMsg += "❌ Data tidak valid:\n";
+                    errorMsg += "- Resep mungkin sudah dihapus\n";
+                    errorMsg += "- User ID tidak valid\n\n";
+                    errorMsg += "Silakan pilih resep lain atau refresh halaman.";
+                    LoadRecipeCombo(); // Reload
+                }
+                else if (ex.SqlState == "23505")
+                {
+                    errorMsg += "❌ Nomor batch sudah ada!\n";
+                    errorMsg += "Coba lagi dalam beberapa detik.";
+                }
+                else
+                {
+                    errorMsg += ex.Message;
+                }
+
+                MessageBox.Show(errorMsg, "Error Database", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error saving batch: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -278,7 +397,6 @@ namespace FnB_Records
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            // Sama dengan batal
             btnBatalEdit_Click(sender, e);
         }
 
@@ -288,7 +406,6 @@ namespace FnB_Records
 
         private void dgvBatch_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Cek apakah klik pada kolom button Detail
             if (e.RowIndex >= 0 && dgvBatch.Columns[e.ColumnIndex].Name == "btnDetail")
             {
                 int batchId = Convert.ToInt32(dgvBatch.Rows[e.RowIndex].Cells["id"].Value);
@@ -303,7 +420,6 @@ namespace FnB_Records
                 Koneksi db = new Koneksi();
                 using (NpgsqlConnection conn = db.GetKoneksi())
                 {
-                    // Ambil detail batch
                     string sql = @"
                         SELECT 
                             pb.batch_number,
@@ -337,11 +453,9 @@ namespace FnB_Records
                                 string notes = reader.IsDBNull(7) ? "" : reader.GetString(7);
                                 double estimatedCost = reader.GetDouble(8);
 
-                                // Ambil material requirements
                                 reader.Close();
                                 string materials = GetBatchMaterials(conn, batchId);
 
-                                // Tampilkan di MessageBox atau Form Detail
                                 string detail = $"DETAIL BATCH PRODUKSI\n" +
                                               $"═══════════════════════════════\n\n" +
                                               $"No. Batch: {batchNumber}\n" +
@@ -357,7 +471,6 @@ namespace FnB_Records
                                               $"═══════════════════════════════\n" +
                                               $"{materials}";
 
-                                // Jika sedang produksi, tampilkan opsi untuk menyelesaikan
                                 if (status == "sedang_produksi")
                                 {
                                     DialogResult result = MessageBox.Show(
@@ -432,7 +545,6 @@ namespace FnB_Records
                 Koneksi db = new Koneksi();
                 using (NpgsqlConnection conn = db.GetKoneksi())
                 {
-                    // Call stored procedure untuk complete batch
                     string sql = "SELECT complete_production_batch(@batch_id, @produced_qty)";
 
                     using (NpgsqlCommand cmd = new NpgsqlCommand(sql, conn))
@@ -485,7 +597,7 @@ namespace FnB_Records
                 cmd.Parameters.AddWithValue("@target_qty", targetQty);
 
                 long count = (long)cmd.ExecuteScalar();
-                return count == 0; // True jika semua bahan cukup
+                return count == 0;
             }
         }
 
@@ -509,23 +621,15 @@ namespace FnB_Records
         }
 
         // ============================================
-        // EVENT HANDLERS (Tidak digunakan tapi harus ada)
+        // EVENT HANDLERS
         // ============================================
 
         private void cbresep_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Ketika resep dipilih, tampilkan info HPP (opsional)
-            if (cbresep.SelectedValue != null && cbresep.SelectedValue is int)
-            {
-                // Bisa tampilkan estimasi HPP
-            }
+           
         }
 
-        private void txtjumlahproduksi_TextChanged(object sender, EventArgs e)
-        {
-            // Auto calculate estimasi HPP (opsional)
-        }
-
+        private void txtjumlahproduksi_TextChanged(object sender, EventArgs e) { }
         private void dttanggalmulai_ValueChanged(object sender, EventArgs e) { }
         private void txtInputcatatan_TextChanged(object sender, EventArgs e) { }
         private void btnEditCabang_Click(object sender, EventArgs e) { }
@@ -533,10 +637,68 @@ namespace FnB_Records
         private void lblbatchselesai_Click(object sender, EventArgs e) { }
         private void lblsedangproduksi_Click(object sender, EventArgs e) { }
         private void lbltotalproduksi_Click(object sender, EventArgs e) { }
-        private void cbresep_SelectedIndexChanged_1(object sender, EventArgs e) { }
+        private void cbresep_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (cbresep.SelectedValue != null && cbresep.SelectedValue is int)
+            {
+                try
+                {
+                    int recipeId = (int)cbresep.SelectedValue;
+
+                    Koneksi db = new Koneksi();
+                    using (NpgsqlConnection conn = db.GetKoneksi())
+                    {
+                        string sql = @"
+                            SELECT 
+                                r.name,
+                                r.hpp,
+                                r.suggested_price,
+                                r.serving_size,
+                                COUNT(ri.id) as ingredient_count
+                            FROM recipes r
+                            LEFT JOIN recipe_items ri ON ri.recipe_id = r.id
+                            WHERE r.id = @recipe_id
+                            GROUP BY r.id, r.name, r.hpp, r.suggested_price, r.serving_size";
+
+                        using (NpgsqlCommand cmd = new NpgsqlCommand(sql, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@recipe_id", recipeId);
+
+                            using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                            {
+                                if (reader.Read())
+                                {
+                                    string recipeName = reader.GetString(0);
+                                    int ingredientCount = reader.GetInt32(4);
+
+                                    if (ingredientCount == 0)
+                                    {
+                                        MessageBox.Show(
+                                            $"⚠️ Resep '{recipeName}' belum memiliki bahan baku!\n\n" +
+                                            "Silakan tambahkan bahan di menu 'Resep Menu' terlebih dahulu.",
+                                            "Peringatan",
+                                            MessageBoxButtons.OK,
+                                            MessageBoxIcon.Warning
+                                        );
+
+                                        cbresep.SelectedIndex = -1;
+                                        return;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
         private void txtjumlahproduksi_TextChanged_1(object sender, EventArgs e) { }
         private void dttanggalmulai_ValueChanged_1(object sender, EventArgs e) { }
         private void gbEditCabang_Click(object sender, EventArgs e) { }
         private void guna2GroupBox6_Click(object sender, EventArgs e) { }
+        private void guna2GroupBox3_Click(object sender, EventArgs e) { }
     }
 }
