@@ -604,7 +604,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvDataBahanBaku.DefaultCellStyle = dataGridViewCellStyle3;
             dgvDataBahanBaku.GridColor = SystemColors.ButtonFace;
-            dgvDataBahanBaku.Location = new Point(18, 0);
+            dgvDataBahanBaku.Location = new Point(5, 4);
             dgvDataBahanBaku.Name = "dgvDataBahanBaku";
             dgvDataBahanBaku.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;

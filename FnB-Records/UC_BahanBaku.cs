@@ -27,6 +27,8 @@ namespace FnB_Records
                 Login.GlobalSession.CurrentUserId = 1; // ID User Anda di Database
             }
 
+            dgvDataBahanBaku.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
+
             LoadComboVendor(); // Load Vendor DULUAN
             LoadDataBahan(""); // Baru Load Data Tab
         }

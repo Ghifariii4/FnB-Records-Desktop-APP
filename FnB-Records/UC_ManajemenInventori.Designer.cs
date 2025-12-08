@@ -31,6 +31,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_ManajemenInventori));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -58,40 +59,101 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges61 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges62 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges55 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges57 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges58 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges59 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges60 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            btnTambahVendor = new Guna.UI2.WinForms.Guna2Button();
+            btnExport = new Guna.UI2.WinForms.Guna2Button();
             label2 = new Label();
             label1 = new Label();
             guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             label18 = new Label();
-            label9 = new Label();
+            lblTotalItem = new Label();
             guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             label5 = new Label();
             guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             label3 = new Label();
-            label4 = new Label();
+            lblStokKritis = new Label();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             label6 = new Label();
             guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
             label7 = new Label();
-            label8 = new Label();
+            lblStokRendah = new Label();
             guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             label10 = new Label();
             guna2GroupBox5 = new Guna.UI2.WinForms.Guna2GroupBox();
             label11 = new Label();
-            label12 = new Label();
+            lblNilaiTotal = new Label();
             guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             label13 = new Label();
             guna2GroupBox6 = new Guna.UI2.WinForms.Guna2GroupBox();
-            guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            cbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2GroupBox11 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2Button20 = new Guna.UI2.WinForms.Guna2Button();
-            guna2TextBox9 = new Guna.UI2.WinForms.Guna2TextBox();
+            txtCari = new Guna.UI2.WinForms.Guna2TextBox();
             guna2GroupBox7 = new Guna.UI2.WinForms.Guna2GroupBox();
+            guna2GroupBox16 = new Guna.UI2.WinForms.Guna2GroupBox();
+            dgvDataInventori = new Guna.UI2.WinForms.Guna2DataGridView();
             label15 = new Label();
             label14 = new Label();
+            panel1 = new Panel();
+            gbTambahStok = new Guna.UI2.WinForms.Guna2GroupBox();
+            guna2GroupBox8 = new Guna.UI2.WinForms.Guna2GroupBox();
+            txttbhCatatan = new Guna.UI2.WinForms.Guna2TextBox();
+            lbltbhStok = new Label();
+            lbltbhItem = new Label();
+            btnClosePopUpBahanBaku = new Guna.UI2.WinForms.Guna2Button();
+            label16 = new Label();
+            label17 = new Label();
+            txttbhJumlahMasuk = new Guna.UI2.WinForms.Guna2TextBox();
+            label19 = new Label();
+            label20 = new Label();
+            btntbhBatal = new Guna.UI2.WinForms.Guna2Button();
+            btntbhSimpan = new Guna.UI2.WinForms.Guna2Button();
+            gbKurangStok = new Guna.UI2.WinForms.Guna2GroupBox();
+            guna2GroupBox10 = new Guna.UI2.WinForms.Guna2GroupBox();
+            txtkrgCatatan = new Guna.UI2.WinForms.Guna2TextBox();
+            lblkrgStok = new Label();
+            lblkrgItem = new Label();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            label9 = new Label();
+            label12 = new Label();
+            txtkrgJumlahKeluar = new Guna.UI2.WinForms.Guna2TextBox();
+            btnkrgBatal = new Guna.UI2.WinForms.Guna2Button();
+            btnkrgSimpan = new Guna.UI2.WinForms.Guna2Button();
             guna2GroupBox1.SuspendLayout();
             guna2GroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox3).BeginInit();
@@ -104,12 +166,18 @@
             guna2GroupBox6.SuspendLayout();
             guna2GroupBox11.SuspendLayout();
             guna2GroupBox7.SuspendLayout();
+            guna2GroupBox16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvDataInventori).BeginInit();
+            gbTambahStok.SuspendLayout();
+            guna2GroupBox8.SuspendLayout();
+            gbKurangStok.SuspendLayout();
+            guna2GroupBox10.SuspendLayout();
             SuspendLayout();
             // 
             // guna2GroupBox1
             // 
             guna2GroupBox1.BorderColor = Color.Transparent;
-            guna2GroupBox1.Controls.Add(btnTambahVendor);
+            guna2GroupBox1.Controls.Add(btnExport);
             guna2GroupBox1.Controls.Add(label2);
             guna2GroupBox1.Controls.Add(label1);
             guna2GroupBox1.CustomBorderColor = Color.Transparent;
@@ -123,30 +191,31 @@
             guna2GroupBox1.Size = new Size(1544, 99);
             guna2GroupBox1.TabIndex = 13;
             // 
-            // btnTambahVendor
+            // btnExport
             // 
-            btnTambahVendor.BorderRadius = 10;
-            btnTambahVendor.Cursor = Cursors.Hand;
-            btnTambahVendor.CustomizableEdges = customizableEdges1;
-            btnTambahVendor.DisabledState.BorderColor = Color.DarkGray;
-            btnTambahVendor.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnTambahVendor.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnTambahVendor.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnTambahVendor.FillColor = Color.FromArgb(45, 45, 45);
-            btnTambahVendor.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnTambahVendor.ForeColor = Color.White;
-            btnTambahVendor.Image = Properties.Resources.add_button_icon_putih;
-            btnTambahVendor.ImageAlign = HorizontalAlignment.Left;
-            btnTambahVendor.ImageOffset = new Point(5, 0);
-            btnTambahVendor.ImageSize = new Size(30, 20);
-            btnTambahVendor.Location = new Point(1351, 0);
-            btnTambahVendor.Name = "btnTambahVendor";
-            btnTambahVendor.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnTambahVendor.Size = new Size(193, 48);
-            btnTambahVendor.TabIndex = 6;
-            btnTambahVendor.Text = "Tambah Cabang";
-            btnTambahVendor.TextAlign = HorizontalAlignment.Left;
-            btnTambahVendor.TextOffset = new Point(5, 0);
+            btnExport.BorderRadius = 10;
+            btnExport.Cursor = Cursors.Hand;
+            btnExport.CustomizableEdges = customizableEdges1;
+            btnExport.DisabledState.BorderColor = Color.DarkGray;
+            btnExport.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnExport.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnExport.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnExport.FillColor = Color.FromArgb(45, 45, 45);
+            btnExport.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnExport.ForeColor = Color.White;
+            btnExport.Image = (Image)resources.GetObject("btnExport.Image");
+            btnExport.ImageAlign = HorizontalAlignment.Left;
+            btnExport.ImageOffset = new Point(5, 0);
+            btnExport.ImageSize = new Size(27, 23);
+            btnExport.Location = new Point(1351, 0);
+            btnExport.Name = "btnExport";
+            btnExport.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnExport.Size = new Size(193, 48);
+            btnExport.TabIndex = 6;
+            btnExport.Text = "Export Laporan";
+            btnExport.TextAlign = HorizontalAlignment.Left;
+            btnExport.TextOffset = new Point(5, 0);
+            btnExport.Click += btnExport_Click;
             // 
             // label2
             // 
@@ -166,7 +235,7 @@
             label1.ForeColor = Color.Black;
             label1.Location = new Point(-5, 0);
             label1.Name = "label1";
-            label1.Size = new Size(404, 50);
+            label1.Size = new Size(403, 50);
             label1.TabIndex = 0;
             label1.Text = "Manajemen Inventori";
             // 
@@ -176,7 +245,7 @@
             guna2GroupBox3.BorderColor = Color.DimGray;
             guna2GroupBox3.BorderRadius = 15;
             guna2GroupBox3.Controls.Add(label18);
-            guna2GroupBox3.Controls.Add(label9);
+            guna2GroupBox3.Controls.Add(lblTotalItem);
             guna2GroupBox3.Controls.Add(guna2PictureBox3);
             guna2GroupBox3.Controls.Add(label5);
             guna2GroupBox3.CustomBorderColor = Color.Empty;
@@ -192,6 +261,7 @@
             guna2GroupBox3.ShadowDecoration.Shadow = new Padding(3, 1, 3, 5);
             guna2GroupBox3.Size = new Size(355, 200);
             guna2GroupBox3.TabIndex = 14;
+            guna2GroupBox3.Click += guna2GroupBox3_Click;
             // 
             // label18
             // 
@@ -204,16 +274,16 @@
             label18.TabIndex = 16;
             label18.Text = "Bahan baku";
             // 
-            // label9
+            // lblTotalItem
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("JetBrains Mono", 27.7499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.White;
-            label9.Location = new Point(21, 81);
-            label9.Name = "label9";
-            label9.Size = new Size(44, 49);
-            label9.TabIndex = 15;
-            label9.Text = "0";
+            lblTotalItem.AutoSize = true;
+            lblTotalItem.Font = new Font("JetBrains Mono", 27.7499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalItem.ForeColor = Color.White;
+            lblTotalItem.Location = new Point(21, 81);
+            lblTotalItem.Name = "lblTotalItem";
+            lblTotalItem.Size = new Size(44, 49);
+            lblTotalItem.TabIndex = 15;
+            lblTotalItem.Text = "0";
             // 
             // guna2PictureBox3
             // 
@@ -246,7 +316,7 @@
             guna2GroupBox2.BorderColor = Color.DimGray;
             guna2GroupBox2.BorderRadius = 15;
             guna2GroupBox2.Controls.Add(label3);
-            guna2GroupBox2.Controls.Add(label4);
+            guna2GroupBox2.Controls.Add(lblStokKritis);
             guna2GroupBox2.Controls.Add(guna2PictureBox1);
             guna2GroupBox2.Controls.Add(label6);
             guna2GroupBox2.CustomBorderColor = Color.Empty;
@@ -274,16 +344,16 @@
             label3.TabIndex = 16;
             label3.Text = "Perlu segera diisi";
             // 
-            // label4
+            // lblStokKritis
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("JetBrains Mono", 27.7499962F, FontStyle.Bold);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(21, 81);
-            label4.Name = "label4";
-            label4.Size = new Size(44, 49);
-            label4.TabIndex = 15;
-            label4.Text = "0";
+            lblStokKritis.AutoSize = true;
+            lblStokKritis.Font = new Font("JetBrains Mono", 27.7499962F, FontStyle.Bold);
+            lblStokKritis.ForeColor = Color.White;
+            lblStokKritis.Location = new Point(21, 81);
+            lblStokKritis.Name = "lblStokKritis";
+            lblStokKritis.Size = new Size(44, 49);
+            lblStokKritis.TabIndex = 15;
+            lblStokKritis.Text = "0";
             // 
             // guna2PictureBox1
             // 
@@ -316,7 +386,7 @@
             guna2GroupBox4.BorderColor = Color.DimGray;
             guna2GroupBox4.BorderRadius = 15;
             guna2GroupBox4.Controls.Add(label7);
-            guna2GroupBox4.Controls.Add(label8);
+            guna2GroupBox4.Controls.Add(lblStokRendah);
             guna2GroupBox4.Controls.Add(guna2PictureBox2);
             guna2GroupBox4.Controls.Add(label10);
             guna2GroupBox4.CustomBorderColor = Color.Empty;
@@ -345,16 +415,16 @@
             label7.Text = "Di bawah minimum";
             label7.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label8
+            // lblStokRendah
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("JetBrains Mono", 27.7499962F, FontStyle.Bold);
-            label8.ForeColor = Color.White;
-            label8.Location = new Point(21, 81);
-            label8.Name = "label8";
-            label8.Size = new Size(44, 49);
-            label8.TabIndex = 15;
-            label8.Text = "0";
+            lblStokRendah.AutoSize = true;
+            lblStokRendah.Font = new Font("JetBrains Mono", 27.7499962F, FontStyle.Bold);
+            lblStokRendah.ForeColor = Color.White;
+            lblStokRendah.Location = new Point(21, 81);
+            lblStokRendah.Name = "lblStokRendah";
+            lblStokRendah.Size = new Size(44, 49);
+            lblStokRendah.TabIndex = 15;
+            lblStokRendah.Text = "0";
             // 
             // guna2PictureBox2
             // 
@@ -387,7 +457,7 @@
             guna2GroupBox5.BorderColor = Color.DimGray;
             guna2GroupBox5.BorderRadius = 15;
             guna2GroupBox5.Controls.Add(label11);
-            guna2GroupBox5.Controls.Add(label12);
+            guna2GroupBox5.Controls.Add(lblNilaiTotal);
             guna2GroupBox5.Controls.Add(guna2PictureBox4);
             guna2GroupBox5.Controls.Add(label13);
             guna2GroupBox5.CustomBorderColor = Color.Empty;
@@ -415,16 +485,16 @@
             label11.TabIndex = 16;
             label11.Text = "Nilai inventori";
             // 
-            // label12
+            // lblNilaiTotal
             // 
-            label12.AutoSize = true;
-            label12.Font = new Font("JetBrains Mono", 27.7499962F, FontStyle.Bold);
-            label12.ForeColor = Color.White;
-            label12.Location = new Point(21, 81);
-            label12.Name = "label12";
-            label12.Size = new Size(44, 49);
-            label12.TabIndex = 15;
-            label12.Text = "0";
+            lblNilaiTotal.AutoSize = true;
+            lblNilaiTotal.Font = new Font("JetBrains Mono", 27.7499962F, FontStyle.Bold);
+            lblNilaiTotal.ForeColor = Color.White;
+            lblNilaiTotal.Location = new Point(21, 81);
+            lblNilaiTotal.Name = "lblNilaiTotal";
+            lblNilaiTotal.Size = new Size(44, 49);
+            lblNilaiTotal.TabIndex = 15;
+            lblNilaiTotal.Text = "0";
             // 
             // guna2PictureBox4
             // 
@@ -456,7 +526,7 @@
             guna2GroupBox6.BackColor = Color.Transparent;
             guna2GroupBox6.BorderColor = Color.DimGray;
             guna2GroupBox6.BorderRadius = 15;
-            guna2GroupBox6.Controls.Add(guna2ComboBox1);
+            guna2GroupBox6.Controls.Add(cbStatus);
             guna2GroupBox6.Controls.Add(guna2GroupBox11);
             guna2GroupBox6.CustomBorderColor = Color.Empty;
             guna2GroupBox6.CustomizableEdges = customizableEdges29;
@@ -472,29 +542,30 @@
             guna2GroupBox6.Size = new Size(1549, 137);
             guna2GroupBox6.TabIndex = 18;
             // 
-            // guna2ComboBox1
+            // cbStatus
             // 
-            guna2ComboBox1.BackColor = Color.Transparent;
-            guna2ComboBox1.BorderColor = Color.Transparent;
-            guna2ComboBox1.BorderRadius = 10;
-            guna2ComboBox1.Cursor = Cursors.Hand;
-            guna2ComboBox1.CustomizableEdges = customizableEdges21;
-            guna2ComboBox1.DrawMode = DrawMode.OwnerDrawFixed;
-            guna2ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            guna2ComboBox1.FocusedColor = Color.Transparent;
-            guna2ComboBox1.FocusedState.BorderColor = Color.Transparent;
-            guna2ComboBox1.Font = new Font("Manrope SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2ComboBox1.ForeColor = Color.FromArgb(45, 45, 45);
-            guna2ComboBox1.ItemHeight = 44;
-            guna2ComboBox1.Items.AddRange(new object[] { "Semua Waktu", "Kritis", "Stok Rendah", "Normal", "Aman" });
-            guna2ComboBox1.ItemsAppearance.BackColor = Color.White;
-            guna2ComboBox1.Location = new Point(1246, 43);
-            guna2ComboBox1.Name = "guna2ComboBox1";
-            guna2ComboBox1.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            guna2ComboBox1.Size = new Size(266, 50);
-            guna2ComboBox1.StartIndex = 0;
-            guna2ComboBox1.TabIndex = 11;
-            guna2ComboBox1.TextOffset = new Point(10, 0);
+            cbStatus.BackColor = Color.Transparent;
+            cbStatus.BorderColor = Color.Transparent;
+            cbStatus.BorderRadius = 10;
+            cbStatus.Cursor = Cursors.Hand;
+            cbStatus.CustomizableEdges = customizableEdges21;
+            cbStatus.DrawMode = DrawMode.OwnerDrawFixed;
+            cbStatus.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbStatus.FocusedColor = Color.Transparent;
+            cbStatus.FocusedState.BorderColor = Color.Transparent;
+            cbStatus.Font = new Font("Manrope SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cbStatus.ForeColor = Color.FromArgb(45, 45, 45);
+            cbStatus.ItemHeight = 44;
+            cbStatus.Items.AddRange(new object[] { "Semua Waktu", "Kritis", "Stok Rendah", "Normal", "Aman" });
+            cbStatus.ItemsAppearance.BackColor = Color.White;
+            cbStatus.Location = new Point(1246, 43);
+            cbStatus.Name = "cbStatus";
+            cbStatus.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            cbStatus.Size = new Size(266, 50);
+            cbStatus.StartIndex = 0;
+            cbStatus.TabIndex = 11;
+            cbStatus.TextOffset = new Point(10, 0);
+            cbStatus.SelectedIndexChanged += cbStatus_SelectedIndexChanged;
             // 
             // guna2GroupBox11
             // 
@@ -503,7 +574,7 @@
             guna2GroupBox11.BorderRadius = 10;
             guna2GroupBox11.BorderThickness = 0;
             guna2GroupBox11.Controls.Add(guna2Button20);
-            guna2GroupBox11.Controls.Add(guna2TextBox9);
+            guna2GroupBox11.Controls.Add(txtCari);
             guna2GroupBox11.CustomBorderColor = Color.Transparent;
             guna2GroupBox11.CustomizableEdges = customizableEdges27;
             guna2GroupBox11.Font = new Font("Segoe UI", 9F);
@@ -540,51 +611,132 @@
             guna2Button20.TabIndex = 7;
             guna2Button20.TextAlign = HorizontalAlignment.Left;
             // 
-            // guna2TextBox9
+            // txtCari
             // 
-            guna2TextBox9.BorderColor = Color.White;
-            guna2TextBox9.BorderRadius = 15;
-            guna2TextBox9.Cursor = Cursors.IBeam;
-            guna2TextBox9.CustomizableEdges = customizableEdges25;
-            guna2TextBox9.DefaultText = "";
-            guna2TextBox9.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox9.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox9.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox9.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox9.FocusedState.BorderColor = Color.FromArgb(212, 122, 71);
-            guna2TextBox9.Font = new Font("Manrope", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2TextBox9.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox9.Location = new Point(60, 7);
-            guna2TextBox9.Margin = new Padding(4);
-            guna2TextBox9.Name = "guna2TextBox9";
-            guna2TextBox9.PlaceholderForeColor = Color.FromArgb(45, 45, 45);
-            guna2TextBox9.PlaceholderText = "Cari Bahan Baku....";
-            guna2TextBox9.SelectedText = "";
-            guna2TextBox9.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            guna2TextBox9.ShadowDecoration.Depth = 0;
-            guna2TextBox9.Size = new Size(1113, 37);
-            guna2TextBox9.TabIndex = 9;
+            txtCari.BorderColor = Color.White;
+            txtCari.BorderRadius = 15;
+            txtCari.Cursor = Cursors.IBeam;
+            txtCari.CustomizableEdges = customizableEdges25;
+            txtCari.DefaultText = "";
+            txtCari.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtCari.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtCari.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtCari.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtCari.FocusedState.BorderColor = Color.FromArgb(212, 122, 71);
+            txtCari.Font = new Font("Manrope", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCari.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtCari.Location = new Point(60, 7);
+            txtCari.Margin = new Padding(4);
+            txtCari.Name = "txtCari";
+            txtCari.PlaceholderForeColor = Color.FromArgb(45, 45, 45);
+            txtCari.PlaceholderText = "Cari Bahan Baku....";
+            txtCari.SelectedText = "";
+            txtCari.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            txtCari.ShadowDecoration.Depth = 0;
+            txtCari.Size = new Size(1113, 37);
+            txtCari.TabIndex = 9;
+            txtCari.TextChanged += txtCari_TextChanged;
             // 
             // guna2GroupBox7
             // 
             guna2GroupBox7.BackColor = Color.Transparent;
             guna2GroupBox7.BorderColor = Color.DimGray;
             guna2GroupBox7.BorderRadius = 15;
+            guna2GroupBox7.Controls.Add(guna2GroupBox16);
             guna2GroupBox7.Controls.Add(label15);
             guna2GroupBox7.Controls.Add(label14);
             guna2GroupBox7.CustomBorderColor = Color.Empty;
-            guna2GroupBox7.CustomizableEdges = customizableEdges31;
+            guna2GroupBox7.CustomizableEdges = customizableEdges33;
             guna2GroupBox7.FillColor = Color.FromArgb(45, 45, 45);
             guna2GroupBox7.Font = new Font("Segoe UI", 9F);
             guna2GroupBox7.ForeColor = Color.FromArgb(125, 137, 149);
             guna2GroupBox7.Location = new Point(34, 565);
             guna2GroupBox7.Name = "guna2GroupBox7";
             guna2GroupBox7.ShadowDecoration.BorderRadius = 18;
-            guna2GroupBox7.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            guna2GroupBox7.ShadowDecoration.CustomizableEdges = customizableEdges34;
             guna2GroupBox7.ShadowDecoration.Enabled = true;
             guna2GroupBox7.ShadowDecoration.Shadow = new Padding(3, 1, 3, 5);
-            guna2GroupBox7.Size = new Size(1549, 343);
+            guna2GroupBox7.Size = new Size(1549, 648);
             guna2GroupBox7.TabIndex = 19;
+            // 
+            // guna2GroupBox16
+            // 
+            guna2GroupBox16.BorderRadius = 15;
+            guna2GroupBox16.Controls.Add(dgvDataInventori);
+            guna2GroupBox16.CustomBorderColor = Color.Empty;
+            guna2GroupBox16.CustomizableEdges = customizableEdges31;
+            guna2GroupBox16.FillColor = Color.FromArgb(232, 234, 237);
+            guna2GroupBox16.Font = new Font("Segoe UI", 9F);
+            guna2GroupBox16.ForeColor = Color.FromArgb(125, 137, 149);
+            guna2GroupBox16.Location = new Point(21, 109);
+            guna2GroupBox16.Name = "guna2GroupBox16";
+            guna2GroupBox16.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            guna2GroupBox16.Size = new Size(1510, 524);
+            guna2GroupBox16.TabIndex = 15;
+            // 
+            // dgvDataInventori
+            // 
+            dgvDataInventori.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(247, 248, 249);
+            dgvDataInventori.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(232, 234, 237);
+            dataGridViewCellStyle2.Font = new Font("Inter", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvDataInventori.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvDataInventori.ColumnHeadersHeight = 40;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Inter SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(125, 137, 149);
+            dataGridViewCellStyle3.SelectionBackColor = Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvDataInventori.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvDataInventori.GridColor = SystemColors.ButtonFace;
+            dgvDataInventori.Location = new Point(4, 10);
+            dgvDataInventori.Name = "dgvDataInventori";
+            dgvDataInventori.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvDataInventori.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dgvDataInventori.RowHeadersVisible = false;
+            dgvDataInventori.RowTemplate.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDataInventori.RowTemplate.Height = 40;
+            dgvDataInventori.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            dgvDataInventori.Size = new Size(1503, 493);
+            dgvDataInventori.TabIndex = 14;
+            dgvDataInventori.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
+            dgvDataInventori.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(247, 248, 249);
+            dgvDataInventori.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgvDataInventori.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgvDataInventori.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgvDataInventori.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvDataInventori.ThemeStyle.BackColor = Color.White;
+            dgvDataInventori.ThemeStyle.GridColor = SystemColors.ButtonFace;
+            dgvDataInventori.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(232, 234, 237);
+            dgvDataInventori.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvDataInventori.ThemeStyle.HeaderStyle.Font = new Font("Inter", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dgvDataInventori.ThemeStyle.HeaderStyle.ForeColor = Color.Black;
+            dgvDataInventori.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvDataInventori.ThemeStyle.HeaderStyle.Height = 40;
+            dgvDataInventori.ThemeStyle.ReadOnly = true;
+            dgvDataInventori.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvDataInventori.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvDataInventori.ThemeStyle.RowsStyle.Font = new Font("Inter SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dgvDataInventori.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(125, 137, 149);
+            dgvDataInventori.ThemeStyle.RowsStyle.Height = 40;
+            dgvDataInventori.ThemeStyle.RowsStyle.SelectionBackColor = Color.White;
+            dgvDataInventori.ThemeStyle.RowsStyle.SelectionForeColor = Color.Black;
+            dgvDataInventori.CellContentClick += dgvDataInventori_CellContentClick;
             // 
             // label15
             // 
@@ -604,9 +756,468 @@
             label14.ForeColor = Color.White;
             label14.Location = new Point(22, 24);
             label14.Name = "label14";
-            label14.Size = new Size(399, 33);
+            label14.Size = new Size(400, 33);
             label14.TabIndex = 12;
             label14.Text = "Daftar Inventori (Data Real-time)";
+            // 
+            // panel1
+            // 
+            panel1.Location = new Point(82, 1227);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(200, 44);
+            panel1.TabIndex = 20;
+            // 
+            // gbTambahStok
+            // 
+            gbTambahStok.BackColor = Color.White;
+            gbTambahStok.BorderRadius = 15;
+            gbTambahStok.Controls.Add(guna2GroupBox8);
+            gbTambahStok.Controls.Add(btntbhBatal);
+            gbTambahStok.Controls.Add(btntbhSimpan);
+            gbTambahStok.CustomBorderColor = Color.White;
+            gbTambahStok.CustomBorderThickness = new Padding(0);
+            gbTambahStok.CustomizableEdges = customizableEdges47;
+            gbTambahStok.FillColor = Color.FromArgb(249, 247, 245);
+            gbTambahStok.Font = new Font("Segoe UI", 9F);
+            gbTambahStok.ForeColor = Color.FromArgb(125, 137, 149);
+            gbTambahStok.Location = new Point(625, 358);
+            gbTambahStok.Name = "gbTambahStok";
+            gbTambahStok.ShadowDecoration.BorderRadius = 15;
+            gbTambahStok.ShadowDecoration.CustomizableEdges = customizableEdges48;
+            gbTambahStok.ShadowDecoration.Depth = 10;
+            gbTambahStok.ShadowDecoration.Shadow = new Padding(0, 10, 10, 10);
+            gbTambahStok.Size = new Size(540, 412);
+            gbTambahStok.TabIndex = 15;
+            gbTambahStok.Visible = false;
+            // 
+            // guna2GroupBox8
+            // 
+            guna2GroupBox8.BackColor = Color.Transparent;
+            guna2GroupBox8.BorderRadius = 15;
+            guna2GroupBox8.BorderThickness = 0;
+            guna2GroupBox8.Controls.Add(txttbhCatatan);
+            guna2GroupBox8.Controls.Add(lbltbhStok);
+            guna2GroupBox8.Controls.Add(lbltbhItem);
+            guna2GroupBox8.Controls.Add(btnClosePopUpBahanBaku);
+            guna2GroupBox8.Controls.Add(label16);
+            guna2GroupBox8.Controls.Add(label17);
+            guna2GroupBox8.Controls.Add(txttbhJumlahMasuk);
+            guna2GroupBox8.Controls.Add(label19);
+            guna2GroupBox8.Controls.Add(label20);
+            guna2GroupBox8.CustomBorderColor = Color.Transparent;
+            guna2GroupBox8.CustomizableEdges = customizableEdges41;
+            guna2GroupBox8.FillColor = Color.Transparent;
+            guna2GroupBox8.Font = new Font("Segoe UI", 9F);
+            guna2GroupBox8.ForeColor = Color.FromArgb(125, 137, 149);
+            guna2GroupBox8.Location = new Point(17, 16);
+            guna2GroupBox8.Name = "guna2GroupBox8";
+            guna2GroupBox8.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            guna2GroupBox8.Size = new Size(504, 318);
+            guna2GroupBox8.TabIndex = 12;
+            // 
+            // txttbhCatatan
+            // 
+            txttbhCatatan.BorderColor = Color.Gainsboro;
+            txttbhCatatan.BorderRadius = 10;
+            txttbhCatatan.Cursor = Cursors.IBeam;
+            txttbhCatatan.CustomizableEdges = customizableEdges35;
+            txttbhCatatan.DefaultText = "";
+            txttbhCatatan.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txttbhCatatan.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txttbhCatatan.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txttbhCatatan.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txttbhCatatan.FocusedState.BorderColor = Color.FromArgb(212, 122, 71);
+            txttbhCatatan.Font = new Font("Manrope", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txttbhCatatan.ForeColor = Color.FromArgb(45, 45, 45);
+            txttbhCatatan.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txttbhCatatan.Location = new Point(0, 225);
+            txttbhCatatan.Margin = new Padding(4);
+            txttbhCatatan.Name = "txttbhCatatan";
+            txttbhCatatan.PlaceholderForeColor = Color.FromArgb(45, 45, 45);
+            txttbhCatatan.PlaceholderText = "Alasan Penyesuaian (Opsional)";
+            txttbhCatatan.SelectedText = "";
+            txttbhCatatan.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            txttbhCatatan.ShadowDecoration.Depth = 0;
+            txttbhCatatan.Size = new Size(504, 68);
+            txttbhCatatan.TabIndex = 31;
+            // 
+            // lbltbhStok
+            // 
+            lbltbhStok.AutoSize = true;
+            lbltbhStok.Font = new Font("Inter", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbltbhStok.ForeColor = Color.FromArgb(45, 45, 45);
+            lbltbhStok.Location = new Point(101, 50);
+            lbltbhStok.Name = "lbltbhStok";
+            lbltbhStok.Size = new Size(74, 22);
+            lbltbhStok.TabIndex = 30;
+            lbltbhStok.Text = "100 gram";
+            // 
+            // lbltbhItem
+            // 
+            lbltbhItem.AutoSize = true;
+            lbltbhItem.Font = new Font("Manrope", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbltbhItem.ForeColor = Color.Black;
+            lbltbhItem.Location = new Point(139, 18);
+            lbltbhItem.Name = "lbltbhItem";
+            lbltbhItem.Size = new Size(83, 26);
+            lbltbhItem.TabIndex = 29;
+            lbltbhItem.Text = "Biji Kopi";
+            // 
+            // btnClosePopUpBahanBaku
+            // 
+            btnClosePopUpBahanBaku.BorderRadius = 10;
+            btnClosePopUpBahanBaku.Cursor = Cursors.Hand;
+            btnClosePopUpBahanBaku.CustomizableEdges = customizableEdges37;
+            btnClosePopUpBahanBaku.DisabledState.BorderColor = Color.DarkGray;
+            btnClosePopUpBahanBaku.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnClosePopUpBahanBaku.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnClosePopUpBahanBaku.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnClosePopUpBahanBaku.FillColor = Color.FromArgb(249, 247, 245);
+            btnClosePopUpBahanBaku.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClosePopUpBahanBaku.ForeColor = Color.FromArgb(45, 45, 45);
+            btnClosePopUpBahanBaku.Image = Properties.Resources.exit_icon_hitam;
+            btnClosePopUpBahanBaku.ImageSize = new Size(30, 20);
+            btnClosePopUpBahanBaku.Location = new Point(458, 3);
+            btnClosePopUpBahanBaku.Name = "btnClosePopUpBahanBaku";
+            btnClosePopUpBahanBaku.ShadowDecoration.BorderRadius = 10;
+            btnClosePopUpBahanBaku.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            btnClosePopUpBahanBaku.ShadowDecoration.Depth = 4;
+            btnClosePopUpBahanBaku.Size = new Size(46, 41);
+            btnClosePopUpBahanBaku.TabIndex = 15;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label16.ForeColor = Color.Black;
+            label16.Location = new Point(0, 196);
+            label16.Name = "label16";
+            label16.Size = new Size(73, 22);
+            label16.TabIndex = 16;
+            label16.Text = "Catatan";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label17.ForeColor = Color.Black;
+            label17.Location = new Point(0, 112);
+            label17.Name = "label17";
+            label17.Size = new Size(129, 22);
+            label17.TabIndex = 14;
+            label17.Text = "Jumlah Masuk *";
+            // 
+            // txttbhJumlahMasuk
+            // 
+            txttbhJumlahMasuk.BorderColor = Color.Gainsboro;
+            txttbhJumlahMasuk.BorderRadius = 10;
+            txttbhJumlahMasuk.Cursor = Cursors.IBeam;
+            txttbhJumlahMasuk.CustomizableEdges = customizableEdges39;
+            txttbhJumlahMasuk.DefaultText = "";
+            txttbhJumlahMasuk.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txttbhJumlahMasuk.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txttbhJumlahMasuk.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txttbhJumlahMasuk.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txttbhJumlahMasuk.FocusedState.BorderColor = Color.FromArgb(212, 122, 71);
+            txttbhJumlahMasuk.Font = new Font("Manrope", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txttbhJumlahMasuk.ForeColor = Color.FromArgb(45, 45, 45);
+            txttbhJumlahMasuk.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txttbhJumlahMasuk.Location = new Point(0, 137);
+            txttbhJumlahMasuk.Margin = new Padding(4);
+            txttbhJumlahMasuk.Name = "txttbhJumlahMasuk";
+            txttbhJumlahMasuk.PlaceholderForeColor = Color.FromArgb(45, 45, 45);
+            txttbhJumlahMasuk.PlaceholderText = "";
+            txttbhJumlahMasuk.SelectedText = "";
+            txttbhJumlahMasuk.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            txttbhJumlahMasuk.ShadowDecoration.Depth = 0;
+            txttbhJumlahMasuk.Size = new Size(504, 36);
+            txttbhJumlahMasuk.TabIndex = 13;
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Font = new Font("Inter", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label19.ForeColor = Color.FromArgb(45, 45, 45);
+            label19.Location = new Point(0, 50);
+            label19.Name = "label19";
+            label19.Size = new Size(104, 22);
+            label19.TabIndex = 13;
+            label19.Text = "Stok saat ini :";
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Font = new Font("Manrope", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label20.ForeColor = Color.Black;
+            label20.Location = new Point(0, 18);
+            label20.Name = "label20";
+            label20.Size = new Size(144, 26);
+            label20.TabIndex = 1;
+            label20.Text = "Tambah Stok :";
+            // 
+            // btntbhBatal
+            // 
+            btntbhBatal.BackColor = Color.Transparent;
+            btntbhBatal.BorderRadius = 10;
+            btntbhBatal.Cursor = Cursors.Hand;
+            btntbhBatal.CustomizableEdges = customizableEdges43;
+            btntbhBatal.DisabledState.BorderColor = Color.DarkGray;
+            btntbhBatal.DisabledState.CustomBorderColor = Color.DarkGray;
+            btntbhBatal.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btntbhBatal.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btntbhBatal.FillColor = Color.White;
+            btntbhBatal.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btntbhBatal.ForeColor = Color.FromArgb(45, 45, 45);
+            btntbhBatal.ImageSize = new Size(30, 20);
+            btntbhBatal.Location = new Point(291, 340);
+            btntbhBatal.Name = "btntbhBatal";
+            btntbhBatal.ShadowDecoration.BorderRadius = 10;
+            btntbhBatal.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            btntbhBatal.ShadowDecoration.Depth = 4;
+            btntbhBatal.ShadowDecoration.Enabled = true;
+            btntbhBatal.Size = new Size(96, 41);
+            btntbhBatal.TabIndex = 14;
+            btntbhBatal.Text = "Batal";
+            btntbhBatal.Click += btntbhBatal_Click;
+            // 
+            // btntbhSimpan
+            // 
+            btntbhSimpan.BackColor = Color.Transparent;
+            btntbhSimpan.BorderRadius = 10;
+            btntbhSimpan.Cursor = Cursors.Hand;
+            btntbhSimpan.CustomizableEdges = customizableEdges45;
+            btntbhSimpan.DisabledState.BorderColor = Color.DarkGray;
+            btntbhSimpan.DisabledState.CustomBorderColor = Color.DarkGray;
+            btntbhSimpan.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btntbhSimpan.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btntbhSimpan.FillColor = Color.FromArgb(45, 45, 45);
+            btntbhSimpan.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btntbhSimpan.ForeColor = Color.White;
+            btntbhSimpan.ImageSize = new Size(30, 20);
+            btntbhSimpan.Location = new Point(404, 340);
+            btntbhSimpan.Name = "btntbhSimpan";
+            btntbhSimpan.ShadowDecoration.BorderRadius = 10;
+            btntbhSimpan.ShadowDecoration.CustomizableEdges = customizableEdges46;
+            btntbhSimpan.ShadowDecoration.Depth = 4;
+            btntbhSimpan.ShadowDecoration.Enabled = true;
+            btntbhSimpan.Size = new Size(117, 41);
+            btntbhSimpan.TabIndex = 13;
+            btntbhSimpan.Text = "➕ Simpan";
+            btntbhSimpan.Click += btntbhSimpan_Click;
+            // 
+            // gbKurangStok
+            // 
+            gbKurangStok.BackColor = Color.White;
+            gbKurangStok.BorderRadius = 15;
+            gbKurangStok.Controls.Add(guna2GroupBox10);
+            gbKurangStok.Controls.Add(btnkrgBatal);
+            gbKurangStok.Controls.Add(btnkrgSimpan);
+            gbKurangStok.CustomBorderColor = Color.White;
+            gbKurangStok.CustomBorderThickness = new Padding(0);
+            gbKurangStok.CustomizableEdges = customizableEdges61;
+            gbKurangStok.FillColor = Color.FromArgb(249, 247, 245);
+            gbKurangStok.Font = new Font("Segoe UI", 9F);
+            gbKurangStok.ForeColor = Color.FromArgb(125, 137, 149);
+            gbKurangStok.Location = new Point(622, 358);
+            gbKurangStok.Name = "gbKurangStok";
+            gbKurangStok.ShadowDecoration.BorderRadius = 15;
+            gbKurangStok.ShadowDecoration.CustomizableEdges = customizableEdges62;
+            gbKurangStok.ShadowDecoration.Depth = 10;
+            gbKurangStok.ShadowDecoration.Shadow = new Padding(0, 10, 10, 10);
+            gbKurangStok.Size = new Size(540, 412);
+            gbKurangStok.TabIndex = 21;
+            gbKurangStok.Visible = false;
+            // 
+            // guna2GroupBox10
+            // 
+            guna2GroupBox10.BackColor = Color.Transparent;
+            guna2GroupBox10.BorderRadius = 15;
+            guna2GroupBox10.BorderThickness = 0;
+            guna2GroupBox10.Controls.Add(txtkrgCatatan);
+            guna2GroupBox10.Controls.Add(lblkrgStok);
+            guna2GroupBox10.Controls.Add(lblkrgItem);
+            guna2GroupBox10.Controls.Add(guna2Button1);
+            guna2GroupBox10.Controls.Add(label9);
+            guna2GroupBox10.Controls.Add(label12);
+            guna2GroupBox10.Controls.Add(txtkrgJumlahKeluar);
+            guna2GroupBox10.CustomBorderColor = Color.Transparent;
+            guna2GroupBox10.CustomizableEdges = customizableEdges55;
+            guna2GroupBox10.FillColor = Color.Transparent;
+            guna2GroupBox10.Font = new Font("Segoe UI", 9F);
+            guna2GroupBox10.ForeColor = Color.FromArgb(125, 137, 149);
+            guna2GroupBox10.Location = new Point(17, 16);
+            guna2GroupBox10.Name = "guna2GroupBox10";
+            guna2GroupBox10.ShadowDecoration.CustomizableEdges = customizableEdges56;
+            guna2GroupBox10.Size = new Size(504, 318);
+            guna2GroupBox10.TabIndex = 12;
+            // 
+            // txtkrgCatatan
+            // 
+            txtkrgCatatan.BorderColor = Color.Gainsboro;
+            txtkrgCatatan.BorderRadius = 10;
+            txtkrgCatatan.Cursor = Cursors.IBeam;
+            txtkrgCatatan.CustomizableEdges = customizableEdges49;
+            txtkrgCatatan.DefaultText = "";
+            txtkrgCatatan.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtkrgCatatan.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtkrgCatatan.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtkrgCatatan.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtkrgCatatan.FocusedState.BorderColor = Color.FromArgb(212, 122, 71);
+            txtkrgCatatan.Font = new Font("Manrope", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtkrgCatatan.ForeColor = Color.FromArgb(45, 45, 45);
+            txtkrgCatatan.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtkrgCatatan.Location = new Point(0, 225);
+            txtkrgCatatan.Margin = new Padding(4);
+            txtkrgCatatan.Name = "txtkrgCatatan";
+            txtkrgCatatan.PlaceholderForeColor = Color.FromArgb(45, 45, 45);
+            txtkrgCatatan.PlaceholderText = "Alasan Penyesuaian (Opsional)";
+            txtkrgCatatan.SelectedText = "";
+            txtkrgCatatan.ShadowDecoration.CustomizableEdges = customizableEdges50;
+            txtkrgCatatan.ShadowDecoration.Depth = 0;
+            txtkrgCatatan.Size = new Size(504, 68);
+            txtkrgCatatan.TabIndex = 31;
+            // 
+            // lblkrgStok
+            // 
+            lblkrgStok.AutoSize = true;
+            lblkrgStok.Font = new Font("Inter", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblkrgStok.ForeColor = Color.FromArgb(45, 45, 45);
+            lblkrgStok.Location = new Point(2, 47);
+            lblkrgStok.Name = "lblkrgStok";
+            lblkrgStok.Size = new Size(74, 22);
+            lblkrgStok.TabIndex = 30;
+            lblkrgStok.Text = "100 gram";
+            // 
+            // lblkrgItem
+            // 
+            lblkrgItem.AutoSize = true;
+            lblkrgItem.Font = new Font("Manrope", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblkrgItem.ForeColor = Color.Black;
+            lblkrgItem.Location = new Point(0, 18);
+            lblkrgItem.Name = "lblkrgItem";
+            lblkrgItem.Size = new Size(83, 26);
+            lblkrgItem.TabIndex = 29;
+            lblkrgItem.Text = "Biji Kopi";
+            // 
+            // guna2Button1
+            // 
+            guna2Button1.BorderRadius = 10;
+            guna2Button1.Cursor = Cursors.Hand;
+            guna2Button1.CustomizableEdges = customizableEdges51;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.FromArgb(249, 247, 245);
+            guna2Button1.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button1.ForeColor = Color.FromArgb(45, 45, 45);
+            guna2Button1.Image = Properties.Resources.exit_icon_hitam;
+            guna2Button1.ImageSize = new Size(30, 20);
+            guna2Button1.Location = new Point(458, 3);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.BorderRadius = 10;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges52;
+            guna2Button1.ShadowDecoration.Depth = 4;
+            guna2Button1.Size = new Size(46, 41);
+            guna2Button1.TabIndex = 15;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.Black;
+            label9.Location = new Point(0, 196);
+            label9.Name = "label9";
+            label9.Size = new Size(73, 22);
+            label9.TabIndex = 16;
+            label9.Text = "Catatan";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.ForeColor = Color.Black;
+            label12.Location = new Point(0, 112);
+            label12.Name = "label12";
+            label12.Size = new Size(126, 22);
+            label12.TabIndex = 14;
+            label12.Text = "Jumlah Keluar *";
+            // 
+            // txtkrgJumlahKeluar
+            // 
+            txtkrgJumlahKeluar.BorderColor = Color.Gainsboro;
+            txtkrgJumlahKeluar.BorderRadius = 10;
+            txtkrgJumlahKeluar.Cursor = Cursors.IBeam;
+            txtkrgJumlahKeluar.CustomizableEdges = customizableEdges53;
+            txtkrgJumlahKeluar.DefaultText = "";
+            txtkrgJumlahKeluar.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtkrgJumlahKeluar.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtkrgJumlahKeluar.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtkrgJumlahKeluar.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtkrgJumlahKeluar.FocusedState.BorderColor = Color.FromArgb(212, 122, 71);
+            txtkrgJumlahKeluar.Font = new Font("Manrope", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtkrgJumlahKeluar.ForeColor = Color.FromArgb(45, 45, 45);
+            txtkrgJumlahKeluar.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtkrgJumlahKeluar.Location = new Point(0, 137);
+            txtkrgJumlahKeluar.Margin = new Padding(4);
+            txtkrgJumlahKeluar.Name = "txtkrgJumlahKeluar";
+            txtkrgJumlahKeluar.PlaceholderForeColor = Color.FromArgb(45, 45, 45);
+            txtkrgJumlahKeluar.PlaceholderText = "";
+            txtkrgJumlahKeluar.SelectedText = "";
+            txtkrgJumlahKeluar.ShadowDecoration.CustomizableEdges = customizableEdges54;
+            txtkrgJumlahKeluar.ShadowDecoration.Depth = 0;
+            txtkrgJumlahKeluar.Size = new Size(504, 36);
+            txtkrgJumlahKeluar.TabIndex = 13;
+            // 
+            // btnkrgBatal
+            // 
+            btnkrgBatal.BackColor = Color.Transparent;
+            btnkrgBatal.BorderRadius = 10;
+            btnkrgBatal.Cursor = Cursors.Hand;
+            btnkrgBatal.CustomizableEdges = customizableEdges57;
+            btnkrgBatal.DisabledState.BorderColor = Color.DarkGray;
+            btnkrgBatal.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnkrgBatal.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnkrgBatal.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnkrgBatal.FillColor = Color.White;
+            btnkrgBatal.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnkrgBatal.ForeColor = Color.FromArgb(45, 45, 45);
+            btnkrgBatal.ImageSize = new Size(30, 20);
+            btnkrgBatal.Location = new Point(291, 340);
+            btnkrgBatal.Name = "btnkrgBatal";
+            btnkrgBatal.ShadowDecoration.BorderRadius = 10;
+            btnkrgBatal.ShadowDecoration.CustomizableEdges = customizableEdges58;
+            btnkrgBatal.ShadowDecoration.Depth = 4;
+            btnkrgBatal.ShadowDecoration.Enabled = true;
+            btnkrgBatal.Size = new Size(96, 41);
+            btnkrgBatal.TabIndex = 14;
+            btnkrgBatal.Text = "Batal";
+            btnkrgBatal.Click += btnkrgBatal_Click;
+            // 
+            // btnkrgSimpan
+            // 
+            btnkrgSimpan.BackColor = Color.Transparent;
+            btnkrgSimpan.BorderRadius = 10;
+            btnkrgSimpan.Cursor = Cursors.Hand;
+            btnkrgSimpan.CustomizableEdges = customizableEdges59;
+            btnkrgSimpan.DisabledState.BorderColor = Color.DarkGray;
+            btnkrgSimpan.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnkrgSimpan.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnkrgSimpan.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnkrgSimpan.FillColor = Color.FromArgb(45, 45, 45);
+            btnkrgSimpan.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnkrgSimpan.ForeColor = Color.White;
+            btnkrgSimpan.ImageSize = new Size(30, 20);
+            btnkrgSimpan.Location = new Point(404, 340);
+            btnkrgSimpan.Name = "btnkrgSimpan";
+            btnkrgSimpan.ShadowDecoration.BorderRadius = 10;
+            btnkrgSimpan.ShadowDecoration.CustomizableEdges = customizableEdges60;
+            btnkrgSimpan.ShadowDecoration.Depth = 4;
+            btnkrgSimpan.ShadowDecoration.Enabled = true;
+            btnkrgSimpan.Size = new Size(117, 41);
+            btnkrgSimpan.TabIndex = 13;
+            btnkrgSimpan.Text = "➖ Simpan";
+            btnkrgSimpan.Click += btnkrgSimpan_Click;
             // 
             // UC_ManajemenInventori
             // 
@@ -614,6 +1225,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.FromArgb(212, 122, 71);
+            Controls.Add(gbKurangStok);
+            Controls.Add(gbTambahStok);
+            Controls.Add(panel1);
             Controls.Add(guna2GroupBox7);
             Controls.Add(guna2GroupBox6);
             Controls.Add(guna2GroupBox5);
@@ -622,7 +1236,8 @@
             Controls.Add(guna2GroupBox3);
             Controls.Add(guna2GroupBox1);
             Name = "UC_ManajemenInventori";
-            Size = new Size(1616, 939);
+            Size = new Size(1446, 1112);
+            Load += UC_ManajemenInventori_Load;
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
             guna2GroupBox3.ResumeLayout(false);
@@ -641,42 +1256,77 @@
             guna2GroupBox11.ResumeLayout(false);
             guna2GroupBox7.ResumeLayout(false);
             guna2GroupBox7.PerformLayout();
+            guna2GroupBox16.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvDataInventori).EndInit();
+            gbTambahStok.ResumeLayout(false);
+            guna2GroupBox8.ResumeLayout(false);
+            guna2GroupBox8.PerformLayout();
+            gbKurangStok.ResumeLayout(false);
+            guna2GroupBox10.ResumeLayout(false);
+            guna2GroupBox10.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
-        private Guna.UI2.WinForms.Guna2Button btnTambahVendor;
+        private Guna.UI2.WinForms.Guna2Button btnExport;
         private Label label2;
         private Label label1;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
         private Label label18;
-        private Label label9;
+        private Label lblTotalItem;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Label label5;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
         private Label label3;
-        private Label label4;
+        private Label lblStokKritis;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Label label6;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox4;
         private Label label7;
-        private Label label8;
+        private Label lblStokRendah;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Label label10;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox5;
         private Label label11;
-        private Label label12;
+        private Label lblNilaiTotal;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         private Label label13;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox6;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox11;
         private Guna.UI2.WinForms.Guna2Button guna2Button20;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox9;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtCari;
+        private Guna.UI2.WinForms.Guna2ComboBox cbStatus;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox7;
         private Label label15;
         private Label label14;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvDataInventori;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox16;
+        private Panel panel1;
+        private Guna.UI2.WinForms.Guna2GroupBox gbTambahStok;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox8;
+        private Guna.UI2.WinForms.Guna2Button btnClosePopUpBahanBaku;
+        private Label label16;
+        private Label label17;
+        private Guna.UI2.WinForms.Guna2TextBox txttbhJumlahMasuk;
+        private Label label19;
+        private Label label20;
+        private Guna.UI2.WinForms.Guna2Button btntbhBatal;
+        private Guna.UI2.WinForms.Guna2Button btntbhSimpan;
+        private Guna.UI2.WinForms.Guna2TextBox txttbhCatatan;
+        private Label lbltbhStok;
+        private Label lbltbhItem;
+        private Guna.UI2.WinForms.Guna2GroupBox gbKurangStok;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox10;
+        private Guna.UI2.WinForms.Guna2TextBox txtkrgCatatan;
+        private Label lblkrgStok;
+        private Label lblkrgItem;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Label label9;
+        private Label label12;
+        private Guna.UI2.WinForms.Guna2TextBox txtkrgJumlahKeluar;
+        private Guna.UI2.WinForms.Guna2Button btnkrgBatal;
+        private Guna.UI2.WinForms.Guna2Button btnkrgSimpan;
     }
 }
