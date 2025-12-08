@@ -58,7 +58,6 @@ namespace FnB_Records
 
             AttachEvents();
             LoadBahanMasterFromDB();
-            // Tidak perlu CreatePanelBahanRows() karena flowPanelBahan sudah ada di Designer
             SetupGridColumns();
             LoadRecipes();
         }
@@ -71,7 +70,6 @@ namespace FnB_Records
             {
                 using (var conn = db.GetKoneksi())
                 {
-                    
                     string sql = "SELECT id, name, price, unit FROM ingredients WHERE user_id = @uid ORDER BY name ASC";
                     using (var cmd = new NpgsqlCommand(sql, conn))
                     {
@@ -95,7 +93,7 @@ namespace FnB_Records
             catch (Exception ex) { MessageBox.Show("Gagal memuat bahan baku: " + ex.Message); }
         }
 
-        // --- 4. LOGIKA TAMBAH BAHAN KE PANEL (MENGGUNAKAN flowPanelBahan YANG ADA) ---
+        // --- 4. LOGIKA TAMBAH BAHAN KE PANEL ---
         private void BtnTambahBahan_Click(object sender, EventArgs e)
         {
             AddBahanRow();
@@ -103,20 +101,17 @@ namespace FnB_Records
 
         private void AddBahanRow(int? selectedBahanId = null, double qtyValue = 0)
         {
-            // Panel Baris (Container per item bahan)
             var rowPanel = new Panel
             {
-                // Gunakan lebar flowPanelBahan yang sudah ada di designer
                 Width = flowPanelBahan.Width - 25,
                 Height = 45,
                 Margin = new Padding(0, 0, 0, 5)
             };
 
-            // 1. Dropdown Bahan
             var cb = new Guna.UI2.WinForms.Guna2ComboBox
             {
                 Name = "cbPilihBahan",
-                DataSource = new BindingList<IngredientItem>(listBahanMaster), // Wajib BindingList baru agar independen
+                DataSource = new BindingList<IngredientItem>(listBahanMaster),
                 DisplayMember = "Display",
                 ValueMember = "Id",
                 DropDownStyle = ComboBoxStyle.DropDownList,
@@ -129,7 +124,6 @@ namespace FnB_Records
             if (selectedBahanId.HasValue) cb.SelectedValue = selectedBahanId.Value;
             else cb.SelectedIndex = -1;
 
-            // 2. Textbox Jumlah
             var txtQty = new Guna.UI2.WinForms.Guna2TextBox
             {
                 Name = "txtInputJumlahBahan",
@@ -141,7 +135,6 @@ namespace FnB_Records
             };
             if (qtyValue > 0) txtQty.Text = qtyValue.ToString();
 
-            // 3. Tombol Hapus (X)
             var btnDel = new Guna.UI2.WinForms.Guna2Button
             {
                 Text = "X",
@@ -154,11 +147,9 @@ namespace FnB_Records
                 Cursor = Cursors.Hand
             };
 
-            // EVENTS: Hitung ulang HPP jika ada perubahan
             cb.SelectedIndexChanged += (s, e) => RecalculateHpp();
             txtQty.TextChanged += (s, e) => RecalculateHpp();
 
-            // Event Hapus Baris dari flowPanelBahan
             btnDel.Click += (s, e) =>
             {
                 flowPanelBahan.Controls.Remove(rowPanel);
@@ -170,7 +161,6 @@ namespace FnB_Records
             rowPanel.Controls.Add(txtQty);
             rowPanel.Controls.Add(btnDel);
 
-            // Masukkan ke flowPanelBahan yang sudah ada di Designer
             flowPanelBahan.Controls.Add(rowPanel);
         }
 
@@ -181,7 +171,6 @@ namespace FnB_Records
         {
             double totalCost = 0.0;
 
-            // Loop kontrol yang ada di flowPanelBahan
             foreach (Panel p in flowPanelBahan.Controls.OfType<Panel>())
             {
                 var cb = p.Controls.OfType<Guna.UI2.WinForms.Guna2ComboBox>().FirstOrDefault();
@@ -198,14 +187,15 @@ namespace FnB_Records
                 }
             }
 
-            // Ambil Jumlah Porsi
+            // Total HPP (bukan per porsi)
+            lblHPP.Text = $"Rp {totalCost:#,##0}";
+
+            // HPP per porsi untuk perhitungan
             int servings = 1;
             int.TryParse(txtInputJumlahPorsi.Text, out servings);
             if (servings <= 0) servings = 1;
 
-            // Hitung HPP
             double hppPerServing = totalCost / servings;
-            lblHPP.Text = $"Rp {hppPerServing:#,##0}";
 
             // Hitung Saran Harga
             double suggested = hppPerServing * SUGGESTED_MULTIPLIER;
@@ -226,22 +216,23 @@ namespace FnB_Records
         {
             if (string.IsNullOrWhiteSpace(txtInputNamaResep.Text))
             {
-                MessageBox.Show("Nama resep wajib diisi!", "Warning"); return;
+                MessageBox.Show("Nama resep wajib diisi!", "Warning");
+                return;
             }
 
-            string hppText = lblHPP.Text.Replace("Rp", "").Replace(".", "").Trim();
-            double hpp = double.TryParse(hppText, out double h) ? h : 0;
+            // Ambil HPP TOTAL (bukan per porsi)
+            string hppText = lblHPP.Text.Replace("Rp", "").Replace(".", "").Replace(",", "").Trim();
+            double hppTotal = double.TryParse(hppText, out double h) ? h : 0;
 
             double targetPrice = 0;
             double.TryParse(txtInputHargaJualTarget.Text.Replace(".", "").Replace(",", ""), out targetPrice);
 
-            int servings = int.TryParse(txtInputJumlahPorsi.Text, out int s) ? s : 1;
+            int servings = int.TryParse(txtInputJumlahPorsi.Text, out int s) && s > 0 ? s : 1;
 
             try
             {
                 using (var conn = db.GetKoneksi())
                 {
-                    
                     using (var trans = conn.BeginTransaction())
                     {
                         try
@@ -251,46 +242,53 @@ namespace FnB_Records
                             // A. Header Resep
                             if (editingRecipeId == null) // INSERT
                             {
-                                string sqlResep = @"INSERT INTO recipes (user_id, name, description, serving_size, hpp, suggested_price, created_at, updated_at)
-                                                    VALUES (@uid, @name, @desc, @serv, @hpp, @price, NOW(), NOW()) RETURNING id";
+                                string sqlResep = @"
+                                    INSERT INTO recipes (user_id, name, description, serving_size, hpp, suggested_price, created_at, updated_at)
+                                    VALUES (@uid, @name, @desc, @serv, @hpp, @price, NOW(), NOW()) 
+                                    RETURNING id";
 
                                 using (var cmd = new NpgsqlCommand(sqlResep, conn, trans))
                                 {
-                                    cmd.Parameters.AddWithValue("uid", currentUserId);
-                                    cmd.Parameters.AddWithValue("name", txtInputNamaResep.Text.Trim());
-                                    cmd.Parameters.AddWithValue("desc", txtInputDeskripsi.Text.Trim());
-                                    cmd.Parameters.AddWithValue("serv", servings);
-                                    cmd.Parameters.AddWithValue("hpp", hpp);
-                                    cmd.Parameters.AddWithValue("price", targetPrice);
+                                    cmd.Parameters.AddWithValue("@uid", currentUserId);
+                                    cmd.Parameters.AddWithValue("@name", txtInputNamaResep.Text.Trim());
+                                    cmd.Parameters.AddWithValue("@desc", string.IsNullOrEmpty(txtInputDeskripsi.Text) ? "" : txtInputDeskripsi.Text.Trim());
+                                    cmd.Parameters.AddWithValue("@serv", servings);
+                                    cmd.Parameters.AddWithValue("@hpp", hppTotal); // HPP TOTAL
+                                    cmd.Parameters.AddWithValue("@price", targetPrice);
+
                                     recipeId = (int)cmd.ExecuteScalar();
                                 }
                             }
                             else // UPDATE
                             {
                                 recipeId = editingRecipeId.Value;
-                                string sqlUpdate = @"UPDATE recipes SET name=@name, description=@desc, serving_size=@serv, 
-                                                     hpp=@hpp, suggested_price=@price, updated_at=NOW() WHERE id=@id AND user_id=@uid";
+                                string sqlUpdate = @"
+                                    UPDATE recipes 
+                                    SET name=@name, description=@desc, serving_size=@serv, 
+                                        hpp=@hpp, suggested_price=@price, updated_at=NOW() 
+                                    WHERE id=@id AND user_id=@uid";
 
                                 using (var cmd = new NpgsqlCommand(sqlUpdate, conn, trans))
                                 {
-                                    cmd.Parameters.AddWithValue("name", txtInputNamaResep.Text.Trim());
-                                    cmd.Parameters.AddWithValue("desc", txtInputDeskripsi.Text.Trim());
-                                    cmd.Parameters.AddWithValue("serv", servings);
-                                    cmd.Parameters.AddWithValue("hpp", hpp);
-                                    cmd.Parameters.AddWithValue("price", targetPrice);
-                                    cmd.Parameters.AddWithValue("id", recipeId);
-                                    cmd.Parameters.AddWithValue("uid", currentUserId);
+                                    cmd.Parameters.AddWithValue("@name", txtInputNamaResep.Text.Trim());
+                                    cmd.Parameters.AddWithValue("@desc", string.IsNullOrEmpty(txtInputDeskripsi.Text) ? "" : txtInputDeskripsi.Text.Trim());
+                                    cmd.Parameters.AddWithValue("@serv", servings);
+                                    cmd.Parameters.AddWithValue("@hpp", hppTotal); // HPP TOTAL
+                                    cmd.Parameters.AddWithValue("@price", targetPrice);
+                                    cmd.Parameters.AddWithValue("@id", recipeId);
+                                    cmd.Parameters.AddWithValue("@uid", currentUserId);
                                     cmd.ExecuteNonQuery();
                                 }
-                                // Hapus detail lama
-                                using (var cmdDel = new NpgsqlCommand("DELETE FROM recipe_ingredients WHERE recipe_id=@rid", conn, trans))
+
+                                // Hapus detail lama - TABEL YANG BENAR: recipe_items
+                                using (var cmdDel = new NpgsqlCommand("DELETE FROM recipe_items WHERE recipe_id=@rid", conn, trans))
                                 {
-                                    cmdDel.Parameters.AddWithValue("rid", recipeId);
+                                    cmdDel.Parameters.AddWithValue("@rid", recipeId);
                                     cmdDel.ExecuteNonQuery();
                                 }
                             }
 
-                            // B. Detail Bahan (Looping dari flowPanelBahan)
+                            // B. Detail Bahan - TABEL: recipe_items, KOLOM: qty
                             foreach (Panel p in flowPanelBahan.Controls.OfType<Panel>())
                             {
                                 var cb = p.Controls.OfType<Guna.UI2.WinForms.Guna2ComboBox>().FirstOrDefault();
@@ -303,12 +301,17 @@ namespace FnB_Records
                                         System.Globalization.CultureInfo.InvariantCulture, out double qty) && qty > 0)
                                     {
                                         int ingredientId = (int)cb.SelectedValue;
-                                        string sqlIng = "INSERT INTO recipe_ingredients (recipe_id, ingredient_id, amount) VALUES (@rid, @iid, @amt)";
+
+                                        // PERBAIKAN: Gunakan recipe_items dan kolom qty
+                                        string sqlIng = @"
+                                            INSERT INTO recipe_items (recipe_id, ingredient_id, qty, created_at) 
+                                            VALUES (@rid, @iid, @qty, NOW())";
+
                                         using (var cmdIng = new NpgsqlCommand(sqlIng, conn, trans))
                                         {
-                                            cmdIng.Parameters.AddWithValue("rid", recipeId);
-                                            cmdIng.Parameters.AddWithValue("iid", ingredientId);
-                                            cmdIng.Parameters.AddWithValue("amt", qty);
+                                            cmdIng.Parameters.AddWithValue("@rid", recipeId);
+                                            cmdIng.Parameters.AddWithValue("@iid", ingredientId);
+                                            cmdIng.Parameters.AddWithValue("@qty", qty);
                                             cmdIng.ExecuteNonQuery();
                                         }
                                     }
@@ -316,15 +319,22 @@ namespace FnB_Records
                             }
 
                             trans.Commit();
-                            MessageBox.Show("Resep berhasil disimpan!", "Sukses");
+                            MessageBox.Show("✅ Resep berhasil disimpan!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             gbResepPopUp.Visible = false;
                             LoadRecipes();
                         }
-                        catch (Exception ex) { trans.Rollback(); throw ex; }
+                        catch (Exception ex)
+                        {
+                            trans.Rollback();
+                            throw ex;
+                        }
                     }
                 }
             }
-            catch (Exception ex) { MessageBox.Show("Error: " + ex.Message); }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error menyimpan resep:\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         // --- 7. LOAD DATA UNTUK EDIT ---
@@ -334,11 +344,10 @@ namespace FnB_Records
             {
                 using (var conn = db.GetKoneksi())
                 {
-                    
                     // Header
                     using (var cmd = new NpgsqlCommand("SELECT * FROM recipes WHERE id=@id", conn))
                     {
-                        cmd.Parameters.AddWithValue("id", recipeId);
+                        cmd.Parameters.AddWithValue("@id", recipeId);
                         using (var r = cmd.ExecuteReader())
                         {
                             if (r.Read())
@@ -352,12 +361,12 @@ namespace FnB_Records
                         }
                     }
 
-                    // Detail Bahan
+                    // Detail Bahan - TABEL YANG BENAR: recipe_items
                     flowPanelBahan.Controls.Clear();
-                    string sqlDet = "SELECT ingredient_id, amount FROM recipe_ingredients WHERE recipe_id=@rid";
+                    string sqlDet = "SELECT ingredient_id, qty FROM recipe_items WHERE recipe_id=@rid";
                     using (var cmd = new NpgsqlCommand(sqlDet, conn))
                     {
-                        cmd.Parameters.AddWithValue("rid", recipeId);
+                        cmd.Parameters.AddWithValue("@rid", recipeId);
                         using (var r = cmd.ExecuteReader())
                         {
                             bool ada = false;
@@ -375,7 +384,10 @@ namespace FnB_Records
                 gbResepPopUp.BringToFront();
                 RecalculateHpp();
             }
-            catch (Exception ex) { MessageBox.Show("Gagal load resep: " + ex.Message); }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal load resep:\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         // --- 8. CONFIG GRID & LOAD DAFTAR RESEP ---
@@ -384,15 +396,32 @@ namespace FnB_Records
             dgvResepMenu.Columns.Clear();
             dgvResepMenu.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
 
-            dgvResepMenu.Columns.Add("id", "ID"); dgvResepMenu.Columns["id"].Visible = false;
+            dgvResepMenu.Columns.Add("id", "ID");
+            dgvResepMenu.Columns["id"].Visible = false;
             dgvResepMenu.Columns.Add("col_name", "Nama Resep");
             dgvResepMenu.Columns.Add("col_serving", "Porsi");
-            dgvResepMenu.Columns.Add("col_hpp", "HPP/Porsi");
+            dgvResepMenu.Columns.Add("col_hpp", "HPP Total");
+            dgvResepMenu.Columns.Add("col_hpp_per_porsi", "HPP/Porsi");
             dgvResepMenu.Columns.Add("col_price", "Harga Jual");
-            dgvResepMenu.Columns.Add("col_profit", "Estimasi Profit");
+            dgvResepMenu.Columns.Add("col_profit", "Profit/Porsi");
 
-            var colEdit = new DataGridViewImageColumn { Name = "col_edit", HeaderText = "Edit", Width = 50, ImageLayout = DataGridViewImageCellLayout.Zoom, Image = Properties.Resources.draw_1798785 };
-            var colDel = new DataGridViewImageColumn { Name = "col_delete", HeaderText = "Hapus", Width = 50, ImageLayout = DataGridViewImageCellLayout.Zoom, Image = Properties.Resources.trash_9787142 };
+            var colEdit = new DataGridViewImageColumn
+            {
+                Name = "col_edit",
+                HeaderText = "Edit",
+                Width = 50,
+                ImageLayout = DataGridViewImageCellLayout.Zoom,
+                Image = Properties.Resources.draw_1798785
+            };
+
+            var colDel = new DataGridViewImageColumn
+            {
+                Name = "col_delete",
+                HeaderText = "Hapus",
+                Width = 50,
+                ImageLayout = DataGridViewImageCellLayout.Zoom,
+                Image = Properties.Resources.trash_9787142
+            };
 
             dgvResepMenu.Columns.Add(colEdit);
             dgvResepMenu.Columns.Add(colDel);
@@ -405,12 +434,17 @@ namespace FnB_Records
             {
                 using (var conn = db.GetKoneksi())
                 {
-                    
-                    string sql = "SELECT id, name, serving_size, hpp, suggested_price FROM recipes WHERE user_id = @uid AND name ILIKE @q ORDER BY created_at DESC";
+                    string sql = @"
+                        SELECT id, name, serving_size, hpp, suggested_price 
+                        FROM recipes 
+                        WHERE user_id = @uid AND name ILIKE @q 
+                        ORDER BY created_at DESC";
+
                     using (var cmd = new NpgsqlCommand(sql, conn))
                     {
-                        cmd.Parameters.AddWithValue("uid", currentUserId);
-                        cmd.Parameters.AddWithValue("q", "%" + search + "%");
+                        cmd.Parameters.AddWithValue("@uid", currentUserId);
+                        cmd.Parameters.AddWithValue("@q", "%" + search + "%");
+
                         using (var r = cmd.ExecuteReader())
                         {
                             while (r.Read())
@@ -420,13 +454,14 @@ namespace FnB_Records
                                 dgvResepMenu.Rows[idx].Cells["col_name"].Value = r["name"];
 
                                 int srv = r.GetInt32(2);
-                                double hppTotal = r.GetDouble(3);
+                                double hppTotal = r.GetDouble(3); // HPP Total
                                 double hppPerPorsi = srv > 0 ? hppTotal / srv : 0;
                                 double price = r.GetDouble(4);
                                 double profit = price - hppPerPorsi;
 
                                 dgvResepMenu.Rows[idx].Cells["col_serving"].Value = srv;
-                                dgvResepMenu.Rows[idx].Cells["col_hpp"].Value = $"Rp {hppPerPorsi:#,##0}";
+                                dgvResepMenu.Rows[idx].Cells["col_hpp"].Value = $"Rp {hppTotal:#,##0}";
+                                dgvResepMenu.Rows[idx].Cells["col_hpp_per_porsi"].Value = $"Rp {hppPerPorsi:#,##0}";
                                 dgvResepMenu.Rows[idx].Cells["col_price"].Value = $"Rp {price:#,##0}";
                                 dgvResepMenu.Rows[idx].Cells["col_profit"].Value = $"Rp {profit:#,##0}";
                             }
@@ -435,7 +470,10 @@ namespace FnB_Records
                 }
                 dgvResepMenu.ClearSelection();
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading recipes:\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         // --- 9. UTILITIES ---
@@ -447,8 +485,8 @@ namespace FnB_Records
             txtInputJumlahPorsi.Text = "1";
             txtInputHargaJualTarget.Clear();
 
-            flowPanelBahan.Controls.Clear(); // Bersihkan panel bahan
-            AddBahanRow(); // Tambah 1 baris default
+            flowPanelBahan.Controls.Clear();
+            AddBahanRow();
 
             lblResep.Text = "Tambah Resep Baru";
             gbResepPopUp.Visible = true;
@@ -461,32 +499,55 @@ namespace FnB_Records
             if (e.RowIndex < 0) return;
             int id = Convert.ToInt32(dgvResepMenu.Rows[e.RowIndex].Tag);
 
-            if (dgvResepMenu.Columns[e.ColumnIndex].Name == "col_edit") LoadRecipeIntoPopup(id);
+            if (dgvResepMenu.Columns[e.ColumnIndex].Name == "col_edit")
+            {
+                LoadRecipeIntoPopup(id);
+            }
             else if (dgvResepMenu.Columns[e.ColumnIndex].Name == "col_delete")
             {
-                if (MessageBox.Show("Hapus resep ini?", "Konfirmasi", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Hapus resep ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     try
                     {
                         using (var conn = db.GetKoneksi())
                         {
-                            
-                            new NpgsqlCommand($"DELETE FROM recipe_ingredients WHERE recipe_id={id}", conn).ExecuteNonQuery();
-                            new NpgsqlCommand($"DELETE FROM recipes WHERE id={id}", conn).ExecuteNonQuery();
+                            // Hapus detail dulu - TABEL YANG BENAR: recipe_items
+                            using (var cmd = new NpgsqlCommand("DELETE FROM recipe_items WHERE recipe_id=@id", conn))
+                            {
+                                cmd.Parameters.AddWithValue("@id", id);
+                                cmd.ExecuteNonQuery();
+                            }
+
+                            // Hapus header
+                            using (var cmd = new NpgsqlCommand("DELETE FROM recipes WHERE id=@id AND user_id=@uid", conn))
+                            {
+                                cmd.Parameters.AddWithValue("@id", id);
+                                cmd.Parameters.AddWithValue("@uid", currentUserId);
+                                cmd.ExecuteNonQuery();
+                            }
                         }
+
+                        MessageBox.Show("✅ Resep berhasil dihapus!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LoadRecipes();
                     }
-                    catch (Exception ex) { MessageBox.Show(ex.Message); }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error menghapus resep:\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
 
         private void DgvResepMenu_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) LoadRecipeIntoPopup(Convert.ToInt32(dgvResepMenu.Rows[e.RowIndex].Tag));
+            if (e.RowIndex >= 0)
+            {
+                LoadRecipeIntoPopup(Convert.ToInt32(dgvResepMenu.Rows[e.RowIndex].Tag));
+            }
         }
 
         private void BtnBatalPopUpResep_Click(object sender, EventArgs e) => gbResepPopUp.Visible = false;
         private void TxtCariResep_TextChanged(object sender, EventArgs e) => LoadRecipes(txtCariResep.Text);
+        private void dgvResepMenu_CellContentClick_1(object sender, DataGridViewCellEventArgs e) { }
     }
 }
