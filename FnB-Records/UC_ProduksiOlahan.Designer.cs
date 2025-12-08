@@ -442,6 +442,7 @@
             guna2GroupBox3.ShadowDecoration.Shadow = new Padding(3, 1, 3, 5);
             guna2GroupBox3.Size = new Size(355, 200);
             guna2GroupBox3.TabIndex = 18;
+            guna2GroupBox3.Click += guna2GroupBox3_Click;
             // 
             // label18
             // 
@@ -961,7 +962,7 @@
             Controls.Add(guna2GroupBox3);
             Controls.Add(guna2GroupBox1);
             Name = "UC_ProduksiOlahan";
-            Size = new Size(1480, 1004);
+            Size = new Size(1463, 987);
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
             guna2GroupBox5.ResumeLayout(false);

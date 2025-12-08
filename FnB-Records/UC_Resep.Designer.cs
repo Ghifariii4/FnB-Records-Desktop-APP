@@ -1053,6 +1053,7 @@
             guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges42;
             guna2GroupBox1.Size = new Size(1544, 99);
             guna2GroupBox1.TabIndex = 15;
+            guna2GroupBox1.Click += guna2GroupBox1_Click;
             // 
             // UC_Resep
             // 

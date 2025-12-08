@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HYPE AMD\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\FnB-Records.csproj": {}
+    "C:\\Users\\HYPE AMD\\Source\\Repos\\FnB-Records-Desktop-APP\\FnB-Records\\FnB-Records.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HYPE AMD\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\FnB-Records.csproj": {
+    "C:\\Users\\HYPE AMD\\Source\\Repos\\FnB-Records-Desktop-APP\\FnB-Records\\FnB-Records.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HYPE AMD\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\FnB-Records.csproj",
+        "projectUniqueName": "C:\\Users\\HYPE AMD\\Source\\Repos\\FnB-Records-Desktop-APP\\FnB-Records\\FnB-Records.csproj",
         "projectName": "FnB-Records",
-        "projectPath": "C:\\Users\\HYPE AMD\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\FnB-Records.csproj",
+        "projectPath": "C:\\Users\\HYPE AMD\\Source\\Repos\\FnB-Records-Desktop-APP\\FnB-Records\\FnB-Records.csproj",
         "packagesPath": "C:\\Users\\HYPE AMD\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\HYPE AMD\\Source\\Repos\\FnB-Records-Desktop-APP\\FnB-Records\\obj\\",
         "projectStyle": "PackageReference",

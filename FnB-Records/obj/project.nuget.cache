@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gkurIpzGzos=",
+  "dgSpecHash": "ggzCdvf+faM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\HYPE AMD\\source\\repos\\FnB-Records-Desktop-APP\\FnB-Records\\FnB-Records.csproj",
+  "projectFilePath": "C:\\Users\\HYPE AMD\\Source\\Repos\\FnB-Records-Desktop-APP\\FnB-Records\\FnB-Records.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HYPE AMD\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.7\\guna.ui2.winforms.2.0.4.7.nupkg.sha512",
     "C:\\Users\\HYPE AMD\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.1\\microsoft.extensions.dependencyinjection.8.0.1.nupkg.sha512",
