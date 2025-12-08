@@ -256,7 +256,7 @@
             dataGridViewCellStyle3.SelectionForeColor = Color.Black;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvDataVendor.DefaultCellStyle = dataGridViewCellStyle3;
-            dgvDataVendor.GridColor = SystemColors.ButtonFace;
+            dgvDataVendor.GridColor = Color.White;
             dgvDataVendor.Location = new Point(9, 5);
             dgvDataVendor.Name = "dgvDataVendor";
             dgvDataVendor.ReadOnly = true;
@@ -280,7 +280,7 @@
             dgvDataVendor.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
             dgvDataVendor.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
             dgvDataVendor.ThemeStyle.BackColor = Color.White;
-            dgvDataVendor.ThemeStyle.GridColor = SystemColors.ButtonFace;
+            dgvDataVendor.ThemeStyle.GridColor = Color.White;
             dgvDataVendor.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(232, 234, 237);
             dgvDataVendor.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
             dgvDataVendor.ThemeStyle.HeaderStyle.Font = new Font("Inter", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
