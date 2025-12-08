@@ -19,7 +19,7 @@ namespace FnB_Records.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -433,6 +433,16 @@ namespace FnB_Records.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap draw_1798785 {
+            get {
+                object obj = ResourceManager.GetObject("draw_1798785", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Email_Icon_Black {
             get {
                 object obj = ResourceManager.GetObject("Email-Icon-Black", resourceCulture);
@@ -713,6 +723,26 @@ namespace FnB_Records.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2025_12_06_174136_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot_2025-12-06_174136-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2025_12_06_174632_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot_2025-12-06_174632-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap search_icon {
             get {
                 object obj = ResourceManager.GetObject("search-icon", resourceCulture);
@@ -763,6 +793,26 @@ namespace FnB_Records.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap trash_9787142 {
+            get {
+                object obj = ResourceManager.GetObject("trash_9787142", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unferivied {
+            get {
+                object obj = ResourceManager.GetObject("unferivied", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Up_Icon_Black {
             get {
                 object obj = ResourceManager.GetObject("Up-Icon-Black", resourceCulture);
@@ -776,6 +826,16 @@ namespace FnB_Records.Properties {
         internal static System.Drawing.Bitmap Up_Icon_White {
             get {
                 object obj = ResourceManager.GetObject("Up-Icon-White", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap verified {
+            get {
+                object obj = ResourceManager.GetObject("verified", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

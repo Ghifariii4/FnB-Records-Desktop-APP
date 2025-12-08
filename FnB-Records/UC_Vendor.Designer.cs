@@ -40,7 +40,6 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Vendor));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -79,6 +78,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Vendor));
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             btnTambahVendor = new Guna.UI2.WinForms.Guna2Button();
             label2 = new Label();
@@ -86,8 +86,6 @@
             guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2GroupBox5 = new Guna.UI2.WinForms.Guna2GroupBox();
             dgvDataVendor = new Guna.UI2.WinForms.Guna2DataGridView();
-            Edit = new DataGridViewImageColumn();
-            Hapus = new DataGridViewImageColumn();
             guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             txtCariVendor = new Guna.UI2.WinForms.Guna2TextBox();
@@ -117,6 +115,9 @@
             txtInputNamaVendor = new Guna.UI2.WinForms.Guna2TextBox();
             label4 = new Label();
             label3 = new Label();
+            panel1 = new Panel();
+            Hapus = new DataGridViewImageColumn();
+            Edit = new DataGridViewImageColumn();
             guna2GroupBox1.SuspendLayout();
             guna2GroupBox2.SuspendLayout();
             guna2GroupBox5.SuspendLayout();
@@ -295,22 +296,6 @@
             dgvDataVendor.ThemeStyle.RowsStyle.SelectionBackColor = Color.White;
             dgvDataVendor.ThemeStyle.RowsStyle.SelectionForeColor = Color.Black;
             dgvDataVendor.CellContentClick += dgvDataVendor_CellContentClick;
-            // 
-            // Edit
-            // 
-            Edit.HeaderText = "Edit";
-            Edit.Image = (Image)resources.GetObject("Edit.Image");
-            Edit.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            Edit.Name = "Edit";
-            Edit.ReadOnly = true;
-            // 
-            // Hapus
-            // 
-            Hapus.HeaderText = "Hapus";
-            Hapus.Image = (Image)resources.GetObject("Hapus.Image");
-            Hapus.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            Hapus.Name = "Hapus";
-            Hapus.ReadOnly = true;
             // 
             // guna2GroupBox3
             // 
@@ -895,17 +880,42 @@
             label3.TabIndex = 1;
             label3.Text = "Tambah Vendor Baru";
             // 
+            // panel1
+            // 
+            panel1.Location = new Point(656, 986);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(340, 64);
+            panel1.TabIndex = 21;
+            // 
+            // Hapus
+            // 
+            Hapus.HeaderText = "Hapus";
+            Hapus.Image = (Image)resources.GetObject("Hapus.Image");
+            Hapus.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            Hapus.Name = "Hapus";
+            Hapus.ReadOnly = true;
+            // 
+            // Edit
+            // 
+            Edit.HeaderText = "Edit";
+            Edit.Image = (Image)resources.GetObject("Edit.Image");
+            Edit.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            Edit.Name = "Edit";
+            Edit.ReadOnly = true;
+            // 
             // UC_Vendor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
             BackColor = Color.FromArgb(212, 122, 71);
+            Controls.Add(panel1);
             Controls.Add(gbEditVendor);
             Controls.Add(gbVendorPopUp);
             Controls.Add(guna2GroupBox1);
             Controls.Add(guna2GroupBox2);
             Name = "UC_Vendor";
-            Size = new Size(1616, 1027);
+            Size = new Size(1616, 1088);
             Load += UC_Vendor_Load;
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
@@ -946,8 +956,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox5;
         private Guna.UI2.WinForms.Guna2DataGridView dgvDataVendor;
-        private DataGridViewImageColumn Edit;
-        private DataGridViewImageColumn Hapus;
         private Guna.UI2.WinForms.Guna2GroupBox gbEditVendor;
         private Guna.UI2.WinForms.Guna2Button btnBatal;
         private Guna.UI2.WinForms.Guna2Button btnPerbarui;
@@ -961,5 +969,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtEditNamaVendor;
         private Label label11;
         private Label label12;
+        private Panel panel1;
+        private DataGridViewImageColumn Edit;
+        private DataGridViewImageColumn Hapus;
     }
 }

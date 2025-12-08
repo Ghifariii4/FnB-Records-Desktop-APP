@@ -93,7 +93,8 @@ namespace FnB_Records
 
                     string query = @"
                 SELECT 
-                    i.id, 
+                    i.id,
+                    i.vendor_id, 
                     i.name AS nama_bahan, 
                     v.name AS nama_vendor, 
                     i.price AS harga, 
@@ -188,43 +189,52 @@ namespace FnB_Records
                 }
 
                 // 3. Simpan ke Database
-                Koneksi koneksiDB = new Koneksi();
-                using (NpgsqlConnection conn = koneksiDB.GetKoneksi())
+                Koneksi db = new Koneksi();
+                using (NpgsqlConnection conn = db.GetKoneksi())
                 {
                     if (conn.State != ConnectionState.Open) conn.Open();
 
-                    string query = @"INSERT INTO ingredients (user_id, vendor_id, name, unit, price, stock, min_stock, created_at, updated_at) 
-                             VALUES (@uid, @vid, @name, @unit, @price, @stock, @min, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)";
+                    string query = "";
+
+                    // --- LOGIKA BARU: CEK APAKAH EDIT ATAU BARU ---
+                    if (idBahanTerpilih == 0)
+                    {
+                        // INSERT (Tambah Baru)
+                        query = @"INSERT INTO ingredients (user_id, vendor_id, name, unit, price, stock, min_stock, created_at, updated_at) 
+                  VALUES (@uid, @vid, @name, @unit, @price, @stock, @min, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)";
+                    }
+                    else
+                    {
+                        // UPDATE (Edit Data Lama)
+                        query = @"UPDATE ingredients 
+                  SET vendor_id=@vid, name=@name, unit=@unit, price=@price, stock=@stock, min_stock=@min, updated_at=CURRENT_TIMESTAMP
+                  WHERE id=@id AND user_id=@uid";
+                    }
+                    // ---------------------------------------------
 
                     using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
                     {
+                        // Parameter Umum
                         cmd.Parameters.AddWithValue("@uid", Login.GlobalSession.CurrentUserId);
-
-                        // Ambil ID Vendor dari ComboBox (ValueMember)
-                        if (int.TryParse(cbVendor.SelectedValue.ToString(), out int vendorId))
-                        {
-                            cmd.Parameters.AddWithValue("@vid", vendorId);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Vendor tidak valid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-
+                        cmd.Parameters.AddWithValue("@vid", Convert.ToInt32(cbVendor.SelectedValue));
                         cmd.Parameters.AddWithValue("@name", txtInputNamaBahan.Text.Trim());
                         cmd.Parameters.AddWithValue("@unit", cbSatuan.SelectedItem.ToString());
                         cmd.Parameters.AddWithValue("@price", harga);
                         cmd.Parameters.AddWithValue("@stock", stok);
                         cmd.Parameters.AddWithValue("@min", minStok);
 
+                        // --- TAMBAHAN KHUSUS EDIT ---
+                        if (idBahanTerpilih > 0)
+                        {
+                            cmd.Parameters.AddWithValue("@id", idBahanTerpilih);
+                        }
+
                         cmd.ExecuteNonQuery();
-                        // Refresh Tabel
-                        
                     }
                 }
 
                 // 4. Feedback & Reset
-                MessageBox.Show("Bahan baku berhasil ditambahkan!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(idBahanTerpilih == 0 ? "Berhasil Ditambahkan!" : "Berhasil Diperbarui!", "Sukses");
                 gbBahanBakuPopUp.Visible = false;
                 BersihkanInput();
                 LoadDataBahan("");
@@ -265,14 +275,32 @@ namespace FnB_Records
                 // --- LOGIKA EDIT ---
                 else if (colName == "Edit")
                 {
-                    // Panggil logika edit (nanti kita isi)
-                    idBahanTerpilih = idDipilih; // Simpan ID ke global
+                    // --- TAMBAHKAN LOGIKA INI ---
 
-                    // Contoh pengisian form edit (jika form edit sudah ada)
-                    // txtInputNamaBahan.Text = namaBahan;
-                    // ... dst
+                    // 1. Set ID agar tombol Simpan tahu ini adalah Edit
+                    idBahanTerpilih = Convert.ToInt32(row["id"]);
 
-                    MessageBox.Show($"Edit ID: {idDipilih} segera hadir.", "Info");
+                    // 2. Isi Textbox dengan data lama
+                    txtInputNamaBahan.Text = row["nama_bahan"].ToString();
+
+                    // Format angka: Hilangkan "Rp" dan titik ribuan agar jadi angka murni (contoh: 10000)
+                    txtInputHargaPerSatuan.Text = Convert.ToDouble(row["harga"]).ToString("N0").Replace(".", "");
+
+                    txtInputStokSaatIni.Text = row["stok"].ToString();
+                    txtInputStokMinimum.Text = row["min_stock"].ToString();
+
+                    // 3. Set Dropdown
+                    cbSatuan.SelectedItem = row["satuan"].ToString();
+                    if (row["vendor_id"] != DBNull.Value)
+                    {
+                        cbVendor.SelectedValue = Convert.ToInt32(row["vendor_id"]);
+                    }
+
+                    // 4. Ubah Judul Tombol & Tampilkan Popup
+                    btnSimpanPopUp.Text = "Update"; // Ubah teks tombol biar user sadar
+
+                    gbBahanBakuPopUp.Visible = true;
+                    gbBahanBakuPopUp.BringToFront();
                 }
             }
         }
@@ -319,6 +347,9 @@ namespace FnB_Records
         private void btnBatalPopUp_Click(object sender, EventArgs e) => gbBahanBakuPopUp.Visible = false;
         private void BersihkanInput()
         {
+
+            idBahanTerpilih = 0;             
+            btnSimpanPopUp.Text = "Simpan";
             txtInputNamaBahan.Clear();
             txtInputHargaPerSatuan.Clear();
             txtInputStokSaatIni.Clear();
