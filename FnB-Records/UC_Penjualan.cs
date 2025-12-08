@@ -182,7 +182,6 @@ namespace FnB_Records
                     Koneksi db = new Koneksi();
                     using (NpgsqlConnection conn = db.GetKoneksi())
                     {
-                        conn.Open();
                         string sql = "SELECT price FROM recipes WHERE id = @id";
                         using (NpgsqlCommand cmd = new NpgsqlCommand(sql, conn))
                         {
@@ -230,7 +229,6 @@ namespace FnB_Records
                 Koneksi db = new Koneksi();
                 using (NpgsqlConnection conn = db.GetKoneksi())
                 {
-                    conn.Open();
                     string sql = @"INSERT INTO sales 
                                 (user_id, recipe_id, qty, price, discount, other_fees, tax, revenue, profit, total_price, sale_date, created_at)
                                 VALUES 
@@ -271,7 +269,6 @@ namespace FnB_Records
                 Koneksi db = new Koneksi();
                 using (NpgsqlConnection conn = db.GetKoneksi())
                 {
-                    conn.Open();
                     // Hitung total harga bahan baku berdasarkan komposisi resep
                     // Asumsi: tabel ingredients punya kolom 'price' per satuan
                     string sql = @"
