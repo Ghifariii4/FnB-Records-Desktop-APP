@@ -637,6 +637,11 @@ namespace FnB_Records
             }
         }
         #endregion
+
+        private void UC_ManajemenInventori_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 
     // WindowsFontResolver untuk PdfSharp

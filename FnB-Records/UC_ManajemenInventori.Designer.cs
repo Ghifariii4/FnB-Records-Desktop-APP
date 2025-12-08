@@ -191,11 +191,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Inter", 12F);
+            label2.Font = new Font("Microsoft Sans Serif", 12F);
             label2.ForeColor = Color.FromArgb(45, 45, 45);
             label2.Location = new Point(3, 48);
             label2.Name = "label2";
-            label2.Size = new Size(507, 23);
+            label2.Size = new Size(471, 20);
             label2.TabIndex = 2;
             label2.Text = "Kelola dan pantau inventori bahan baku dengan tracking real-time";
             // 
@@ -206,7 +206,7 @@
             label1.ForeColor = Color.Black;
             label1.Location = new Point(-5, 0);
             label1.Name = "label1";
-            label1.Size = new Size(403, 50);
+            label1.Size = new Size(404, 50);
             label1.TabIndex = 0;
             label1.Text = "Manajemen Inventori";
             // 
@@ -236,11 +236,11 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Font = new Font("Inter Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label18.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label18.ForeColor = Color.LightGray;
             label18.Location = new Point(21, 161);
             label18.Name = "label18";
-            label18.Size = new Size(75, 17);
+            label18.Size = new Size(83, 15);
             label18.TabIndex = 16;
             label18.Text = "Bahan baku";
             // 
@@ -272,11 +272,11 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.White;
             label5.Location = new Point(21, 19);
             label5.Name = "label5";
-            label5.Size = new Size(86, 23);
+            label5.Size = new Size(90, 20);
             label5.TabIndex = 12;
             label5.Text = "Total Item";
             // 
@@ -306,11 +306,11 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Inter Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.LightGray;
             label3.Location = new Point(21, 161);
             label3.Name = "label3";
-            label3.Size = new Size(105, 17);
+            label3.Size = new Size(120, 15);
             label3.TabIndex = 16;
             label3.Text = "Perlu segera diisi";
             // 
@@ -342,11 +342,11 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
             label6.Location = new Point(21, 19);
             label6.Name = "label6";
-            label6.Size = new Size(89, 23);
+            label6.Size = new Size(91, 20);
             label6.TabIndex = 12;
             label6.Text = "Stok Kritis";
             // 
@@ -376,11 +376,11 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Inter Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.LightGray;
             label7.Location = new Point(21, 161);
             label7.Name = "label7";
-            label7.Size = new Size(117, 17);
+            label7.Size = new Size(131, 15);
             label7.TabIndex = 16;
             label7.Text = "Di bawah minimum";
             label7.TextAlign = ContentAlignment.MiddleCenter;
@@ -413,11 +413,11 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.White;
             label10.Location = new Point(21, 19);
             label10.Name = "label10";
-            label10.Size = new Size(107, 23);
+            label10.Size = new Size(114, 20);
             label10.TabIndex = 12;
             label10.Text = "Stok Rendah";
             // 
@@ -447,11 +447,11 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Font = new Font("Inter Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label11.ForeColor = Color.LightGray;
             label11.Location = new Point(21, 161);
             label11.Name = "label11";
-            label11.Size = new Size(86, 17);
+            label11.Size = new Size(96, 15);
             label11.TabIndex = 16;
             label11.Text = "Nilai inventori";
             // 
@@ -483,11 +483,11 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = Color.White;
             label13.Location = new Point(21, 19);
             label13.Name = "label13";
-            label13.Size = new Size(86, 23);
+            label13.Size = new Size(88, 20);
             label13.TabIndex = 12;
             label13.Text = "Nilai Total";
             // 
@@ -649,7 +649,7 @@
             dgvManajemenInventori.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(232, 234, 237);
-            dataGridViewCellStyle2.Font = new Font("Inter", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
@@ -659,7 +659,7 @@
             dgvManajemenInventori.Columns.AddRange(new DataGridViewColumn[] { dataGridViewImageColumn1, dataGridViewImageColumn2 });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Inter SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle3.ForeColor = Color.FromArgb(125, 137, 149);
             dataGridViewCellStyle3.SelectionBackColor = Color.White;
             dataGridViewCellStyle3.SelectionForeColor = Color.Black;
@@ -692,14 +692,14 @@
             dgvManajemenInventori.ThemeStyle.GridColor = SystemColors.ButtonFace;
             dgvManajemenInventori.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(232, 234, 237);
             dgvManajemenInventori.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvManajemenInventori.ThemeStyle.HeaderStyle.Font = new Font("Inter", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dgvManajemenInventori.ThemeStyle.HeaderStyle.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dgvManajemenInventori.ThemeStyle.HeaderStyle.ForeColor = Color.Black;
             dgvManajemenInventori.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgvManajemenInventori.ThemeStyle.HeaderStyle.Height = 40;
             dgvManajemenInventori.ThemeStyle.ReadOnly = true;
             dgvManajemenInventori.ThemeStyle.RowsStyle.BackColor = Color.White;
             dgvManajemenInventori.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvManajemenInventori.ThemeStyle.RowsStyle.Font = new Font("Inter SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dgvManajemenInventori.ThemeStyle.RowsStyle.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dgvManajemenInventori.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(125, 137, 149);
             dgvManajemenInventori.ThemeStyle.RowsStyle.Height = 40;
             dgvManajemenInventori.ThemeStyle.RowsStyle.SelectionBackColor = Color.White;
@@ -724,11 +724,11 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Font = new Font("Inter Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label15.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label15.ForeColor = Color.White;
             label15.Location = new Point(22, 57);
             label15.Name = "label15";
-            label15.Size = new Size(427, 23);
+            label15.Size = new Size(452, 20);
             label15.TabIndex = 13;
             label15.Text = "Stok dan nilai diperbarui secara real-time dari database";
             // 
@@ -739,7 +739,7 @@
             label14.ForeColor = Color.White;
             label14.Location = new Point(22, 24);
             label14.Name = "label14";
-            label14.Size = new Size(400, 33);
+            label14.Size = new Size(399, 33);
             label14.TabIndex = 12;
             label14.Text = "Daftar Inventori (Data Real-time)";
             // 
@@ -932,11 +932,11 @@
             // lblStokSaatIniPopup
             // 
             lblStokSaatIniPopup.AutoSize = true;
-            lblStokSaatIniPopup.Font = new Font("Inter", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblStokSaatIniPopup.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblStokSaatIniPopup.ForeColor = Color.FromArgb(45, 45, 45);
             lblStokSaatIniPopup.Location = new Point(0, 143);
             lblStokSaatIniPopup.Name = "lblStokSaatIniPopup";
-            lblStokSaatIniPopup.Size = new Size(83, 18);
+            lblStokSaatIniPopup.Size = new Size(81, 16);
             lblStokSaatIniPopup.TabIndex = 13;
             lblStokSaatIniPopup.Text = "Stok Saat Ini";
             // 
@@ -967,6 +967,7 @@
             Controls.Add(guna2GroupBox1);
             Name = "UC_ManajemenInventori";
             Size = new Size(1616, 939);
+            Load += UC_ManajemenInventori_Load_1;
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
             guna2GroupBox3.ResumeLayout(false);

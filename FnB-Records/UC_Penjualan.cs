@@ -535,5 +535,10 @@ namespace FnB_Records
         private void btnBatalPopUp_Click(object sender, EventArgs e) => gbInputPenjualanPopUp.Visible = false;
         private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e) { }
         private void label43_Click(object sender, EventArgs e) { }
+
+        private void guna2GroupBox12_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
