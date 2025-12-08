@@ -256,7 +256,7 @@
             lblrole.AutoSize = true;
             lblrole.Font = new Font("Manrope ExtraBold", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblrole.ForeColor = Color.White;
-            lblrole.Location = new Point(19, 3);
+            lblrole.Location = new Point(15, 3);
             lblrole.Name = "lblrole";
             lblrole.Size = new Size(82, 22);
             lblrole.TabIndex = 8;
@@ -860,7 +860,7 @@
             label16.ForeColor = Color.White;
             label16.Location = new Point(22, 24);
             label16.Name = "label16";
-            label16.Size = new Size(194, 33);
+            label16.Size = new Size(195, 33);
             label16.TabIndex = 12;
             label16.Text = "Ubah Password";
             // 
