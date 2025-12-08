@@ -642,6 +642,16 @@ namespace FnB_Records
         {
 
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            gbKurangStok.Visible = false;
+        }
+
+        private void btnClosePopUpBahanBaku_Click(object sender, EventArgs e)
+        {
+            gbTambahStok.Visible = false;
+        }
     }
 
     // WindowsFontResolver untuk PdfSharp
