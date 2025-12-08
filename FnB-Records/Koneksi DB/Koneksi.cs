@@ -12,7 +12,7 @@ namespace FnB_Records.Koneksi_DB
     {
         private const string DbHost = "localhost";
         private const string DbName = "DB_FnBRecords";
-        private const string DbUser = "postgres";
+        private const string DbUser = "junior";
         private const string DbPass = "123";
         private const int DbPort = 5432; 
 
