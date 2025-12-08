@@ -24,7 +24,27 @@ namespace FnB_Records
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GroupBox12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbPilihResep_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
