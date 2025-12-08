@@ -884,6 +884,7 @@
             btnClosePopUpBahanBaku.ShadowDecoration.Depth = 4;
             btnClosePopUpBahanBaku.Size = new Size(46, 41);
             btnClosePopUpBahanBaku.TabIndex = 15;
+            btnClosePopUpBahanBaku.Click += btnClosePopUpBahanBaku_Click;
             // 
             // label16
             // 
@@ -1018,7 +1019,7 @@
             gbKurangStok.FillColor = Color.FromArgb(249, 247, 245);
             gbKurangStok.Font = new Font("Segoe UI", 9F);
             gbKurangStok.ForeColor = Color.FromArgb(125, 137, 149);
-            gbKurangStok.Location = new Point(622, 358);
+            gbKurangStok.Location = new Point(606, 355);
             gbKurangStok.Name = "gbKurangStok";
             gbKurangStok.ShadowDecoration.BorderRadius = 15;
             gbKurangStok.ShadowDecoration.CustomizableEdges = customizableEdges62;
@@ -1120,6 +1121,7 @@
             guna2Button1.ShadowDecoration.Depth = 4;
             guna2Button1.Size = new Size(46, 41);
             guna2Button1.TabIndex = 15;
+            guna2Button1.Click += guna2Button1_Click;
             // 
             // label9
             // 
@@ -1236,7 +1238,7 @@
             Controls.Add(guna2GroupBox3);
             Controls.Add(guna2GroupBox1);
             Name = "UC_ManajemenInventori";
-            Size = new Size(1446, 1112);
+            Size = new Size(1395, 1061);
             Load += UC_ManajemenInventori_Load;
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
