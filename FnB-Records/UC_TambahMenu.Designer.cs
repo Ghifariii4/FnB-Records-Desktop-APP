@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -46,9 +46,13 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            label7 = new Label();
+            numPorsi = new Guna.UI2.WinForms.Guna2NumericUpDown();
             btnSimpan = new Guna.UI2.WinForms.Guna2Button();
             btnBrowse = new Guna.UI2.WinForms.Guna2Button();
             label6 = new Label();
@@ -65,13 +69,14 @@
             lbl01 = new Label();
             label1 = new Label();
             label16 = new Label();
-            label7 = new Label();
-            numPorsi = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            label8 = new Label();
+            numHPP = new Guna.UI2.WinForms.Guna2NumericUpDown();
             guna2GroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numPorsi).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picGambar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numStok).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numHarga).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numPorsi).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numHPP).BeginInit();
             SuspendLayout();
             // 
             // guna2GroupBox2
@@ -80,6 +85,8 @@
             guna2GroupBox2.BorderColor = Color.FromArgb(45, 45, 45);
             guna2GroupBox2.BorderRadius = 20;
             guna2GroupBox2.BorderThickness = 0;
+            guna2GroupBox2.Controls.Add(label8);
+            guna2GroupBox2.Controls.Add(numHPP);
             guna2GroupBox2.Controls.Add(label7);
             guna2GroupBox2.Controls.Add(numPorsi);
             guna2GroupBox2.Controls.Add(btnSimpan);
@@ -97,25 +104,51 @@
             guna2GroupBox2.Controls.Add(txtNamaMenu);
             guna2GroupBox2.Controls.Add(lbl01);
             guna2GroupBox2.CustomBorderColor = Color.Transparent;
-            guna2GroupBox2.CustomizableEdges = customizableEdges19;
+            guna2GroupBox2.CustomizableEdges = customizableEdges21;
             guna2GroupBox2.FillColor = Color.FromArgb(45, 45, 45);
             guna2GroupBox2.Font = new Font("Segoe UI", 9F);
             guna2GroupBox2.ForeColor = Color.FromArgb(125, 137, 149);
             guna2GroupBox2.Location = new Point(38, 138);
             guna2GroupBox2.Name = "guna2GroupBox2";
             guna2GroupBox2.ShadowDecoration.BorderRadius = 20;
-            guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges22;
             guna2GroupBox2.ShadowDecoration.Depth = 3;
             guna2GroupBox2.ShadowDecoration.Enabled = true;
             guna2GroupBox2.ShadowDecoration.Shadow = new Padding(10);
             guna2GroupBox2.Size = new Size(1544, 800);
             guna2GroupBox2.TabIndex = 27;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Manrope ExtraBold", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(21, 343);
+            label7.Name = "label7";
+            label7.Size = new Size(186, 37);
+            label7.TabIndex = 58;
+            label7.Text = "Ukuran Porsi";
+            // 
+            // numPorsi
+            // 
+            numPorsi.BackColor = Color.Transparent;
+            numPorsi.BorderRadius = 5;
+            numPorsi.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            numPorsi.CustomizableEdges = customizableEdges3;
+            numPorsi.Font = new Font("JetBrains Mono", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            numPorsi.Location = new Point(21, 389);
+            numPorsi.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
+            numPorsi.Name = "numPorsi";
+            numPorsi.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            numPorsi.Size = new Size(397, 51);
+            numPorsi.TabIndex = 57;
+            numPorsi.UpDownButtonFillColor = Color.FromArgb(212, 122, 71);
+            // 
             // btnSimpan
             // 
             btnSimpan.BorderRadius = 5;
             btnSimpan.Cursor = Cursors.Hand;
-            btnSimpan.CustomizableEdges = customizableEdges3;
+            btnSimpan.CustomizableEdges = customizableEdges5;
             btnSimpan.DisabledState.BorderColor = Color.DarkGray;
             btnSimpan.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSimpan.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -125,7 +158,7 @@
             btnSimpan.ForeColor = Color.FromArgb(45, 45, 45);
             btnSimpan.Location = new Point(1266, 576);
             btnSimpan.Name = "btnSimpan";
-            btnSimpan.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnSimpan.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnSimpan.Size = new Size(229, 51);
             btnSimpan.TabIndex = 56;
             btnSimpan.Text = "Simpan";
@@ -135,7 +168,7 @@
             // 
             btnBrowse.BorderRadius = 5;
             btnBrowse.Cursor = Cursors.Hand;
-            btnBrowse.CustomizableEdges = customizableEdges5;
+            btnBrowse.CustomizableEdges = customizableEdges7;
             btnBrowse.DisabledState.BorderColor = Color.DarkGray;
             btnBrowse.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBrowse.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -145,7 +178,7 @@
             btnBrowse.ForeColor = Color.FromArgb(45, 45, 45);
             btnBrowse.Location = new Point(944, 576);
             btnBrowse.Name = "btnBrowse";
-            btnBrowse.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnBrowse.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnBrowse.Size = new Size(229, 51);
             btnBrowse.TabIndex = 55;
             btnBrowse.Text = "Cari Gambar";
@@ -165,11 +198,11 @@
             // picGambar
             // 
             picGambar.BorderRadius = 10;
-            picGambar.CustomizableEdges = customizableEdges7;
+            picGambar.CustomizableEdges = customizableEdges9;
             picGambar.ImageRotate = 0F;
             picGambar.Location = new Point(1013, 138);
             picGambar.Name = "picGambar";
-            picGambar.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            picGambar.ShadowDecoration.CustomizableEdges = customizableEdges10;
             picGambar.Size = new Size(400, 400);
             picGambar.TabIndex = 53;
             picGambar.TabStop = false;
@@ -190,12 +223,12 @@
             numStok.BackColor = Color.Transparent;
             numStok.BorderRadius = 5;
             numStok.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
-            numStok.CustomizableEdges = customizableEdges9;
+            numStok.CustomizableEdges = customizableEdges11;
             numStok.Font = new Font("JetBrains Mono", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             numStok.Location = new Point(498, 260);
             numStok.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
             numStok.Name = "numStok";
-            numStok.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            numStok.ShadowDecoration.CustomizableEdges = customizableEdges12;
             numStok.Size = new Size(320, 51);
             numStok.TabIndex = 51;
             numStok.UpDownButtonFillColor = Color.FromArgb(212, 122, 71);
@@ -207,20 +240,20 @@
             label4.ForeColor = Color.White;
             label4.Location = new Point(21, 214);
             label4.Name = "label4";
-            label4.Size = new Size(174, 37);
+            label4.Size = new Size(234, 37);
             label4.TabIndex = 50;
-            label4.Text = "Harga Menu";
+            label4.Text = "Harga Jual Menu";
             // 
             // numHarga
             // 
             numHarga.BackColor = Color.Transparent;
             numHarga.BorderRadius = 5;
-            numHarga.CustomizableEdges = customizableEdges11;
+            numHarga.CustomizableEdges = customizableEdges13;
             numHarga.Font = new Font("JetBrains Mono", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             numHarga.Location = new Point(21, 260);
             numHarga.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
             numHarga.Name = "numHarga";
-            numHarga.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            numHarga.ShadowDecoration.CustomizableEdges = customizableEdges14;
             numHarga.Size = new Size(397, 51);
             numHarga.TabIndex = 49;
             numHarga.ThousandsSeparator = true;
@@ -242,7 +275,7 @@
             cmbKategori.BackColor = Color.Transparent;
             cmbKategori.BorderRadius = 5;
             cmbKategori.Cursor = Cursors.Hand;
-            cmbKategori.CustomizableEdges = customizableEdges13;
+            cmbKategori.CustomizableEdges = customizableEdges15;
             cmbKategori.DrawMode = DrawMode.OwnerDrawFixed;
             cmbKategori.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbKategori.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -253,7 +286,7 @@
             cmbKategori.Items.AddRange(new object[] { "Makanan Utama", "Makanan Ringan", "Minuman Dingin", "Minuman Panas", "Makanan Penutup" });
             cmbKategori.Location = new Point(498, 138);
             cmbKategori.Name = "cmbKategori";
-            cmbKategori.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            cmbKategori.ShadowDecoration.CustomizableEdges = customizableEdges16;
             cmbKategori.Size = new Size(320, 51);
             cmbKategori.TabIndex = 47;
             // 
@@ -273,7 +306,7 @@
             txtDeskripsi.BorderColor = Color.Gainsboro;
             txtDeskripsi.BorderRadius = 5;
             txtDeskripsi.Cursor = Cursors.IBeam;
-            txtDeskripsi.CustomizableEdges = customizableEdges15;
+            txtDeskripsi.CustomizableEdges = customizableEdges17;
             txtDeskripsi.DefaultText = "";
             txtDeskripsi.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtDeskripsi.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -290,7 +323,7 @@
             txtDeskripsi.PlaceholderForeColor = Color.FromArgb(45, 45, 45);
             txtDeskripsi.PlaceholderText = "Ayam yang digoreng dengan balutan bumbu kuning dan tepung yang renyah";
             txtDeskripsi.SelectedText = "";
-            txtDeskripsi.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txtDeskripsi.ShadowDecoration.CustomizableEdges = customizableEdges18;
             txtDeskripsi.ShadowDecoration.Depth = 0;
             txtDeskripsi.Size = new Size(797, 231);
             txtDeskripsi.TabIndex = 45;
@@ -300,7 +333,7 @@
             txtNamaMenu.BorderColor = Color.Gainsboro;
             txtNamaMenu.BorderRadius = 5;
             txtNamaMenu.Cursor = Cursors.IBeam;
-            txtNamaMenu.CustomizableEdges = customizableEdges17;
+            txtNamaMenu.CustomizableEdges = customizableEdges19;
             txtNamaMenu.DefaultText = "";
             txtNamaMenu.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtNamaMenu.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -316,7 +349,7 @@
             txtNamaMenu.PlaceholderForeColor = Color.FromArgb(45, 45, 45);
             txtNamaMenu.PlaceholderText = "Ayam Goreng";
             txtNamaMenu.SelectedText = "";
-            txtNamaMenu.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            txtNamaMenu.ShadowDecoration.CustomizableEdges = customizableEdges20;
             txtNamaMenu.ShadowDecoration.Depth = 0;
             txtNamaMenu.Size = new Size(397, 51);
             txtNamaMenu.TabIndex = 44;
@@ -354,31 +387,31 @@
             label16.TabIndex = 28;
             label16.Text = "Tambah Menu";
             // 
-            // label7
+            // label8
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Manrope ExtraBold", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.White;
-            label7.Location = new Point(21, 343);
-            label7.Name = "label7";
-            label7.Size = new Size(186, 37);
-            label7.TabIndex = 58;
-            label7.Text = "Ukuran Porsi";
+            label8.AutoSize = true;
+            label8.Font = new Font("Manrope ExtraBold", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(498, 343);
+            label8.Name = "label8";
+            label8.Size = new Size(255, 37);
+            label8.TabIndex = 60;
+            label8.Text = "Harga Pembuatan";
             // 
-            // numPorsi
+            // numHPP
             // 
-            numPorsi.BackColor = Color.Transparent;
-            numPorsi.BorderRadius = 5;
-            numPorsi.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
-            numPorsi.CustomizableEdges = customizableEdges1;
-            numPorsi.Font = new Font("JetBrains Mono", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            numPorsi.Location = new Point(21, 389);
-            numPorsi.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
-            numPorsi.Name = "numPorsi";
-            numPorsi.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            numPorsi.Size = new Size(397, 51);
-            numPorsi.TabIndex = 57;
-            numPorsi.UpDownButtonFillColor = Color.FromArgb(212, 122, 71);
+            numHPP.BackColor = Color.Transparent;
+            numHPP.BorderRadius = 5;
+            numHPP.CustomizableEdges = customizableEdges1;
+            numHPP.Font = new Font("JetBrains Mono", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            numHPP.Location = new Point(498, 389);
+            numHPP.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
+            numHPP.Name = "numHPP";
+            numHPP.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            numHPP.Size = new Size(320, 51);
+            numHPP.TabIndex = 59;
+            numHPP.ThousandsSeparator = true;
+            numHPP.UpDownButtonFillColor = Color.FromArgb(212, 122, 71);
             // 
             // UC_TambahMenu
             // 
@@ -392,10 +425,11 @@
             Size = new Size(1620, 1008);
             guna2GroupBox2.ResumeLayout(false);
             guna2GroupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numPorsi).EndInit();
             ((System.ComponentModel.ISupportInitialize)picGambar).EndInit();
             ((System.ComponentModel.ISupportInitialize)numStok).EndInit();
             ((System.ComponentModel.ISupportInitialize)numHarga).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numPorsi).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numHPP).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -421,5 +455,7 @@
         private Guna.UI2.WinForms.Guna2Button btnSimpan;
         private Label label7;
         private Guna.UI2.WinForms.Guna2NumericUpDown numPorsi;
+        private Label label8;
+        private Guna.UI2.WinForms.Guna2NumericUpDown numHPP;
     }
 }

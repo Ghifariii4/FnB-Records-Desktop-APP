@@ -85,9 +85,7 @@ namespace FnB_Records
                         cmd.Parameters.AddWithValue("@price", (double)numHarga.Value); // Asumsi pakai NumericUpDown
                         cmd.Parameters.AddWithValue("@stock", (int)numStok.Value);     // Asumsi pakai NumericUpDown
                         cmd.Parameters.AddWithValue("@serving", (int)numPorsi.Value);
-
-                        // Default HPP (Karena Not Null di database)
-                        cmd.Parameters.AddWithValue("@hpp", 0);
+                        cmd.Parameters.AddWithValue("@hpp", (double)numHPP.Value);
 
                         // 3. Logika Gambar
                         if (picGambar.Image != null && picGambar.Tag?.ToString() == "HasImage")
