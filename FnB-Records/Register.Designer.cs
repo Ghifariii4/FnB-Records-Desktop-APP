@@ -42,6 +42,15 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label4 = new Label();
             txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             label5 = new Label();
@@ -57,7 +66,14 @@
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             txtKodeAktivasi = new Guna.UI2.WinForms.Guna2TextBox();
             label6 = new Label();
+            gbsnk = new Guna.UI2.WinForms.Guna2GroupBox();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            chksnk = new Guna.UI2.WinForms.Guna2CustomCheckBox();
+            txtsnk = new Guna.UI2.WinForms.Guna2TextBox();
             guna2GroupBox1.SuspendLayout();
+            gbsnk.SuspendLayout();
             SuspendLayout();
             // 
             // label4
@@ -121,7 +137,7 @@
             btDaftarAkun.FillColor = Color.FromArgb(212, 122, 71);
             btDaftarAkun.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btDaftarAkun.ForeColor = Color.White;
-            btDaftarAkun.Location = new Point(44, 562);
+            btDaftarAkun.Location = new Point(43, 560);
             btDaftarAkun.Name = "btDaftarAkun";
             btDaftarAkun.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btDaftarAkun.Size = new Size(486, 45);
@@ -135,7 +151,7 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Microsoft Sans Serif", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.FromArgb(125, 137, 149);
-            label7.Location = new Point(130, 639);
+            label7.Location = new Point(129, 637);
             label7.Name = "label7";
             label7.Size = new Size(168, 20);
             label7.TabIndex = 11;
@@ -148,7 +164,7 @@
             lblMasukSekarang.Cursor = Cursors.Hand;
             lblMasukSekarang.Font = new Font("Microsoft Sans Serif", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMasukSekarang.ForeColor = Color.FromArgb(45, 45, 45);
-            lblMasukSekarang.Location = new Point(296, 639);
+            lblMasukSekarang.Location = new Point(295, 637);
             lblMasukSekarang.Name = "lblMasukSekarang";
             lblMasukSekarang.Size = new Size(140, 20);
             lblMasukSekarang.TabIndex = 12;
@@ -293,14 +309,14 @@
             guna2GroupBox1.FillColor = Color.FromArgb(227, 201, 189);
             guna2GroupBox1.Font = new Font("Segoe UI", 9F);
             guna2GroupBox1.ForeColor = Color.Transparent;
-            guna2GroupBox1.Location = new Point(393, 225);
+            guna2GroupBox1.Location = new Point(400, 175);
             guna2GroupBox1.Name = "guna2GroupBox1";
             guna2GroupBox1.ShadowDecoration.BorderRadius = 20;
             guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2GroupBox1.ShadowDecoration.Depth = 20;
             guna2GroupBox1.ShadowDecoration.Enabled = true;
             guna2GroupBox1.ShadowDecoration.Shadow = new Padding(0, 3, 10, 10);
-            guna2GroupBox1.Size = new Size(567, 706);
+            guna2GroupBox1.Size = new Size(567, 701);
             guna2GroupBox1.TabIndex = 1;
             guna2GroupBox1.Text = "guna2GroupBox1";
             // 
@@ -341,6 +357,110 @@
             label6.TabIndex = 21;
             label6.Text = "Kode Aktivasi";
             // 
+            // gbsnk
+            // 
+            gbsnk.BackColor = Color.Transparent;
+            gbsnk.BorderRadius = 10;
+            gbsnk.Controls.Add(guna2Button1);
+            gbsnk.Controls.Add(guna2HtmlLabel2);
+            gbsnk.Controls.Add(guna2HtmlLabel1);
+            gbsnk.Controls.Add(chksnk);
+            gbsnk.Controls.Add(txtsnk);
+            gbsnk.CustomizableEdges = customizableEdges21;
+            gbsnk.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gbsnk.ForeColor = Color.FromArgb(125, 137, 149);
+            gbsnk.Location = new Point(350, 164);
+            gbsnk.Name = "gbsnk";
+            gbsnk.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            gbsnk.Size = new Size(711, 645);
+            gbsnk.TabIndex = 2;
+            gbsnk.Text = "Syarat & Ketentuan";
+            gbsnk.Click += gbsnk_Click;
+            // 
+            // guna2Button1
+            // 
+            guna2Button1.CustomizableEdges = customizableEdges15;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.Transparent;
+            guna2Button1.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button1.ForeColor = Color.Red;
+            guna2Button1.Location = new Point(656, 6);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna2Button1.Size = new Size(41, 27);
+            guna2Button1.TabIndex = 27;
+            guna2Button1.Text = "❌";
+            guna2Button1.Click += guna2Button1_Click;
+            // 
+            // guna2HtmlLabel2
+            // 
+            guna2HtmlLabel2.BackColor = Color.Transparent;
+            guna2HtmlLabel2.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel2.ForeColor = Color.CornflowerBlue;
+            guna2HtmlLabel2.Location = new Point(202, 566);
+            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            guna2HtmlLabel2.Size = new Size(147, 20);
+            guna2HtmlLabel2.TabIndex = 26;
+            guna2HtmlLabel2.Text = "Syarat & Ketentuan";
+            // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.Location = new Point(49, 566);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(149, 20);
+            guna2HtmlLabel1.TabIndex = 25;
+            guna2HtmlLabel1.Text = "Saya setuju dengan";
+            // 
+            // chksnk
+            // 
+            chksnk.BackColor = Color.FromArgb(224, 224, 224);
+            chksnk.CheckedState.BorderColor = Color.FromArgb(211, 47, 47);
+            chksnk.CheckedState.BorderRadius = 2;
+            chksnk.CheckedState.BorderThickness = 0;
+            chksnk.CheckedState.FillColor = Color.FromArgb(211, 47, 47);
+            chksnk.Cursor = Cursors.Hand;
+            chksnk.CustomizableEdges = customizableEdges17;
+            chksnk.Location = new Point(22, 567);
+            chksnk.Name = "chksnk";
+            chksnk.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            chksnk.Size = new Size(20, 20);
+            chksnk.TabIndex = 23;
+            chksnk.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            chksnk.UncheckedState.BorderRadius = 2;
+            chksnk.UncheckedState.BorderThickness = 0;
+            chksnk.UncheckedState.FillColor = Color.FromArgb(125, 137, 149);
+            chksnk.Click += chksnk_Click;
+            // 
+            // txtsnk
+            // 
+            txtsnk.AutoCompleteCustomSource.AddRange(new string[] { "" });
+            txtsnk.AutoScroll = true;
+            txtsnk.CustomizableEdges = customizableEdges19;
+            txtsnk.DefaultText = resources.GetString("txtsnk.DefaultText");
+            txtsnk.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtsnk.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtsnk.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtsnk.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtsnk.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtsnk.Font = new Font("Segoe UI", 9F);
+            txtsnk.ForeColor = Color.Black;
+            txtsnk.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtsnk.Location = new Point(22, 64);
+            txtsnk.Multiline = true;
+            txtsnk.Name = "txtsnk";
+            txtsnk.PlaceholderText = "";
+            txtsnk.ReadOnly = true;
+            txtsnk.ScrollBars = ScrollBars.Vertical;
+            txtsnk.SelectedText = "";
+            txtsnk.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            txtsnk.Size = new Size(667, 476);
+            txtsnk.TabIndex = 1;
+            // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -348,6 +468,7 @@
             BackgroundImage = Properties.Resources.bg_login_register;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1330, 1008);
+            Controls.Add(gbsnk);
             Controls.Add(guna2GroupBox1);
             Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
@@ -355,8 +476,11 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Register";
             WindowState = FormWindowState.Maximized;
+            Load += Register_Load;
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
+            gbsnk.ResumeLayout(false);
+            gbsnk.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -377,5 +501,11 @@
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2TextBox txtKodeAktivasi;
         private Label label6;
+        private Guna.UI2.WinForms.Guna2GroupBox gbsnk;
+        private Guna.UI2.WinForms.Guna2TextBox txtsnk;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2CustomCheckBox chksnk;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

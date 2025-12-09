@@ -63,13 +63,13 @@
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_AnalisisBelanja));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             cbsemuawaktu = new Guna.UI2.WinForms.Guna2ComboBox();
             btnEksporLaporancsv = new Guna.UI2.WinForms.Guna2Button();
@@ -103,12 +103,12 @@
             label15 = new Label();
             label16 = new Label();
             guna2GroupBox8 = new Guna.UI2.WinForms.Guna2GroupBox();
-            dgvtopVendor = new Guna.UI2.WinForms.Guna2DataGridView();
-            Edit = new DataGridViewImageColumn();
-            Hapus = new DataGridViewImageColumn();
             label17 = new Label();
             label19 = new Label();
             guna2GroupBox9 = new Guna.UI2.WinForms.Guna2GroupBox();
+            dgvtopVendor = new Guna.UI2.WinForms.Guna2DataGridView();
+            Edit = new DataGridViewImageColumn();
+            Hapus = new DataGridViewImageColumn();
             guna2GroupBox1.SuspendLayout();
             guna2GroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
@@ -123,8 +123,8 @@
             guna2GroupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)chart5bahanbakuberdasarpembelian).BeginInit();
             guna2GroupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvtopVendor).BeginInit();
             guna2GroupBox9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvtopVendor).BeginInit();
             SuspendLayout();
             // 
             // guna2GroupBox1
@@ -553,7 +553,7 @@
             label14.ForeColor = Color.White;
             label14.Location = new Point(21, 28);
             label14.Name = "label14";
-            label14.Size = new Size(237, 33);
+            label14.Size = new Size(238, 33);
             label14.TabIndex = 13;
             label14.Text = "Distribusi Kategori";
             // 
@@ -642,86 +642,6 @@
             guna2GroupBox8.TabIndex = 29;
             guna2GroupBox8.Click += guna2GroupBox8_Click;
             // 
-            // dgvtopVendor
-            // 
-            dgvtopVendor.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(247, 248, 249);
-            dgvtopVendor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(232, 234, 237);
-            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvtopVendor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvtopVendor.ColumnHeadersHeight = 40;
-            dgvtopVendor.Columns.AddRange(new DataGridViewColumn[] { Edit, Hapus });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(45, 45, 45);
-            dataGridViewCellStyle3.SelectionBackColor = Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvtopVendor.DefaultCellStyle = dataGridViewCellStyle3;
-            dgvtopVendor.GridColor = SystemColors.ButtonFace;
-            dgvtopVendor.Location = new Point(20, 25);
-            dgvtopVendor.Name = "dgvtopVendor";
-            dgvtopVendor.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvtopVendor.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            dgvtopVendor.RowHeadersVisible = false;
-            dgvtopVendor.RowTemplate.Height = 40;
-            dgvtopVendor.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dgvtopVendor.Size = new Size(676, 353);
-            dgvtopVendor.TabIndex = 18;
-            dgvtopVendor.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
-            dgvtopVendor.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(247, 248, 249);
-            dgvtopVendor.ThemeStyle.AlternatingRowsStyle.Font = null;
-            dgvtopVendor.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            dgvtopVendor.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            dgvtopVendor.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            dgvtopVendor.ThemeStyle.BackColor = Color.White;
-            dgvtopVendor.ThemeStyle.GridColor = SystemColors.ButtonFace;
-            dgvtopVendor.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(232, 234, 237);
-            dgvtopVendor.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvtopVendor.ThemeStyle.HeaderStyle.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dgvtopVendor.ThemeStyle.HeaderStyle.ForeColor = Color.Black;
-            dgvtopVendor.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dgvtopVendor.ThemeStyle.HeaderStyle.Height = 40;
-            dgvtopVendor.ThemeStyle.ReadOnly = true;
-            dgvtopVendor.ThemeStyle.RowsStyle.BackColor = Color.White;
-            dgvtopVendor.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvtopVendor.ThemeStyle.RowsStyle.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dgvtopVendor.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(45, 45, 45);
-            dgvtopVendor.ThemeStyle.RowsStyle.Height = 40;
-            dgvtopVendor.ThemeStyle.RowsStyle.SelectionBackColor = Color.White;
-            dgvtopVendor.ThemeStyle.RowsStyle.SelectionForeColor = Color.Black;
-            dgvtopVendor.CellContentClick += dgvtopVendor_CellContentClick;
-            // 
-            // Edit
-            // 
-            Edit.HeaderText = "Edit";
-            Edit.Image = (Image)resources.GetObject("Edit.Image");
-            Edit.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            Edit.Name = "Edit";
-            Edit.ReadOnly = true;
-            // 
-            // Hapus
-            // 
-            Hapus.HeaderText = "Hapus";
-            Hapus.Image = (Image)resources.GetObject("Hapus.Image");
-            Hapus.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            Hapus.Name = "Hapus";
-            Hapus.ReadOnly = true;
-            // 
             // label17
             // 
             label17.AutoSize = true;
@@ -759,6 +679,86 @@
             guna2GroupBox9.Size = new Size(713, 394);
             guna2GroupBox9.TabIndex = 31;
             // 
+            // dgvtopVendor
+            // 
+            dgvtopVendor.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dgvtopVendor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.ButtonFace;
+            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvtopVendor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvtopVendor.ColumnHeadersHeight = 40;
+            dgvtopVendor.Columns.AddRange(new DataGridViewColumn[] { Edit, Hapus });
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(45, 45, 45);
+            dataGridViewCellStyle3.SelectionBackColor = Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvtopVendor.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvtopVendor.GridColor = SystemColors.ButtonFace;
+            dgvtopVendor.Location = new Point(3, 12);
+            dgvtopVendor.Name = "dgvtopVendor";
+            dgvtopVendor.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvtopVendor.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dgvtopVendor.RowHeadersVisible = false;
+            dgvtopVendor.RowTemplate.Height = 40;
+            dgvtopVendor.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            dgvtopVendor.Size = new Size(707, 366);
+            dgvtopVendor.TabIndex = 18;
+            dgvtopVendor.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
+            dgvtopVendor.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgvtopVendor.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgvtopVendor.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgvtopVendor.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgvtopVendor.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvtopVendor.ThemeStyle.BackColor = Color.White;
+            dgvtopVendor.ThemeStyle.GridColor = SystemColors.ButtonFace;
+            dgvtopVendor.ThemeStyle.HeaderStyle.BackColor = SystemColors.ButtonFace;
+            dgvtopVendor.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvtopVendor.ThemeStyle.HeaderStyle.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dgvtopVendor.ThemeStyle.HeaderStyle.ForeColor = Color.Black;
+            dgvtopVendor.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvtopVendor.ThemeStyle.HeaderStyle.Height = 40;
+            dgvtopVendor.ThemeStyle.ReadOnly = true;
+            dgvtopVendor.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvtopVendor.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvtopVendor.ThemeStyle.RowsStyle.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dgvtopVendor.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(45, 45, 45);
+            dgvtopVendor.ThemeStyle.RowsStyle.Height = 40;
+            dgvtopVendor.ThemeStyle.RowsStyle.SelectionBackColor = Color.White;
+            dgvtopVendor.ThemeStyle.RowsStyle.SelectionForeColor = Color.Black;
+            dgvtopVendor.CellContentClick += dgvtopVendor_CellContentClick;
+            // 
+            // Edit
+            // 
+            Edit.HeaderText = "Edit";
+            Edit.Image = (Image)resources.GetObject("Edit.Image");
+            Edit.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            Edit.Name = "Edit";
+            Edit.ReadOnly = true;
+            // 
+            // Hapus
+            // 
+            Hapus.HeaderText = "Hapus";
+            Hapus.Image = (Image)resources.GetObject("Hapus.Image");
+            Hapus.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            Hapus.Name = "Hapus";
+            Hapus.ReadOnly = true;
+            // 
             // UC_AnalisisBelanja
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -775,6 +775,7 @@
             Controls.Add(guna2GroupBox1);
             Name = "UC_AnalisisBelanja";
             Size = new Size(1616, 2000);
+            Load += UC_AnalisisBelanja_Load_1;
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
             guna2GroupBox3.ResumeLayout(false);
@@ -797,8 +798,8 @@
             ((System.ComponentModel.ISupportInitialize)chart5bahanbakuberdasarpembelian).EndInit();
             guna2GroupBox8.ResumeLayout(false);
             guna2GroupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvtopVendor).EndInit();
             guna2GroupBox9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvtopVendor).EndInit();
             ResumeLayout(false);
         }
 

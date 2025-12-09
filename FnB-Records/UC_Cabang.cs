@@ -268,6 +268,7 @@ namespace FnB_Records
         private void UC_Cabang_Load(object sender, EventArgs e)
         {
             LoadDataCabang("");
+            dgvDataCabang.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
         }
 
         private void dgvDataCabang_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -113,12 +113,12 @@ namespace FnB_Records
             {
                 using (var conn = koneksi.GetKoneksi())
                 {
-                    // Query Total PO
+                    // Query Total PO (semua status kecuali draft/cancelled)
                     string queryTotalPO = @"
                         SELECT COUNT(*) 
                         FROM purchases 
                         WHERE user_id = @userId 
-                        AND status IN ('approved', 'received')";
+                        AND status NOT IN ('draft', 'cancelled')";
 
                     using (var cmd = new NpgsqlCommand(queryTotalPO, conn))
                     {
@@ -132,7 +132,7 @@ namespace FnB_Records
                         SELECT COALESCE(AVG(total_amount), 0) 
                         FROM purchases 
                         WHERE user_id = @userId 
-                        AND status IN ('approved', 'received')";
+                        AND status NOT IN ('draft', 'cancelled')";
 
                     using (var cmd = new NpgsqlCommand(queryAvgPO, conn))
                     {
@@ -146,7 +146,7 @@ namespace FnB_Records
                         SELECT COALESCE(SUM(total_amount), 0) 
                         FROM purchases 
                         WHERE user_id = @userId 
-                        AND status IN ('approved', 'received')";
+                        AND status NOT IN ('draft', 'cancelled')";
 
                     using (var cmd = new NpgsqlCommand(queryTotalPengeluaran, conn))
                     {
@@ -240,14 +240,14 @@ namespace FnB_Records
 
                 using (var conn = koneksi.GetKoneksi())
                 {
-                    // Query untuk 6 bulan terakhir
+                    // Query untuk 6 bulan terakhir (semua status kecuali draft/cancelled)
                     string query = @"
                         SELECT 
                             TO_CHAR(created_at, 'Mon YYYY') as bulan,
                             SUM(total_amount) as total
                         FROM purchases
                         WHERE user_id = @userId
-                        AND status IN ('approved', 'received')
+                        AND status NOT IN ('draft', 'cancelled')
                         AND created_at >= NOW() - INTERVAL '6 months'
                         GROUP BY TO_CHAR(created_at, 'Mon YYYY'), DATE_TRUNC('month', created_at)
                         ORDER BY DATE_TRUNC('month', created_at)";
@@ -294,7 +294,7 @@ namespace FnB_Records
             {
                 using (var conn = koneksi.GetKoneksi())
                 {
-                    // Sortir vendor berdasarkan email (contact)
+                    // Top 5 Vendors berdasarkan total amount
                     string query = @"
                         SELECT 
                             v.name as vendor_name,
@@ -304,11 +304,11 @@ namespace FnB_Records
                         FROM vendors v
                         LEFT JOIN purchases p ON p.vendor_id = v.id 
                             AND p.user_id = @userId 
-                            AND p.status IN ('approved', 'received')
+                            AND p.status NOT IN ('draft', 'cancelled')
                         WHERE v.user_id = @userId
                         GROUP BY v.id, v.name, v.contact
-                        ORDER BY v.contact ASC, total_amount DESC
-                        LIMIT 10";
+                        ORDER BY total_amount DESC
+                        LIMIT 5";
 
                     using (var adapter = new NpgsqlDataAdapter(query, conn))
                     {
@@ -385,7 +385,7 @@ namespace FnB_Records
                                     SUM(total_amount) as total
                                 FROM purchases
                                 WHERE user_id = @userId
-                                AND status IN ('approved', 'received')
+                                AND status NOT IN ('draft', 'cancelled')
                                 AND created_at >= NOW() - INTERVAL '6 months'
                                 GROUP BY TO_CHAR(created_at, 'Mon YYYY'), DATE_TRUNC('month', created_at)
                                 ORDER BY DATE_TRUNC('month', created_at)";
@@ -407,8 +407,8 @@ namespace FnB_Records
                         }
                         writer.WriteLine();
 
-                        // === TOP VENDORS ===
-                        writer.WriteLine("=== TOP 10 VENDORS ===");
+                        // === TOP 5 VENDORS ===
+                        writer.WriteLine("=== TOP 5 VENDORS ===");
                         writer.WriteLine("Nama Vendor,Email,Total Orders,Total Amount (Rp)");
 
                         using (var conn = koneksi.GetKoneksi())
@@ -422,11 +422,11 @@ namespace FnB_Records
                                 FROM vendors v
                                 LEFT JOIN purchases p ON p.vendor_id = v.id 
                                     AND p.user_id = @userId 
-                                    AND p.status IN ('approved', 'received')
+                                    AND p.status NOT IN ('draft', 'cancelled')
                                 WHERE v.user_id = @userId
                                 GROUP BY v.id, v.name, v.contact
-                                ORDER BY v.contact ASC, total_amount DESC
-                                LIMIT 10";
+                                ORDER BY total_amount DESC
+                                LIMIT 5";
 
                             using (var cmd = new NpgsqlCommand(queryVendors, conn))
                             {
@@ -524,5 +524,10 @@ namespace FnB_Records
         private void chart5bahanbakuberdasarpembelian_Click(object sender, EventArgs e) { }
         private void guna2GroupBox8_Click(object sender, EventArgs e) { }
         private void dgvtopVendor_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
+
+        private void UC_AnalisisBelanja_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

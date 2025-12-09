@@ -34,6 +34,7 @@ namespace FnB_Records
                 Login.GlobalSession.CurrentUserId = 1;
             }
 
+            dgvDataVendor.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
             LoadDataVendor("");
         }
 

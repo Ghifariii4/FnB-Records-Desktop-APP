@@ -74,6 +74,16 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             btBuatPOBaru = new Guna.UI2.WinForms.Guna2Button();
             label2 = new Label();
@@ -110,21 +120,44 @@
             label15 = new Label();
             label14 = new Label();
             panel1 = new Panel();
-            gbEditCabang = new Guna.UI2.WinForms.Guna2GroupBox();
-            txtInputcatatan = new Guna.UI2.WinForms.Guna2TextBox();
-            btnBatalEdit = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            btnsimpan = new Guna.UI2.WinForms.Guna2Button();
+            gbTambahBatch = new Guna.UI2.WinForms.Guna2GroupBox();
+            txtInputCatatan = new Guna.UI2.WinForms.Guna2TextBox();
+            btnBatal = new Guna.UI2.WinForms.Guna2Button();
+            btnCloseBuat = new Guna.UI2.WinForms.Guna2Button();
+            btnSimpan = new Guna.UI2.WinForms.Guna2Button();
             guna2GroupBox6 = new Guna.UI2.WinForms.Guna2GroupBox();
-            txtjumlahproduksi = new Guna.UI2.WinForms.Guna2TextBox();
+            txtTargetProduksi = new Guna.UI2.WinForms.Guna2TextBox();
             label22 = new Label();
             cbresep = new Guna.UI2.WinForms.Guna2ComboBox();
-            dttanggalmulai = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            dtpTanggalMulai = new Guna.UI2.WinForms.Guna2DateTimePicker();
             label16 = new Label();
             label17 = new Label();
             label19 = new Label();
             label20 = new Label();
             label21 = new Label();
+            gbDetailBatch = new Guna.UI2.WinForms.Guna2GroupBox();
+            gbCatatan = new Guna.UI2.WinForms.Guna2GroupBox();
+            lblCatatan = new Label();
+            flpBahan = new FlowLayoutPanel();
+            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            guna2GroupBox10 = new Guna.UI2.WinForms.Guna2GroupBox();
+            lblTanggalSelesai = new Label();
+            lblTanggalMulai = new Label();
+            lblSudahDiproduksi = new Label();
+            lblTargetProduksi = new Label();
+            gbStatus = new Guna.UI2.WinForms.Guna2GroupBox();
+            lblStatus = new Label();
+            lblResep = new Label();
+            label25 = new Label();
+            label23 = new Label();
+            label4 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            label12 = new Label();
+            lblNoBatch = new Label();
+            label24 = new Label();
+            label27 = new Label();
+            label26 = new Label();
             guna2GroupBox1.SuspendLayout();
             guna2GroupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox4).BeginInit();
@@ -137,8 +170,12 @@
             guna2GroupBox7.SuspendLayout();
             guna2GroupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvBatch).BeginInit();
-            gbEditCabang.SuspendLayout();
+            gbTambahBatch.SuspendLayout();
             guna2GroupBox6.SuspendLayout();
+            gbDetailBatch.SuspendLayout();
+            gbCatatan.SuspendLayout();
+            guna2GroupBox10.SuspendLayout();
+            gbStatus.SuspendLayout();
             SuspendLayout();
             // 
             // guna2GroupBox1
@@ -157,6 +194,7 @@
             guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2GroupBox1.Size = new Size(1544, 99);
             guna2GroupBox1.TabIndex = 14;
+            guna2GroupBox1.Click += guna2GroupBox1_Click;
             // 
             // btBuatPOBaru
             // 
@@ -442,6 +480,7 @@
             guna2GroupBox3.ShadowDecoration.Shadow = new Padding(3, 1, 3, 5);
             guna2GroupBox3.Size = new Size(355, 200);
             guna2GroupBox3.TabIndex = 18;
+            guna2GroupBox3.Click += guna2GroupBox3_Click;
             // 
             // label18
             // 
@@ -534,7 +573,7 @@
             dataGridViewCellStyle1.BackColor = Color.FromArgb(247, 248, 249);
             dgvBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(232, 234, 237);
+            dataGridViewCellStyle2.BackColor = SystemColors.ButtonFace;
             dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
@@ -552,7 +591,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvBatch.DefaultCellStyle = dataGridViewCellStyle3;
             dgvBatch.GridColor = SystemColors.ButtonFace;
-            dgvBatch.Location = new Point(38, 9);
+            dgvBatch.Location = new Point(3, 9);
             dgvBatch.Name = "dgvBatch";
             dgvBatch.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -566,7 +605,7 @@
             dgvBatch.RowHeadersVisible = false;
             dgvBatch.RowTemplate.Height = 40;
             dgvBatch.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dgvBatch.Size = new Size(1409, 376);
+            dgvBatch.Size = new Size(1479, 376);
             dgvBatch.TabIndex = 15;
             dgvBatch.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
             dgvBatch.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(247, 248, 249);
@@ -576,7 +615,7 @@
             dgvBatch.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
             dgvBatch.ThemeStyle.BackColor = Color.White;
             dgvBatch.ThemeStyle.GridColor = SystemColors.ButtonFace;
-            dgvBatch.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(232, 234, 237);
+            dgvBatch.ThemeStyle.HeaderStyle.BackColor = SystemColors.ButtonFace;
             dgvBatch.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
             dgvBatch.ThemeStyle.HeaderStyle.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dgvBatch.ThemeStyle.HeaderStyle.ForeColor = Color.Black;
@@ -624,7 +663,7 @@
             // 
             // Aksi
             // 
-            Aksi.HeaderText = "aksi";
+            Aksi.HeaderText = "Aksi";
             Aksi.Name = "Aksi";
             Aksi.ReadOnly = true;
             // 
@@ -635,9 +674,9 @@
             label15.ForeColor = Color.White;
             label15.Location = new Point(22, 57);
             label15.Name = "label15";
-            label15.Size = new Size(452, 20);
+            label15.Size = new Size(344, 20);
             label15.TabIndex = 13;
-            label15.Text = "Tracking dan management batch produksi (Demo Data)";
+            label15.Text = "Tracking dan management batch produksi";
             // 
             // label14
             // 
@@ -646,7 +685,7 @@
             label14.ForeColor = Color.White;
             label14.Location = new Point(22, 24);
             label14.Name = "label14";
-            label14.Size = new Size(269, 33);
+            label14.Size = new Size(270, 33);
             label14.TabIndex = 12;
             label14.Text = "Daftar Batch Produksi";
             // 
@@ -657,143 +696,143 @@
             panel1.Size = new Size(200, 68);
             panel1.TabIndex = 24;
             // 
-            // gbEditCabang
+            // gbTambahBatch
             // 
-            gbEditCabang.BackColor = Color.White;
-            gbEditCabang.BorderRadius = 15;
-            gbEditCabang.Controls.Add(txtInputcatatan);
-            gbEditCabang.Controls.Add(btnBatalEdit);
-            gbEditCabang.Controls.Add(guna2Button4);
-            gbEditCabang.Controls.Add(btnsimpan);
-            gbEditCabang.Controls.Add(guna2GroupBox6);
-            gbEditCabang.CustomBorderColor = Color.White;
-            gbEditCabang.CustomBorderThickness = new Padding(0);
-            gbEditCabang.CustomizableEdges = customizableEdges41;
-            gbEditCabang.FillColor = Color.FromArgb(249, 247, 245);
-            gbEditCabang.Font = new Font("Segoe UI", 9F);
-            gbEditCabang.ForeColor = Color.FromArgb(125, 137, 149);
-            gbEditCabang.Location = new Point(489, 352);
-            gbEditCabang.Name = "gbEditCabang";
-            gbEditCabang.ShadowDecoration.BorderRadius = 15;
-            gbEditCabang.ShadowDecoration.CustomizableEdges = customizableEdges42;
-            gbEditCabang.ShadowDecoration.Depth = 10;
-            gbEditCabang.ShadowDecoration.Shadow = new Padding(0, 10, 10, 10);
-            gbEditCabang.Size = new Size(636, 583);
-            gbEditCabang.TabIndex = 24;
-            gbEditCabang.Visible = false;
-            gbEditCabang.Click += gbEditCabang_Click;
+            gbTambahBatch.BackColor = Color.Transparent;
+            gbTambahBatch.BorderRadius = 15;
+            gbTambahBatch.Controls.Add(txtInputCatatan);
+            gbTambahBatch.Controls.Add(btnBatal);
+            gbTambahBatch.Controls.Add(btnCloseBuat);
+            gbTambahBatch.Controls.Add(btnSimpan);
+            gbTambahBatch.Controls.Add(guna2GroupBox6);
+            gbTambahBatch.CustomBorderColor = Color.White;
+            gbTambahBatch.CustomBorderThickness = new Padding(0);
+            gbTambahBatch.CustomizableEdges = customizableEdges41;
+            gbTambahBatch.FillColor = Color.FromArgb(249, 247, 245);
+            gbTambahBatch.Font = new Font("Segoe UI", 9F);
+            gbTambahBatch.ForeColor = Color.FromArgb(125, 137, 149);
+            gbTambahBatch.Location = new Point(929, 342);
+            gbTambahBatch.Name = "gbTambahBatch";
+            gbTambahBatch.ShadowDecoration.BorderRadius = 15;
+            gbTambahBatch.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            gbTambahBatch.ShadowDecoration.Depth = 10;
+            gbTambahBatch.ShadowDecoration.Shadow = new Padding(0, 10, 10, 10);
+            gbTambahBatch.Size = new Size(636, 583);
+            gbTambahBatch.TabIndex = 24;
+            gbTambahBatch.Visible = false;
+            gbTambahBatch.Click += gbEditCabang_Click;
             // 
-            // txtInputcatatan
+            // txtInputCatatan
             // 
-            txtInputcatatan.AllowDrop = true;
-            txtInputcatatan.BorderColor = Color.Gainsboro;
-            txtInputcatatan.BorderRadius = 5;
-            txtInputcatatan.Cursor = Cursors.IBeam;
-            txtInputcatatan.CustomizableEdges = customizableEdges25;
-            txtInputcatatan.DefaultText = "";
-            txtInputcatatan.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtInputcatatan.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtInputcatatan.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtInputcatatan.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtInputcatatan.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtInputcatatan.Font = new Font("Manrope", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtInputcatatan.ForeColor = Color.FromArgb(45, 45, 45);
-            txtInputcatatan.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtInputcatatan.Location = new Point(20, 386);
-            txtInputcatatan.Margin = new Padding(4);
-            txtInputcatatan.Multiline = true;
-            txtInputcatatan.Name = "txtInputcatatan";
-            txtInputcatatan.PlaceholderForeColor = Color.FromArgb(45, 45, 45);
-            txtInputcatatan.PlaceholderText = "Catatan untuk batch ini..";
-            txtInputcatatan.SelectedText = "";
-            txtInputcatatan.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            txtInputcatatan.ShadowDecoration.Depth = 0;
-            txtInputcatatan.Size = new Size(589, 79);
-            txtInputcatatan.TabIndex = 52;
-            txtInputcatatan.TextChanged += txtInputcatatan_TextChanged;
+            txtInputCatatan.AllowDrop = true;
+            txtInputCatatan.BorderColor = Color.Gainsboro;
+            txtInputCatatan.BorderRadius = 5;
+            txtInputCatatan.Cursor = Cursors.IBeam;
+            txtInputCatatan.CustomizableEdges = customizableEdges25;
+            txtInputCatatan.DefaultText = "";
+            txtInputCatatan.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtInputCatatan.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtInputCatatan.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtInputCatatan.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtInputCatatan.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtInputCatatan.Font = new Font("Manrope", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtInputCatatan.ForeColor = Color.FromArgb(45, 45, 45);
+            txtInputCatatan.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtInputCatatan.Location = new Point(20, 386);
+            txtInputCatatan.Margin = new Padding(4);
+            txtInputCatatan.Multiline = true;
+            txtInputCatatan.Name = "txtInputCatatan";
+            txtInputCatatan.PlaceholderForeColor = Color.FromArgb(45, 45, 45);
+            txtInputCatatan.PlaceholderText = "Catatan untuk batch ini..";
+            txtInputCatatan.SelectedText = "";
+            txtInputCatatan.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            txtInputCatatan.ShadowDecoration.Depth = 0;
+            txtInputCatatan.Size = new Size(589, 79);
+            txtInputCatatan.TabIndex = 52;
+            txtInputCatatan.TextChanged += txtInputcatatan_TextChanged;
             // 
-            // btnBatalEdit
+            // btnBatal
             // 
-            btnBatalEdit.BackColor = Color.Transparent;
-            btnBatalEdit.BorderRadius = 10;
-            btnBatalEdit.Cursor = Cursors.Hand;
-            btnBatalEdit.CustomizableEdges = customizableEdges27;
-            btnBatalEdit.DisabledState.BorderColor = Color.DarkGray;
-            btnBatalEdit.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnBatalEdit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnBatalEdit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnBatalEdit.FillColor = Color.White;
-            btnBatalEdit.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBatalEdit.ForeColor = Color.FromArgb(45, 45, 45);
-            btnBatalEdit.ImageSize = new Size(30, 20);
-            btnBatalEdit.Location = new Point(423, 525);
-            btnBatalEdit.Name = "btnBatalEdit";
-            btnBatalEdit.ShadowDecoration.BorderRadius = 10;
-            btnBatalEdit.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            btnBatalEdit.ShadowDecoration.Depth = 4;
-            btnBatalEdit.ShadowDecoration.Enabled = true;
-            btnBatalEdit.Size = new Size(87, 41);
-            btnBatalEdit.TabIndex = 14;
-            btnBatalEdit.Text = "Batal";
-            btnBatalEdit.Click += btnBatalEdit_Click;
+            btnBatal.BackColor = Color.Transparent;
+            btnBatal.BorderRadius = 10;
+            btnBatal.Cursor = Cursors.Hand;
+            btnBatal.CustomizableEdges = customizableEdges27;
+            btnBatal.DisabledState.BorderColor = Color.DarkGray;
+            btnBatal.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnBatal.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnBatal.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnBatal.FillColor = Color.White;
+            btnBatal.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBatal.ForeColor = Color.FromArgb(45, 45, 45);
+            btnBatal.ImageSize = new Size(30, 20);
+            btnBatal.Location = new Point(423, 525);
+            btnBatal.Name = "btnBatal";
+            btnBatal.ShadowDecoration.BorderRadius = 10;
+            btnBatal.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            btnBatal.ShadowDecoration.Depth = 4;
+            btnBatal.ShadowDecoration.Enabled = true;
+            btnBatal.Size = new Size(87, 41);
+            btnBatal.TabIndex = 14;
+            btnBatal.Text = "Batal";
+            btnBatal.Click += btnBatalEdit_Click;
             // 
-            // guna2Button4
+            // btnCloseBuat
             // 
-            guna2Button4.BorderRadius = 10;
-            guna2Button4.Cursor = Cursors.Hand;
-            guna2Button4.CustomizableEdges = customizableEdges29;
-            guna2Button4.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button4.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button4.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button4.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button4.FillColor = Color.FromArgb(249, 247, 245);
-            guna2Button4.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button4.ForeColor = Color.FromArgb(45, 45, 45);
-            guna2Button4.Image = Properties.Resources.exit_icon_hitam;
-            guna2Button4.ImageSize = new Size(30, 20);
-            guna2Button4.Location = new Point(578, 22);
-            guna2Button4.Name = "guna2Button4";
-            guna2Button4.ShadowDecoration.BorderRadius = 10;
-            guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            guna2Button4.ShadowDecoration.Depth = 4;
-            guna2Button4.Size = new Size(46, 41);
-            guna2Button4.TabIndex = 15;
-            guna2Button4.Click += guna2Button4_Click;
+            btnCloseBuat.BorderRadius = 10;
+            btnCloseBuat.Cursor = Cursors.Hand;
+            btnCloseBuat.CustomizableEdges = customizableEdges29;
+            btnCloseBuat.DisabledState.BorderColor = Color.DarkGray;
+            btnCloseBuat.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnCloseBuat.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnCloseBuat.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnCloseBuat.FillColor = Color.FromArgb(249, 247, 245);
+            btnCloseBuat.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCloseBuat.ForeColor = Color.FromArgb(45, 45, 45);
+            btnCloseBuat.Image = Properties.Resources.exit_icon_hitam;
+            btnCloseBuat.ImageSize = new Size(30, 20);
+            btnCloseBuat.Location = new Point(578, 22);
+            btnCloseBuat.Name = "btnCloseBuat";
+            btnCloseBuat.ShadowDecoration.BorderRadius = 10;
+            btnCloseBuat.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            btnCloseBuat.ShadowDecoration.Depth = 4;
+            btnCloseBuat.Size = new Size(46, 41);
+            btnCloseBuat.TabIndex = 15;
+            btnCloseBuat.Click += guna2Button4_Click;
             // 
-            // btnsimpan
+            // btnSimpan
             // 
-            btnsimpan.BackColor = Color.Transparent;
-            btnsimpan.BorderRadius = 10;
-            btnsimpan.Cursor = Cursors.Hand;
-            btnsimpan.CustomizableEdges = customizableEdges31;
-            btnsimpan.DisabledState.BorderColor = Color.DarkGray;
-            btnsimpan.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnsimpan.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnsimpan.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnsimpan.FillColor = Color.FromArgb(255, 128, 0);
-            btnsimpan.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnsimpan.ForeColor = Color.White;
-            btnsimpan.ImageSize = new Size(30, 20);
-            btnsimpan.Location = new Point(516, 525);
-            btnsimpan.Name = "btnsimpan";
-            btnsimpan.ShadowDecoration.BorderRadius = 10;
-            btnsimpan.ShadowDecoration.CustomizableEdges = customizableEdges32;
-            btnsimpan.ShadowDecoration.Depth = 4;
-            btnsimpan.ShadowDecoration.Enabled = true;
-            btnsimpan.Size = new Size(108, 41);
-            btnsimpan.TabIndex = 13;
-            btnsimpan.Text = "Simpan";
-            btnsimpan.Click += btnsimpan_Click;
+            btnSimpan.BackColor = Color.Transparent;
+            btnSimpan.BorderRadius = 10;
+            btnSimpan.Cursor = Cursors.Hand;
+            btnSimpan.CustomizableEdges = customizableEdges31;
+            btnSimpan.DisabledState.BorderColor = Color.DarkGray;
+            btnSimpan.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSimpan.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSimpan.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSimpan.FillColor = Color.FromArgb(255, 128, 0);
+            btnSimpan.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSimpan.ForeColor = Color.White;
+            btnSimpan.ImageSize = new Size(30, 20);
+            btnSimpan.Location = new Point(516, 525);
+            btnSimpan.Name = "btnSimpan";
+            btnSimpan.ShadowDecoration.BorderRadius = 10;
+            btnSimpan.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            btnSimpan.ShadowDecoration.Depth = 4;
+            btnSimpan.ShadowDecoration.Enabled = true;
+            btnSimpan.Size = new Size(108, 41);
+            btnSimpan.TabIndex = 13;
+            btnSimpan.Text = "Simpan";
+            btnSimpan.Click += btnsimpan_Click;
             // 
             // guna2GroupBox6
             // 
             guna2GroupBox6.BackColor = Color.Transparent;
             guna2GroupBox6.BorderRadius = 15;
             guna2GroupBox6.BorderThickness = 0;
-            guna2GroupBox6.Controls.Add(txtjumlahproduksi);
+            guna2GroupBox6.Controls.Add(txtTargetProduksi);
             guna2GroupBox6.Controls.Add(label22);
             guna2GroupBox6.Controls.Add(cbresep);
-            guna2GroupBox6.Controls.Add(dttanggalmulai);
+            guna2GroupBox6.Controls.Add(dtpTanggalMulai);
             guna2GroupBox6.Controls.Add(label16);
             guna2GroupBox6.Controls.Add(label17);
             guna2GroupBox6.Controls.Add(label19);
@@ -810,32 +849,32 @@
             guna2GroupBox6.Size = new Size(591, 398);
             guna2GroupBox6.TabIndex = 12;
             // 
-            // txtjumlahproduksi
+            // txtTargetProduksi
             // 
-            txtjumlahproduksi.BorderColor = Color.Gainsboro;
-            txtjumlahproduksi.BorderRadius = 5;
-            txtjumlahproduksi.Cursor = Cursors.IBeam;
-            txtjumlahproduksi.CustomizableEdges = customizableEdges33;
-            txtjumlahproduksi.DefaultText = "";
-            txtjumlahproduksi.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtjumlahproduksi.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtjumlahproduksi.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtjumlahproduksi.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtjumlahproduksi.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtjumlahproduksi.Font = new Font("JetBrains Mono", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtjumlahproduksi.ForeColor = Color.FromArgb(45, 45, 45);
-            txtjumlahproduksi.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtjumlahproduksi.Location = new Point(331, 147);
-            txtjumlahproduksi.Margin = new Padding(6);
-            txtjumlahproduksi.Name = "txtjumlahproduksi";
-            txtjumlahproduksi.PlaceholderForeColor = Color.FromArgb(45, 45, 45);
-            txtjumlahproduksi.PlaceholderText = "Jumlah porsi/unit";
-            txtjumlahproduksi.SelectedText = "";
-            txtjumlahproduksi.ShadowDecoration.CustomizableEdges = customizableEdges34;
-            txtjumlahproduksi.ShadowDecoration.Depth = 0;
-            txtjumlahproduksi.Size = new Size(261, 46);
-            txtjumlahproduksi.TabIndex = 51;
-            txtjumlahproduksi.TextChanged += txtjumlahproduksi_TextChanged_1;
+            txtTargetProduksi.BorderColor = Color.Gainsboro;
+            txtTargetProduksi.BorderRadius = 5;
+            txtTargetProduksi.Cursor = Cursors.IBeam;
+            txtTargetProduksi.CustomizableEdges = customizableEdges33;
+            txtTargetProduksi.DefaultText = "";
+            txtTargetProduksi.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtTargetProduksi.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtTargetProduksi.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtTargetProduksi.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtTargetProduksi.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtTargetProduksi.Font = new Font("JetBrains Mono", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtTargetProduksi.ForeColor = Color.FromArgb(45, 45, 45);
+            txtTargetProduksi.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtTargetProduksi.Location = new Point(331, 147);
+            txtTargetProduksi.Margin = new Padding(6);
+            txtTargetProduksi.Name = "txtTargetProduksi";
+            txtTargetProduksi.PlaceholderForeColor = Color.FromArgb(45, 45, 45);
+            txtTargetProduksi.PlaceholderText = "Jumlah porsi/unit";
+            txtTargetProduksi.SelectedText = "";
+            txtTargetProduksi.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            txtTargetProduksi.ShadowDecoration.Depth = 0;
+            txtTargetProduksi.Size = new Size(261, 46);
+            txtTargetProduksi.TabIndex = 51;
+            txtTargetProduksi.TextChanged += txtjumlahproduksi_TextChanged_1;
             // 
             // label22
             // 
@@ -868,28 +907,28 @@
             cbresep.TabIndex = 49;
             cbresep.SelectedIndexChanged += cbresep_SelectedIndexChanged_1;
             // 
-            // dttanggalmulai
+            // dtpTanggalMulai
             // 
-            dttanggalmulai.BackColor = Color.Transparent;
-            dttanggalmulai.BorderColor = Color.White;
-            dttanggalmulai.BorderRadius = 5;
-            dttanggalmulai.Checked = true;
-            dttanggalmulai.CustomizableEdges = customizableEdges37;
-            dttanggalmulai.FillColor = Color.White;
-            dttanggalmulai.FocusedColor = Color.Transparent;
-            dttanggalmulai.Font = new Font("Manrope SemiBold", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dttanggalmulai.ForeColor = Color.FromArgb(45, 45, 45);
-            dttanggalmulai.Format = DateTimePickerFormat.Custom;
-            dttanggalmulai.Location = new Point(3, 237);
-            dttanggalmulai.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            dttanggalmulai.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            dttanggalmulai.Name = "dttanggalmulai";
-            dttanggalmulai.ShadowDecoration.CustomizableEdges = customizableEdges38;
-            dttanggalmulai.Size = new Size(589, 46);
-            dttanggalmulai.TabIndex = 48;
-            dttanggalmulai.UseTransparentBackground = true;
-            dttanggalmulai.Value = new DateTime(2025, 12, 4, 8, 5, 59, 677);
-            dttanggalmulai.ValueChanged += dttanggalmulai_ValueChanged_1;
+            dtpTanggalMulai.BackColor = Color.Transparent;
+            dtpTanggalMulai.BorderColor = Color.White;
+            dtpTanggalMulai.BorderRadius = 5;
+            dtpTanggalMulai.Checked = true;
+            dtpTanggalMulai.CustomizableEdges = customizableEdges37;
+            dtpTanggalMulai.FillColor = Color.White;
+            dtpTanggalMulai.FocusedColor = Color.Transparent;
+            dtpTanggalMulai.Font = new Font("Manrope SemiBold", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dtpTanggalMulai.ForeColor = Color.FromArgb(45, 45, 45);
+            dtpTanggalMulai.Format = DateTimePickerFormat.Custom;
+            dtpTanggalMulai.Location = new Point(3, 237);
+            dtpTanggalMulai.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtpTanggalMulai.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtpTanggalMulai.Name = "dtpTanggalMulai";
+            dtpTanggalMulai.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            dtpTanggalMulai.Size = new Size(589, 46);
+            dtpTanggalMulai.TabIndex = 48;
+            dtpTanggalMulai.UseTransparentBackground = true;
+            dtpTanggalMulai.Value = new DateTime(2025, 12, 4, 8, 5, 59, 677);
+            dtpTanggalMulai.ValueChanged += dttanggalmulai_ValueChanged_1;
             // 
             // label16
             // 
@@ -942,9 +981,315 @@
             label21.ForeColor = Color.Black;
             label21.Location = new Point(3, 21);
             label21.Name = "label21";
-            label21.Size = new Size(244, 26);
+            label21.Size = new Size(245, 26);
             label21.TabIndex = 1;
             label21.Text = "Buat Batch Produksi Baru";
+            // 
+            // gbDetailBatch
+            // 
+            gbDetailBatch.BackColor = Color.Transparent;
+            gbDetailBatch.BorderRadius = 15;
+            gbDetailBatch.Controls.Add(gbCatatan);
+            gbDetailBatch.Controls.Add(flpBahan);
+            gbDetailBatch.Controls.Add(guna2Button2);
+            gbDetailBatch.Controls.Add(guna2GroupBox10);
+            gbDetailBatch.Controls.Add(label27);
+            gbDetailBatch.Controls.Add(label26);
+            gbDetailBatch.CustomBorderColor = Color.White;
+            gbDetailBatch.CustomBorderThickness = new Padding(0);
+            gbDetailBatch.CustomizableEdges = customizableEdges51;
+            gbDetailBatch.FillColor = Color.FromArgb(249, 247, 245);
+            gbDetailBatch.Font = new Font("Segoe UI", 9F);
+            gbDetailBatch.ForeColor = Color.FromArgb(125, 137, 149);
+            gbDetailBatch.Location = new Point(3, 345);
+            gbDetailBatch.Name = "gbDetailBatch";
+            gbDetailBatch.ShadowDecoration.BorderRadius = 15;
+            gbDetailBatch.ShadowDecoration.CustomizableEdges = customizableEdges52;
+            gbDetailBatch.ShadowDecoration.Depth = 10;
+            gbDetailBatch.ShadowDecoration.Shadow = new Padding(0, 10, 10, 10);
+            gbDetailBatch.Size = new Size(636, 647);
+            gbDetailBatch.TabIndex = 25;
+            gbDetailBatch.Visible = false;
+            gbDetailBatch.Click += gbDetailBatch_Click;
+            // 
+            // gbCatatan
+            // 
+            gbCatatan.BorderRadius = 10;
+            gbCatatan.BorderThickness = 0;
+            gbCatatan.Controls.Add(lblCatatan);
+            gbCatatan.CustomBorderColor = Color.Empty;
+            gbCatatan.CustomizableEdges = customizableEdges43;
+            gbCatatan.FillColor = Color.Linen;
+            gbCatatan.Font = new Font("Segoe UI", 9F);
+            gbCatatan.ForeColor = Color.FromArgb(125, 137, 149);
+            gbCatatan.Location = new Point(20, 544);
+            gbCatatan.Name = "gbCatatan";
+            gbCatatan.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            gbCatatan.Size = new Size(563, 56);
+            gbCatatan.TabIndex = 57;
+            // 
+            // lblCatatan
+            // 
+            lblCatatan.AutoSize = true;
+            lblCatatan.Font = new Font("Manrope", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCatatan.ForeColor = Color.Black;
+            lblCatatan.Location = new Point(12, 16);
+            lblCatatan.Name = "lblCatatan";
+            lblCatatan.Size = new Size(197, 21);
+            lblCatatan.TabIndex = 57;
+            lblCatatan.Text = "Batch untuk meja nomor 4";
+            // 
+            // flpBahan
+            // 
+            flpBahan.Location = new Point(20, 407);
+            flpBahan.Name = "flpBahan";
+            flpBahan.Size = new Size(563, 100);
+            flpBahan.TabIndex = 55;
+            // 
+            // guna2Button2
+            // 
+            guna2Button2.BorderRadius = 10;
+            guna2Button2.Cursor = Cursors.Hand;
+            guna2Button2.CustomizableEdges = customizableEdges45;
+            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button2.FillColor = Color.FromArgb(249, 247, 245);
+            guna2Button2.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button2.ForeColor = Color.FromArgb(45, 45, 45);
+            guna2Button2.Image = Properties.Resources.exit_icon_hitam;
+            guna2Button2.ImageSize = new Size(30, 20);
+            guna2Button2.Location = new Point(578, 22);
+            guna2Button2.Name = "guna2Button2";
+            guna2Button2.ShadowDecoration.BorderRadius = 10;
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges46;
+            guna2Button2.ShadowDecoration.Depth = 4;
+            guna2Button2.Size = new Size(46, 41);
+            guna2Button2.TabIndex = 15;
+            guna2Button2.Click += guna2Button2_Click;
+            // 
+            // guna2GroupBox10
+            // 
+            guna2GroupBox10.BackColor = Color.Transparent;
+            guna2GroupBox10.BorderRadius = 15;
+            guna2GroupBox10.BorderThickness = 0;
+            guna2GroupBox10.Controls.Add(lblTanggalSelesai);
+            guna2GroupBox10.Controls.Add(lblTanggalMulai);
+            guna2GroupBox10.Controls.Add(lblSudahDiproduksi);
+            guna2GroupBox10.Controls.Add(lblTargetProduksi);
+            guna2GroupBox10.Controls.Add(gbStatus);
+            guna2GroupBox10.Controls.Add(lblResep);
+            guna2GroupBox10.Controls.Add(label25);
+            guna2GroupBox10.Controls.Add(label23);
+            guna2GroupBox10.Controls.Add(label4);
+            guna2GroupBox10.Controls.Add(label8);
+            guna2GroupBox10.Controls.Add(label9);
+            guna2GroupBox10.Controls.Add(label12);
+            guna2GroupBox10.Controls.Add(lblNoBatch);
+            guna2GroupBox10.Controls.Add(label24);
+            guna2GroupBox10.CustomBorderColor = Color.Transparent;
+            guna2GroupBox10.CustomizableEdges = customizableEdges49;
+            guna2GroupBox10.FillColor = Color.Transparent;
+            guna2GroupBox10.Font = new Font("Segoe UI", 9F);
+            guna2GroupBox10.ForeColor = Color.FromArgb(125, 137, 149);
+            guna2GroupBox10.Location = new Point(17, 16);
+            guna2GroupBox10.Name = "guna2GroupBox10";
+            guna2GroupBox10.ShadowDecoration.CustomizableEdges = customizableEdges50;
+            guna2GroupBox10.Size = new Size(591, 340);
+            guna2GroupBox10.TabIndex = 12;
+            // 
+            // lblTanggalSelesai
+            // 
+            lblTanggalSelesai.AutoSize = true;
+            lblTanggalSelesai.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTanggalSelesai.ForeColor = Color.Black;
+            lblTanggalSelesai.Location = new Point(415, 304);
+            lblTanggalSelesai.Name = "lblTanggalSelesai";
+            lblTanggalSelesai.Size = new Size(96, 22);
+            lblTanggalSelesai.TabIndex = 60;
+            lblTanggalSelesai.Text = "2 Des 2025";
+            // 
+            // lblTanggalMulai
+            // 
+            lblTanggalMulai.AutoSize = true;
+            lblTanggalMulai.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTanggalMulai.ForeColor = Color.Black;
+            lblTanggalMulai.Location = new Point(2, 304);
+            lblTanggalMulai.Name = "lblTanggalMulai";
+            lblTanggalMulai.Size = new Size(93, 22);
+            lblTanggalMulai.TabIndex = 59;
+            lblTanggalMulai.Text = "1 Des 2025";
+            // 
+            // lblSudahDiproduksi
+            // 
+            lblSudahDiproduksi.AutoSize = true;
+            lblSudahDiproduksi.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSudahDiproduksi.ForeColor = Color.Black;
+            lblSudahDiproduksi.Location = new Point(420, 221);
+            lblSudahDiproduksi.Name = "lblSudahDiproduksi";
+            lblSudahDiproduksi.Size = new Size(62, 22);
+            lblSudahDiproduksi.TabIndex = 58;
+            lblSudahDiproduksi.Text = "2 Porsi";
+            // 
+            // lblTargetProduksi
+            // 
+            lblTargetProduksi.AutoSize = true;
+            lblTargetProduksi.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTargetProduksi.ForeColor = Color.Black;
+            lblTargetProduksi.Location = new Point(2, 221);
+            lblTargetProduksi.Name = "lblTargetProduksi";
+            lblTargetProduksi.Size = new Size(62, 22);
+            lblTargetProduksi.TabIndex = 57;
+            lblTargetProduksi.Text = "2 Porsi";
+            // 
+            // gbStatus
+            // 
+            gbStatus.BorderRadius = 10;
+            gbStatus.BorderThickness = 0;
+            gbStatus.Controls.Add(lblStatus);
+            gbStatus.CustomBorderColor = Color.Empty;
+            gbStatus.CustomizableEdges = customizableEdges47;
+            gbStatus.FillColor = Color.Linen;
+            gbStatus.Font = new Font("Segoe UI", 9F);
+            gbStatus.ForeColor = Color.FromArgb(125, 137, 149);
+            gbStatus.Location = new Point(384, 135);
+            gbStatus.Name = "gbStatus";
+            gbStatus.ShadowDecoration.CustomizableEdges = customizableEdges48;
+            gbStatus.Size = new Size(178, 29);
+            gbStatus.TabIndex = 56;
+            // 
+            // lblStatus
+            // 
+            lblStatus.AutoSize = true;
+            lblStatus.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblStatus.ForeColor = Color.Black;
+            lblStatus.Location = new Point(5, 3);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(93, 22);
+            lblStatus.TabIndex = 57;
+            lblStatus.Text = "✅ Selesai";
+            // 
+            // lblResep
+            // 
+            lblResep.AutoSize = true;
+            lblResep.Font = new Font("Manrope", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblResep.ForeColor = Color.Black;
+            lblResep.Location = new Point(1, 138);
+            lblResep.Name = "lblResep";
+            lblResep.Size = new Size(218, 22);
+            lblResep.TabIndex = 55;
+            lblResep.Text = "Ikan Tongseng Asam Manis";
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold);
+            label25.ForeColor = Color.DimGray;
+            label25.Location = new Point(415, 269);
+            label25.Name = "label25";
+            label25.Size = new Size(124, 21);
+            label25.TabIndex = 52;
+            label25.Text = "Tanggal Selesai";
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold);
+            label23.ForeColor = Color.DimGray;
+            label23.Location = new Point(415, 191);
+            label23.Name = "label23";
+            label23.Size = new Size(139, 21);
+            label23.TabIndex = 51;
+            label23.Text = "Sudah Diproduksi";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold);
+            label4.ForeColor = Color.DimGray;
+            label4.Location = new Point(415, 113);
+            label4.Name = "label4";
+            label4.Size = new Size(61, 21);
+            label4.TabIndex = 50;
+            label4.Text = "Status";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold);
+            label8.ForeColor = Color.DimGray;
+            label8.Location = new Point(0, 269);
+            label8.Name = "label8";
+            label8.Size = new Size(111, 21);
+            label8.TabIndex = 18;
+            label8.Text = "Tanggal Mulai";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold);
+            label9.ForeColor = Color.DimGray;
+            label9.Location = new Point(0, 191);
+            label9.Name = "label9";
+            label9.Size = new Size(125, 21);
+            label9.TabIndex = 18;
+            label9.Text = "Target Produksi";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold);
+            label12.ForeColor = Color.DimGray;
+            label12.Location = new Point(0, 112);
+            label12.Name = "label12";
+            label12.Size = new Size(55, 21);
+            label12.TabIndex = 14;
+            label12.Text = "Resep";
+            // 
+            // lblNoBatch
+            // 
+            lblNoBatch.AutoSize = true;
+            lblNoBatch.Font = new Font("JetBrains Mono", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNoBatch.ForeColor = Color.FromArgb(45, 45, 45);
+            lblNoBatch.Location = new Point(3, 56);
+            lblNoBatch.Name = "lblNoBatch";
+            lblNoBatch.Size = new Size(126, 19);
+            lblNoBatch.TabIndex = 13;
+            lblNoBatch.Text = "PROD-2025-001";
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Font = new Font("Manrope", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label24.ForeColor = Color.Black;
+            label24.Location = new Point(3, 21);
+            label24.Name = "label24";
+            label24.Size = new Size(208, 26);
+            label24.TabIndex = 1;
+            label24.Text = "Detail Batch Produksi";
+            // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold);
+            label27.ForeColor = Color.DimGray;
+            label27.Location = new Point(18, 520);
+            label27.Name = "label27";
+            label27.Size = new Size(72, 21);
+            label27.TabIndex = 54;
+            label27.Text = "Catatan";
+            // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold);
+            label26.ForeColor = Color.DimGray;
+            label26.Location = new Point(17, 372);
+            label26.Name = "label26";
+            label26.Size = new Size(179, 21);
+            label26.TabIndex = 53;
+            label26.Text = "Bahan yang digunakan";
             // 
             // UC_ProduksiOlahan
             // 
@@ -952,7 +1297,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.FromArgb(212, 122, 71);
-            Controls.Add(gbEditCabang);
+            Controls.Add(gbDetailBatch);
+            Controls.Add(gbTambahBatch);
             Controls.Add(panel1);
             Controls.Add(guna2GroupBox7);
             Controls.Add(guna2GroupBox5);
@@ -961,7 +1307,8 @@
             Controls.Add(guna2GroupBox3);
             Controls.Add(guna2GroupBox1);
             Name = "UC_ProduksiOlahan";
-            Size = new Size(1480, 1004);
+            Size = new Size(1361, 885);
+            Load += UC_ProduksiOlahan_Load_1;
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
             guna2GroupBox5.ResumeLayout(false);
@@ -980,9 +1327,17 @@
             guna2GroupBox7.PerformLayout();
             guna2GroupBox8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvBatch).EndInit();
-            gbEditCabang.ResumeLayout(false);
+            gbTambahBatch.ResumeLayout(false);
             guna2GroupBox6.ResumeLayout(false);
             guna2GroupBox6.PerformLayout();
+            gbDetailBatch.ResumeLayout(false);
+            gbDetailBatch.PerformLayout();
+            gbCatatan.ResumeLayout(false);
+            gbCatatan.PerformLayout();
+            guna2GroupBox10.ResumeLayout(false);
+            guna2GroupBox10.PerformLayout();
+            gbStatus.ResumeLayout(false);
+            gbStatus.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -1018,26 +1373,49 @@
         private Panel panel1;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox8;
         private Guna.UI2.WinForms.Guna2DataGridView dgvBatch;
+        private Guna.UI2.WinForms.Guna2GroupBox gbTambahBatch;
+        private Guna.UI2.WinForms.Guna2TextBox txtInputCatatan;
+        private Guna.UI2.WinForms.Guna2Button btnBatal;
+        private Guna.UI2.WinForms.Guna2Button btnCloseBuat;
+        private Guna.UI2.WinForms.Guna2Button btnSimpan;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox6;
+        private Guna.UI2.WinForms.Guna2TextBox txtTargetProduksi;
+        private Label label22;
+        private Guna.UI2.WinForms.Guna2ComboBox cbresep;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpTanggalMulai;
+        private Label label16;
+        private Label label17;
+        private Label label19;
+        private Label label20;
+        private Label label21;
         private DataGridViewTextBoxColumn nobatch;
         private DataGridViewTextBoxColumn Resep;
         private DataGridViewTextBoxColumn targetproduksi;
         private DataGridViewTextBoxColumn Tanggal;
         private DataGridViewTextBoxColumn Status;
         private DataGridViewTextBoxColumn Aksi;
-        private Guna.UI2.WinForms.Guna2GroupBox gbEditCabang;
-        private Guna.UI2.WinForms.Guna2TextBox txtInputcatatan;
-        private Guna.UI2.WinForms.Guna2Button btnBatalEdit;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button btnsimpan;
-        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox6;
-        private Guna.UI2.WinForms.Guna2TextBox txtjumlahproduksi;
-        private Label label22;
-        private Guna.UI2.WinForms.Guna2ComboBox cbresep;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dttanggalmulai;
-        private Label label16;
-        private Label label17;
-        private Label label19;
-        private Label label20;
-        private Label label21;
+        private Guna.UI2.WinForms.Guna2GroupBox gbDetailBatch;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox10;
+        private Label label4;
+        private Label label8;
+        private Label label9;
+        private Label label12;
+        private Label lblNoBatch;
+        private Label label24;
+        private Label label23;
+        private Label label27;
+        private Label label25;
+        private Label label26;
+        private Guna.UI2.WinForms.Guna2GroupBox gbStatus;
+        private Label lblStatus;
+        private Label lblResep;
+        private Label lblTanggalSelesai;
+        private Label lblTanggalMulai;
+        private Label lblSudahDiproduksi;
+        private Label lblTargetProduksi;
+        private Guna.UI2.WinForms.Guna2GroupBox gbCatatan;
+        private Label lblCatatan;
+        private FlowLayoutPanel flpBahan;
     }
 }

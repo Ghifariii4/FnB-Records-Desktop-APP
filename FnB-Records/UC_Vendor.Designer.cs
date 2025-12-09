@@ -40,6 +40,7 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Vendor));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -78,7 +79,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Vendor));
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             btnTambahVendor = new Guna.UI2.WinForms.Guna2Button();
             label2 = new Label();
@@ -86,6 +86,8 @@
             guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2GroupBox5 = new Guna.UI2.WinForms.Guna2GroupBox();
             dgvDataVendor = new Guna.UI2.WinForms.Guna2DataGridView();
+            Edit = new DataGridViewImageColumn();
+            Hapus = new DataGridViewImageColumn();
             guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             txtCariVendor = new Guna.UI2.WinForms.Guna2TextBox();
@@ -116,8 +118,6 @@
             label4 = new Label();
             label3 = new Label();
             panel1 = new Panel();
-            Hapus = new DataGridViewImageColumn();
-            Edit = new DataGridViewImageColumn();
             guna2GroupBox1.SuspendLayout();
             guna2GroupBox2.SuspendLayout();
             guna2GroupBox5.SuspendLayout();
@@ -239,7 +239,7 @@
             dataGridViewCellStyle1.BackColor = Color.FromArgb(247, 248, 249);
             dgvDataVendor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(232, 234, 237);
+            dataGridViewCellStyle2.BackColor = SystemColors.ButtonFace;
             dataGridViewCellStyle2.Font = new Font("Inter", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
@@ -256,7 +256,7 @@
             dataGridViewCellStyle3.SelectionForeColor = Color.Black;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvDataVendor.DefaultCellStyle = dataGridViewCellStyle3;
-            dgvDataVendor.GridColor = SystemColors.ButtonFace;
+            dgvDataVendor.GridColor = Color.White;
             dgvDataVendor.Location = new Point(9, 5);
             dgvDataVendor.Name = "dgvDataVendor";
             dgvDataVendor.ReadOnly = true;
@@ -280,8 +280,8 @@
             dgvDataVendor.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
             dgvDataVendor.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
             dgvDataVendor.ThemeStyle.BackColor = Color.White;
-            dgvDataVendor.ThemeStyle.GridColor = SystemColors.ButtonFace;
-            dgvDataVendor.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(232, 234, 237);
+            dgvDataVendor.ThemeStyle.GridColor = Color.White;
+            dgvDataVendor.ThemeStyle.HeaderStyle.BackColor = SystemColors.ButtonFace;
             dgvDataVendor.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
             dgvDataVendor.ThemeStyle.HeaderStyle.Font = new Font("Inter", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dgvDataVendor.ThemeStyle.HeaderStyle.ForeColor = Color.Black;
@@ -296,6 +296,22 @@
             dgvDataVendor.ThemeStyle.RowsStyle.SelectionBackColor = Color.White;
             dgvDataVendor.ThemeStyle.RowsStyle.SelectionForeColor = Color.Black;
             dgvDataVendor.CellContentClick += dgvDataVendor_CellContentClick;
+            // 
+            // Edit
+            // 
+            Edit.HeaderText = "Edit";
+            Edit.Image = (Image)resources.GetObject("Edit.Image");
+            Edit.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            Edit.Name = "Edit";
+            Edit.ReadOnly = true;
+            // 
+            // Hapus
+            // 
+            Hapus.HeaderText = "Hapus";
+            Hapus.Image = (Image)resources.GetObject("Hapus.Image");
+            Hapus.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            Hapus.Name = "Hapus";
+            Hapus.ReadOnly = true;
             // 
             // guna2GroupBox3
             // 
@@ -886,22 +902,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(340, 64);
             panel1.TabIndex = 21;
-            // 
-            // Hapus
-            // 
-            Hapus.HeaderText = "Hapus";
-            Hapus.Image = (Image)resources.GetObject("Hapus.Image");
-            Hapus.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            Hapus.Name = "Hapus";
-            Hapus.ReadOnly = true;
-            // 
-            // Edit
-            // 
-            Edit.HeaderText = "Edit";
-            Edit.Image = (Image)resources.GetObject("Edit.Image");
-            Edit.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            Edit.Name = "Edit";
-            Edit.ReadOnly = true;
             // 
             // UC_Vendor
             // 

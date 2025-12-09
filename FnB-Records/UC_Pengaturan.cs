@@ -231,11 +231,7 @@ namespace FnB_Records
         // ============================================
         private async void btnverifemail_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(currentUserEmail))
-            {
-                MessageBox.Show("Email tidak valid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            if (string.IsNullOrWhiteSpace(currentUserEmail)) return;
 
             Random random = new Random();
             verificationCode = random.Next(100000, 999999).ToString();
@@ -247,34 +243,37 @@ namespace FnB_Records
             {
                 await SendVerificationEmail(currentUserEmail, verificationCode);
 
-                MessageBox.Show(
-                    $"Kode verifikasi telah dikirim ke {currentUserEmail}\n\nSilakan cek email Anda dan masukkan kode 6 digit.",
-                    "Email Terkirim",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information
-                );
-
                 string inputCode = Microsoft.VisualBasic.Interaction.InputBox(
-                    "Masukkan kode verifikasi 6 digit yang dikirim ke email Anda:",
-                    "Verifikasi Email",
-                    ""
-                );
+                    $"Kode dikirim ke {currentUserEmail}. Masukkan kode 6 digit:",
+                    "Verifikasi Email", "");
 
                 if (inputCode == verificationCode)
                 {
                     await MarkEmailAsVerified();
-                    MessageBox.Show("Email berhasil diverifikasi! ✅", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // ========================================================
+                    // PERBAIKAN: Update GlobalSession & Refresh Main Menu
+                    // ========================================================
                     isEmailVerified = true;
+                    GlobalSession.IsEmailVerified = true; // Update Session
                     UpdateVerificationUI();
+
+                    // Refresh Form Utama agar Menu Terbuka
+                    if (this.TopLevelControl is Main_Form mainForm)
+                    {
+                        mainForm.RefreshUserAccess();
+                    }
+
+                    MessageBox.Show("Email berhasil diverifikasi! Menu telah terbuka.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (!string.IsNullOrWhiteSpace(inputCode))
                 {
-                    MessageBox.Show("Kode verifikasi salah!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Kode salah!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Gagal mengirim email: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Gagal: {ex.Message}");
             }
             finally
             {
