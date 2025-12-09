@@ -41,7 +41,6 @@ C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-
 C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\WinForms.DataVisualization.dll
 C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_SimulasiKebutuhan.resources
 C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_ManajemenInventori.resources
-C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_ProduksiOlahan.resources
 C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\FnB-Records.exe
 C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\FnB-Records.dll.config
 C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\FnB-Records.deps.json
@@ -223,3 +222,4 @@ C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-
 C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.Form_Bayar.resources
 C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.ContainerItemPO.resources
 C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UCProduksiOlahan.resources
+C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_Menu.resources

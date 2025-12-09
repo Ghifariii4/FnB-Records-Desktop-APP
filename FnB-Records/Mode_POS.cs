@@ -385,10 +385,13 @@ namespace FnB_Records
                     {
                         try
                         {
-                            // --- LOOPING ITEM KERANJANG ---
+                            // Generate No Batch Otomatis
+                            string batchDate = DateTime.Now.ToString("yyyyMMdd");
+                            string autoBatchNo = $"POS-{batchDate}-{DateTime.Now:HHmmss}";
+
                             foreach (var item in _cartItems)
                             {
-                                // A. Ambil HPP
+                                // [A] AMBIL HPP
                                 double hppSatuan = 0;
                                 string queryGetHpp = "SELECT hpp FROM recipes WHERE id = @rid";
                                 using (NpgsqlCommand cmdHpp = new NpgsqlCommand(queryGetHpp, conn))
@@ -400,12 +403,12 @@ namespace FnB_Records
                                         hppSatuan = Convert.ToDouble(resultHpp);
                                 }
 
-                                // B. Hitung Keuangan
+                                // [B] HITUNG KEUANGAN
                                 double revenue = item.HargaSatuan * item.Quantity;
                                 double totalHpp = hppSatuan * item.Quantity;
                                 double profit = revenue - totalHpp;
 
-                                // C. Insert Sales
+                                // [C] INSERT SALES (Data Penjualan)
                                 string querySales = @"INSERT INTO sales 
                                             (user_id, recipe_id, qty, selling_price, total_price, revenue, total_hpp, profit, discount, other_costs, sale_date, created_at) 
                                             VALUES 
@@ -427,7 +430,7 @@ namespace FnB_Records
                                     cmd.ExecuteNonQuery();
                                 }
 
-                                // D. Update Stok
+                                // [D] UPDATE STOK MENU (Barang Jadi Berkurang karena Terjual)
                                 string queryStock = "UPDATE recipes SET stock = stock - @qty WHERE id = @rid";
                                 using (NpgsqlCommand cmdStock = new NpgsqlCommand(queryStock, conn))
                                 {
@@ -436,12 +439,36 @@ namespace FnB_Records
                                     cmdStock.Parameters.AddWithValue("@rid", item.RecipeId);
                                     cmdStock.ExecuteNonQuery();
                                 }
+
+                                // ---------------------------------------------------------
+                                // [E] INSERT KE PRODUKSI OLAHAN (AUTO GENERATE)
+                                // ---------------------------------------------------------
+                                // Status: 'sedang_produksi'
+                                // Produced Qty: 0 (karena belum selesai)
+                                // Ingredients: TIDAK dipotong disini (nanti dipotong di modul Produksi saat status diubah jadi Selesai)
+
+                                string queryBatch = @"INSERT INTO production_batches 
+                                            (user_id, batch_number, recipe_id, target_qty, produced_qty, start_date, status, notes, created_at)
+                                            VALUES 
+                                            (@uid, @batch, @rid, @qty, 0, @date, 'sedang_produksi', 'Order dari POS', NOW())";
+
+                                using (NpgsqlCommand cmdBatch = new NpgsqlCommand(queryBatch, conn))
+                                {
+                                    cmdBatch.Transaction = transaction;
+                                    cmdBatch.Parameters.AddWithValue("@uid", Login.GlobalSession.CurrentUserId);
+                                    // Suffix ID Menu agar unik jika beli 2 menu beda sekaligus
+                                    cmdBatch.Parameters.AddWithValue("@batch", $"{autoBatchNo}-{item.RecipeId}");
+                                    cmdBatch.Parameters.AddWithValue("@rid", item.RecipeId);
+                                    cmdBatch.Parameters.AddWithValue("@qty", item.Quantity);
+                                    cmdBatch.Parameters.AddWithValue("@date", DateTime.Now);
+                                    cmdBatch.ExecuteNonQuery();
+                                }
                             }
 
                             transaction.Commit();
 
-                            // --- 6. PERSIAPAN DATA STRUK ---
-                            // PENTING: Gunakan 'Form_Struk.' di depannya
+                            // --- [SISA KODE SAMA: STRUK & RESET UI] ---
+
                             Form_Struk.CurrentReceipt.Clear();
                             Form_Struk.CurrentReceipt.NoFaktur = "TRJ-" + DateTime.Now.ToString("yyyyMMdd-HHmmss");
                             Form_Struk.CurrentReceipt.KasirName = Login.GlobalSession.CurrentUserEmail;
@@ -458,29 +485,21 @@ namespace FnB_Records
                                 });
                             }
 
-                            // Isi Data Keuangan ke Struk
                             double subtotalVal = ParseCurrency(lblSubtotal.Text.Replace("Subtotal", ""));
-
-                            // Bersihkan label pajak
                             string pajakClean = lblPajak.Text.Replace("Tax", "").Replace("(", "").Replace(")", "").Replace("%", "").Replace(":", "").Trim();
                             double taxVal = ParseCurrency(pajakClean);
-
                             double totalVal = ParseCurrency(lblTotalAkhir.Text);
 
                             Form_Struk.CurrentReceipt.Subtotal = subtotalVal;
                             Form_Struk.CurrentReceipt.Tax = taxVal;
                             Form_Struk.CurrentReceipt.GrandTotal = totalVal;
-
-                            // Masukkan data uang dari Form Bayar tadi
                             Form_Struk.CurrentReceipt.CashPaid = uangDiterima;
                             Form_Struk.CurrentReceipt.ChangeDue = kembalian;
 
-                            // --- 7. TAMPILKAN STRUK ---
                             Form_Struk struk = new Form_Struk();
                             struk.StartPosition = FormStartPosition.CenterScreen;
                             struk.ShowDialog();
 
-                            // --- 8. RESET POS ---
                             flpKeranjang.Controls.Clear();
                             _cartItems.Clear();
                             HitungTotalBelanja();

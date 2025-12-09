@@ -112,6 +112,8 @@ namespace FnB_Records
             btAnalisisBelanja.Enabled = false;
             btManajemenInventori.Enabled = false;
             btProduksiOlahan.Enabled = false;
+            btTambahMenu.Enabled = false;
+            btKelolaMenu.Enabled = false;
             btPengaturan.Enabled = false; // Akan di-enable khusus untuk verifikasi
         }
 
@@ -123,6 +125,8 @@ namespace FnB_Records
             btBahanBaku.Enabled = true;
             btResepMenu.Enabled = true;
             btPO.Enabled = true;
+            btTambahMenu.Enabled = true;
+            btKelolaMenu.Enabled = true;
             btPenjualan.Enabled = true;
             btCabang.Enabled = true;
             btAnalisisBelanja.Enabled = true;
@@ -407,6 +411,13 @@ namespace FnB_Records
             Mode_POS mode_POS = new Mode_POS();
             mode_POS.Show();
             this.Hide();
+        }
+
+        private void btKelolaMenu_Click(object sender, EventArgs e)
+        {
+            if (!ValidasiAksesMenu("Kelola Menu")) return;
+            UC_Menu kelolaMenu = new UC_Menu();
+            navigationControl(kelolaMenu);
         }
     }
 }

@@ -139,5 +139,10 @@ namespace FnB_Records
                 e.SuppressKeyPress = true; // Hilangkan bunyi 'ding'
             }
         }
+
+        private void txtCariRiwayatTransaksi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -291,6 +291,7 @@
             txtCariRiwayatTransaksi.ShadowDecoration.Depth = 0;
             txtCariRiwayatTransaksi.Size = new Size(1046, 37);
             txtCariRiwayatTransaksi.TabIndex = 9;
+            txtCariRiwayatTransaksi.TextChanged += txtCariRiwayatTransaksi_TextChanged;
             txtCariRiwayatTransaksi.KeyDown += txtCariRiwayatTransaksi_KeyDown;
             // 
             // label1

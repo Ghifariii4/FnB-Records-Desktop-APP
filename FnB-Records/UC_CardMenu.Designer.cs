@@ -32,9 +32,9 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             elipseCard = new Guna.UI2.WinForms.Guna2Elipse(components);
             lblNama = new Label();
             lblHarga = new Label();
@@ -75,16 +75,16 @@
             // 
             picProduk.BackColor = Color.Transparent;
             picProduk.BorderRadius = 15;
-            picProduk.CustomizableEdges = customizableEdges5;
+            picProduk.CustomizableEdges = customizableEdges2;
             picProduk.ImageRotate = 0F;
             picProduk.Location = new Point(24, 29);
             picProduk.Name = "picProduk";
             picProduk.ShadowDecoration.BorderRadius = 15;
             picProduk.ShadowDecoration.Color = Color.FromArgb(212, 122, 71);
-            picProduk.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            picProduk.ShadowDecoration.CustomizableEdges = customizableEdges3;
             picProduk.ShadowDecoration.Enabled = true;
             picProduk.Size = new Size(250, 250);
-            picProduk.SizeMode = PictureBoxSizeMode.Zoom;
+            picProduk.SizeMode = PictureBoxSizeMode.StretchImage;
             picProduk.TabIndex = 4;
             picProduk.TabStop = false;
             // 
@@ -105,7 +105,7 @@
             btTambah.ImageSize = new Size(25, 25);
             btTambah.Location = new Point(232, 357);
             btTambah.Name = "btTambah";
-            btTambah.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btTambah.ShadowDecoration.CustomizableEdges = customizableEdges1;
             btTambah.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             btTambah.Size = new Size(42, 40);
             btTambah.TabIndex = 5;

@@ -547,7 +547,7 @@ namespace FnB_Records
 
         private async Task<string> AskGemini(string prompt)
         {
-            string apiKey = "AIzaSyCyYVNT_0XTd7q4lcJtGhWNlkyTzsxcwXU";
+            string apiKey = "AIzaSyD0BXuIaj2H1a9eW0TGIM0Fdgt9Ga6VxFk";
             string url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent";
 
             string context = $"Nama Bisnis: {Login.GlobalSession.BusinessName}. Saya adalah pemilik bisnis F&B. Jawablah terkait manajemen stok, penjualan, atau strategi marketing.";

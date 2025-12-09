@@ -565,5 +565,10 @@ namespace FnB_Records
         private void lblBatchSelesai_Click(object sender, EventArgs e) { }
         private void lblSedangProduksi_Click(object sender, EventArgs e) { }
         private void lblTotalProduksi_Click(object sender, EventArgs e) { }
+
+        private void btnCloseBuat_Click(object sender, EventArgs e)
+        {
+            gbTambahBatch.Visible = false;
+        }
     }
 }

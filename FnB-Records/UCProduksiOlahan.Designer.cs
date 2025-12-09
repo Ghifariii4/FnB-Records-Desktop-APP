@@ -451,7 +451,7 @@
             label24.ForeColor = Color.Black;
             label24.Location = new Point(3, 21);
             label24.Name = "label24";
-            label24.Size = new Size(208, 26);
+            label24.Size = new Size(207, 26);
             label24.TabIndex = 1;
             label24.Text = "Detail Batch Produksi";
             // 
@@ -609,7 +609,7 @@
             label21.ForeColor = Color.Black;
             label21.Location = new Point(3, 21);
             label21.Name = "label21";
-            label21.Size = new Size(245, 26);
+            label21.Size = new Size(244, 26);
             label21.TabIndex = 1;
             label21.Text = "Buat Batch Produksi Baru";
             // 
@@ -663,6 +663,7 @@
             btnCloseBuat.ShadowDecoration.Depth = 4;
             btnCloseBuat.Size = new Size(46, 41);
             btnCloseBuat.TabIndex = 15;
+            btnCloseBuat.Click += btnCloseBuat_Click;
             // 
             // btnSimpan
             // 
@@ -1064,7 +1065,7 @@
             label14.ForeColor = Color.White;
             label14.Location = new Point(22, 24);
             label14.Name = "label14";
-            label14.Size = new Size(270, 33);
+            label14.Size = new Size(269, 33);
             label14.TabIndex = 12;
             label14.Text = "Daftar Batch Produksi";
             // 

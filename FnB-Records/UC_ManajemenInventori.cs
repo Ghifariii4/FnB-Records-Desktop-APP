@@ -46,14 +46,19 @@ namespace FnB_Records
                     csvContent.AppendLine("Total Nilai Aset:," + lblNilaiTotal.Text.Replace("Rp ", "").Trim());
                     csvContent.AppendLine(); // Baris kosong
 
-                    // 2. Header Tabel
+                    // 2. Header Tabel (Skip Kolom Aksi)
                     for (int i = 0; i < dgvDataInventori.Columns.Count; i++)
                     {
-                        if (dgvDataInventori.Columns[i].Visible)
+                        // Hanya ekspor kolom visible DAN bukan kolom aksi
+                        if (dgvDataInventori.Columns[i].Visible &&
+                            dgvDataInventori.Columns[i].Name != "colTambah" &&
+                            dgvDataInventori.Columns[i].Name != "colKurang")
                         {
                             csvContent.Append(dgvDataInventori.Columns[i].HeaderText + ",");
                         }
                     }
+                    // Hapus koma terakhir & pindah baris
+                    if (csvContent.Length > 0 && csvContent[csvContent.Length - 1] == ',') csvContent.Length--;
                     csvContent.AppendLine();
 
                     // 3. Isi Data
@@ -61,12 +66,20 @@ namespace FnB_Records
                     {
                         for (int i = 0; i < dgvDataInventori.Columns.Count; i++)
                         {
-                            if (dgvDataInventori.Columns[i].Visible)
+                            if (dgvDataInventori.Columns[i].Visible &&
+                                dgvDataInventori.Columns[i].Name != "colTambah" &&
+                                dgvDataInventori.Columns[i].Name != "colKurang")
                             {
-                                string cellValue = row.Cells[i].Value?.ToString().Replace(",", "."); // Ganti koma dengan titik agar CSV aman
+                                string cellValue = row.Cells[i].Value?.ToString() ?? "";
+
+                                // Sanitasi data: ganti koma dengan titik, hapus enter/tab
+                                cellValue = cellValue.Replace(",", ".").Replace("\n", " ").Replace("\r", "");
+
                                 csvContent.Append(cellValue + ",");
                             }
                         }
+                        // Hapus koma terakhir & pindah baris
+                        if (csvContent.Length > 0 && csvContent[csvContent.Length - 1] == ',') csvContent.Length--;
                         csvContent.AppendLine();
                     }
 

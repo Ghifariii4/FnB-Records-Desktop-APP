@@ -37,13 +37,13 @@
     <Compile Update="UC_ManajemenInventori.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UC_Menu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UC_Panel_MenuTerlaris.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UC_Pengaturan.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="UC_ProduksiOlahan.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UC_Riwayat.cs">
