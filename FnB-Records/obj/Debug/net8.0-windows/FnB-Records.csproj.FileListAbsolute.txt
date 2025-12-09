@@ -221,3 +221,5 @@ C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-
 C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.Form_Struk.resources
 C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_Riwayat.resources
 C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.Form_Bayar.resources
+C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.ContainerItemPO.resources
+C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UCProduksiOlahan.resources
