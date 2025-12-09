@@ -97,14 +97,12 @@ namespace FnB_Records
                 // Lalu kunci menu premium
                 btCabang.Enabled = false;
                 btAnalisisBelanja.Enabled = false;
-                btSimulasiKebutuhan.Enabled = false;
                 btManajemenInventori.Enabled = false;
                 btProduksiOlahan.Enabled = false;
 
                 // Tambahkan icon gembok atau ubah warna (opsional)
                 btCabang.Text = "🔒 Cabang (Premium)";
                 btAnalisisBelanja.Text = "🔒 Analisis Belanja (Premium)";
-                btSimulasiKebutuhan.Text = "🔒 Simulasi Kebutuhan (Premium)";
                 btManajemenInventori.Text = "🔒 Manajemen Inventori (Premium)";
                 btProduksiOlahan.Text = "🔒 Produksi Olahan (Premium)";
             }
@@ -121,7 +119,6 @@ namespace FnB_Records
             btPenjualan.Enabled = false;
             btCabang.Enabled = false;
             btAnalisisBelanja.Enabled = false;
-            btSimulasiKebutuhan.Enabled = false;
             btManajemenInventori.Enabled = false;
             btProduksiOlahan.Enabled = false;
             btPengaturan.Enabled = false; // Akan di-enable khusus untuk verifikasi
@@ -138,7 +135,6 @@ namespace FnB_Records
             btPenjualan.Enabled = true;
             btCabang.Enabled = true;
             btAnalisisBelanja.Enabled = true;
-            btSimulasiKebutuhan.Enabled = true;
             btManajemenInventori.Enabled = true;
             btProduksiOlahan.Enabled = true;
             btPengaturan.Enabled = true;
@@ -146,7 +142,6 @@ namespace FnB_Records
             // Reset text (hilangkan gembok)
             btCabang.Text = "Cabang";
             btAnalisisBelanja.Text = "Analisis Belanja";
-            btSimulasiKebutuhan.Text = "Simulasi Kebutuhan";
             btManajemenInventori.Text = "Manajemen Inventori";
             btProduksiOlahan.Text = "Produksi Olahan";
         }
@@ -298,6 +293,13 @@ namespace FnB_Records
             navigationControl(produksiOlahan);
         }
 
+        private void btTambahMenu_Click(object sender, EventArgs e)
+        {
+            if (!ValidasiAksesMenu("Tambah Menu")) return;
+            UC_TambahMenu tambahMenu = new UC_TambahMenu();
+            navigationControl(tambahMenu);
+        }
+
         private void btPengaturan_Click(object sender, EventArgs e)
         {
             // Pengaturan selalu bisa diakses (untuk verifikasi email)
@@ -408,5 +410,12 @@ namespace FnB_Records
         // Event lainnya
         private void guna2Panel2_Paint(object sender, PaintEventArgs e) { }
         private void paneluc_Paint(object sender, PaintEventArgs e) { }
+
+        private void btUbahMode_Click(object sender, EventArgs e)
+        {
+            Mode_POS mode_POS = new Mode_POS();
+            mode_POS.Show();
+            this.Hide();
+        }
     }
 }

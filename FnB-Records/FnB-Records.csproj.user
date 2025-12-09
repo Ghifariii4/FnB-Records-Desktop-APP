@@ -1,7 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Form_Bayar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form_Struk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form_Verifikasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Mode_POS.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UC_AnalisisBelanja.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UC_CartItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UC_CardMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UC_DaftarMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UC_Kategori.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UC_ManajemenInventori.cs">
@@ -14,6 +38,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UC_ProduksiOlahan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UC_Riwayat.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UC_SimulasiKebutuhan.cs">
@@ -44,6 +71,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UC_Resep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UC_TambahMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UC_Vendor.cs">

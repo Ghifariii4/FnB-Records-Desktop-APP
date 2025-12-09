@@ -211,3 +211,13 @@ C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net
 C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\PdfSharp.dll
 C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll
 C:\Users\HYPE AMD\Source\Repos\FnB-Records-Desktop-APP\FnB-Records\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.Mode_POS.resources
+C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_DaftarMenu.resources
+C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_Kategori.resources
+C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_CardMenu.resources
+C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_TambahMenu.resources
+C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.Form_Verifikasi.resources
+C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_CartItem.resources
+C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.Form_Struk.resources
+C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.UC_Riwayat.resources
+C:\Users\USER\source\repos\FnB-Records-Desktop-APP\FnB-Records\obj\Debug\net8.0-windows\FnB_Records.Form_Bayar.resources

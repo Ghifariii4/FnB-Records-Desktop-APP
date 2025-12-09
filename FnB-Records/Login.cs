@@ -96,7 +96,7 @@ namespace FnB_Records
                                     AturIngatSaya(email, password);
 
                                     // C. Pindah ke Menu Utama
-                                    Main_Form menu = new Main_Form();
+                                    Mode_POS menu = new Mode_POS();
                                     menu.Show();
                                     this.Hide();
                                 }
