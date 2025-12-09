@@ -575,7 +575,7 @@
             dataGridViewCellStyle1.BackColor = Color.FromArgb(247, 248, 249);
             dgvDataBahanBaku.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(232, 234, 237);
+            dataGridViewCellStyle2.BackColor = SystemColors.ButtonFace;
             dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
@@ -593,7 +593,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvDataBahanBaku.DefaultCellStyle = dataGridViewCellStyle3;
             dgvDataBahanBaku.GridColor = SystemColors.ButtonFace;
-            dgvDataBahanBaku.Location = new Point(15, 25);
+            dgvDataBahanBaku.Location = new Point(3, 17);
             dgvDataBahanBaku.Name = "dgvDataBahanBaku";
             dgvDataBahanBaku.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -608,7 +608,7 @@
             dgvDataBahanBaku.RowTemplate.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvDataBahanBaku.RowTemplate.Height = 40;
             dgvDataBahanBaku.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dgvDataBahanBaku.Size = new Size(1452, 671);
+            dgvDataBahanBaku.Size = new Size(1475, 729);
             dgvDataBahanBaku.TabIndex = 11;
             dgvDataBahanBaku.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
             dgvDataBahanBaku.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(247, 248, 249);
@@ -618,7 +618,7 @@
             dgvDataBahanBaku.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
             dgvDataBahanBaku.ThemeStyle.BackColor = Color.White;
             dgvDataBahanBaku.ThemeStyle.GridColor = SystemColors.ButtonFace;
-            dgvDataBahanBaku.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(232, 234, 237);
+            dgvDataBahanBaku.ThemeStyle.HeaderStyle.BackColor = SystemColors.ButtonFace;
             dgvDataBahanBaku.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
             dgvDataBahanBaku.ThemeStyle.HeaderStyle.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dgvDataBahanBaku.ThemeStyle.HeaderStyle.ForeColor = Color.Black;

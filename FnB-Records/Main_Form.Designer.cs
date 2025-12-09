@@ -38,10 +38,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -64,6 +64,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -80,8 +82,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2GroupBox5 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2GroupBox6 = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -89,8 +89,8 @@
             guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             label7 = new Label();
             guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             btProduksiOlahan = new Guna.UI2.WinForms.Guna2Button();
-            btKeluar = new Guna.UI2.WinForms.Guna2Button();
             btPengaturan = new Guna.UI2.WinForms.Guna2Button();
             btVendor = new Guna.UI2.WinForms.Guna2Button();
             label6 = new Label();
@@ -103,6 +103,7 @@
             btBahanBaku = new Guna.UI2.WinForms.Guna2Button();
             btResepMenu = new Guna.UI2.WinForms.Guna2Button();
             btAnalisisBelanja = new Guna.UI2.WinForms.Guna2Button();
+            btKeluar = new Guna.UI2.WinForms.Guna2Button();
             guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             lblEmail = new Label();
             lblNamaBisnis = new Label();
@@ -117,7 +118,6 @@
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             btnExitApp = new Guna.UI2.WinForms.Guna2Button();
             paneluc = new Guna.UI2.WinForms.Guna2Panel();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1.SuspendLayout();
             guna2GroupBox5.SuspendLayout();
             guna2GroupBox6.SuspendLayout();
@@ -257,8 +257,37 @@
             guna2GroupBox4.Location = new Point(12, 136);
             guna2GroupBox4.Name = "guna2GroupBox4";
             guna2GroupBox4.ShadowDecoration.CustomizableEdges = customizableEdges34;
-            guna2GroupBox4.Size = new Size(274, 779);
+            guna2GroupBox4.Size = new Size(274, 714);
             guna2GroupBox4.TabIndex = 7;
+            // 
+            // guna2Button1
+            // 
+            guna2Button1.Animated = true;
+            guna2Button1.AnimatedGIF = true;
+            guna2Button1.BorderRadius = 10;
+            guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            guna2Button1.CheckedState.FillColor = Color.FromArgb(212, 122, 71);
+            guna2Button1.CheckedState.ForeColor = Color.FromArgb(45, 45, 45);
+            guna2Button1.CheckedState.Image = Properties.Resources.Setting_Icon_Black;
+            guna2Button1.Cursor = Cursors.Hand;
+            guna2Button1.CustomizableEdges = customizableEdges7;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.FromArgb(45, 45, 45);
+            guna2Button1.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Image = Properties.Resources._32;
+            guna2Button1.ImageAlign = HorizontalAlignment.Right;
+            guna2Button1.Location = new Point(28, 669);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.RightToLeft = RightToLeft.Yes;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Button1.Size = new Size(246, 36);
+            guna2Button1.TabIndex = 38;
+            guna2Button1.Text = "Ubah Mode APP";
+            guna2Button1.TextAlign = HorizontalAlignment.Right;
             // 
             // btProduksiOlahan
             // 
@@ -291,36 +320,6 @@
             btProduksiOlahan.TextAlign = HorizontalAlignment.Right;
             btProduksiOlahan.TextOffset = new Point(0, 3);
             btProduksiOlahan.Click += btProduksiOlahan_Click;
-            // 
-            // btKeluar
-            // 
-            btKeluar.Animated = true;
-            btKeluar.AnimatedGIF = true;
-            btKeluar.BorderRadius = 10;
-            btKeluar.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            btKeluar.CheckedState.FillColor = Color.FromArgb(212, 122, 71);
-            btKeluar.CheckedState.ForeColor = Color.FromArgb(45, 45, 45);
-            btKeluar.CheckedState.Image = Properties.Resources.Exit_Icon_Black;
-            btKeluar.Cursor = Cursors.Hand;
-            btKeluar.CustomizableEdges = customizableEdges35;
-            btKeluar.DisabledState.BorderColor = Color.DarkGray;
-            btKeluar.DisabledState.CustomBorderColor = Color.DarkGray;
-            btKeluar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btKeluar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btKeluar.FillColor = Color.FromArgb(45, 45, 45);
-            btKeluar.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btKeluar.ForeColor = Color.FromArgb(211, 47, 47);
-            btKeluar.Image = Properties.Resources.warna_primer;
-            btKeluar.ImageAlign = HorizontalAlignment.Right;
-            btKeluar.Location = new Point(33, 903);
-            btKeluar.Name = "btKeluar";
-            btKeluar.RightToLeft = RightToLeft.Yes;
-            btKeluar.ShadowDecoration.CustomizableEdges = customizableEdges36;
-            btKeluar.Size = new Size(246, 36);
-            btKeluar.TabIndex = 37;
-            btKeluar.Text = "Keluar";
-            btKeluar.TextAlign = HorizontalAlignment.Right;
-            btKeluar.Click += btKeluar_Click;
             // 
             // btPengaturan
             // 
@@ -684,6 +683,36 @@
             btAnalisisBelanja.TextOffset = new Point(0, 1);
             btAnalisisBelanja.Click += btAnalisisBelanja_Click;
             // 
+            // btKeluar
+            // 
+            btKeluar.Animated = true;
+            btKeluar.AnimatedGIF = true;
+            btKeluar.BorderRadius = 10;
+            btKeluar.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            btKeluar.CheckedState.FillColor = Color.FromArgb(212, 122, 71);
+            btKeluar.CheckedState.ForeColor = Color.FromArgb(45, 45, 45);
+            btKeluar.CheckedState.Image = Properties.Resources.Exit_Icon_Black;
+            btKeluar.Cursor = Cursors.Hand;
+            btKeluar.CustomizableEdges = customizableEdges35;
+            btKeluar.DisabledState.BorderColor = Color.DarkGray;
+            btKeluar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btKeluar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btKeluar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btKeluar.FillColor = Color.FromArgb(45, 45, 45);
+            btKeluar.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btKeluar.ForeColor = Color.FromArgb(211, 47, 47);
+            btKeluar.Image = Properties.Resources.warna_primer;
+            btKeluar.ImageAlign = HorizontalAlignment.Right;
+            btKeluar.Location = new Point(33, 903);
+            btKeluar.Name = "btKeluar";
+            btKeluar.RightToLeft = RightToLeft.Yes;
+            btKeluar.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            btKeluar.Size = new Size(246, 36);
+            btKeluar.TabIndex = 37;
+            btKeluar.Text = "Keluar";
+            btKeluar.TextAlign = HorizontalAlignment.Right;
+            btKeluar.Click += btKeluar_Click;
+            // 
             // guna2GroupBox3
             // 
             guna2GroupBox3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -898,35 +927,6 @@
             paneluc.Size = new Size(1620, 1008);
             paneluc.TabIndex = 4;
             paneluc.Paint += paneluc_Paint;
-            // 
-            // guna2Button1
-            // 
-            guna2Button1.Animated = true;
-            guna2Button1.AnimatedGIF = true;
-            guna2Button1.BorderRadius = 10;
-            guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            guna2Button1.CheckedState.FillColor = Color.FromArgb(212, 122, 71);
-            guna2Button1.CheckedState.ForeColor = Color.FromArgb(45, 45, 45);
-            guna2Button1.CheckedState.Image = Properties.Resources.Setting_Icon_Black;
-            guna2Button1.Cursor = Cursors.Hand;
-            guna2Button1.CustomizableEdges = customizableEdges7;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(45, 45, 45);
-            guna2Button1.Font = new Font("Manrope ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Image = Properties.Resources._32;
-            guna2Button1.ImageAlign = HorizontalAlignment.Right;
-            guna2Button1.Location = new Point(28, 669);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.RightToLeft = RightToLeft.Yes;
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button1.Size = new Size(246, 36);
-            guna2Button1.TabIndex = 38;
-            guna2Button1.Text = "Ubah Mode APP";
-            guna2Button1.TextAlign = HorizontalAlignment.Right;
             // 
             // Main_Form
             // 

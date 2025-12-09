@@ -2106,7 +2106,7 @@
             dataGridViewCellStyle17.BackColor = Color.FromArgb(247, 248, 249);
             dgvDataPurchaseOrder.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
             dataGridViewCellStyle18.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = Color.FromArgb(232, 234, 237);
+            dataGridViewCellStyle18.BackColor = SystemColors.ButtonFace;
             dataGridViewCellStyle18.Font = new Font("Inter", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle18.ForeColor = Color.Black;
             dataGridViewCellStyle18.SelectionBackColor = SystemColors.Highlight;
@@ -2125,7 +2125,7 @@
             dataGridViewCellStyle19.WrapMode = DataGridViewTriState.False;
             dgvDataPurchaseOrder.DefaultCellStyle = dataGridViewCellStyle19;
             dgvDataPurchaseOrder.GridColor = SystemColors.ButtonFace;
-            dgvDataPurchaseOrder.Location = new Point(40, 135);
+            dgvDataPurchaseOrder.Location = new Point(40, 140);
             dgvDataPurchaseOrder.Name = "dgvDataPurchaseOrder";
             dgvDataPurchaseOrder.ReadOnly = true;
             dataGridViewCellStyle20.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -2140,7 +2140,7 @@
             dgvDataPurchaseOrder.RowTemplate.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvDataPurchaseOrder.RowTemplate.Height = 40;
             dgvDataPurchaseOrder.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dgvDataPurchaseOrder.Size = new Size(1467, 671);
+            dgvDataPurchaseOrder.Size = new Size(1467, 666);
             dgvDataPurchaseOrder.TabIndex = 11;
             dgvDataPurchaseOrder.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
             dgvDataPurchaseOrder.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(247, 248, 249);
@@ -2150,7 +2150,7 @@
             dgvDataPurchaseOrder.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
             dgvDataPurchaseOrder.ThemeStyle.BackColor = Color.White;
             dgvDataPurchaseOrder.ThemeStyle.GridColor = SystemColors.ButtonFace;
-            dgvDataPurchaseOrder.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(232, 234, 237);
+            dgvDataPurchaseOrder.ThemeStyle.HeaderStyle.BackColor = SystemColors.ButtonFace;
             dgvDataPurchaseOrder.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
             dgvDataPurchaseOrder.ThemeStyle.HeaderStyle.Font = new Font("Inter", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dgvDataPurchaseOrder.ThemeStyle.HeaderStyle.ForeColor = Color.Black;

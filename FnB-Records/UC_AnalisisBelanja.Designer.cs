@@ -553,7 +553,7 @@
             label14.ForeColor = Color.White;
             label14.Location = new Point(21, 28);
             label14.Name = "label14";
-            label14.Size = new Size(237, 33);
+            label14.Size = new Size(238, 33);
             label14.TabIndex = 13;
             label14.Text = "Distribusi Kategori";
             // 
@@ -682,10 +682,10 @@
             // dgvtopVendor
             // 
             dgvtopVendor.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(247, 248, 249);
+            dataGridViewCellStyle1.BackColor = Color.White;
             dgvtopVendor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(232, 234, 237);
+            dataGridViewCellStyle2.BackColor = SystemColors.ButtonFace;
             dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
@@ -703,7 +703,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvtopVendor.DefaultCellStyle = dataGridViewCellStyle3;
             dgvtopVendor.GridColor = SystemColors.ButtonFace;
-            dgvtopVendor.Location = new Point(20, 25);
+            dgvtopVendor.Location = new Point(3, 12);
             dgvtopVendor.Name = "dgvtopVendor";
             dgvtopVendor.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -717,17 +717,17 @@
             dgvtopVendor.RowHeadersVisible = false;
             dgvtopVendor.RowTemplate.Height = 40;
             dgvtopVendor.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dgvtopVendor.Size = new Size(676, 353);
+            dgvtopVendor.Size = new Size(707, 366);
             dgvtopVendor.TabIndex = 18;
             dgvtopVendor.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
-            dgvtopVendor.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(247, 248, 249);
+            dgvtopVendor.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvtopVendor.ThemeStyle.AlternatingRowsStyle.Font = null;
             dgvtopVendor.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
             dgvtopVendor.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
             dgvtopVendor.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
             dgvtopVendor.ThemeStyle.BackColor = Color.White;
             dgvtopVendor.ThemeStyle.GridColor = SystemColors.ButtonFace;
-            dgvtopVendor.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(232, 234, 237);
+            dgvtopVendor.ThemeStyle.HeaderStyle.BackColor = SystemColors.ButtonFace;
             dgvtopVendor.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
             dgvtopVendor.ThemeStyle.HeaderStyle.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dgvtopVendor.ThemeStyle.HeaderStyle.ForeColor = Color.Black;

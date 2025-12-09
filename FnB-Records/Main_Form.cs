@@ -17,38 +17,13 @@ namespace FnB_Records
             InitializeComponent();
         }
 
-        // --- EVENT LOAD (Menampilkan Data User & Mengatur Akses Menu) ---
-        // --- EVENT LOAD (Menampilkan Data User & Mengatur Akses Menu) ---
         private void Main_Form_Load(object sender, EventArgs e)
         {
-            // 1. Ambil data dari GlobalSession
-            string namaBisnis = Login.GlobalSession.BusinessName ?? "Nama Bisnis";
-            string emailUser = Login.GlobalSession.CurrentUserEmail ?? "email@example.com";
-            string roleUser = Login.GlobalSession.CurrentUserRole ?? "free";
-            bool emailVerified = Login.GlobalSession.IsEmailVerified;
+            // Panggil fungsi refresh saat form pertama kali dimuat
+            RefreshUserAccess();
 
-            // 2. Tampilkan ke Label
-            lblNamaBisnis.Text = namaBisnis;
-            lblEmail.Text = emailUser;
-            lblStatusRole.Text = roleUser == "premium" ? "Premium ✨" : "Free";
-
-            // 3. Atur Warna Status Role - HIJAU TUA untuk Free
-            if (roleUser == "premium")
-            {
-                gbStatusRole.FillColor = Color.Gold; // Gold untuk Premium
-                lblStatusRole.ForeColor = Color.White;
-            }
-            else
-            {
-                gbStatusRole.FillColor = Color.FromArgb(34, 139, 34); // Hijau Tua untuk Free ✅
-                lblStatusRole.ForeColor = Color.White;
-            }
-
-            // 4. KUNCI MENU BERDASARKAN STATUS
-            AturAksesMenu(emailVerified, roleUser);
-
-            // 5. Load Dashboard Awal (hanya jika email verified)
-            if (emailVerified)
+            // Load Dashboard Awal (hanya jika email verified)
+            if (Login.GlobalSession.IsEmailVerified)
             {
                 UCDashboard uc = new UCDashboard();
                 navigationControl(uc);
@@ -56,52 +31,69 @@ namespace FnB_Records
             }
             else
             {
-                // Jika belum verifikasi, tampilkan pesan
                 TampilkanPesanVerifikasi();
             }
         }
 
-        // --- FUNGSI UNTUK MENGATUR AKSES MENU ---
+        // ==========================================
+        // TAMBAHKAN METHOD PUBLIC INI
+        // Agar bisa dipanggil dari UC_Pengaturan
+        // ==========================================
+        public void RefreshUserAccess()
+        {
+            // 1. Ambil data TERBARU dari GlobalSession
+            string namaBisnis = Login.GlobalSession.BusinessName ?? "Nama Bisnis";
+            string emailUser = Login.GlobalSession.CurrentUserEmail ?? "email@example.com";
+            string roleUser = Login.GlobalSession.CurrentUserRole ?? "free";
+            bool emailVerified = Login.GlobalSession.IsEmailVerified; // Ini harus sudah true
+
+            // 2. Tampilkan ke Label
+            lblNamaBisnis.Text = namaBisnis;
+            lblEmail.Text = emailUser;
+            lblStatusRole.Text = roleUser == "premium" ? "Premium ✨" : "Free";
+
+            // 3. Atur Warna Status Role
+            if (roleUser == "premium")
+            {
+                gbStatusRole.FillColor = Color.Gold;
+                lblStatusRole.ForeColor = Color.White;
+            }
+            else
+            {
+                gbStatusRole.FillColor = Color.FromArgb(34, 139, 34);
+                lblStatusRole.ForeColor = Color.White;
+            }
+
+            // 4. Buka/Kunci Menu berdasarkan status terbaru
+            AturAksesMenu(emailVerified, roleUser);
+        }
+
+        // --- FUNGSI UNTUK MENGATUR AKSES MENU (SAMA SEPERTI SEBELUMNYA) ---
         private void AturAksesMenu(bool emailVerified, string role)
         {
-            // Jika EMAIL BELUM TERVERIFIKASI - KUNCI SEMUA MENU
             if (!emailVerified)
             {
                 KunciSemuaMenu();
-
-                // Hanya Pengaturan yang bisa diakses untuk verifikasi email
-                btPengaturan.Enabled = true;
-
-                MessageBox.Show(
-                    "⚠️ EMAIL BELUM TERVERIFIKASI!\n\n" +
-                    "Semua menu terkunci hingga Anda memverifikasi email.\n\n" +
-                    "Silakan buka menu PENGATURAN untuk verifikasi email.",
-                    "Verifikasi Diperlukan",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
+                btPengaturan.Enabled = true; // Tetap buka pengaturan
                 return;
             }
 
-            // Jika EMAIL SUDAH TERVERIFIKASI
+            // Jika sudah terverifikasi, buka menu
             if (role == "premium")
             {
-                // PREMIUM - BUKA SEMUA MENU
                 BukaSemuaMenu();
             }
             else
             {
-                // FREE - BUKA MENU DASAR, KUNCI MENU PREMIUM
-                BukaSemuaMenu(); // Buka dulu semua
+                BukaSemuaMenu(); // Buka dasar
 
-                // Lalu kunci menu premium
+                // Kunci menu premium
                 btCabang.Enabled = false;
                 btAnalisisBelanja.Enabled = false;
                 btSimulasiKebutuhan.Enabled = false;
                 btManajemenInventori.Enabled = false;
                 btProduksiOlahan.Enabled = false;
 
-                // Tambahkan icon gembok atau ubah warna (opsional)
                 btCabang.Text = "🔒 Cabang (Premium)";
                 btAnalisisBelanja.Text = "🔒 Analisis Belanja (Premium)";
                 btSimulasiKebutuhan.Text = "🔒 Simulasi Kebutuhan (Premium)";
@@ -109,7 +101,6 @@ namespace FnB_Records
                 btProduksiOlahan.Text = "🔒 Produksi Olahan (Premium)";
             }
         }
-
         // --- FUNGSI KUNCI SEMUA MENU ---
         private void KunciSemuaMenu()
         {
@@ -294,7 +285,7 @@ namespace FnB_Records
         private void btProduksiOlahan_Click(object sender, EventArgs e)
         {
             if (!ValidasiAksesMenu("Produksi Olahan")) return;
-            UC_ProduksiOlahan produksiOlahan = new UC_ProduksiOlahan();
+            var produksiOlahan = new UCProduksiOlahan();
             navigationControl(produksiOlahan);
         }
 

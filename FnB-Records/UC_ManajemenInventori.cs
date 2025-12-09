@@ -153,6 +153,8 @@ namespace FnB_Records
         {
             if (Login.GlobalSession.CurrentUserId == 0) Login.GlobalSession.CurrentUserId = 1;
 
+            dgvDataInventori.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
+
             LoadDataInventori();
             IsiComboBoxStatus();
         }

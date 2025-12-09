@@ -582,6 +582,7 @@
             // 
             // flowPanelBahan
             // 
+            flowPanelBahan.AutoScroll = true;
             flowPanelBahan.Controls.Add(cbPilihBahan);
             flowPanelBahan.Controls.Add(txtInputJumlahBahan);
             flowPanelBahan.Controls.Add(btnHapusBahan);
@@ -809,7 +810,7 @@
             dataGridViewCellStyle1.BackColor = Color.FromArgb(247, 248, 249);
             dgvResepMenu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(232, 234, 237);
+            dataGridViewCellStyle2.BackColor = SystemColors.ButtonFace;
             dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
@@ -828,7 +829,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvResepMenu.DefaultCellStyle = dataGridViewCellStyle3;
             dgvResepMenu.GridColor = SystemColors.ButtonFace;
-            dgvResepMenu.Location = new Point(9, 5);
+            dgvResepMenu.Location = new Point(9, 10);
             dgvResepMenu.Name = "dgvResepMenu";
             dgvResepMenu.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -842,7 +843,7 @@
             dgvResepMenu.RowHeadersVisible = false;
             dgvResepMenu.RowTemplate.Height = 40;
             dgvResepMenu.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dgvResepMenu.Size = new Size(1467, 671);
+            dgvResepMenu.Size = new Size(1467, 666);
             dgvResepMenu.TabIndex = 11;
             dgvResepMenu.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
             dgvResepMenu.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(247, 248, 249);
@@ -852,7 +853,7 @@
             dgvResepMenu.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
             dgvResepMenu.ThemeStyle.BackColor = Color.White;
             dgvResepMenu.ThemeStyle.GridColor = SystemColors.ButtonFace;
-            dgvResepMenu.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(232, 234, 237);
+            dgvResepMenu.ThemeStyle.HeaderStyle.BackColor = SystemColors.ButtonFace;
             dgvResepMenu.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
             dgvResepMenu.ThemeStyle.HeaderStyle.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dgvResepMenu.ThemeStyle.HeaderStyle.ForeColor = Color.Black;

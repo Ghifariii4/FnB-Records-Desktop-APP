@@ -16,6 +16,7 @@ namespace FnB_Records
         {
             InitializeComponent();
             gbInputPenjualanPopUp.BackColor = Color.White;
+            AttachInputEvents();
         }
 
         // --- 1. SETUP & EVENTS ---
@@ -27,9 +28,11 @@ namespace FnB_Records
             dtpTanggalPenjualan.Value = DateTime.Now;
             dtpTanggalPenjualan.MinDate = DateTime.Today;
 
+            dgvDataBahanBaku.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
+
             SetupTableStyle();
             LoadComboMenu();
-            AttachInputEvents();
+            
             LoadDataPenjualan();
             HitungTotalSemuaTransaksi();
         }
@@ -45,12 +48,17 @@ namespace FnB_Records
             txtCariRiwayatPenjualan.TextChanged += (s, ev) => LoadDataPenjualan();
             dtpFilterTanggal.ValueChanged += (s, ev) => LoadDataPenjualan();
 
-            btinputPenjualanPopUp.Click += btinputPenjualanPopUp_Click;
-            btnClosePopUpBahanBaku.Click += btnClosePopUpBahanBaku_Click;
-            btnBatalPopUp.Click += btnBatalPopUp_Click;
-            btnSimpanPopUp.Click += btnSimpanPopUp_Click;
+            // --- BAGIAN INI HARUS DIHAPUS / DIKOMENTARI ---
+            // Karena Visual Studio biasanya sudah menaruh ini di Designer.cs
 
-            // Event Klik Grid (Edit/Hapus)
+            // btinputPenjualanPopUp.Click += btinputPenjualanPopUp_Click; // <-- HAPUS/KOMENTAR
+            // btnClosePopUpBahanBaku.Click += btnClosePopUpBahanBaku_Click; // <-- HAPUS/KOMENTAR
+            // btnBatalPopUp.Click += btnBatalPopUp_Click; // <-- HAPUS/KOMENTAR
+
+            // INI BIANG KEROKNYA:
+            // btnSimpanPopUp.Click += btnSimpanPopUp_Click; // <-- WAJIB HAPUS BARIS INI
+
+            // Event Grid (Biarkan tetap ada karena ini jarang ada di designer otomatis)
             dgvDataBahanBaku.CellContentClick += dgvDataBahanBaku_CellContentClick;
         }
 
@@ -104,15 +112,21 @@ namespace FnB_Records
         // --- 3. SIMPAN PENJUALAN (INSERT / UPDATE) ---
         private void btnSimpanPopUp_Click(object sender, EventArgs e)
         {
-            if (cbMenu.SelectedValue == null || string.IsNullOrWhiteSpace(inputJumlahTerjual.Text))
+            if (cbMenu.SelectedValue == null ||
+         string.IsNullOrWhiteSpace(inputJumlahTerjual.Text) ||
+         string.IsNullOrWhiteSpace(inputHargaJual.Text))
             {
-                MessageBox.Show("Lengkapi data!", "Peringatan"); return;
+                MessageBox.Show("Lengkapi data Menu, Jumlah, dan Harga Jual!", "Peringatan");
+                return;
             }
 
             try
             {
+                // 2. Parse dengan aman (Jika kosong otomatis jadi 0)
                 double harga = ParseCurrency(inputHargaJual.Text);
                 int qty = (int)ParseCurrency(inputJumlahTerjual.Text);
+
+                // Diskon & Biaya Lain Opsional (Otomatis 0 jika kosong)
                 double diskon = ParseCurrency(inputDiskon.Text);
                 double biayaLain = ParseCurrency(inputBiayaLain.Text);
                 int recipeId = Convert.ToInt32(cbMenu.SelectedValue);
@@ -266,77 +280,151 @@ namespace FnB_Records
                                 editingSalesId = id;
                                 cbMenu.SelectedValue = r["recipe_id"];
                                 inputJumlahTerjual.Text = r["qty"].ToString();
+
+                                // Konversi angka agar aman
                                 inputHargaJual.Text = Convert.ToDouble(r["selling_price"]).ToString("N0");
                                 inputDiskon.Text = Convert.ToDouble(r["discount"]).ToString("N0");
                                 inputBiayaLain.Text = Convert.ToDouble(r["other_fees"]).ToString("N0");
-                                dtpTanggalPenjualan.Value = Convert.ToDateTime(r["sale_date"]);
 
-                                label16.Text = "Edit Penjualan"; // Ubah Judul Popup
+                                // --- BAGIAN INI YANG MEMPERBAIKI ERROR DATEONLY ---
+                                var rawDate = r["sale_date"];
+                                if (rawDate is DateOnly dateOnlyVal)
+                                {
+                                    dtpTanggalPenjualan.Value = dateOnlyVal.ToDateTime(TimeOnly.MinValue);
+                                }
+                                else
+                                {
+                                    dtpTanggalPenjualan.Value = Convert.ToDateTime(rawDate);
+                                }
+                                // ---------------------------------------------------
+
+                                label16.Text = "Edit Penjualan";
                                 btnSimpanPopUp.Text = "Update";
                                 gbInputPenjualanPopUp.Visible = true;
                                 gbInputPenjualanPopUp.BringToFront();
+
+                                // Panggil hitung estimasi agar angka di kanan update
                                 HitungEstimasiLive();
                             }
                         }
                     }
                 }
             }
-            catch (Exception ex) { MessageBox.Show("Gagal load edit: " + ex.Message); }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal load edit: " + ex.Message);
+            }
         }
 
         // --- 5. LOGIKA STOK (KURANGI & KEMBALIKAN) ---
 
         // Fungsi mengurangi stok saat jual
+        // Fungsi mengurangi stok saat jual
+        // --- FUNGSI KURANGI STOK ---
         private void ReduceStock(int recipeId, int qty, NpgsqlConnection conn, NpgsqlTransaction trans)
         {
+            // 1. Ambil Data Bahan dari Resep
             string sql = "SELECT ingredient_id, amount FROM recipe_ingredients WHERE recipe_id=@rid";
+
             using (var cmd = new NpgsqlCommand(sql, conn, trans))
             {
                 cmd.Parameters.AddWithValue("@rid", recipeId);
+
+                var updates = new System.Collections.Generic.List<(int idBahan, double jumlahPakai)>();
+
                 using (var r = cmd.ExecuteReader())
                 {
-                    var list = new System.Collections.Generic.List<(int, double)>();
-                    while (r.Read()) list.Add((r.GetInt32(0), r.GetDouble(1)));
-                    r.Close();
-
-                    foreach (var item in list)
+                    while (r.Read())
                     {
-                        double used = item.Item2 * qty;
-                        new NpgsqlCommand($"UPDATE ingredients SET stock = stock - {used} WHERE id={item.Item1}", conn, trans).ExecuteNonQuery();
+                        int idBahan = Convert.ToInt32(r["ingredient_id"]);
+                        double amountPerResep = Convert.ToDouble(r["amount"]);
+                        updates.Add((idBahan, amountPerResep));
+                    }
+                }
+
+                // --- DETEKTIF KODE (DEBUGGING) ---
+                if (updates.Count == 0)
+                {
+                    // Jika pesan ini muncul, berarti Masalahnya ada di DATA RESEP, bukan kodingan stok.
+                    MessageBox.Show($"PERINGATAN: Penjualan berhasil disimpan, TAPI stok tidak berkurang karena Resep ID {recipeId} belum diatur komposisi bahan bakunya di database (Tabel: recipe_ingredients kosong).", "Debug Info", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Keluar karena tidak ada yang perlu diupdate
+                }
+                else
+                {
+                    // Jika ini muncul, berarti bahan ditemukan. Kita lihat apakah update jalan.
+                     MessageBox.Show($"Debug: Ditemukan {updates.Count} jenis bahan untuk resep ini. Melakukan update stok...", "Info");
+                }
+                // ----------------------------------
+
+                // 2. Eksekusi Update Stok
+                foreach (var item in updates)
+                {
+                    double totalUsed = item.jumlahPakai * qty;
+
+                    string updateSql = "UPDATE ingredients SET stock = stock - @val WHERE id = @id";
+
+                    using (var updateCmd = new NpgsqlCommand(updateSql, conn, trans))
+                    {
+                        updateCmd.Parameters.AddWithValue("@val", totalUsed);
+                        updateCmd.Parameters.AddWithValue("@id", item.idBahan);
+
+                        int barisTerubah = updateCmd.ExecuteNonQuery();
+
+                        // Cek apakah ID Bahan benar-benar ada di tabel ingredients
+                        if (barisTerubah == 0)
+                        {
+                            MessageBox.Show($"Error: Resep meminta potong stok Bahan ID {item.idBahan}, tapi ID tersebut TIDAK ADA di tabel 'ingredients'!", "Data Tidak Konsisten");
+                        }
                     }
                 }
             }
         }
 
-        // Fungsi mengembalikan stok saat hapus/edit
+        // --- FUNGSI KEMBALIKAN STOK (SAAT EDIT/HAPUS) ---
         private void RestoreStock(int salesId, NpgsqlConnection conn, NpgsqlTransaction trans)
         {
-            // Ambil data resep & qty dari penjualan lama
             int rid = 0, qty = 0;
+
+            // 1. Cek data penjualan lama
             using (var cmd = new NpgsqlCommand($"SELECT recipe_id, qty FROM sales WHERE id={salesId}", conn, trans))
             using (var r = cmd.ExecuteReader())
             {
-                if (r.Read()) { rid = r.GetInt32(0); qty = r.GetInt32(1); }
+                if (r.Read())
+                {
+                    rid = Convert.ToInt32(r["recipe_id"]);
+                    qty = Convert.ToInt32(r["qty"]);
+                }
             }
 
             if (rid > 0 && qty > 0)
             {
-                // Ambil bahan dari resep tersebut
+                // 2. Ambil komposisi bahan
                 string sql = "SELECT ingredient_id, amount FROM recipe_ingredients WHERE recipe_id=@rid";
                 using (var cmd = new NpgsqlCommand(sql, conn, trans))
                 {
                     cmd.Parameters.AddWithValue("@rid", rid);
+
+                    var updates = new System.Collections.Generic.List<(int idBahan, double jumlahPakai)>();
+
                     using (var r = cmd.ExecuteReader())
                     {
-                        var list = new System.Collections.Generic.List<(int, double)>();
-                        while (r.Read()) list.Add((r.GetInt32(0), r.GetDouble(1)));
-                        r.Close();
-
-                        // Kembalikan stok (stock + used)
-                        foreach (var item in list)
+                        while (r.Read())
                         {
-                            double used = item.Item2 * qty;
-                            new NpgsqlCommand($"UPDATE ingredients SET stock = stock + {used} WHERE id={item.Item1}", conn, trans).ExecuteNonQuery();
+                            updates.Add((Convert.ToInt32(r["ingredient_id"]), Convert.ToDouble(r["amount"])));
+                        }
+                    }
+
+                    // 3. Update kembalikan stok
+                    foreach (var item in updates)
+                    {
+                        double totalUsed = item.jumlahPakai * qty;
+
+                        string updateSql = "UPDATE ingredients SET stock = stock + @val WHERE id = @id";
+                        using (var updateCmd = new NpgsqlCommand(updateSql, conn, trans))
+                        {
+                            updateCmd.Parameters.AddWithValue("@val", totalUsed);
+                            updateCmd.Parameters.AddWithValue("@id", item.idBahan);
+                            updateCmd.ExecuteNonQuery();
                         }
                     }
                 }
@@ -489,7 +577,14 @@ namespace FnB_Records
         private double ParseCurrency(string text)
         {
             if (string.IsNullOrWhiteSpace(text)) return 0;
-            return double.TryParse(text.Replace(".", "").Replace(",", ""), out double result) ? result : 0;
+
+            string cleanText = System.Text.RegularExpressions.Regex.Replace(text, "[^0-9]", "");
+
+            if (double.TryParse(cleanText, out double result))
+            {
+                return result;
+            }
+            return 0;
         }
 
         private void FormatKolom()

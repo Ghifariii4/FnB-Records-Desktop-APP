@@ -17,6 +17,18 @@ namespace FnB_Records
         {
             InitializeComponent();
             gbBahanBakuPopUp.BackColor = Color.White;
+            this.VisibleChanged += UC_BahanBaku_VisibleChanged;
+        }
+
+        private void UC_BahanBaku_VisibleChanged(object sender, EventArgs e)
+        {
+            // Cek jika halaman sedang dilihat (Visible = true)
+            if (this.Visible)
+            {
+                // Panggil fungsi load data agar stok terupdate sesuai database terbaru
+                LoadDataBahan("");
+                LoadComboVendor(); // Opsional, jika vendor sering berubah
+            }
         }
 
         // --- 1. EVENT LOAD ---
@@ -28,6 +40,8 @@ namespace FnB_Records
             }
 
             dgvDataBahanBaku.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
+
+
 
             LoadComboVendor(); // Load Vendor DULUAN
             LoadDataBahan(""); // Baru Load Data Tab

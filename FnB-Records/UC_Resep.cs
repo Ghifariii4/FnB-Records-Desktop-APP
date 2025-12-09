@@ -33,6 +33,7 @@ namespace FnB_Records
         {
             InitializeComponent();
             gbResepPopUp.BackColor = Color.White;
+            AttachEvents();
         }
 
         // --- 2. SETUP EVENT & LOAD ---
@@ -56,7 +57,9 @@ namespace FnB_Records
         {
             if (currentUserId == 0) Login.GlobalSession.CurrentUserId = 1;
 
-            AttachEvents();
+            dgvDataVendor.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
+
+            
             LoadBahanMasterFromDB();
             SetupGridColumns();
             LoadRecipes();
@@ -281,7 +284,7 @@ namespace FnB_Records
                                 }
 
                                 // Hapus detail lama
-                                using (var cmdDel = new NpgsqlCommand("DELETE FROM recipe_items WHERE recipe_id=@rid", conn, trans))
+                                using (var cmdDel = new NpgsqlCommand("DELETE FROM recipe_ingredients WHERE recipe_id=@rid", conn, trans))
                                 {
                                     cmdDel.Parameters.AddWithValue("@rid", recipeId);
                                     cmdDel.ExecuteNonQuery();
@@ -302,9 +305,8 @@ namespace FnB_Records
                                     {
                                         int ingredientId = (int)cb.SelectedValue;
 
-                                        string sqlIng = @"
-                                            INSERT INTO recipe_items (recipe_id, ingredient_id, qty, created_at) 
-                                            VALUES (@rid, @iid, @qty, NOW())";
+                                        string sqlIng = @"INSERT INTO recipe_ingredients (recipe_id, ingredient_id, amount) 
+                  VALUES (@rid, @iid, @qty)";
 
                                         using (var cmdIng = new NpgsqlCommand(sqlIng, conn, trans))
                                         {
@@ -362,7 +364,7 @@ namespace FnB_Records
 
                     // Detail Bahan
                     flowPanelBahan.Controls.Clear();
-                    string sqlDet = "SELECT ingredient_id, qty FROM recipe_items WHERE recipe_id=@rid";
+                    string sqlDet = "SELECT ingredient_id, amount FROM recipe_ingredients WHERE recipe_id=@rid";
                     using (var cmd = new NpgsqlCommand(sqlDet, conn))
                     {
                         cmd.Parameters.AddWithValue("@rid", recipeId);
@@ -510,14 +512,22 @@ namespace FnB_Records
                     {
                         using (var conn = db.GetKoneksi())
                         {
-                            // Hapus detail dulu
+                            // 1. TAMBAHAN PENTING: Hapus dari tabel lama (recipe_items) untuk mengatasi error Foreign Key
+                            // Ini wajib ada karena error log Anda menunjuk ke tabel ini
                             using (var cmd = new NpgsqlCommand("DELETE FROM recipe_items WHERE recipe_id=@id", conn))
                             {
                                 cmd.Parameters.AddWithValue("@id", id);
                                 cmd.ExecuteNonQuery();
                             }
 
-                            // Hapus header
+                            // 2. Hapus detail dari tabel baru (recipe_ingredients) - Biarkan tetap ada
+                            using (var cmd = new NpgsqlCommand("DELETE FROM recipe_ingredients WHERE recipe_id=@id", conn))
+                            {
+                                cmd.Parameters.AddWithValue("@id", id);
+                                cmd.ExecuteNonQuery();
+                            }
+
+                            // 3. Hapus Header Resep (Sekarang aman karena anak-anaknya di kedua tabel sudah dihapus)
                             using (var cmd = new NpgsqlCommand("DELETE FROM recipes WHERE id=@id AND user_id=@uid", conn))
                             {
                                 cmd.Parameters.AddWithValue("@id", id);

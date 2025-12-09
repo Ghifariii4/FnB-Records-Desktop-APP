@@ -4,6 +4,9 @@
     <Compile Update="ContainerItemPO.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UCProduksiOlahan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UC_ManajemenInventori.cs">
       <SubType>UserControl</SubType>
     </Compile>
